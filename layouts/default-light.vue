@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopMenu />
+    <TopMenu :light="true" />
     <Nuxt />
     <Footer />
   </div>

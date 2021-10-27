@@ -9,6 +9,7 @@
     <div class="h-30px bg-gray-E8E3DD relative mb-80px">
       <div class="mx-auto max-w-1300px">
         <div class="absolute flex -top-80px mx-20px">
+          <!-- TODO: Carrousel -->
           <div class="bg-blue-191F6B text-white px-20px pb-20px group">
             <center>
               <img
@@ -106,12 +107,7 @@
         <div class="bg-blue-03ABD7 relative overflow-hidden p-20px text-white">
           <div
             class="absolute bg-blue-0D86C0 w-full"
-            style="
-              transform: rotate(-45deg);
-              left: -500px;
-              height: 1000px;
-              bottom: 0;
-            "
+            style="transform: rotate(-45deg);left: -500px;height: 1000px;bottom: 0;"
           ></div>
 
           <div class="relative z-10 flex">
@@ -148,5 +144,7 @@
 </template>
 
 <script>
-export default {};
+export default {
+  layout: "default",
+};
 </script>

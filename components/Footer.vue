@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="bg-gray-666666 text-white">
+  <footer class="bg-gray-666666 text-white">
     <div class="mx-auto max-w-1300px p-20px flex justify-between">
       <div class="flex">
         <div
@@ -62,10 +62,10 @@
           </a>
         </div>
         <div>
-          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
-          <p class="body-4">All Right Reserved.</p>
+          <p class="body-4 text-right">©2021 Real Estate Analytics Pte Ltd,</p>
+          <p class="body-4 text-right">All Right Reserved.</p>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
