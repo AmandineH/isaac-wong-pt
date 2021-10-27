@@ -24,13 +24,21 @@
         <div>
           <p class="body-4">For inquiries contact us at:</p>
           <p class="text-blue-03ABD7 body-4">Consumer</p>
-          <p class="body-4">consumer@realestateanalytics.sg</p>
+          <a class="body-4" href="mailto:consumer@realestateanalytics.sg"
+            >consumer@realestateanalytics.sg</a
+          >
           <p class="text-blue-03ABD7 body-4">Concierge</p>
-          <p class="body-4">concierge@realestateanalytics.sg</p>
+          <a class="body-4" href="mailto:concierge@realestateanalytics.sg"
+            >concierge@realestateanalytics.sg</a
+          >
           <p class="text-blue-03ABD7 body-4">Institution and Government</p>
-          <p class="body-4">corporate@realestateanalytics.sg</p>
+          <a class="body-4" href="mailto:corporate@realestateanalytics.sg"
+            >corporate@realestateanalytics.sg</a
+          >
           <p class="text-blue-03ABD7 body-4">Media</p>
-          <p class="body-4">media@realestateanalytics.sg</p>
+          <a class="body-4" href="mailto:media@realestateanalytics.sg"
+            >media@realestateanalytics.sg</a
+          >
         </div>
       </div>
       <div class="flex flex-col justify-between items-end">

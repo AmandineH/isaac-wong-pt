@@ -3,7 +3,9 @@
   <div :class="[light ? '' : 'absolute top-0 w-full']">
     <div class="mx-auto max-w-1300px p-20px">
       <div class="flex items-end justify-between">
-        <img src="@/assets/rea.png" alt="rea" />
+        <a href="/">
+          <img src="@/assets/rea.png" alt="rea" />
+        </a>
         <div class="flex">
           <a
             href="/about"
