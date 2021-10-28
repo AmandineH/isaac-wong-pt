@@ -65,7 +65,7 @@
             </div>
 
             <div class="w-2/3 mx-auto">
-              <div class="my-20px flex">
+              <div class="my-20px flex items-center">
                 <img src="@/assets/mail-in.png" alt="mail-in" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -77,7 +77,7 @@
                 </p>
               </div>
 
-              <div class="flex">
+              <div class="flex items-center">
                 <img src="@/assets/mail-plus.png" alt="mail-plus" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
