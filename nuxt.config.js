@@ -1,6 +1,7 @@
 import tailwindConfig from "./tailwind.config.js";
 
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'rea',
