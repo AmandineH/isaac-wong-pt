@@ -1,0 +1,61 @@
+image: node:14.18
+
+cache:
+  untracked: true
+  paths:
+    - node_modules/
+
+stages: 
+  - setup         # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+setup:
+  stage: setup
+  script:
+    - rm -rf node_modules
+    - npm install
+  only:
+    - /^(prod-.*|dev-.*)$/
+
+build:
+  stage: build
+  script:
+    - npm run generate
+  artifacts:
+    paths:
+      - dist
+  only:
+    - /^(prod-.*|dev-.*)$/
+
+deploy:
+  image: "python:latest"
+  stage: deploy
+  environment:
+    name: production
+    url: https://${S3_BUCKET}.s3.${AWS_DEFAULT_REGION}.amazonaws.com/rea-production
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${S3_BUCKET}/rea-production/assets/  --recursive
+    - aws s3 cp public s3://${S3_BUCKET}/rea-production --recursive
+  dependencies:
+    - build
+  only:
+    - /^(prod-.*)$/
+
+deploy_dev:
+  image: "python:latest"
+  stage: deploy
+  environment:
+    name: development
+    url: https://${S3_BUCKET}.s3.${AWS_DEFAULT_REGION}.amazonaws.com/rea-development
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${S3_BUCKET}/rea-development/  --recursive
+    - aws s3 cp dist s3://${S3_BUCKET}/rea-development --recursive
+  dependencies:
+    - build
+  only:
+    - /^(dev-.*)$/
