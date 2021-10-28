@@ -12,7 +12,7 @@
             justify-between
           "
         >
-          <img src="@/assets/rea.png" alt="rea" />
+          <img src="@/assets/rea.png" alt="rea" class="h-60px" />
 
           <div>
             <p class="body-4">9 Temasex Boulevard</p>

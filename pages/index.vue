@@ -76,10 +76,10 @@
         <div class="flex flex-col items-center">
           <h1 class="title-1 text-gray-666666 text-center">
             News, stories and recent developments
-            <span class="flex w-full">
+            <div class="flex w-300px">
               <span class="w-1/4 h-2px bg-blue-191F6B"></span>
               <span class="flex-grow h-2px bg-blue-03ABD7"></span>
-            </span>
+            </div>
           </h1>
           <div class="my-20px">
             Stories Layout

@@ -4,7 +4,7 @@
     <div class="mx-auto max-w-1300px p-20px">
       <div class="flex items-end justify-between">
         <a href="/">
-          <img src="@/assets/rea.png" alt="rea" />
+          <img src="@/assets/rea.png" alt="rea" class="h-60px" />
         </a>
         <div class="flex">
           <a
