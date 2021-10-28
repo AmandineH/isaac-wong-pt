@@ -136,7 +136,7 @@
                 <img src="@/assets/arrow-dark-blue.png" alt="arrow" />
               </button>
             </div>
-          </div>
+          </div><!--- -->
         </div>
       </div>
     </div>
