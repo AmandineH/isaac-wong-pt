@@ -1,8 +1,8 @@
 <!-- Please remove this file from your project -->
 <template>
   <footer class="bg-gray-666666 text-white">
-    <div class="mx-auto max-w-1300px p-20px flex justify-between">
-      <div class="flex">
+    <div class="mx-auto max-w-1300px p-20px block md:flex justify-between">
+      <div class="hidden md:flex">
         <div
           class="
             border-r border-blue-03ABD7
@@ -41,8 +41,8 @@
           >
         </div>
       </div>
-      <div class="flex flex-col justify-between items-end">
-        <div class="flex">
+      <div class="flex flex-col justify-between items-center md:items-end">
+        <div class="flex mb-20px md:mb-0">
           <a
             href="https://www.facebook.com/8PROP/"
             target="_blank"
@@ -69,9 +69,12 @@
             />
           </a>
         </div>
-        <div>
-          <p class="body-4 text-right">©2021 Real Estate Analytics Pte Ltd,</p>
-          <p class="body-4 text-right">All Right Reserved.</p>
+        <div class="text-center md:text-right">
+          <center>
+            <img src="@/assets/rea.png" alt="rea" class="h-60px flex md:hidden" />
+          </center>
+          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
+          <p class="body-4">All Right Reserved.</p>
         </div>
       </div>
     </div>

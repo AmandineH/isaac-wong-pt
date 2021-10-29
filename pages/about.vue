@@ -2,28 +2,14 @@
   <div>
     <img src="@/assets/about.png" alt="about" class="w-full min-h-80vh" />
 
-    <div class="h-30px bg-blue-03ABD7 relative mb-80px">
-      <div class="mx-auto max-w-1300px">
-        <div class="absolute flex -top-80px mx-20px">
-          <!---AL: to do coursel-->
-          <div class="bg-blue-03ABD7 text-white p-20px text-center">
-            <h1 class="title-1 uppercase text-blue-191F6B">
+    <div class="relative">
+      <div class="absolute top-50px h-30px bg-blue-03ABD7 w-full"/>
+      <div class="relative z-10 mx-auto max-w-1300px -mt-50px">
+        <div class="mx-20px">
+          <!-- TODO: CARROUSEL (AMANDINE) -->
+          <div class="p-20px bg-blue-03ABD7 text-white">
+            <h1 class="header-1 uppercase text-blue-191F6B text-center mb-10px">
               ABOUT <span class="text-white">MISSION</span>
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-              tellus id dui semper aliquam. Maecenas vitae felis et orci
-              molestie sagittis. Mauris at ligula eu est porta porta at eu est.
-              Vestibulum tincidunt nunc metus, nec scelerisque ligula vestibulum
-              a. Curabitur facilisis vehicula nibh sit amet aliquet. Donec
-              laoreet congue tellus, vel facilisis erat pretium vel. Etiam
-              interdum odio nisi, a semper eros interdum non. Fusce in faucibus
-              quam.
-            </p>
-          </div>
-          <div class="bg-blue-03ABD7 text-white p-20px text-center">
-            <h1 class="title-1 uppercase text-blue-191F6B">
-              ABOUT <span class="text-white">VISION</span>
             </h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
