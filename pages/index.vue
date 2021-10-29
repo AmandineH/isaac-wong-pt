@@ -6,66 +6,26 @@
       class="w-full min-h-80vh"
     />
 
-    <div class="h-30px bg-gray-E8E3DD relative mb-80px">
-      <div class="mx-auto max-w-1300px">
-        <div class="absolute flex -top-80px mx-20px">
-          <!-- TODO: Carrousel -->
-          <div class="bg-blue-191F6B text-white px-20px pb-20px group">
-            <center>
-              <img
-                src="@/assets/arrow-white.png"
-                alt="arrow"
-                class="group-hover:opacity-100 opacity-0"
-              />
-            </center>
-            <h1 class="title-1 mb-10px">Real Estate Anlytics</h1>
-            <p class="mb-10px body-3">
-              We empower everyone to make the best real estate decisions
-            </p>
-            <button
-              class="border border-blue-03ABD7 px-5px body-3 flex items-center"
-            >
-              Read More
-              <img src="@/assets/arrow-light-blue.png" alt="arrow" />
-            </button>
+    <div class="relative">
+      <!-- TODO: CARROUSEL (AMANDINE) -->
+      <div class="absolute top-50px h-30px bg-gray-E8E3DD w-full"/>
+      <div class="relative z-10 mx-auto max-w-1300px -mt-50px">
+        <div class=" mx-20px">
+          <div class="p-20px bg-gray-E8E3DD text-gray-666666">
+            <p>We empower people and organizations to make the best decisions when it comes to real estate. Whether it is buying, selling, renting, brokering, developing, investing, leveraging or planning real estate, we have the tools and capabilities that deliver the best-in-class solutions, analytics and information. </p>
+            <p>Conceptualized over 20 years ago when technology wasn’t ready, Real Estate Analytics has today brought together some of the best analysts, web developers, engineers and scientists to achieve our goal; that anyone can benefit from real estate by making the right decisions with easy-to-use technology and the right data. </p>
+            <p>We now provide products and services for the residential real estate market, as well as offer specially tailored real estate analytics, information, and solutions, to governments, companies, and other organizations.</p>
+            <p>Headquartered in Singapore, we have offices in Hong Kong, Indonesia, and Malaysia.  Come speak to us about your real estate needs. </p>
           </div>
-          <div class="bg-blue-03ABD7 text-white px-20px pb-20px group">
-            <center>
-              <img
-                src="@/assets/arrow-white.png"
-                alt="arrow"
-                class="group-hover:opacity-100 opacity-0"
-              />
-            </center>
-            <h1 class="title-1 mb-10px">Real Estate Anlytics</h1>
-            <p class="mb-10px body-3">
-              We empower everyone to make the best real estate decisions
-            </p>
-            <button
-              class="border border-blue-191F6B px-5px body-3 flex items-center"
-            >
-              Read More
-              <img src="@/assets/arrow-dark-blue.png" alt="arrow" />
-            </button>
-          </div>
-          <div class="bg-gray-666666 text-white px-20px pb-20px group">
-            <center>
-              <img
-                src="@/assets/arrow-white.png"
-                alt="arrow"
-                class="group-hover:opacity-100 opacity-0"
-              />
-            </center>
-            <h1 class="title-1 mb-10px">Real Estate Anlytics</h1>
-            <p class="mb-10px body-3">
-              We empower everyone to make the best real estate decisions
-            </p>
-            <button
-              class="border border-blue-03ABD7 px-5px body-3 flex items-center"
-            >
-              Read More
-              <img src="@/assets/arrow-light-blue.png" alt="arrow" />
-            </button>
+          <div class="flex">
+            <div class="p-20px w-1/2 bg-blue-191F6B text-white">
+              <h1 class="title-2 mb-20px">Consumer</h1>
+              <p class="body-3">With 8PROP, we help buyers, sellers, renters, agents and investors choose the best possible homes to meet their needs by providing them with the information platform they need. </p>
+            </div>
+            <div class="p-20px w-1/2 bg-blue-03ABD7 text-white">
+              <h1 class="title-2 mb-20px">Corporate/Government </h1>
+              <p class="body-3">We assist companies, governments, NGOs and other organizations with tailored and targeted information, analytics and solutions to help with specific real estate needs. </p>
+            </div>
           </div>
         </div>
       </div>
