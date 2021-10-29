@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-auto max-w-1300px">
     <div
       class="relative overflow-hidden p-20px text-white m-20px bg-center bg-no-repeat bg-cover min-h-200px"
       :style="{
@@ -14,70 +14,60 @@
       <h1 class="supheader-1 relative z-10">Contact us</h1>
     </div>
 
-    <div class="p-20px pt-40px">
-      <div class="mx-auto max-w-full">
-        <div class="flex flex-col items-left">
-          <div class="relative z-10 flex text-justify text-black">
-          <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.798167640012!2d103.85689231444971!3d1.2956953990549809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c4401f071f%3A0x3ce0fafa822c08f6!2sReal%20Estate%20Analytics!5e0!3m2!1sen!2ssg!4v1635401278030!5m2!1sen!2ssg"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+    <div class="md:flex p-20px">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.798167640012!2d103.85689231444971!3d1.2956953990549809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c4401f071f%3A0x3ce0fafa822c08f6!2sReal%20Estate%20Analytics!5e0!3m2!1sen!2ssg!4v1635401278030!5m2!1sen!2ssg"
+        class="w-full md:w-1/2 min-h-200px"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+      <div class="md:w-1/2 md:ml-20px mt-20px md:mt-0">
+        <p class="title-3 mb-20px text-gray-666666">Real Estate Analytics</p>
+        <div class="my-20px">
+          <p class="body-4 text-gray-666666">9 Temasex Boulevard</p>
+          <p class="body-4 text-gray-666666">Suntec Tower Two</p>
+          <p class="body-4 text-gray-666666">#23-02, Singapore 038989</p>
+        </div>
 
-           <div class="sm:flex flex-row"><!--start point to appear on the below for small devices -->
-            <div class="header-1 text-left pl-8"> 
-              <p>Real Estate Analytics<br><br>
-                <span class="flex w-full text-gray-666666 header-2">
-                  9 Temasek Boulevard,<br>Suntec Tower Two<br>#23-02, Singapore 038989
-                </span>
-              </p>
-              <br>
-            
-               <!---phone image and number -->
-              <div class="flex items-center text-gray-666666">
-                <img src="@/assets/call.png" alt="call">
-                <div class ="header-3 pl-4"><p>+65 6226-2723</p> 
-                </div>
-              </div>
-                <br>
+                        
+        <div class="my-20px flex items-center">
+          <img src="@/assets/call.png" alt="call" class="h-30px">
+          <p class="body-4 text-gray-666666 ml-20px">+65 6226-2723</p>
+        </div>
 
-                <!---inquiries -->
-              <div class="flex items-start text-gray-666666">
-                <img src="@/assets/inquiries.png" alt="inquiries" />
-                <div class ="header-3 pl-4"><br>
-                  <p>For inquiries contact us at:</p>
-                  <br> 
-                  <p class="text-blue-03ABD7">Consumer</p>
-                  <a href="mailto:consumer@realestateanalytics.sg">consumer@realestateanalytics.sg</a>
-                  <br><br>
-                  <p class="text-blue-03ABD7">Concierge</p>
-                  <a href="mailto:conceirge@realestateanalytics.sg">conceirge@realestateanalytics.sg</a>
-                  <br><br>
-                  <p class="text-blue-03ABD7">Institutional and Government</p>
-                  <a href="mailto:corporate@realestateanalytics.sg">corporate@realestateanalytics.sg</a>
-                  <br><br>
-                  <p class="text-blue-03ABD7">Media</p>
-                  <a href="mailto:media@realestateanalytics.sg">media@realestateanalytics.sg</a>  
-                </div><br>
-              </div>
-
-            </div> 
-          </div><!--end -->
-
+        <div class="my-20px flex items-start">
+          <img src="@/assets/inquiries.png" alt="inquiries" class="h-30px">
+          <div class="ml-20px">
+            <p class="body-4 text-gray-666666">For inquiries contact us at:</p>
+            <p class="text-blue-03ABD7 body-4">Consumer</p>
+            <a
+              class="body-4 text-gray-666666"
+              href="mailto:consumer@realestateanalytics.sg"
+              >consumer@realestateanalytics.sg</a
+            >
+            <p class="text-blue-03ABD7 body-4">Concierge</p>
+            <a
+              class="body-4 text-gray-666666"
+              href="mailto:concierge@realestateanalytics.sg"
+              >concierge@realestateanalytics.sg</a
+            >
+            <p class="text-blue-03ABD7 body-4">Institution and Government</p>
+            <a
+              class="body-4 text-gray-666666"
+              href="mailto:corporate@realestateanalytics.sg"
+              >corporate@realestateanalytics.sg</a
+            >
+            <p class="text-blue-03ABD7 body-4">Media</p>
+            <a
+              class="body-4 text-gray-666666"
+              href="mailto:media@realestateanalytics.sg"
+              >media@realestateanalytics.sg</a
+            >
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
   </div>
 </template>
 
