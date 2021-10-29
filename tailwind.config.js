@@ -7,6 +7,8 @@ module.exports = {
         body: ["Roboto", "Helvetica", "Arial", "sans-serif"],
       },
       spacing: {
+        "1/2": "50%",
+
         "2px": "2px",
         "5px": "5px",
         "10px": "10px",
@@ -21,6 +23,9 @@ module.exports = {
         "100px": "100px",
         "200px": "200px",
         "300px": "300px",
+        "400px": "400px",
+        "500px": "500px",
+        "1000px": "1000px",
         "1300px": "1300px",
 
         "80vh": "80vh"

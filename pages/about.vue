@@ -5,7 +5,7 @@
     <div class="relative">
       <div class="absolute top-50px h-30px bg-blue-03ABD7 w-full"/>
       <div class="relative z-10 mx-auto max-w-1300px -mt-50px">
-        <div class="mx-20px">
+        <div class="md:mx-20px">
           <!-- TODO: CARROUSEL (AMANDINE) -->
           <div class="p-20px bg-blue-03ABD7 text-white">
             <h1 class="header-1 uppercase text-blue-191F6B text-center mb-10px">
@@ -50,9 +50,9 @@
               diam est.
             </div>
 
-            <div class="w-2/3 mx-auto">
+            <div class="md:w-2/3 mx-auto">
               <div class="my-20px flex items-center">
-                <img src="@/assets/mail-in.png" alt="mail-in" />
+                <img src="@/assets/mail-in.png" alt="mail-in" class="h-100px" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
@@ -64,7 +64,7 @@
               </div>
 
               <div class="flex items-center">
-                <img src="@/assets/mail-plus.png" alt="mail-plus" />
+                <img src="@/assets/mail-plus.png" alt="mail-plus" class="h-100px" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
