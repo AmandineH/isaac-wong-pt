@@ -8,14 +8,12 @@
     >
       <div>
         <div class="mx-auto max-w-1300px p-40px">
-          <div class="md:w-200px">
-            <h1 class="title-1 text-blue-00ACD7 mb-10px">
-              Real Estate Analytics
-            </h1>
-            <p class="text-white body-2">
-              We empower everyone to make the best real estate decisions
-            </p>
-          </div>
+          <h1 class="title-1 text-blue-00ACD7 mb-10px">
+            Real Estate Analytics
+          </h1>
+          <p class="text-white body-2 md:w-200px">
+            We empower everyone to make the best real estate decisions
+          </p>
         </div>
       </div>
     </div>
@@ -209,13 +207,7 @@
       <div class="mx-auto max-w-1300px">
         <div class="relative overflow-hidden text-white bg-blue-00ACD7 p-40px">
           <div
-            class="absolute w-full bg-blue-0689BC"
-            style="
-              transform: rotate(-45deg);
-              left: -500px;
-              height: 1000px;
-              bottom: 0;
-            "
+            class="absolute w-full transform rotate-45 bg-blue-0689BC left-50px md:-left-500px h-1000px bottom-500px md:bottom-100px"
           ></div>
 
           <div class="relative z-10 items-center md:flex">
@@ -229,9 +221,9 @@
                 At Real Estate Analytics we recognize our employees are our
                 greatest asset and we support them in their professional growth
                 and personnal lives. We encourage our team to continue their
-                education, giving them time to achieve this. beyond a hybrid
+                education, giving them time to achieve this. Beyond a hybrid
                 work environnement, we provide a good medical coverage, flexible
-                working hours, nuture a supportive environment , and more. We
+                working hours, nuture a supportive environment, and more. We
                 are committed to doing what we can to help our employees
                 succeed.
               </p>
