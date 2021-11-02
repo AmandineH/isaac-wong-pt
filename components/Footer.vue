@@ -1,4 +1,3 @@
-<!-- Please remove this file from your project -->
 <template>
   <footer class="text-white bg-gray-666666">
     <div class="justify-between block mx-auto max-w-1300px p-20px md:flex">
@@ -17,19 +16,19 @@
         </div>
         <div>
           <p class="body-4">For inquiries contact us at:</p>
-          <p class="text-blue-00ACD7 body-4">Consumer</p>
+          <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
           <a class="body-4" href="mailto:consumer@realestateanalytics.sg"
             >consumer@realestateanalytics.sg</a
           >
-          <p class="text-blue-00ACD7 body-4">Concierge</p>
+          <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
           <a class="body-4" href="mailto:concierge@realestateanalytics.sg"
             >concierge@realestateanalytics.sg</a
           >
-          <p class="text-blue-00ACD7 body-4">Institution and Government</p>
+          <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
           <a class="body-4" href="mailto:corporate@realestateanalytics.sg"
             >corporate@realestateanalytics.sg</a
           >
-          <p class="text-blue-00ACD7 body-4">Media</p>
+          <p class="text-blue-00ACD7 body-4 mt-10px">Media</p>
           <a class="body-4" href="mailto:media@realestateanalytics.sg"
             >media@realestateanalytics.sg</a
           >

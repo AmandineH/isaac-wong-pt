@@ -3,26 +3,44 @@
     <img src="@/assets/images/about.jpg" alt="about" class="w-full min-h-600px" />
 
     <div class="relative">
-      <div class="absolute w-full top-50px h-30px bg-blue-00ACD7"/>
-      <div class="relative z-10 mx-auto max-w-1300px -mt-50px">
-        <div class="md:mx-20px">
-          <!-- TODO: CARROUSEL (AMANDINE) -->
-          <div class="text-white p-20px bg-blue-00ACD7">
-            <h1 class="text-center uppercase header-1 text-blue-191f6C mb-10px">
-              ABOUT <span class="text-white">MISSION</span>
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-              tellus id dui semper aliquam. Maecenas vitae felis et orci
-              molestie sagittis. Mauris at ligula eu est porta porta at eu est.
-              Vestibulum tincidunt nunc metus, nec scelerisque ligula vestibulum
-              a. Curabitur facilisis vehicula nibh sit amet aliquet. Donec
-              laoreet congue tellus, vel facilisis erat pretium vel. Etiam
-              interdum odio nisi, a semper eros interdum non. Fusce in faucibus
-              quam.
-            </p>
-          </div>
-        </div>
+      <div class="absolute w-full top-100px h-10px bg-blue-00ACD7"/>
+      <div class="relative z-10 mx-auto max-w-1300px md:-mt-100px">
+        <Carousel class="md:mx-20px" :slides="[1, 2]" :controls="true">
+
+          <template v-for="(slide, index) in [1, 2]" v-slot:[slide]>
+            <div :key="index" v-if="slide === 1" class="text-white p-20px px-60px bg-blue-00ACD7">
+              <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
+                ABOUT <span class="text-white">MISSION</span>
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
+                tellus id dui semper aliquam. Maecenas vitae felis et orci
+                molestie sagittis. Mauris at ligula eu est porta porta at eu est.
+                Vestibulum tincidunt nunc metus, nec scelerisque ligula vestibulum
+                a. Curabitur facilisis vehicula nibh sit amet aliquet. Donec
+                laoreet congue tellus, vel facilisis erat pretium vel. Etiam
+                interdum odio nisi, a semper eros interdum non. Fusce in faucibus
+                quam.
+              </p>
+            </div>
+
+            <div :key="index" v-if="slide === 2" class="text-white p-20px px-60px bg-blue-00ACD7">
+              <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
+                ABOUT <span class="text-white">VISION</span>
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
+                tellus id dui semper aliquam. Maecenas vitae felis et orci
+                molestie sagittis. Mauris at ligula eu est porta porta at eu est.
+                Vestibulum tincidunt nunc metus, nec scelerisque ligula vestibulum
+                a. Curabitur facilisis vehicula nibh sit amet aliquet. Donec
+                laoreet congue tellus, vel facilisis erat pretium vel. Etiam
+                interdum odio nisi, a semper eros interdum non. Fusce in faucibus
+                quam.
+              </p>
+            </div>
+          </template>
+        </Carousel>
       </div>
     </div>
 
@@ -31,7 +49,7 @@
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-blue-191f6C">
             About Us
-            <div class="flex w-300px">
+            <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/3 h-2px bg-blue-191f6C"></span>
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
@@ -91,7 +109,12 @@
 </template>
 
 <script>
+import Carousel from "@/components/Carousel.vue";
+
 export default {
   layout: "default",
+  components: {
+    Carousel,
+  },
 };
 </script>

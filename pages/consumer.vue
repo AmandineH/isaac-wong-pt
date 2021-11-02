@@ -2,13 +2,13 @@
   <div>
     <div class="mx-auto max-w-1300px">
       <div
-        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px min-h-400px"
+        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
         :style="{
           backgroundImage: 'url(\'' + require('@/assets/images/consumer.jpg') + '\')',
         }"
       >
         <div
-          class="absolute w-full transform rotate-45 bg-blue-0689BC left-100px md:-left-500px h-1000px -bottom-100px md:bottom-0"
+          class="absolute w-full transform rotate-45 bg-blue-0689BC left-50px md:-left-500px h-1000px -bottom-50px md:bottom-100px"
         ></div>
 
         <h1 class="relative z-10 supheader-1">Consumer</h1>
@@ -17,9 +17,9 @@
 
     <div class="bg-gray-E8E8F0 -mt-100px pt-100px mb-20px">
       <div class="items-center mx-auto max-w-1300px md:flex p-20px">
-        <img src="@/assets/8prop.png" alt="8prop" class="h-50px md:h-100px" />
+        <img src="@/assets/8prop/8prop.svg" alt="8prop" class="h-50px md:h-100px" />
         <p class="mt-20px md:mt-0 md:ml-20px text-gray-666666">
-          With 8PROP, we help buyers, sellers, renters, agents and investors choose the best possible homes to meet their needs by providing them with the information platform they need.  Whether it is to find/list homes, compare prices, take an in-depth 360 virtual tour of the home, learn more about the estate, get a quick automated estimate value of the home that uses data analytics across the similar transactions around the neighbourhood, evaluate the investment opportunity over time, and more.  Users can get all this on the 8PROP site, visit <a href="https://8prop.com/">https://8prop.com/</a>
+          With 8PROP, we help buyers, sellers, renters, agents and investors choose the best possible homes to meet their needs by providing them with the information platform they need.  Whether it is to find/list homes, compare prices, take an in-depth 360 virtual tour of the home, learn more about the estate, get a quick automated estimate value of the home that uses data analytics across the similar transactions around the neighbourhood, evaluate the investment opportunity over time, and more.  Users can get all this on the 8PROP site, visit <a href="https://8prop.com/" class="text-blue-0689BC">https://8prop.com/</a>
         </p>
       </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="mx-auto max-w-1300px md:flex">
       <div class="m-20px md:w-1/2">
         <h1 class="text-blue-191f6C title-1 mb-10px">8PROP 360</h1>
-        <p>If you’re looking to sell your home or you’re an agent looking to help your clients get the best price for their home, can we recommend getting 8PROP 360 to give potential buyers (or renters!) a better view of the amazing home.  It’ll also increase the number of actual qualified interested buyers, reducing the time spent on house tours, thereby giving you more time to decide the best price. Visit <a href="https://8prop.com/360">https://8prop.com/360</a></p>
+        <p>If you’re looking to sell your home or you’re an agent looking to help your clients get the best price for their home, can we recommend getting 8PROP 360 to give potential buyers (or renters!) a better view of the amazing home.  It’ll also increase the number of actual qualified interested buyers, reducing the time spent on house tours, thereby giving you more time to decide the best price. Visit <a href="https://8prop.com/360" class="text-blue-0689BC">https://8prop.com/360</a></p>
       </div>
       <div class="m-20px md:w-1/2">
         <h1 class="text-blue-191f6C title-1 mb-10px">8PROP Concierge</h1>
@@ -37,7 +37,7 @@
     <div class="mx-auto max-w-1300px md:flex">
       <div class="m-20px md:w-1/2">
         <h1 class="text-blue-191f6C title-1 mb-10px">8PROP Valuation</h1>
-        <p>Leveraging our extensive real estate data from the market, our licensed valuers can give you an accurate, full and comprehensive valuation of your property within 24hours.  This will help you justify your price and make the most of your investment. Visit <a href="https://8prop.com/xpert" >https://8prop.com/xpert</a></p>
+        <p>Leveraging our extensive real estate data from the market, our licensed valuers can give you an accurate, full and comprehensive valuation of your property within 24hours.  This will help you justify your price and make the most of your investment. Visit <a href="https://8prop.com/xpert" class="text-blue-0689BC">https://8prop.com/xpert</a></p>
       </div>
       <div class="m-20px md:w-1/2">
         <h1 class="text-blue-191f6C title-1 mb-10px">8PROP Marketplace</h1>
