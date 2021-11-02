@@ -2,11 +2,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-        display: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-        body: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Verdana", "Helvetica", "Arial", "sans-serif"],
+        display: ["Verdana", "Helvetica", "Arial", "sans-serif"],
+        body: ["Verdana", "Helvetica", "Arial", "sans-serif"],
       },
       spacing: {
+        "1/2": "50%",
+
         "2px": "2px",
         "5px": "5px",
         "10px": "10px",
@@ -21,17 +23,20 @@ module.exports = {
         "100px": "100px",
         "200px": "200px",
         "300px": "300px",
+        "400px": "400px",
+        "500px": "500px",
+        "1000px": "1000px",
         "1300px": "1300px",
 
         "80vh": "80vh"
       },
       colors: {
-        "blue-191F6B": "#191F6B",
-        "blue-03ABD7": "#03ABD7",
-        "blue-03ABD7": "#03ABD7",
-        "blue-0D86C0": "#0D86C0",
+        "blue-191f6C": "#191f6C",
+        "blue-00ACD7": "#00ACD7",
+        "blue-0689BC": "#0689BC",
+        "blue-333333": "#333333",
         "gray-666666": "#666666",
-        "gray-E8E3DD": "#E8E3DD",
+        "gray-E8E8F0": "#E8E8F0",
       },
       width: (theme) => ({
         ...theme("spacing"),

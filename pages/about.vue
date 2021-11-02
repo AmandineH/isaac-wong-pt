@@ -1,14 +1,14 @@
 <template>
   <div>
-    <img src="@/assets/about.png" alt="about" class="w-full min-h-80vh" />
+    <img src="@/assets/images/about.jpg" alt="about" class="w-full min-h-600px" />
 
     <div class="relative">
-      <div class="absolute top-50px h-30px bg-blue-03ABD7 w-full"/>
+      <div class="absolute w-full top-50px h-30px bg-blue-00ACD7"/>
       <div class="relative z-10 mx-auto max-w-1300px -mt-50px">
-        <div class="mx-20px">
+        <div class="md:mx-20px">
           <!-- TODO: CARROUSEL (AMANDINE) -->
-          <div class="p-20px bg-blue-03ABD7 text-white">
-            <h1 class="header-1 uppercase text-blue-191F6B text-center mb-10px">
+          <div class="text-white p-20px bg-blue-00ACD7">
+            <h1 class="text-center uppercase header-1 text-blue-191f6C mb-10px">
               ABOUT <span class="text-white">MISSION</span>
             </h1>
             <p>
@@ -29,11 +29,11 @@
     <div class="p-20px pt-40px">
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
-          <h1 class="title-1 text-blue-191F6B text-center">
+          <h1 class="text-center title-1 text-blue-191f6C">
             About Us
             <div class="flex w-300px">
-              <span class="w-1/3 h-2px bg-blue-191F6B"></span>
-              <span class="flex-grow h-2px bg-blue-03ABD7"></span>
+              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
+              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
           </h1>
           <div>
@@ -50,9 +50,9 @@
               diam est.
             </div>
 
-            <div class="w-2/3 mx-auto">
-              <div class="my-20px flex items-center">
-                <img src="@/assets/mail-in.png" alt="mail-in" />
+            <div class="mx-auto md:w-2/3">
+              <div class="flex items-center my-20px">
+                <img src="@/assets/utility/mail-lock.svg" alt="mail-lock" class="h-100px" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
@@ -64,7 +64,7 @@
               </div>
 
               <div class="flex items-center">
-                <img src="@/assets/mail-plus.png" alt="mail-plus" />
+                <img src="@/assets/utility/mail-add.svg" alt="mail-add" class="h-100px" />
                 <p class="ml-20px">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
