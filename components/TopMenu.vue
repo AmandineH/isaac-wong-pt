@@ -47,7 +47,7 @@
 
     <div class="block md:hidden" :class="[light ? '' : 'absolute top-0 w-full']">
       <div class="flex justify-between p-20px">
-        <img v-if="light" src="@/assets/utility/hamburger-white.svg" alt="hamburger" class="h-30px" />
+        <img v-if="light" src="@/assets/utility/hamburger.svg" alt="hamburger" class="h-30px" />
         <img src="@/assets/utility/hamburger-white.svg" alt="hamburger" class="h-30px" />
 
           <a href="/">

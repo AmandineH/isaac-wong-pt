@@ -2,13 +2,13 @@
   <div>
     <div class="mx-auto max-w-1300px">
       <div
-        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px min-h-400px"
+        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
         :style="{
           backgroundImage: 'url(\'' + require('@/assets/images/contact.jpg') + '\')',
         }"
       >
         <div
-          class="absolute w-full transform rotate-45 bg-blue-0689BC left-100px md:-left-500px h-1000px -bottom-100px md:bottom-0"
+        class="absolute w-full transform rotate-45 bg-blue-0689BC left-50px md:-left-500px h-1000px -bottom-50px md:bottom-100px"
         ></div>
 
         <h1 class="relative z-10 supheader-1">Contact us</h1>
@@ -48,25 +48,25 @@
           <img src="@/assets/utility/email.svg" alt="email" class="h-30px">
           <div class="ml-20px">
             <p class="body-4 text-gray-666666">For inquiries contact us at:</p>
-            <p class="text-blue-00ACD7 body-4">Consumer</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:consumer@realestateanalytics.sg"
               >consumer@realestateanalytics.sg</a
             >
-            <p class="text-blue-00ACD7 body-4">Concierge</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:concierge@realestateanalytics.sg"
               >concierge@realestateanalytics.sg</a
             >
-            <p class="text-blue-00ACD7 body-4">Institution and Government</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:corporate@realestateanalytics.sg"
               >corporate@realestateanalytics.sg</a
             >
-            <p class="text-blue-00ACD7 body-4">Media</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Media</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:media@realestateanalytics.sg"
