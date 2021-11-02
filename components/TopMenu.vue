@@ -1,45 +1,59 @@
-<!-- Please remove this file from your project -->
 <template>
-  <div :class="[light ? '' : 'absolute top-0 w-full']">
-    <div class="mx-auto max-w-1300px p-20px">
-      <div class="flex items-end justify-between">
-        <a href="/">
-          <img src="@/assets/rea.png" alt="rea" />
-        </a>
+  <div>
+    <div class="hidden md:block" :class="[light ? '' : 'absolute top-0 w-full']">
+      <div class="mx-auto max-w-1300px p-20px">
+        <div class="flex items-end justify-between">
+          <a href="/">
+            <img v-if="light" src="@/assets/rea/rea.svg" alt="rea" class="h-50px mb-10px" />
+            <img v-else src="@/assets/rea/rea-white.svg" alt="rea" class="h-50px mb-10px" />
+          </a>
+          <div class="flex">
+            <a
+              href="/about"
+              class="my-20px ml-40px body-3"
+              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+            >
+              About us
+            </a>
+            <a
+              href="/news"
+              class="my-20px ml-40px body-3"
+              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+            >
+              News & Developments
+            </a>
+            <a
+              href="/careers"
+              class="my-20px ml-40px body-3"
+              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+            >
+              Careers
+            </a>
+            <a
+              href="/contact"
+              class="my-20px ml-40px body-3"
+              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+            >
+              Contact us
+            </a>
+          </div>
+        </div>
         <div class="flex">
-          <a
-            href="/about"
-            class="my-20px ml-40px body-3"
-            :class="[light ? 'text-blue-191F6B' : 'text-white']"
-          >
-            About us
-          </a>
-          <a
-            href="/news"
-            class="my-20px ml-40px body-3"
-            :class="[light ? 'text-blue-191F6B' : 'text-white']"
-          >
-            News & Developments
-          </a>
-          <a
-            href="/careers"
-            class="my-20px ml-40px body-3"
-            :class="[light ? 'text-blue-191F6B' : 'text-white']"
-          >
-            Careers
-          </a>
-          <a
-            href="/contact"
-            class="my-20px ml-40px body-3"
-            :class="[light ? 'text-blue-191F6B' : 'text-white']"
-          >
-            Contact us
-          </a>
+          <div class="w-1/4 h-2px bg-blue-191f6C"></div>
+          <div class="flex-grow h-2px bg-blue-00ACD7"></div>
         </div>
       </div>
-      <div class="flex">
-        <div class="w-1/4 h-2px bg-blue-191F6B"></div>
-        <div class="flex-grow h-2px bg-blue-03ABD7"></div>
+    </div>
+
+    <div class="block md:hidden" :class="[light ? '' : 'absolute top-0 w-full']">
+      <div class="flex justify-between p-20px">
+        <img v-if="light" src="@/assets/utility/hamburger.svg" alt="hamburger" class="h-30px" />
+        <img src="@/assets/utility/hamburger-white.svg" alt="hamburger" class="h-30px" />
+
+          <a href="/">
+            <img v-if="light" src="@/assets/rea/rea.svg" alt="rea" class="h-30px" />
+            <img v-else src="@/assets/rea/rea-white.svg" alt="rea" class="h-30px" />
+          </a>
       </div>
     </div>
   </div>
@@ -51,9 +65,6 @@ export default {
     light: {
       type: Boolean,
     },
-  },
-  mounted() {
-    console.log(this.light);
   },
 };
 </script>
