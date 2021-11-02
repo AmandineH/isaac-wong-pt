@@ -1,4 +1,3 @@
-<!-- Please remove this file from your project -->
 <template>
   <footer class="text-white bg-gray-666666">
     <div class="justify-between block mx-auto max-w-1300px p-20px md:flex">

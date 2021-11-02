@@ -31,7 +31,7 @@
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-blue-191f6C">
             About Us
-            <div class="flex w-300px">
+            <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/3 h-2px bg-blue-191f6C"></span>
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>

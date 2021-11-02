@@ -17,7 +17,7 @@
 
     <div class="bg-gray-E8E8F0 -mt-100px pt-100px mb-20px">
       <div class="items-center mx-auto max-w-1300px md:flex p-20px">
-        <img src="@/assets/8prop.png" alt="8prop" class="h-50px md:h-100px" />
+        <img src="@/assets/8prop/8prop.svg" alt="8prop" class="h-50px md:h-100px" />
         <p class="mt-20px md:mt-0 md:ml-20px text-gray-666666">
           With 8PROP, we help buyers, sellers, renters, agents and investors choose the best possible homes to meet their needs by providing them with the information platform they need.  Whether it is to find/list homes, compare prices, take an in-depth 360 virtual tour of the home, learn more about the estate, get a quick automated estimate value of the home that uses data analytics across the similar transactions around the neighbourhood, evaluate the investment opportunity over time, and more.  Users can get all this on the 8PROP site, visit <a href="https://8prop.com/">https://8prop.com/</a>
         </p>
