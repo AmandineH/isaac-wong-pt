@@ -8,7 +8,7 @@
         }"
       >
         <div
-        class="absolute w-full transform rotate-45 bg-blue-0689BC left-50px md:-left-500px h-1000px -bottom-50px md:bottom-100px"
+        class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
         ></div>
 
         <h1 class="relative z-10 supheader-1">Contact us</h1>
