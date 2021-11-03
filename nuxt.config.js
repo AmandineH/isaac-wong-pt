@@ -41,6 +41,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/dayjs',
+    [
+      "@nuxtjs/apollo",
+      {
+        clientConfigs: {
+          default: {
+            httpEndpoint: `${process.env.API_URL}/graphql`,
+          },
+        },
+      },
+    ],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

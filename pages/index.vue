@@ -184,13 +184,13 @@
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-gray-666666">
-            News, stories and recent developments
+            News, Stories and Recent Developments
             <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/4 h-2px bg-blue-191f6C"></span>
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
           </h1>
-          <div class="my-20px">Stories Layout</div>
+          <ArticlesGrid :nbArticles="3" :loadMore="false" />
           <a href="/news">
             <button
               class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666"
@@ -207,7 +207,7 @@
       <div class="mx-auto max-w-1300px">
         <div class="relative overflow-hidden text-white bg-blue-00ACD7 p-40px">
           <div
-            class="absolute w-full transform rotate-45 bg-blue-0689BC left-50px md:-left-500px h-1000px bottom-500px md:bottom-100px"
+            class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
           ></div>
 
           <div class="relative z-10 items-center md:flex">
@@ -244,12 +244,15 @@
 </template>
 
 <script>
+// components
 import Carousel from "@/components/Carousel.vue";
+import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 export default {
   layout: "default",
   components: {
     Carousel,
+    ArticlesGrid
   },
 };
 </script>
