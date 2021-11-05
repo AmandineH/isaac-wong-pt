@@ -21,13 +21,13 @@
             />
           </a>
           <div class="flex">
-            <a
+            <!-- <a
               href="/about"
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
               About us
-            </a>
+            </a> -->
             <a
               href="/news"
               class="my-20px ml-40px body-3"
@@ -134,12 +134,12 @@
         </div>
 
         <div class="flex flex-col justify-center flex-grow mb-50px">
-          <a
+          <!-- <a
             href="/about"
             class="text-center my-20px body-3"
           >
             About us
-          </a>
+          </a> -->
           <a
             href="/news"
             class="text-center my-20px body-3"

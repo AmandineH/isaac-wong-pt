@@ -180,10 +180,10 @@
       </div>
     </div>
 
-    <div class="p-20px pt-40px">
+    <div class="py-20px pt-40px">
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
-          <h1 class="text-center title-1 text-gray-666666">
+          <h1 class="text-center title-1 text-gray-666666 mx-20px">
             News, Stories and Recent Developments
             <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/4 h-2px bg-blue-191f6C"></span>
@@ -193,7 +193,7 @@
           <ArticlesGrid :nbArticles="3" :loadMore="false" />
           <a href="/news">
             <button
-              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666"
+              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mx-20px"
             >
               Click here for more stories
               <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />

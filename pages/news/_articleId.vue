@@ -1,7 +1,7 @@
 <template>
   <div v-if="params.articleId">
-    <div class="mx-auto max-w-1300px p-20px">
-      <div>
+    <div class="mx-auto max-w-1300px mb-20px">
+      <div class="mx-20px">
         <p class="fine-prints-2 text-gray-666666">
           <a href="/news">News</a> > {{ article.title }}
         </p>
@@ -24,7 +24,7 @@
       </div>
 
       <div>
-        <h1 class="text-center title-1 text-gray-666666">
+        <h1 class="text-center title-1 text-gray-666666 mx-20px">
           Latest Stories
           <div class="flex mx-auto w-300px mt-10px">
             <span class="w-1/4 h-2px bg-blue-191f6C"></span>
@@ -38,14 +38,14 @@
   <div v-else>
     <div class="mx-auto max-w-1300px">
       <div
-        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover  p-20px md:m-20px h-200px md:h-400px"
+        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
         :style="{
           backgroundImage:
             'url(\'' + require('@/assets/images/news.jpg') + '\')',
         }"
       >
         <div
-          class="absolute transform rotate-45  -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
+          class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
         ></div>
 
         <h1 class="relative z-10 supheader-1">
