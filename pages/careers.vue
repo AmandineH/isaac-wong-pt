@@ -29,29 +29,29 @@
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
           </h1>
-          <div class="my-20px">
-            <div
-              v-for="(position, key) in positions" :key="key"
-              class="items-center justify-between md:flex bg-gray-E8E8F0 p-20px mb-20px">
-              <div class="w-3/4">
-                <h1 class="title-1 text-blue-191f6C mb-10px">{{ position.title }} - {{ position.occupation }}</h1>
-                <h2 class="title-4 mb-10px mt-20px text-blue-333333">Responsibilities</h2>
-                <p class="body-4 text-blue-333333 mb-10px" v-html="position.description"></p>
-                <h2 class="title-4 mb-10px mt-20px text-blue-333333">Requirements</h2>
-                <p class="body-4 text-blue-333333 mb-10px" v-html="position.requirements"></p>
-                <p class="flex items-center body-4 text-blue-333333"><img
-                src="@/assets/utility/location.svg"
-                alt="location" /> {{ position.location }}</p>
-              </div>
-              <a href="mailto:careers@realestateanalytics.sg">
-                <button
-                  class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mt-20px md:mt-0"
-                >
-                  Apply now
-                  <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
-                </button>
-              </a>
+        </div>
+        <div class="my-20px">
+          <div
+            v-for="(position, key) in positions" :key="key"
+            class="items-center justify-between md:flex bg-gray-E8E8F0 p-20px mb-20px">
+            <div class="w-3/4">
+              <h1 class="title-1 text-blue-191f6C mb-10px">{{ position.title }} - {{ position.occupation }}</h1>
+              <h2 class="title-4 mb-10px mt-20px text-blue-333333">Responsibilities</h2>
+              <p class="body-4 text-blue-333333 mb-10px" v-html="position.description"></p>
+              <h2 class="title-4 mb-10px mt-20px text-blue-333333">Requirements</h2>
+              <p class="body-4 text-blue-333333 mb-10px" v-html="position.requirements"></p>
+              <p class="flex items-center body-4 text-blue-333333"><img
+              src="@/assets/utility/location.svg"
+              alt="location" /> {{ position.location }}</p>
             </div>
+            <a href="mailto:careers@realestateanalytics.sg">
+              <button
+                class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mt-20px md:mt-0"
+              >
+                Apply now
+                <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
