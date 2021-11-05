@@ -1,7 +1,7 @@
 import tailwindConfig from "./tailwind.config.js";
 
 export default {
-  target: 'static',
+  target: 'universal',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Real Estate Analytics',
@@ -56,5 +56,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    vendor: ['axios'],
+    publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/` // <= add the path to the cached files
+  },
+  srcDir: 'src/',
+  performance: {
+    gzip: false
+  },
+  router: {
+    base: `/`
+  },
+  dev: false
 }
