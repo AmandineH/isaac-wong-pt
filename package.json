@@ -6,16 +6,35 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "nuxt build && sls deploy"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/dayjs": "^1.4.1",
+    "axios": "^0.24.0",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "express": "^4.17.1",
+    "nuxt": "^2.15.8",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "postcss": "^8.3.5"
-  }
+    "postcss": "^8.3.5",
+    "serverless-domain-manager": "^5.1.5"
+  },
+  "description": "## Build Setup",
+  "main": "nuxt.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/reapl1/rea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/reapl1/rea/issues"
+  },
+  "homepage": "https://gitlab.com/reapl1/rea#readme"
 }

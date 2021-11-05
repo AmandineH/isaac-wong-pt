@@ -44,7 +44,7 @@
               src="@/assets/utility/location.svg"
               alt="location" /> {{ position.location }}</p>
             </div>
-            <a href="mailto:careers@realestateanalytics.sg">
+            <a href="mailto:careers@rea-id.com">
               <button
                 class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mt-20px md:mt-0"
               >
