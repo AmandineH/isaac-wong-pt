@@ -8,14 +8,12 @@
     >
       <div>
         <div class="mx-auto max-w-1300px p-40px">
-          <div class="md:w-200px">
-            <h1 class="title-1 text-blue-00ACD7 mb-10px">
-              Real Estate Analytics
-            </h1>
-            <p class="text-white body-2">
-              We empower everyone to make the best real estate decisions
-            </p>
-          </div>
+          <h1 class="title-1 text-blue-00ACD7 mb-10px">
+            Real Estate Analytics
+          </h1>
+          <p class="text-white body-2 md:w-200px">
+            We empower everyone to make the best real estate decisions
+          </p>
         </div>
       </div>
     </div>
@@ -182,20 +180,20 @@
       </div>
     </div>
 
-    <div class="p-20px pt-40px">
+    <div class="py-20px pt-40px">
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
-          <h1 class="text-center title-1 text-gray-666666">
-            News, stories and recent developments
+          <h1 class="text-center title-1 text-gray-666666 mx-20px">
+            News, Stories and Recent Developments
             <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/4 h-2px bg-blue-191f6C"></span>
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
           </h1>
-          <div class="my-20px">Stories Layout</div>
+          <ArticlesGrid :nbArticles="3" :loadMore="false" />
           <a href="/news">
             <button
-              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666"
+              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mx-20px"
             >
               Click here for more stories
               <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
@@ -209,13 +207,7 @@
       <div class="mx-auto max-w-1300px">
         <div class="relative overflow-hidden text-white bg-blue-00ACD7 p-40px">
           <div
-            class="absolute w-full bg-blue-0689BC"
-            style="
-              transform: rotate(-45deg);
-              left: -500px;
-              height: 1000px;
-              bottom: 0;
-            "
+            class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
           ></div>
 
           <div class="relative z-10 items-center md:flex">
@@ -229,9 +221,9 @@
                 At Real Estate Analytics we recognize our employees are our
                 greatest asset and we support them in their professional growth
                 and personnal lives. We encourage our team to continue their
-                education, giving them time to achieve this. beyond a hybrid
+                education, giving them time to achieve this. Beyond a hybrid
                 work environnement, we provide a good medical coverage, flexible
-                working hours, nuture a supportive environment , and more. We
+                working hours, nuture a supportive environment, and more. We
                 are committed to doing what we can to help our employees
                 succeed.
               </p>
@@ -252,12 +244,15 @@
 </template>
 
 <script>
+// components
 import Carousel from "@/components/Carousel.vue";
+import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 export default {
   layout: "default",
   components: {
     Carousel,
+    ArticlesGrid
   },
 };
 </script>
