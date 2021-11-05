@@ -53,7 +53,9 @@
         </h1>
       </div>
     </div>
-    <ArticlesGrid />
+    <div class="mx-auto max-w-1300px">
+      <ArticlesGrid />
+    </div>
   </div>
 </template>
 
