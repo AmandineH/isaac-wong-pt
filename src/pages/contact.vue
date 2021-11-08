@@ -29,9 +29,9 @@
         <div class="md:w-1/2 md:px-20px mt-20px md:mt-0">
           <p class="title-3 mb-20px text-gray-666666">Real Estate Analytics</p>
           <div>
-            <p class="body-4 text-gray-666666">9 Temasex Boulevard</p>
-            <p class="body-4 text-gray-666666">Suntec Tower Two</p>
-            <p class="body-4 text-gray-666666">#23-02, Singapore 038989</p>
+            <p class="body-4 text-gray-666666">Equity Tower Lt 49</p>
+            <p class="body-4 text-gray-666666">Jl Jenderal Sudirman Kav 52-53</p>
+            <p class="body-4 text-gray-666666">Jakarta</p>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
       <div class="md:w-1/2 md:px-20px">
         <div class="flex items-center mb-20px">
           <img src="@/assets/utility/phone.svg" alt="phone" class="h-30px">
-          <p class="body-4 text-gray-666666 ml-20px">+65 6226-2723</p>
+          <p class="body-4 text-gray-666666 ml-20px">+62857 950 111 98</p>
         </div>
 
         <div class="flex items-start mb-20px">
@@ -51,26 +51,26 @@
             <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
             <a
               class="body-4 text-gray-666666"
-              href="mailto:consumer@rea-id.com"
-              >consumer@rea-id.com</a
+              href="mailto:consumer@digitalpropertinusantara.com"
+              >consumer@digitalpropertinusantara.com</a
             >
             <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
             <a
               class="body-4 text-gray-666666"
-              href="mailto:concierge@rea-id.com"
-              >concierge@rea-id.com</a
+              href="mailto:concierge@digitalpropertinusantara.com"
+              >concierge@digitalpropertinusantara.com</a
             >
             <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
             <a
               class="body-4 text-gray-666666"
-              href="mailto:corporate@rea-id.com"
-              >corporate@rea-id.com</a
+              href="mailto:corporate@digitalpropertinusantara.com"
+              >corporate@digitalpropertinusantara.com</a
             >
             <p class="text-blue-00ACD7 body-4 mt-10px">Media</p>
             <a
               class="body-4 text-gray-666666"
-              href="mailto:media@rea-id.com"
-              >media@rea-id.com</a
+              href="mailto:media@digitalpropertinusantara.com"
+              >media@digitalpropertinusantara.com</a
             >
           </div>
         </div>
