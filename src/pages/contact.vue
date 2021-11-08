@@ -31,7 +31,8 @@
           <div>
             <p class="body-4 text-gray-666666">Equity Tower Lt 49</p>
             <p class="body-4 text-gray-666666">Jl Jenderal Sudirman Kav 52-53</p>
-            <p class="body-4 text-gray-666666">Jakarta</p>
+            <p class="body-4 text-gray-666666">Senayan, Kebayoran Baro</p>
+            <p class="body-4 text-gray-666666">Jakarta Selatan</p>
           </div>
         </div>
       </div>

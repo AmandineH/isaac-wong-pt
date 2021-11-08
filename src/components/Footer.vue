@@ -10,7 +10,8 @@
           <div>
             <p class="body-4">Equity Tower Lt 49</p>
             <p class="body-4">Jl Jenderal Sudirman Kav 52-53</p>
-            <p class="body-4">Jakarta</p>
+            <p class="body-4">Senayan, Kebayoran Baro</p>
+            <p class="body-4">Jakarta Selatan</p>
           </div>
           <p class="body-4">Phone: +62857 950 111 98</p>
         </div>
@@ -66,7 +67,7 @@
           <center>
             <img src="@/assets/rea/rea-white.svg" alt="rea" class="flex h-40px md:hidden mb-20px" />
           </center>
-          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
+          <p class="body-4">©2021 PT Real Estate Analytics Indonesia,</p>
           <p class="body-4">All Right Reserved.</p>
         </div>
       </div>
