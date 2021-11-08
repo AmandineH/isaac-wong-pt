@@ -18,20 +18,20 @@
         <div>
           <p class="body-4">For inquiries contact us at:</p>
           <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
-          <a class="body-4" href="mailto:consumer@digitalpropertinusantara.com"
-            >consumer@digitalpropertinusantara.com</a
+          <a class="body-4" href="mailto:consumer@rea-id.com"
+            >consumer@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
-          <a class="body-4" href="mailto:concierge@digitalpropertinusantara.com"
-            >concierge@digitalpropertinusantara.com</a
+          <a class="body-4" href="mailto:concierge@rea-id.com"
+            >concierge@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
-          <a class="body-4" href="mailto:corporate@digitalpropertinusantara.com"
-            >corporate@digitalpropertinusantara.com</a
+          <a class="body-4" href="mailto:corporate@rea-id.com"
+            >corporate@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Media</p>
-          <a class="body-4" href="mailto:media@digitalpropertinusantara.com"
-            >media@digitalpropertinusantara.com</a
+          <a class="body-4" href="mailto:media@rea-id.com"
+            >media@rea-id.com</a
           >
         </div>
       </div>
