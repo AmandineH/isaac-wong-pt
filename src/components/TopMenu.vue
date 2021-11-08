@@ -28,13 +28,13 @@
             >
               About us
             </a> -->
-            <a
+            <!-- <a
               href="/news"
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
               News & Developments
-            </a>
+            </a> -->
             <a
               href="/careers"
               class="my-20px ml-40px body-3"
