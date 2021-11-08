@@ -1,4 +1,3 @@
-// nuxt.js
 const express = require('express')
 const app = express()
 const { Nuxt } = require('nuxt')
