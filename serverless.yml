@@ -15,16 +15,12 @@ provider:
     # stops telemetry output from nuxt
     NUXT_TELEMETRY_DISABLED: 1
 
-# custom:
-#   customDomain:
-#     domainName: 'rea-id.com'
-#     basePath: ''
-#     stage: ${self:provider.stage}
-#     createRoute53Record: true
-#     certificateName: '*.rea-id.com.'
-#   apigwBinary:
-#     types:
-#       - 'image/*'
+custom:
+  customDomain:
+    domainName: 'rea-id.com'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
 
 package:
   include:
