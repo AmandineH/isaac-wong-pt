@@ -16,7 +16,7 @@
           <div class="body-3 text-gray-666666 p-20px">{{ article.title }}</div>
         </div>
 
-        <div v-else class="bg-gray-E8E8F0">
+        <div v-else class="h-full bg-gray-E8E8F0">
           <img
             :src="article.thumbnail"
             :alt="article.title || article.thumbnail"

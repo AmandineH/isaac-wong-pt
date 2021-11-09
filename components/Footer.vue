@@ -8,29 +8,30 @@
           <img src="@/assets/rea/rea-white.svg" alt="rea" class="h-60px" />
 
           <div>
-            <p class="body-4">9 Temasex Boulevard</p>
-            <p class="body-4">Suntec Tower Two</p>
-            <p class="body-4">#23-02, Singapore 038989</p>
+            <p class="body-4">Equity Tower Lt 49</p>
+            <p class="body-4">Jl Jenderal Sudirman Kav 52-53</p>
+            <p class="body-4">Senayan, Kebayoran Baro</p>
+            <p class="body-4">Jakarta Selatan</p>
           </div>
-          <p class="body-4">Phone: +65 6226-2723</p>
+          <p class="body-4">Telepon: +62857 950 111 98</p>
         </div>
         <div>
           <p class="body-4">For inquiries contact us at:</p>
           <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
-          <a class="body-4" href="mailto:consumer@realestateanalytics.sg"
-            >consumer@realestateanalytics.sg</a
+          <a class="body-4" href="mailto:consumer@rea-id.com"
+            >consumer@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
-          <a class="body-4" href="mailto:concierge@realestateanalytics.sg"
-            >concierge@realestateanalytics.sg</a
+          <a class="body-4" href="mailto:concierge@rea-id.com"
+            >concierge@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
-          <a class="body-4" href="mailto:corporate@realestateanalytics.sg"
-            >corporate@realestateanalytics.sg</a
+          <a class="body-4" href="mailto:corporate@rea-id.com"
+            >corporate@rea-id.com</a
           >
           <p class="text-blue-00ACD7 body-4 mt-10px">Media</p>
-          <a class="body-4" href="mailto:media@realestateanalytics.sg"
-            >media@realestateanalytics.sg</a
+          <a class="body-4" href="mailto:media@rea-id.com"
+            >media@rea-id.com</a
           >
         </div>
       </div>
@@ -66,7 +67,7 @@
           <center>
             <img src="@/assets/rea/rea-white.svg" alt="rea" class="flex h-40px md:hidden mb-20px" />
           </center>
-          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
+          <p class="body-4">©2021 PT Real Estate Analytics Indonesia,</p>
           <p class="body-4">All Right Reserved.</p>
         </div>
       </div>
