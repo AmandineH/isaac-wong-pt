@@ -21,13 +21,13 @@
             />
           </a>
           <div class="flex">
-            <!-- <a
+            <a
               href="/about"
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
-              About us
-            </a> -->
+              Tentang kami
+            </a>
             <a
               href="/news"
               class="my-20px ml-40px body-3"
@@ -40,14 +40,14 @@
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
-              Careers
+              Karir
             </a>
             <a
               href="/contact"
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
-              Contact us
+              Hubungi kami
             </a>
           </div>
         </div>
@@ -134,29 +134,29 @@
         </div>
 
         <div class="flex flex-col justify-center flex-grow mb-50px">
-          <!-- <a
+          <a
             href="/about"
             class="text-center my-20px body-3"
           >
-            About us
-          </a> -->
-          <a
+            Tentang kami
+          </a>
+          <!-- <a
             href="/news"
             class="text-center my-20px body-3"
           >
             News & Developments
-          </a>
+          </a> -->
           <a
             href="/careers"
             class="text-center my-20px body-3"
           >
-            Careers
+            Karir
           </a>
           <a
             href="/contact"
             class="text-center my-20px body-3"
           >
-            Contact us
+            Hubungi kami
           </a>
         </div>
       </div>

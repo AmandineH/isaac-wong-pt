@@ -1,36 +1,37 @@
-service: serverless-side-rendering-vue-nuxt
+service: rea
+
+plugins:
+  - serverless-offline
 
 provider:
   name: aws
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
   runtime: nodejs12.x
-  stage: ${self:custom.secrets.NODE_ENV}
-  region: ap-southeast-1
-  environment: 
-    NODE_ENV: ${self:custom.secrets.NODE_ENV}
+  apiGateway:
+    binaryMediaTypes:
+      - '*/*'
+  environment:
+    # stops telemetry output from nuxt
+    NUXT_TELEMETRY_DISABLED: 1
 
-functions:
-  nuxt:
-    handler: index.nuxt
-    events:
-      - http: ANY /
-      - http: ANY /{proxy+}
-
-plugins:
-  - serverless-apigw-binary
-  - serverless-domain-manager
+custom:
+  customDomain:
+    domainName: 'rea-id.com'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
 
 package:
   include:
-    # ensures that the build output gets packaged
     - .nuxt/**
+  exclude:
+    - node_modules/**
 
-custom:
-  secrets: ${file(secrets.json)}
-  apigwBinary:
-    types:
-      - '*/*'
-  customDomain:
-    domainName: ${self:custom.secrets.DOMAIN}
-    basePath: ''
-    stage: ${self:custom.secrets.NODE_ENV}
-    createRoute53Record: true
+functions:
+  nuxt:
+    timeout: 30
+    handler: app.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
