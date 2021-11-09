@@ -1,33 +1,38 @@
-service: serverless-side-rendering-vue-nuxt
+org: amandine
+app: rea
+service: rea
+
+plugins:
+  - serverless-offline
+  # - serverless-nuxt-plugin
+  - serverless-apigw-binary
+  # - serverless-domain-manager
 
 provider:
   name: aws
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
   runtime: nodejs12.x
-  stage: ${self:provider.stage}
-  region: us-west-1
-  environment: 
-    NODE_ENV: ${self:provider.stage}
-
-functions:
-  nuxt:
-    handler: index.nuxt
-    events:
-      - http: ANY /
-      - http: ANY /{proxy+}
-
-plugins:
-  - serverless-apigw-binary
-  - serverless-domain-manager
+  environment:
+    SLS_DEBUG: '*'
 
 custom:
-  secrets: ${file(secrets.json)}
-  apigwBinary:
-    types:
-      - '*/*'
   customDomain:
-    domainName: 'serverless.rea-id.com'
-    certificateName: '*.rea-id.com'
+    domainName: 'rea-id.com'
     basePath: ''
     stage: ${self:provider.stage}
     createRoute53Record: true
-    certificateArn: 'arn:aws:acm:ap-southeast-1:051694948699:certificate/6575dffb-289b-4a0a-a22b-8fc5929ecf65'
+    certificateName: '*.rea-id.com.'
+  apigwBinary:
+    types:
+      - 'image/*'
+
+functions:
+  nuxt:
+    timeout: 30
+    # handler: handler.render
+    # handler: app.handler
+    handler: app.nuxt
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}

@@ -1,7 +1,7 @@
-import tailwindConfig from "./tailwind.config.js";
+// import tailwindConfig from "./tailwind.config.js";
 
-export default {
-  target: 'universal',
+module.exports = {
+  target: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Real Estate Analytics',
@@ -36,7 +36,7 @@ export default {
   ],
 
   tailwindcss: {
-    config: tailwindConfig,
+    // config: tailwindConfig,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

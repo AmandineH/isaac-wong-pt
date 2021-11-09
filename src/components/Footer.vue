@@ -13,7 +13,7 @@
             <p class="body-4">Senayan, Kebayoran Baro</p>
             <p class="body-4">Jakarta Selatan</p>
           </div>
-          <p class="body-4">Phone: +62857 950 111 98</p>
+          <p class="body-4">Telepon: +62857 950 111 98</p>
         </div>
         <div>
           <p class="body-4">For inquiries contact us at:</p>

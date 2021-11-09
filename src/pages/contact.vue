@@ -11,7 +11,7 @@
         class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
         ></div>
 
-        <h1 class="relative z-10 supheader-1">Contact us</h1>
+        <h1 class="relative z-10 supheader-1">Hubungi Kami</h1>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
         ></iframe>
 
         <div class="md:w-1/2 md:px-20px mt-20px md:mt-0">
-          <p class="title-3 mb-20px text-gray-666666">Real Estate Analytics</p>
+          <p class="title-3 mb-20px text-gray-666666">PT Real Estate Analytics Indonesia</p>
           <div>
             <p class="body-4 text-gray-666666">Equity Tower Lt 49</p>
             <p class="body-4 text-gray-666666">Jl Jenderal Sudirman Kav 52-53</p>
@@ -48,20 +48,20 @@
         <div class="flex items-start mb-20px">
           <img src="@/assets/utility/email.svg" alt="email" class="h-30px">
           <div class="ml-20px">
-            <p class="body-4 text-gray-666666">For inquiries contact us at:</p>
-            <p class="text-blue-00ACD7 body-4 mt-10px">Consumer</p>
+            <p class="body-4 text-gray-666666">Untuk pertanyaan dapat menghubungi kami:</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Konsumer</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:consumer@rea-id.com"
               >consumer@rea-id.com</a
             >
-            <p class="text-blue-00ACD7 body-4 mt-10px">Concierge</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Pelayanan</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:concierge@rea-id.com"
               >concierge@rea-id.com</a
             >
-            <p class="text-blue-00ACD7 body-4 mt-10px">Institution and Government</p>
+            <p class="text-blue-00ACD7 body-4 mt-10px">Instituti dan Pemerintah</p>
             <a
               class="body-4 text-gray-666666"
               href="mailto:corporate@rea-id.com"

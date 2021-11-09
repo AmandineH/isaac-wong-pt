@@ -9,10 +9,10 @@
       <div>
         <div class="mx-auto max-w-1300px p-40px">
           <h1 class="title-1 text-blue-00ACD7 mb-10px">
-            Real Estate Analytics
+            PT Real Estate Analytics Indonesia
           </h1>
           <p class="text-white body-2 md:w-200px">
-            We empower everyone to make the best real estate decisions
+            Kami membantu semua untuk mengambil keputusan terbaik di bidang real estate
           </p>
         </div>
       </div>
@@ -26,38 +26,27 @@
             <div :key="index" v-if="slide === 1">
               <div class="p-40px bg-gray-E8E8F0 text-gray-666666">
                 <p>
-                  We empower people and organizations to make the best decisions
-                  when it comes to real estate. Whether it is buying, selling,
-                  renting, brokering, developing, investing, leveraging or
-                  planning real estate, we have the tools and capabilities that
-                  deliver the best-in-class solutions, analytics and
-                  information.
+                  Kami membuat organisasi dan perorangan untuk membuat keputusan terbaik dalam segala hal  mengenai real estate. 
+                  Baik itu pembelian, penjualan, penyewaan, perantara, pengembangan, investasi, pemanfaatan, atau perencanaan real estate, 
+                  kami memiliki tools dan kemampuan yang memberikan solusi, analitik, dan informasi terbaik di kelasnya.
                 </p>
                 <p>
-                  Conceptualized over 20 years ago when technology wasn’t ready,
-                  Real Estate Analytics has today brought together some of the
-                  best analysts, web developers, engineers and scientists to
-                  achieve our goal; that anyone can benefit from real estate by
-                  making the right decisions with easy-to-use technology and the
-                  right data.
+                  Dikonseptualisasikan lebih dari 20 tahun yang lalu ketika teknologi belum siap, 
+                  Real Estate Analytics hari ini telah mengumpulkan beberapa analis, pengembang web, insinyur, dan ilmuwan terbaik untuk mencapai tujuan kami; 
+                  bahwa siapa pun dapat memperoleh manfaat dari real estat dengan membuat keputusan yang tepat dengan teknologi yang mudah digunakan dan data yang tepat.
                 </p>
                 <p>
-                  We now provide products and services for the residential real
-                  estate market, as well as offer specially tailored real estate
-                  analytics, information, and solutions, to governments,
-                  companies, and other organizations.
+                  Kami saat ini menyediakan produk dan layanan untuk pasar real estate, serta menawarkan analisa, informasi, dan solusi real estate yang dirancang khusus, kepada pemerintah, perusahaan, dan organisasi lainnya.
                 </p>
                 <p>
-                  Headquartered in Singapore, we have offices in Hong Kong,
-                  Indonesia, and Malaysia. Come speak to us about your real
-                  estate needs.
+                  Berpusat di Singapura, kami juga memiliki kantor di Hong Kong, Indonesia, dan Malaysia. Ayo konsultasikan kebutuhan properti Anda kepada kami.
                 </p>
               </div>
               <div class="md:flex">
                 <div class="text-white md:w-1/2 p-40px bg-blue-191f6C">
-                  <h1 class="title-2 mb-20px">Consumer</h1>
+                  <h1 class="title-2 mb-20px">Konsumen</h1>
                   <p class="body-3 mb-20px">
-                    We help everyone choose the best possible homes to meet their needs
+                    Dengan 8PROP, kami membantu pembeli, penjual, penyewa, agen, dan investor memilih rumah terbaik untuk memenuhi kebutuhan mereka dengan menyediakan platform informasi yang mereka butuhkan.
                   </p>
                   <a href="/consumer">
                     <button
@@ -72,15 +61,15 @@
                   </a>
                 </div>
                 <div class="text-white md:w-1/2 p-40px bg-blue-00ACD7">
-                  <h1 class="title-2 mb-20px">Corporate/Government</h1>
+                  <h1 class="title-2 mb-20px">Perusahaan / Pemerintahan</h1>
                   <p class="body-3 mb-20px">
-                    We assist companies and governments with tailored and targeted information
+                    Kami membantu perusahaan, pemerintah, LSM, dan organisasi lain dengan informasi, analisis, dan solusi yang disesuaikan dan ditargetkan untuk membantu kebutuhan real estat secara khusus.
                   </p>
                   <a href="/corporate-government">
                     <button
                       class="flex items-center border border-blue-191f6C p-5px body-4"
                     >
-                      Read more
+                      Baca Lebih
                       <img
                         src="@/assets/utility/arrow-dark-blue.svg"
                         alt="arrow"
@@ -102,9 +91,9 @@
                     class="transform rotate-90 opacity-0 group-hover:opacity-100 pb-20px pt-10px"
                   />
                 </center>
-                <h1 class="title-1 mb-10px">Real Estate Anlytics</h1>
+                <h1 class="title-1 mb-10px">PT Real Estate Analytics Indonesia</h1>
                 <p class="mb-20px body-3">
-                  We empower everyone to make the best real estate decisions
+                  Kami membantu semua untuk mengambil keputusan terbaik di bidang real estate
                 </p>
                 <a href="/about">
                   <button
@@ -128,11 +117,9 @@
                     class="transform rotate-90 opacity-0 group-hover:opacity-100 pb-20px pt-10px"
                   />
                 </center>
-                <h1 class="title-1 mb-10px">Consumer</h1>
+                <h1 class="title-1 mb-10px">Konsumen</h1>
                 <p class="mb-20px body-3">
-                  With 8PROP, we help buyers, sellers, renters, agents and
-                  investors choose the best possible homes to meet their needs
-                  by providing them with the information platform they need.
+                  Dengan 8PROP, kami membantu pembeli, penjual, penyewa, agen, dan investor memilih rumah terbaik untuk memenuhi kebutuhan mereka dengan menyediakan platform informasi yang mereka butuhkan.
                 </p>
                 <a href="/consumer">
                   <button
@@ -158,15 +145,13 @@
                 </center>
                 <h1 class="title-1 mb-10px">Corporate/Government</h1>
                 <p class="mb-20px body-3">
-                  We assist companies, governments, NGOs and other organizations
-                  with tailored and targeted information, analytics and
-                  solutions to help with specific real estate needs.
+                  Kami membantu perusahaan, pemerintah, LSM, dan organisasi lain dengan informasi, analisis, dan solusi yang disesuaikan dan ditargetkan untuk membantu kebutuhan real estat secara khusus.
                 </p>
                 <a href="/corporate-government">
                   <button
                     class="flex items-center border border-blue-00ACD7 p-5px body-3"
                   >
-                    Read More
+                    Baca Lebih
                     <img
                       src="@/assets/utility/arrow-light-blue.svg"
                       alt="arrow"
@@ -218,20 +203,15 @@
             />
             <div class="md:ml-20px">
               <p class="mb-20px">
-                At Real Estate Analytics we recognize our employees are our
-                greatest asset and we support them in their professional growth
-                and personnal lives. We encourage our team to continue their
-                education, giving them time to achieve this. Beyond a hybrid
-                work environnement, we provide a good medical coverage, flexible
-                working hours, nuture a supportive environment, and more. We
-                are committed to doing what we can to help our employees
-                succeed.
+                Di REA Indonesia, staff kami adalah asset. Kami mendukung mereka dalam perjalanan karir professional mereka dan kehidupan.
+                Kami juga selalu mendukung staff untuk melanjutkan pendidikan. Kami menawarkan jam kerja yang flexible, asuransi kesehatan, lingkungan kerja yang 
+                supportive. Kami selalu membantu staff untuk mencapai sukses. 
               </p>
               <a href="careers" class="flex justify-center md:block">
                 <button
                   class="flex items-center border border-blue-191f6C p-5px body-3"
                 >
-                  Come join us
+                 Mari Bergabung Dengan Kami
                   <img src="@/assets/utility/arrow-dark-blue.svg" alt="arrow" />
                 </button>
               </a>
