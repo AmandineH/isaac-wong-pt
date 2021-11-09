@@ -2,20 +2,12 @@
   <div>
     <div
       class="hidden md:block"
-      :class="[light ? '' : 'absolute top-0 w-full']"
     >
       <div class="mx-auto max-w-1300px p-20px">
         <div class="flex items-end justify-between">
           <a href="/">
             <img
-              v-if="light"
               src="@/assets/rea/rea.svg"
-              alt="rea"
-              class="h-50px mb-10px"
-            />
-            <img
-              v-else
-              src="@/assets/rea/rea-white.svg"
               alt="rea"
               class="h-50px mb-10px"
             />
@@ -23,29 +15,25 @@
           <div class="flex">
             <a
               href="/about"
-              class="my-20px ml-40px body-3"
-              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+              class="my-20px ml-40px body-3 text-blue-191f6C"
             >
               Tentang kami
             </a>
             <!-- <a
               href="/news"
-              class="my-20px ml-40px body-3"
-              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+              class="my-20px ml-40px body-3 text-blue-191f6C"
             >
               News & Developments
             </a> -->
             <a
               href="/careers"
-              class="my-20px ml-40px body-3"
-              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+              class="my-20px ml-40px body-3 text-blue-191f6C"
             >
               Karir
             </a>
             <a
               href="/contact"
-              class="my-20px ml-40px body-3"
-              :class="[light ? 'text-blue-191f6C' : 'text-white']"
+              class="my-20px ml-40px body-3 text-blue-191f6C"
             >
               Hubungi kami
             </a>
@@ -60,19 +48,10 @@
 
     <div
       class="block md:hidden"
-      :class="[light ? '' : 'absolute top-0 w-full']"
     >
       <div class="flex justify-between p-20px">
         <img
-          v-if="light"
           src="@/assets/utility/hamburger.svg"
-          alt="hamburger"
-          class="h-30px"
-          @click="isOpen = true"
-        />
-        <img
-          v-else
-          src="@/assets/utility/hamburger-white.svg"
           alt="hamburger"
           class="h-30px"
           @click="isOpen = true"
@@ -80,14 +59,7 @@
 
         <a href="/">
           <img
-            v-if="light"
             src="@/assets/rea/rea.svg"
-            alt="rea"
-            class="h-30px"
-          />
-          <img
-            v-else
-            src="@/assets/rea/rea-white.svg"
             alt="rea"
             class="h-30px"
           />
@@ -97,23 +69,12 @@
 
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex flex-col justify-between"
-      :class="[
-        light ? 'bg-white text-blue-191f6C' : 'bg-gray-666666 text-white',
-      ]"
+      class="fixed inset-0 z-50 flex flex-col justify-between bg-white text-blue-191f6C"
     >
       <div class="flex flex-col flex-grow p-20px">
         <div class="flex justify-between">
           <img
-            v-if="light"
             src="@/assets/utility/hamburger.svg"
-            alt="hamburger"
-            class="h-30px"
-            @click="isOpen = false"
-          />
-          <img
-            v-else
-            src="@/assets/utility/hamburger-white.svg"
             alt="hamburger"
             class="h-30px"
             @click="isOpen = false"
@@ -121,14 +82,7 @@
 
           <a href="/">
             <img
-              v-if="light"
               src="@/assets/rea/rea.svg"
-              alt="rea"
-              class="h-30px"
-            />
-            <img
-              v-else
-              src="@/assets/rea/rea-white.svg"
               alt="rea"
               class="h-30px"
             />
@@ -196,11 +150,6 @@
 
 <script>
 export default {
-  props: {
-    light: {
-      type: Boolean,
-    },
-  },
   data() {
     return {
       isOpen: false,
