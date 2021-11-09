@@ -31,8 +31,6 @@ build:
 deploy:
   image: "python:latest"
   stage: deploy
-  variables:
-    DEPLOY_VARIABLE: "default-deploy"
   rules:
     - if: $CI_COMMIT_REF_NAME =~ /id-prod-.+/
       variables:
@@ -46,7 +44,6 @@ deploy:
     - if: $CI_COMMIT_REF_NAME =~ /sg-dev-.+/
       variables:
         BUCKET_PATH: "rea-sg-development"
-
   before_script:
     - pip install awscli
   script:
@@ -54,5 +51,3 @@ deploy:
     - aws s3 cp public s3://${S3_BUCKET}/${BUCKET_PATH} --recursive
   dependencies:
     - build
-  only:
-    - /^(sg-prod|sg-dev|id-prod|id-dev)-.*$/
