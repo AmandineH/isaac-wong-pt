@@ -18,10 +18,10 @@
       </div>
     </div>
 
-    <div class="relative">
+    <div class="relative px-20px">
       <div class="absolute w-full top-100px h-10px bg-blue-00ACD7" />
       <div class="relative z-10 mx-auto max-w-1300px -mt-100px">
-        <Carousel class="md:mx-20px" :slides="[1, 2]" :dots="true">
+        <Carousel :slides="[1, 2]" :dots="true">
           <template v-for="(slide, index) in [1, 2]" v-slot:[slide]>
             <div :key="index" v-if="slide === 1">
               <div class="p-40px bg-gray-E8E8F0 text-gray-666666">
