@@ -49,7 +49,7 @@ deploy:
   before_script:
     - pip install awscli
   script:
-    - aws s3 rm s3://${S3_BUCKET}/rea-production/  --recursive
+    - aws s3 rm s3://${S3_BUCKET}/${BUCKET_PATH}/  --recursive
     - echo "Uploading to s3://${S3_BUCKET}/${BUCKET_PATH}"
     - aws s3 cp public s3://${S3_BUCKET}/${BUCKET_PATH} --recursive
   dependencies:
