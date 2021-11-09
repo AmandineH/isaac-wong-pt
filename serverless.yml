@@ -1,38 +1,41 @@
-org: amandine
-app: rea
 service: rea
 
 plugins:
   - serverless-offline
-  # - serverless-nuxt-plugin
-  - serverless-apigw-binary
-  # - serverless-domain-manager
 
 provider:
   name: aws
   region: us-east-1
   stage: ${opt:stage, 'dev'}
   runtime: nodejs12.x
+  apiGateway:
+    binaryMediaTypes:
+      - '*/*'
   environment:
-    SLS_DEBUG: '*'
+    # stops telemetry output from nuxt
+    NUXT_TELEMETRY_DISABLED: 1
 
-custom:
-  customDomain:
-    domainName: 'rea-id.com'
-    basePath: ''
-    stage: ${self:provider.stage}
-    createRoute53Record: true
-    certificateName: '*.rea-id.com.'
-  apigwBinary:
-    types:
-      - 'image/*'
+# custom:
+#   customDomain:
+#     domainName: 'rea-id.com'
+#     basePath: ''
+#     stage: ${self:provider.stage}
+#     createRoute53Record: true
+#     certificateName: '*.rea-id.com.'
+#   apigwBinary:
+#     types:
+#       - 'image/*'
+
+package:
+  include:
+    - .nuxt/**
+  exclude:
+    - node_modules/**
 
 functions:
   nuxt:
     timeout: 30
-    # handler: handler.render
-    # handler: app.handler
-    handler: app.nuxt
+    handler: app.handler
     events:
       - http: ANY /
       - http: ANY /{proxy+}

@@ -28,13 +28,13 @@
             >
               Tentang kami
             </a>
-            <!-- <a
+            <a
               href="/news"
               class="my-20px ml-40px body-3"
               :class="[light ? 'text-blue-191f6C' : 'text-white']"
             >
               News & Developments
-            </a> -->
+            </a>
             <a
               href="/careers"
               class="my-20px ml-40px body-3"
@@ -140,12 +140,12 @@
           >
             Tentang kami
           </a>
-          <!-- <a
+          <a
             href="/news"
             class="text-center my-20px body-3"
           >
             News & Developments
-          </a> -->
+          </a>
           <a
             href="/careers"
             class="text-center my-20px body-3"

@@ -2,6 +2,7 @@
 
 module.exports = {
   target: 'server',
+  srcDir: 'src/',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Real Estate Analytics',
@@ -57,12 +58,4 @@ module.exports = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  srcDir: 'src/',
-  performance: {
-    gzip: false
-  },
-  router: {
-    base: `/`
-  },
-  dev: false
 }
