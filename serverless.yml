@@ -1,0 +1,37 @@
+service: rea
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs12.x
+  apiGateway:
+    binaryMediaTypes:
+      - '*/*'
+  environment:
+    # stops telemetry output from nuxt
+    NUXT_TELEMETRY_DISABLED: 1
+
+custom:
+  customDomain:
+    domainName: 'rea-id.com'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+
+package:
+  include:
+    - .nuxt/**
+  exclude:
+    - node_modules/**
+
+functions:
+  nuxt:
+    timeout: 30
+    handler: app.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}

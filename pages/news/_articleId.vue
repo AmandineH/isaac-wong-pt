@@ -1,5 +1,5 @@
 <template>
-  <div v-if="params.articleId">
+  <div v-if="articleId">
     <div class="mx-auto max-w-1300px mb-20px">
       <div class="mx-20px">
         <p class="fine-prints-2 text-gray-666666">
@@ -53,7 +53,9 @@
         </h1>
       </div>
     </div>
-    <ArticlesGrid />
+    <div class="mx-auto max-w-1300px">
+      <ArticlesGrid />
+    </div>
   </div>
 </template>
 
@@ -107,7 +109,7 @@ export default {
     }
 
     return {
-      params,
+      articleId: params.articleId,
       article,
     };
   },
