@@ -140,12 +140,12 @@
           >
             Tentang kami
           </a>
-          <a
+          <!-- <a
             href="/news"
             class="text-center my-20px body-3"
           >
             News & Developments
-          </a>
+          </a> -->
           <a
             href="/careers"
             class="text-center my-20px body-3"

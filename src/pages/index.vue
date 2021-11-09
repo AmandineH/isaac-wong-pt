@@ -165,7 +165,7 @@
       </div>
     </div>
 
-    <div class="py-20px pt-40px">
+    <!-- <div class="py-20px pt-40px">
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-gray-666666 mx-20px">
@@ -186,7 +186,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="p-20px pt-40px">
       <div class="mx-auto max-w-1300px">
