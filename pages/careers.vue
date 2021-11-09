@@ -2,27 +2,29 @@
   <div>
     <div class="mx-auto max-w-1300px">
       <div
-        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
+        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover  p-20px md:m-20px h-200px md:h-400px"
         :style="{
           backgroundImage:
             'url(\'' + require('@/assets/images/career.jpg') + '\')',
         }"
       >
         <div
-          class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
+          class="absolute transform rotate-45  -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
         ></div>
 
-        <h1 class="relative z-10 supheader-1">
-          Careers
-        </h1>
+        <h1 class="relative z-10 supheader-1">Careers</h1>
       </div>
     </div>
 
     <div class="bg-gray-E8E8F0 -mt-100px pt-100px mb-20px">
       <div class="mx-auto max-w-1300px p-20px">
-        <p class="body-4 text-gray-666666">Di REA Indonesia, staff kami adalah asset. Kami mendukung mereka dalam perjalanan karir professional mereka dan kehidupan.
-                Kami juga selalu mendukung staff untuk melanjutkan pendidikan. Kami menawarkan jam kerja yang flexible, asuransi kesehatan, lingkungan kerja yang 
-                supportive. Kami selalu membantu staff untuk mencapai sukses. </p> 
+        <p class="body-4 text-gray-666666">
+          Di REA Indonesia, staff kami adalah asset. Kami mendukung mereka dalam
+          perjalanan karir professional mereka dan kehidupan. Kami juga selalu
+          mendukung staff untuk melanjutkan pendidikan. Kami menawarkan jam
+          kerja yang flexible, asuransi kesehatan, lingkungan kerja yang
+          supportive. Kami selalu membantu staff untuk mencapai sukses.
+        </p>
       </div>
     </div>
 
@@ -38,21 +40,36 @@
       </div>
       <div class="my-20px">
         <div
-          v-for="(position, key) in positions" :key="key"
-          class="items-center justify-between md:flex bg-gray-E8E8F0 p-20px mb-20px">
+          v-for="(position, key) in positions"
+          :key="key"
+          class="items-center justify-between  md:flex bg-gray-E8E8F0 p-20px mb-20px"
+        >
           <div class="w-3/4">
-            <h1 class="title-1 text-blue-191f6C mb-10px">{{ position.title }} - {{ position.occupation }}</h1>
-            <h2 class="title-4 mb-10px mt-20px text-blue-333333">Tanggung Jawab</h2>
-            <p class="body-4 text-blue-333333 mb-10px" v-html="position.description"></p>
-            <h2 class="title-4 mb-10px mt-20px text-blue-333333">Keterampilan Yang Dibutuhkan</h2>
-            <p class="body-4 text-blue-333333 mb-10px" v-html="position.requirements"></p>
-            <p class="flex items-center body-4 text-blue-333333"><img
-            src="@/assets/utility/location.svg"
-            alt="location" /> {{ position.location }}</p>
+            <h1 class="title-1 text-blue-191f6C mb-10px">
+              {{ position.title }} - {{ position.occupation }}
+            </h1>
+            <h2 class="title-4 mb-10px mt-20px text-blue-333333">
+              Tanggung Jawab
+            </h2>
+            <p
+              class="body-4 text-blue-333333 mb-10px"
+              v-html="position.description"
+            ></p>
+            <h2 class="title-4 mb-10px mt-20px text-blue-333333">
+              Keterampilan Yang Dibutuhkan
+            </h2>
+            <p
+              class="body-4 text-blue-333333 mb-10px"
+              v-html="position.requirements"
+            ></p>
+            <p class="flex items-center body-4 text-blue-333333">
+              <img src="@/assets/utility/location.svg" alt="location" />
+              {{ position.location }}
+            </p>
           </div>
           <a href="mailto:careers@rea-id.com">
             <button
-              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mt-20px md:mt-0"
+              class="flex items-center border  border-blue-00ACD7 p-5px body-4 text-gray-666666 mt-20px md:mt-0"
             >
               Apply now
               <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
@@ -118,9 +135,9 @@ export default {
             <br />• A degree in computing, information technology, data analytics or related fields
           `,
           location: "Singapore",
-        }
-      ]
-    }
-  }
+        },
+      ],
+    };
+  },
 };
 </script>

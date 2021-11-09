@@ -5,7 +5,15 @@
     <div class="relative">
       <div class="absolute w-full top-100px h-10px bg-blue-00ACD7"/>
       <div class="relative z-10 mx-auto max-w-1300px md:-mt-100px">
-        <Carousel class="md:mx-20px" :slides="[1, 2]" :controls="true">
+        <div class="text-white p-20px px-60px bg-blue-00ACD7 md:min-h-200px md:mx-20px">
+          <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
+            TENTANG KAMI <span class="text-white">MISI</span>
+          </h1>
+          <p>
+            Kami memberikan transparansi untuk memungkinkan pengambilan keputusan yang lebih efisien dan cerdas di pasar real estate global, melalui informasi, analitik, dan solusi khusus yang memberdayakan klien kami.
+          </p>
+        </div>
+        <!-- <Carousel class="md:mx-20px" :slides="[1, 2]" :controls="true">
 
           <template v-for="(slide, index) in [1, 2]" v-slot:[slide]>
             <div :key="index" v-if="slide === 1" class="text-white p-20px px-60px bg-blue-00ACD7">
@@ -26,7 +34,7 @@
               </p>
             </div>
           </template>
-        </Carousel>
+        </Carousel> -->
       </div>
     </div>
 
@@ -89,12 +97,12 @@
 </template>
 
 <script>
-import Carousel from "@/components/Carousel.vue";
+// import Carousel from "@/components/Carousel.vue";
 
 export default {
   layout: "default",
   components: {
-    Carousel,
+    // Carousel,
   },
 };
 </script>
