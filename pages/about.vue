@@ -1,16 +1,25 @@
 <template>
   <div>
-    <img src="@/assets/images/about.jpg" alt="about" class="w-full min-h-600px" />
+    <img
+      src="@/assets/images/about.jpg"
+      alt="about"
+      class="w-full min-h-600px"
+    />
 
     <div class="relative">
-      <div class="absolute w-full top-100px h-10px bg-blue-00ACD7"/>
-      <div class="relative z-10 mx-auto max-w-1300px md:-mt-100px">
-        <div class="text-white p-20px px-60px bg-blue-00ACD7 md:min-h-200px md:mx-20px">
+      <div class="absolute w-full top-50px h-10px bg-blue-00ACD7" />
+      <div class="relative z-10 mx-auto max-w-1300px md:-mt-50px">
+        <div
+          class="text-white p-20px px-60px bg-blue-00ACD7 md:min-h-100px md:mx-20px"
+        >
           <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
-            TENTANG KAMI <span class="text-white">MISI</span>
+            OUR <span class="text-white">MISSION</span>
           </h1>
           <p>
-            Kami memberikan transparansi untuk memungkinkan pengambilan keputusan yang lebih efisien dan cerdas di pasar real estate global, melalui informasi, analitik, dan solusi khusus yang memberdayakan klien kami.
+            8PROP is dedicated to empowering everyone with the best-in-class
+            property analytics to succeed in life. With a transparent
+            data-driven approach, 8PROP creates ease of access to properties in
+            the global markets – anywhere, any time.
           </p>
         </div>
         <!-- <Carousel class="md:mx-20px" :slides="[1, 2]" :controls="true">
@@ -42,53 +51,99 @@
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-blue-191f6C">
-            Tentang Kami
+            Our Connected Journey
             <div class="flex mx-auto w-300px mt-10px">
               <span class="w-1/3 h-2px bg-blue-191f6C"></span>
               <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
           </h1>
-          <div>
-            <div class="my-20px">
-              Kami membuat organisasi dan perorangan untuk membuat keputusan terbaik dalam segala hal mengenai real estate. 
-              Baik itu pembelian, penjualan, penyewaan, perantara, pengembangan, investasi, pemanfaatan, atau perencanaan real estate, 
-              kami memiliki tools dan kemampuan yang memberikan solusi, analitik, dan informasi terbaik di kelasnya.
+          <div class="w-full my-20px">
+            <p>
+              Everyone needs a place to live, play and work. In fact, it is
+              essential and our right to life. We need a place to flourish -
+              emotionally, mentally and physically. No matter who we are or
+              where we come from, every one of us deserves the opportunity for a
+              better future.
+            </p>
 
-              Dikonseptualisasikan lebih dari 20 tahun yang lalu ketika teknologi belum siap, 
-              Real Estate Analytics hari ini telah mengumpulkan beberapa analis, pengembang web, insinyur, dan ilmuwan terbaik untuk mencapai tujuan kami; 
-              bahwa siapa pun dapat memperoleh manfaat dari real estat dengan membuat keputusan yang tepat dengan teknologi yang mudah digunakan dan data yang tepat.
+            <p>
+              As such, we should be empowered to make the best with what we have
+              in our life's journey - locally and globally. Whether you are
+              buying, selling, renting or investing properties (residential,
+              office, commercial, shared places) - they are roofs over our
+              heads, a safe place for us to thrive in.
+            </p>
+          </div>
 
-              Kami saat ini menyediakan produk dan layanan untuk pasar real estate, serta menawarkan analisa, informasi, dan solusi real estate yang dirancang khusus, 
-              kepada pemerintah, perusahaan, dan organisasi lainnya.
+          <h1 class="text-center title-1 text-blue-191f6C">
+            Our Technology and Data Research Principles
+            <div class="flex mx-auto w-300px mt-10px">
+              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
+              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
+          </h1>
+          <div class="w-full my-20px">
+            <p>
+              Equipped with cutting-edge technology and a data-driven
+              statistical approach, we believe that everyone can be empowered to
+              make smart, holistic property decisions in their life. Harness the
+              power of proptech at your fingertips without the constraint of
+              physical boundaries.
+            </p>
+            <p>
+              We provide unbiased data and research analysis about the real
+              estate market in a transparent way.
+            </p>
 
+            <p>
+              We benchmarks findings against various datasets whenever possible
+              to ensure accuracy and context relevancy.
+            </p>
 
-           <!-- <div class="mx-auto md:w-2/3">
-              <div class="flex items-center my-20px">
-                <img src="@/assets/utility/mail-lock.svg" alt="mail-lock" class="h-100px" />
-                <p class="ml-20px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
-                  et orci molestie sagittis. Mauris at ligula eu est porta porta
-                </p>
-              </div>
+            <p>
+              We respect the integrity of data and use it honestly. We do not
+              manipulate data to create a desired result.
+            </p>
+          </div>
 
-              <div class="flex items-center">
-                <img src="@/assets/utility/mail-add.svg" alt="mail-add" class="h-100px" />
-                <p class="ml-20px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean ac tellus id dui semper aliquam. Maecenas vitae felis
-                  et orci molestie sagittis. Mauris at ligula eu est porta porta
-                  at eu est. Vestibulum tincidunt nunc metus, nec scelerisque
-                  ligula vestibulum a. Curabitur facilisis vehicula nibh sit
-                  amet aliquet
-                </p>
-              </div>
-            </div>-->
-
-            <div class="my-20px">
-              Berpusat di Singapura, kami juga memiliki kantor di Hong Kong, Indonesia, dan Malaysia. Ayo konsultasikan kebutuhan properti Anda kepada kami.
+          <h1 class="text-center title-1 text-blue-191f6C">
+            Why 8PROP?
+            <div class="flex mx-auto w-300px mt-10px">
+              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
+              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
             </div>
+          </h1>
+          <div class="w-full my-20px">
+            <p>
+              Objective and Unbiased Approach: We are objective and unbiased.
+              Our analysis and research methods are audited regularly, and we
+              are independent of any real estate, media or banking interests.
+            </p>
+            <p>
+              Timely Insights: We transform mountains of data into valuable
+              insights and regularly update our database to ensure that they are
+              relevant, subject to market We implement processes to uphold the
+              highest standards of data quality, deployed on platforms that
+              enable us to store, sort and analyse data quickly and deliver it
+              in simple and easy to use formats.
+            </p>
+            <p>
+              Globally Local We understand global trends and local insights so
+              that you can make smart, holistic choices. Whichever part of Asia
+              you are in, we can help minimise the guesswork and reduce
+              ambiguity in your property decisions.
+            </p>
+            <p>
+              Bold and Creative: We take courage in exploring new opportunities,
+              go over and beyond our comfort zone to creatively pioneer new
+              territories so that we can continuously build a transparent and
+              seamless real estate ecosystem.
+            </p>
+            <p>
+              Continuous Improvement: We are building a culture of continuous
+              improvement - processes, tools, products, services, etc to ensure
+              that we deliver transformational results.
+            </p>
           </div>
         </div>
       </div>

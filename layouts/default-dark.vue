@@ -1,16 +1,16 @@
 <template>
   <div>
-    <TopMenuLight />
+    <TopMenu :dark="true" />
     <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-import TopMenuLight from "@/components/TopMenuLight.vue";
+import TopMenu from "@/components/TopMenu.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  components: { TopMenuLight, Footer },
+  components: { TopMenu, Footer },
 };
 </script>
