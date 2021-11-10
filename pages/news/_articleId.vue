@@ -67,7 +67,7 @@ import ArticlesGrid from "@/components/ArticlesGrid.vue";
 import { GET_ARTICLES } from "@/graphql/articles.js";
 
 export default {
-  layout: "default-light",
+  layout: "default",
   components: {
     ArticlesGrid,
   },

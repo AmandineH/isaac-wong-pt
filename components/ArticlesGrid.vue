@@ -53,7 +53,6 @@ import Spinner from "@/components/Spinner.vue";
 import { GET_ARTICLES } from "@/graphql/articles.js";
 
 export default {
-  layout: "default-light",
   components: {
     Spinner,
   },
