@@ -23,7 +23,7 @@
         <div class="md:w-1/2 md:px-20px mt-20px md:mt-0">
           <p class="title-3 mb-20px text-gray-666666">Real Estate Analytics</p>
           <div>
-            <p class="body-4 text-gray-666666">9 Temasex Boulevard</p>
+            <p class="body-4 text-gray-666666">9 Temasek Boulevard</p>
             <p class="body-4 text-gray-666666">Suntec Tower Two</p>
             <p class="body-4 text-gray-666666">#23-02, Singapore 038989</p>
           </div>
