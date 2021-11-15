@@ -8,7 +8,7 @@
           <img src="@/assets/rea/rea-white.svg" alt="rea" class="h-60px" />
 
           <div>
-            <p class="body-4">9 Temasex Boulevard</p>
+            <p class="body-4">9 Temasek Boulevard</p>
             <p class="body-4">Suntec Tower Two</p>
             <p class="body-4">#23-02, Singapore 038989</p>
           </div>
