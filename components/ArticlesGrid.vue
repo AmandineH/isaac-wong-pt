@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div v-if="articles.length > 0" class="flex flex-wrap ml-20px mt-20px">
+    <Spinner
+      v-if="loading"
+      class="flex items-center justify-center h-150px m-20px"
+    />
+    <div v-else-if="articles.length > 0" class="flex flex-wrap ml-20px mt-20px">
       <a
         :href="'/news/' + article.articleId"
         v-for="(article, key) in articles"
@@ -25,12 +29,6 @@
           <div class="body-3 text-gray-666666 p-20px">{{ article.title }}</div>
         </div>
       </a>
-    </div>
-    <div v-else class="m-20px">
-      <Spinner
-        v-if="loading"
-        class="flex items-center justify-center h-150px"
-      />
     </div>
 
     <center v-if="loadMore && hasNextPage">

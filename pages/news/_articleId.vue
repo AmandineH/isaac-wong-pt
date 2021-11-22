@@ -1,5 +1,11 @@
 <template>
-  <div v-if="article">
+  <div v-if="loading" class="m-20px">
+    <Spinner
+      v-if="loading"
+      class="flex items-center justify-center h-150px"
+    />
+  </div>
+  <div v-else-if="article">
     <div class="mx-auto max-w-1300px mb-20px">
       <div class="mx-20px">
         <p class="fine-prints-2 text-gray-666666">
@@ -61,6 +67,7 @@
 
 <script>
 // components
+import Spinner from "@/components/Spinner.vue";
 import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 // graphql
@@ -69,22 +76,30 @@ import { GET_ARTICLES } from "@/graphql/articles.js";
 export default {
   layout: "default",
   components: {
+    Spinner,
     ArticlesGrid,
   },
   data() {
     return {
+      loading: true,
       article: null
     };
   },
   async mounted() {
-    let res = await this.getArticles(
-      {
-        articleId: { equalTo: this.$route.params.articleId },
-      }
-    );
+    if (this.$route.params.articleId) {
+      this.loading = true
+      let res = await this.getArticles(
+        {
+          articleId: { equalTo: this.$route.params.articleId },
+        }
+      );
 
-    if (res && res.articles[0]) {
-      this.article = res.articles[0];
+      if (res && res.articles[0]) {
+        this.article = res.articles[0];
+      }
+      this.loading = false
+    } else {
+      this.loading = false
     }
   },
   methods: {
