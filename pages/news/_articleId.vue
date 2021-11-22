@@ -1,5 +1,5 @@
 <template>
-  <div v-if="articleId">
+  <div v-if="article">
     <div class="mx-auto max-w-1300px mb-20px">
       <div class="mx-20px">
         <p class="fine-prints-2 text-gray-666666">
@@ -71,47 +71,21 @@ export default {
   components: {
     ArticlesGrid,
   },
-  async asyncData({ app, params }) {
-    const client = app.apolloProvider.defaultClient;
-    const getArticles = async (filter, first = 5, offset = 0) => {
-      try {
-        const res = await client.query({
-          query: GET_ARTICLES,
-          variables: {
-            filter: {
-              published: { equalTo: true },
-              ...filter,
-            },
-            first: first,
-            offset: offset,
-          },
-        });
-        if (res) {
-          return {
-            articles: res.data.articles.nodes,
-            hasNextPage: res.data.articles.pageInfo.hasNextPage,
-          };
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    };
-
-    let article;
-    if (params.articleId) {
-      const res = await getArticles({
-        articleId: { equalTo: params.articleId },
-      });
-
-      if (res && res.articles[0]) {
-        article = res.articles[0];
-      }
-    }
-
+  data() {
     return {
-      articleId: params.articleId,
-      article,
+      article: null
     };
+  },
+  async mounted() {
+    let res = await this.getArticles(
+      {
+        articleId: { equalTo: this.$route.params.articleId },
+      }
+    );
+
+    if (res && res.articles[0]) {
+      this.article = res.articles[0];
+    }
   },
   methods: {
     getDate(date) {
