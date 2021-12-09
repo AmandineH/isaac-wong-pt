@@ -8,144 +8,62 @@
 
     <div class="relative">
       <div class="absolute w-full top-50px h-10px bg-blue-00ACD7" />
-      <div class="relative z-10 mx-auto max-w-1300px md:-mt-50px">
-        <div
-          class="text-white p-20px px-60px bg-blue-00ACD7 md:min-h-100px md:mx-20px"
-        >
-          <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
-            OUR <span class="text-white">MISSION</span>
-          </h1>
-          <p>
-            8PROP is dedicated to empowering everyone with the best-in-class
-            property analytics to succeed in life. With a transparent
-            data-driven approach, 8PROP creates ease of access to properties in
-            the global markets – anywhere, any time.
+      <div
+        class="relative z-10 mx-auto max-w-1300px md:-mt-50px md:flex p-20px"
+      >
+        <div class="flex-1 text-white bg-blue-191f6C px-20px py-20px">
+          <h1 class="title-1 mb-10px">OUR MISSION</h1>
+          <p class="body-3">
+            Provide easy access to organized real estate data with empowering
+            tailored solutions.
           </p>
         </div>
-        <!-- <Carousel class="md:mx-20px" :slides="[1, 2]" :controls="true">
-
-          <template v-for="(slide, index) in [1, 2]" v-slot:[slide]>
-            <div :key="index" v-if="slide === 1" class="text-white p-20px px-60px bg-blue-00ACD7">
-              <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
-                TENTANG KAMI <span class="text-white">MISI</span>
-              </h1>
-              <p>
-                Kami memberikan transparansi untuk memungkinkan pengambilan keputusan yang lebih efisien dan cerdas di pasar real estate global, melalui informasi, analitik, dan solusi khusus yang memberdayakan klien kami.
-              </p>
-            </div>
-
-            <div :key="index" v-if="slide === 2" class="text-white p-20px px-60px bg-blue-00ACD7">
-              <h1 class="text-center uppercase title-1 text-blue-191f6C mb-10px">
-                TENTANG KAMI <span class="text-white">VISI</span>
-              </h1>
-              <p>
-                Menjadi global leader agar setiap orang dan organisasi dapat membuat keputusan terbaik di pasar real estate dunia
-              </p>
-            </div>
-          </template>
-        </Carousel> -->
+        <div class="flex-1 text-white bg-blue-00ACD7 px-20px py-20px">
+          <h1 class="title-1 mb-10px">OUR VISION</h1>
+          <p class="body-3">
+            Be the global leading provider of critical information to solve
+            known and unknown problems related to real estate.
+          </p>
+        </div>
+        <div class="flex-1 text-white bg-gray-666666 px-20px py-20px">
+          <h1 class="title-1 mb-10px">OUR PRINCIPLES</h1>
+          <p class="body-3">Integrity, Tenacity, Creativity</p>
+        </div>
       </div>
     </div>
 
     <div class="p-20px pt-40px">
       <div class="mx-auto max-w-1300px">
-        <div class="flex flex-col items-center">
-          <h1 class="text-center title-1 text-blue-191f6C">
-            Our Connected Journey
-            <div class="flex mx-auto w-300px mt-10px">
-              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
-              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
-            </div>
-          </h1>
-          <div class="w-full my-20px">
-            <p>
-              Everyone needs a place to live, play and work. In fact, it is
-              essential and our right to life. We need a place to flourish -
-              emotionally, mentally and physically. No matter who we are or
-              where we come from, every one of us deserves the opportunity for a
-              better future.
-            </p>
-
-            <p>
-              As such, we should be empowered to make the best with what we have
-              in our life's journey - locally and globally. Whether you are
-              buying, selling, renting or investing properties (residential,
-              office, commercial, shared places) - they are roofs over our
-              heads, a safe place for us to thrive in.
-            </p>
-          </div>
-
-          <h1 class="text-center title-1 text-blue-191f6C">
-            Our Technology and Data Research Principles
-            <div class="flex mx-auto w-300px mt-10px">
-              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
-              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
-            </div>
-          </h1>
-          <div class="w-full my-20px">
-            <p>
-              Equipped with cutting-edge technology and a data-driven
-              statistical approach, we believe that everyone can be empowered to
-              make smart, holistic property decisions in their life. Harness the
-              power of proptech at your fingertips without the constraint of
-              physical boundaries.
-            </p>
-            <p>
-              We provide unbiased data and research analysis about the real
-              estate market in a transparent way.
-            </p>
-
-            <p>
-              We benchmarks findings against various datasets whenever possible
-              to ensure accuracy and context relevancy.
-            </p>
-
-            <p>
-              We respect the integrity of data and use it honestly. We do not
-              manipulate data to create a desired result.
-            </p>
-          </div>
-
-          <h1 class="text-center title-1 text-blue-191f6C">
-            Why 8PROP?
-            <div class="flex mx-auto w-300px mt-10px">
-              <span class="w-1/3 h-2px bg-blue-191f6C"></span>
-              <span class="flex-grow h-2px bg-blue-00ACD7"></span>
-            </div>
-          </h1>
-          <div class="w-full my-20px">
-            <p>
-              Objective and Unbiased Approach: We are objective and unbiased.
-              Our analysis and research methods are audited regularly, and we
-              are independent of any real estate, media or banking interests.
-            </p>
-            <p>
-              Timely Insights: We transform mountains of data into valuable
-              insights and regularly update our database to ensure that they are
-              relevant, subject to market We implement processes to uphold the
-              highest standards of data quality, deployed on platforms that
-              enable us to store, sort and analyse data quickly and deliver it
-              in simple and easy to use formats.
-            </p>
-            <p>
-              Globally Local We understand global trends and local insights so
-              that you can make smart, holistic choices. Whichever part of Asia
-              you are in, we can help minimise the guesswork and reduce
-              ambiguity in your property decisions.
-            </p>
-            <p>
-              Bold and Creative: We take courage in exploring new opportunities,
-              go over and beyond our comfort zone to creatively pioneer new
-              territories so that we can continuously build a transparent and
-              seamless real estate ecosystem.
-            </p>
-            <p>
-              Continuous Improvement: We are building a culture of continuous
-              improvement - processes, tools, products, services, etc to ensure
-              that we deliver transformational results.
-            </p>
-          </div>
-        </div>
+        <ul class="list-disc list-outside ml-20px">
+          <li>
+            REA empowers people and organizations to make the best decisions
+            involving real estate.
+          </li>
+          <li>
+            REA endeavors to make its data, tools and products available on a
+            global scale, building out from Asia Pacific.
+          </li>
+          <li>
+            HQ in Singapore, Present in Malaysia, Hong Kong and Indonesia.
+          </li>
+          <li>
+            Founded in 2019 by Dr. JM Paul, P Yan, J Yao. Chairman Pr. R
+            Edelstein.
+          </li>
+          <li>
+            A dedicated team of dozens of Data scientists, IT specialists, UX
+            experts, RE Developer, valuers, agents, statisticians, architects,
+            geographers, MBAs, urban economists.
+          </li>
+          <li>
+            REA develops technologies enabling transparency, efficiency and
+            innovative solutions. It has developed an Asian metadatabase that is
+            comprehensive, organized and accessible. A set of unique proprietary
+            smart tools allow for transparent, granular and fully scalable use.
+            Users are empowered with a set of innovative and powerful
+            applications.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
