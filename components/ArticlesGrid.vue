@@ -49,6 +49,7 @@ import Spinner from "@/components/Spinner.vue";
 
 // graphql
 import { GET_ARTICLES } from "@/graphql/articles.js";
+import { setHeaderParams } from "@/plugins/apollo.js";
 
 export default {
   components: {
@@ -119,6 +120,7 @@ export default {
             first: first,
             offset: offset,
           },
+          ...setHeaderParams("USERS")
         });
         if (res) {
           return {
