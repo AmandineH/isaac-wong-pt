@@ -120,7 +120,7 @@ export default {
             first: first,
             offset: offset,
           },
-          ...setHeaderParams("USERS")
+          ...setHeaderParams("USER")
         });
         if (res) {
           return {
