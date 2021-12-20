@@ -1,7 +1,7 @@
 import gql from "graphql-tag";
 
 export const GET_ARTICLES = gql`
-  query GetArticles(
+  query Articles(
     $first: Int = 20
     $offset: Int = 0
     $orderBy: [ArticlesOrderBy!] = [PUBLICATION_DATE_DESC]
