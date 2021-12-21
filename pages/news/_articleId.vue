@@ -72,6 +72,7 @@ import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 // graphql
 import { GET_ARTICLES } from "@/graphql/articles.js";
+import { setHeaderParams } from "@/plugins/apollo.js";
 
 export default {
   layout: "default",
@@ -118,6 +119,7 @@ export default {
             first: first,
             offset: offset,
           },
+          ...setHeaderParams("USER")
         });
         if (res) {
           return {
