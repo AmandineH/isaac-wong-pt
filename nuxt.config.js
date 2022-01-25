@@ -14,6 +14,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/rea-logo.png' }
+    ],
+    script: [
+      {
+        src: "~/plugins/gtag.js",
+      },
     ]
   },
 
