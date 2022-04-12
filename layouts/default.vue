@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-between">
     <div>
-      <TopMenuLight />
+      <Topbar />
       <Nuxt />
     </div>
     <Footer />
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import TopMenuLight from "@/components/TopMenuLight.vue";
+import Topbar from "@/components/Topbar.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  components: { TopMenuLight, Footer },
+  components: { Topbar, Footer },
 };
 </script>

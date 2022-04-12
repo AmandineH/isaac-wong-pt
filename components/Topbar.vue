@@ -1,29 +1,17 @@
 <template>
   <div>
-    <div class="hidden md:block" :class="[dark ? 'absolute top-0 w-full' : '']">
+    <div class="hidden md:block">
       <div class="mx-auto max-w-1300px p-20px">
         <div class="flex items-end justify-between">
           <a href="/">
-            <img
-              v-if="dark"
-              src="@/assets/rea/rea-white.svg"
-              alt="rea"
-              class="h-50px mb-10px"
-            />
-            <img
-              v-else
-              src="@/assets/rea/rea.svg"
-              alt="rea"
-              class="h-50px mb-10px"
-            />
+            <img src="@/assets/rea/rea.svg" alt="rea" class="h-50px mb-10px" />
           </a>
           <div class="flex">
             <a
               v-for="menuItem in menu"
               :key="menuItem.id"
               :href="menuItem.href"
-              class="my-20px ml-40px body-3"
-              :class="[dark ? 'text-white' : 'text-blue-191f6C']"
+              class="my-20px ml-40px body-3 text-blue-191f6C"
             >
               {{ menuItem.label }}
             </a>
@@ -36,17 +24,9 @@
       </div>
     </div>
 
-    <div class="block md:hidden" :class="[dark ? 'absolute top-0 w-full' : '']">
+    <div class="block md:hidden">
       <div class="flex justify-between p-20px">
         <img
-          v-if="dark"
-          src="@/assets/utility/hamburger-white.svg"
-          alt="hamburger"
-          class="h-30px"
-          @click="isOpen = true"
-        />
-        <img
-          v-else
           src="@/assets/utility/hamburger.svg"
           alt="hamburger"
           class="h-30px"
@@ -54,35 +34,18 @@
         />
 
         <a href="/">
-          <img
-            v-if="dark"
-            src="@/assets/rea/rea-white.svg"
-            alt="rea"
-            class="h-30px"
-          />
-          <img v-else src="@/assets/rea/rea.svg" alt="rea" class="h-30px" />
+          <img src="@/assets/rea/rea.svg" alt="rea" class="h-30px" />
         </a>
       </div>
     </div>
 
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex flex-col justify-between"
-      :class="[
-        dark ? 'bg-gray-666666 text-white' : 'bg-white text-blue-191f6C',
-      ]"
+      class="fixed inset-0 z-50 flex flex-col justify-between bg-white  text-blue-191f6C"
     >
       <div class="flex flex-col flex-grow p-20px">
         <div class="flex justify-between">
           <img
-            v-if="dark"
-            src="@/assets/utility/hamburger-white.svg"
-            alt="hamburger"
-            class="h-30px"
-            @click="isOpen = false"
-          />
-          <img
-            v-else
             src="@/assets/utility/hamburger.svg"
             alt="hamburger"
             class="h-30px"
@@ -90,13 +53,7 @@
           />
 
           <a href="/">
-            <img
-              v-if="dark"
-              src="@/assets/rea/rea-white.svg"
-              alt="rea"
-              class="h-30px"
-            />
-            <img v-else src="@/assets/rea/rea.svg" alt="rea" class="h-30px" />
+            <img src="@/assets/rea/rea.svg" alt="rea" class="h-30px" />
           </a>
         </div>
 
@@ -153,11 +110,6 @@
 
 <script>
 export default {
-  props: {
-    dark: {
-      type: Boolean,
-    },
-  },
   data() {
     return {
       isOpen: false,
