@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `./.env`,
+})
+
 module.exports = {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -169,19 +173,20 @@ module.exports = {
           {
             code: "en-US",
             iso: "en-US",
-            file: "en-US",
+            file: "en-US.json",
             dir: "ltr",
             name: "English",
           },
           {
             code: "id-ID",
             iso: "id-ID",
-            file: "id-ID",
+            file: "id-ID.json",
             dir: "ltr",
             name: "Basaha Indonesia",
           },
         ],
         defaultLocale: "en-US",
+        langDir: "lang/",
         vueI18n: {
           fallbackLocale: "en-US",
         },
@@ -193,6 +198,10 @@ module.exports = {
     ],
     '@nuxtjs/dayjs',
   ],
+
+  env: {
+    COUNTRY_CODE: process.env.COUNTRY_CODE,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

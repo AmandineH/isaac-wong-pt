@@ -26,5 +26,22 @@
     "newsdevelopments": "News & Developments",
     "careers": "Careers",
     "contactus": "Contact us"
+  },
+  "footer": {
+    "addressline1": "9 Temasek Boulevard",
+    "addressline2": "Suntec Tower Two",
+    "addressline3": "#23-02, Singapore 038989",
+    "addressline4": "",
+    "phone": "Phone: +65 6226-2723",
+    "forinquiries": "For inquiries contact us at:",
+    "consumer": "Consumer",
+    "emailconsumer": "consumer@rea-sg.com",
+    "concierge": "Concierge",
+    "emailconcierge": "concierge@rea-sg.com",
+    "corporate": "Institution and Government",
+    "emailcorporate": "corporate@rea-sg.com",
+    "media": "Media",
+    "emailmedia": "media@rea-sg.com",
+    "companyname": "Real Estate Analytics Pte Ltd"
   }
 }

@@ -20,5 +20,22 @@
     "aboutus": "Tentang kami",
     "careers": "Karir",
     "contactus": "Hubungi kami"
+  },
+  "footer": {
+    "addressline1": "Equity Tower Lt 49",
+    "addressline2": "Jl Jenderal Sudirman Kav 52-53",
+    "addressline3": "Senayan, Kebayoran Baro",
+    "addressline4": "Jakarta Selatan",
+    "phone": "Telepon: +62 8126 999 4959",
+    "forinquiries": "Untuk pertanyaan dapat menghubungi kami:",
+    "consumer": "Consumer",
+    "emailconsumer": "consumer@rea-id.com",
+    "concierge": "Concierge",
+    "emailconcierge": "concierge@rea-id.com",
+    "corporate": "Instituti dan Pemerintah",
+    "emailcorporate": "corporate@rea-id.com",
+    "media": "Media",
+    "emailmedia": "media@rea-id.com",
+    "companyname": "PT Real Estate Analytics Indonesia"
   }
 }
