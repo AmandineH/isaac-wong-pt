@@ -14,9 +14,7 @@
           <img src="@/assets/rea/rea-white.svg" alt="rea" class="h-60px" />
 
           <div>
-            <p v-for="line in footer.address" class="body-4">{{ line }}</p>
-            <!-- <p class="body-4">Suntec Tower Two</p>
-            <p class="body-4">#23-02, Singapore 038989</p> -->
+            <p v-for="line in footer.address" class="body-4">{{ line }}</p>       
           </div>
           <p class="body-4">{{$t("footer.phone")}}</p>
         </div>
