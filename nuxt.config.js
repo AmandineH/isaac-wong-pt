@@ -14,6 +14,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/rea-logo.png' }
+    ],
+    script: [
+      {
+        src: "~/plugins/gtag.js",
+      },
     ]
   },
 
@@ -145,7 +150,6 @@ module.exports = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/dayjs',
     [
       "@nuxtjs/apollo",
       {
@@ -156,6 +160,38 @@ module.exports = {
         },
       },
     ],
+    [
+      "@nuxtjs/i18n",
+      {
+        baseUrl: process.env.BASE_URL,
+        langDir: "lang/",
+        locales: [
+          {
+            code: "en-US",
+            iso: "en-US",
+            file: "en-US",
+            dir: "ltr",
+            name: "English",
+          },
+          {
+            code: "id-ID",
+            iso: "id-ID",
+            file: "id-ID",
+            dir: "ltr",
+            name: "Basaha Indonesia",
+          },
+        ],
+        defaultLocale: "en-US",
+        vueI18n: {
+          fallbackLocale: "en-US",
+        },
+        lazy: true,
+        detectBrowserLanguage: {
+          useCookie: false,
+        },
+      },
+    ],
+    '@nuxtjs/dayjs',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

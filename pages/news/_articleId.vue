@@ -1,5 +1,11 @@
 <template>
-  <div v-if="articleId">
+  <div v-if="loading" class="m-20px">
+    <Spinner
+      v-if="loading"
+      class="flex items-center justify-center h-150px"
+    />
+  </div>
+  <div v-else-if="article">
     <div class="mx-auto max-w-1300px mb-20px">
       <div class="mx-20px">
         <p class="fine-prints-2 text-gray-666666">
@@ -61,57 +67,41 @@
 
 <script>
 // components
+import Spinner from "@/components/Spinner.vue";
 import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 // graphql
 import { GET_ARTICLES } from "@/graphql/articles.js";
+import { setHeaderParams } from "@/plugins/apollo.js";
 
 export default {
-  layout: "default-light",
+  layout: "default",
   components: {
+    Spinner,
     ArticlesGrid,
   },
-  async asyncData({ app, params }) {
-    const client = app.apolloProvider.defaultClient;
-    const getArticles = async (filter, first = 5, offset = 0) => {
-      try {
-        const res = await client.query({
-          query: GET_ARTICLES,
-          variables: {
-            filter: {
-              published: { equalTo: true },
-              ...filter,
-            },
-            first: first,
-            offset: offset,
-          },
-        });
-        if (res) {
-          return {
-            articles: res.data.articles.nodes,
-            hasNextPage: res.data.articles.pageInfo.hasNextPage,
-          };
-        }
-      } catch (e) {
-        console.log(e);
-      }
+  data() {
+    return {
+      loading: true,
+      article: null
     };
-
-    let article;
-    if (params.articleId) {
-      const res = await getArticles({
-        articleId: { equalTo: params.articleId },
-      });
+  },
+  async mounted() {
+    if (this.$route.params.articleId) {
+      this.loading = true
+      let res = await this.getArticles(
+        {
+          articleId: { equalTo: this.$route.params.articleId },
+        }
+      );
 
       if (res && res.articles[0]) {
-        article = res.articles[0];
+        this.article = res.articles[0];
       }
+      this.loading = false
+    } else {
+      this.loading = false
     }
-
-    return {
-      articleId: params.articleId,
-      article,
-    };
   },
   methods: {
     getDate(date) {
@@ -129,6 +119,7 @@ export default {
             first: first,
             offset: offset,
           },
+          ...setHeaderParams("USER")
         });
         if (res) {
           return {

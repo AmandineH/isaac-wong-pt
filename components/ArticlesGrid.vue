@@ -1,13 +1,20 @@
 <template>
   <div>
-    <div v-if="articles.length > 0" class="flex flex-wrap ml-20px mt-20px">
+    <Spinner
+      v-if="loading"
+      class="flex items-center justify-center h-150px m-20px"
+    />
+    <div v-else-if="articles.length > 0" class="flex flex-wrap ml-20px mt-20px">
       <a
         :href="'/news/' + article.articleId"
         v-for="(article, key) in articles"
         :key="key"
         class="md:w-1/3 pr-20px pb-20px"
       >
-        <div v-if="article.layout === 'horizontal'" class="flex h-full bg-gray-E8E8F0">
+        <div
+          v-if="article.layout === 'horizontal'"
+          class="flex h-full bg-gray-E8E8F0"
+        >
           <img
             :src="article.thumbnail"
             :alt="article.title || article.thumbnail"
@@ -26,19 +33,13 @@
         </div>
       </a>
     </div>
-    <div v-else class="m-20px">
-      <Spinner
-        v-if="loading"
-        class="flex items-center justify-center h-150px"
-      />
-    </div>
 
     <center v-if="loadMore && hasNextPage">
       <button
         class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
         @click="loadMoreArticles"
       >
-        Load more stories
+        {{ $t("news.loadmorestories") }}
         <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
       </button>
     </center>
@@ -51,9 +52,9 @@ import Spinner from "@/components/Spinner.vue";
 
 // graphql
 import { GET_ARTICLES } from "@/graphql/articles.js";
+import { setHeaderParams } from "@/plugins/apollo.js";
 
 export default {
-  layout: "default-light",
   components: {
     Spinner,
   },
@@ -80,7 +81,7 @@ export default {
 
     let res = await this.getArticles(
       {
-        lang: { equalTo: "en-US" },
+        lang: { equalTo: this.$i18n.locale },
       },
       this.nbArticles
     );
@@ -98,7 +99,7 @@ export default {
         this.offset = this.offset + this.first;
         let res = await this.getArticles(
           {
-            lang: { equalTo: "en-US" },
+            lang: { equalTo: this.$i18n.locale },
           },
           this.first,
           this.offset
@@ -122,6 +123,7 @@ export default {
             first: first,
             offset: offset,
           },
+          ...setHeaderParams("USER"),
         });
         if (res) {
           return {
@@ -130,7 +132,6 @@ export default {
           };
         }
       } catch (e) {
-        console.log(e);
       }
     },
   },
