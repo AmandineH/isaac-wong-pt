@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="flex items-center overflow-hidden text-white bg-center bg-no-repeat bg-cover min-h-400px"
+      class="flex items-center overflow-hidden text-white bg-center bg-no-repeat bg-cover  min-h-400px"
       :style="{
         backgroundImage: 'url(\'' + require('@/assets/images/home.jpg') + '\')',
       }"
@@ -31,7 +31,7 @@
               <img
                 src="@/assets/utility/arrow-white.svg"
                 alt="arrow"
-                class="transform rotate-90 opacity-0 group-hover:opacity-100 pb-20px pt-10px"
+                class="transform rotate-90 opacity-0  group-hover:opacity-100 pb-20px pt-10px"
               />
             </center>
             <h1 class="title-1 mb-10px">
@@ -54,7 +54,7 @@
               <img
                 src="@/assets/utility/arrow-white.svg"
                 alt="arrow"
-                class="transform rotate-90 opacity-0 group-hover:opacity-100 pb-20px pt-10px"
+                class="transform rotate-90 opacity-0  group-hover:opacity-100 pb-20px pt-10px"
               />
             </center>
             <h1 class="title-1 mb-10px">{{ $t("index.consumer") }}</h1>
@@ -73,7 +73,7 @@
               <img
                 src="@/assets/utility/arrow-white.svg"
                 alt="arrow"
-                class="transform rotate-90 opacity-0 group-hover:opacity-100 pb-20px pt-10px"
+                class="transform rotate-90 opacity-0  group-hover:opacity-100 pb-20px pt-10px"
               />
             </center>
             <h1 class="title-1 mb-10px">
@@ -96,6 +96,7 @@
     </div>
 
     <div class="py-20px pt-40px">
+      <!-- TODO: only is countryCode = SG -->
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
           <h1 class="text-center title-1 text-gray-666666 mx-20px">
@@ -108,7 +109,7 @@
           <ArticlesGrid :nbArticles="3" :loadMore="false" />
           <a href="/news">
             <button
-              class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 mx-20px"
+              class="flex items-center border  border-blue-00ACD7 p-5px body-4 text-gray-666666 mx-20px"
             >
               {{ $t("news.clickhereformorestories") }}
               <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
@@ -122,7 +123,7 @@
       <div class="mx-auto max-w-1300px">
         <div class="relative overflow-hidden text-white bg-blue-00ACD7 p-40px">
           <div
-            class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
+            class="absolute transform rotate-45  -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
           ></div>
 
           <div class="relative z-10 items-center md:flex">
@@ -137,7 +138,7 @@
               </p>
               <a href="careers" class="flex justify-center md:block">
                 <button
-                  class="flex items-center border border-blue-191f6C p-5px body-3"
+                  class="flex items-center border  border-blue-191f6C p-5px body-3"
                 >
                   {{ $t("careers.comejoinus") }}
                   <img src="@/assets/utility/arrow-dark-blue.svg" alt="arrow" />

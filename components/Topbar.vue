@@ -41,7 +41,7 @@
 
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex flex-col justify-between bg-white  text-blue-191f6C"
+      class="fixed inset-0 z-50 flex flex-col justify-between bg-white text-blue-191f6C"
     >
       <div class="flex flex-col flex-grow p-20px">
         <div class="flex justify-between">
