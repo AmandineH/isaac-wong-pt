@@ -156,7 +156,7 @@
 import ArticlesGrid from "@/components/ArticlesGrid.vue";
 
 export default {
-  layout: "default-dark",
+  layout: "default",
   components: {
     ArticlesGrid,
   },

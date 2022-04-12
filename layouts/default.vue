@@ -1,9 +1,7 @@
 <template>
-  <div class="flex flex-col justify-between">
-    <div>
-      <Topbar />
-      <Nuxt />
-    </div>
+  <div>
+    <Topbar />
+    <Nuxt />
     <Footer />
   </div>
 </template>
