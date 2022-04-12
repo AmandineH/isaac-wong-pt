@@ -70,12 +70,7 @@
 </template>
 
 <script>
-// import Carousel from "@/components/Carousel.vue";
-
 export default {
   layout: "default",
-  components: {
-    // Carousel,
-  },
 };
 </script>

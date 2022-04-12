@@ -11,7 +11,10 @@
         :key="key"
         class="md:w-1/3 pr-20px pb-20px"
       >
-        <div v-if="article.layout === 'horizontal'" class="flex h-full bg-gray-E8E8F0">
+        <div
+          v-if="article.layout === 'horizontal'"
+          class="flex h-full bg-gray-E8E8F0"
+        >
           <img
             :src="article.thumbnail"
             :alt="article.title || article.thumbnail"
@@ -36,7 +39,7 @@
         class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
         @click="loadMoreArticles"
       >
-        Load more stories
+        {{ $t("news.loadmorestories") }}
         <img src="@/assets/utility/arrow-light-blue.svg" alt="arrow" />
       </button>
     </center>
@@ -78,7 +81,7 @@ export default {
 
     let res = await this.getArticles(
       {
-        lang: { equalTo: "en-US" },
+        lang: { equalTo: this.$i18n.locale },
       },
       this.nbArticles
     );
@@ -96,7 +99,7 @@ export default {
         this.offset = this.offset + this.first;
         let res = await this.getArticles(
           {
-            lang: { equalTo: "en-US" },
+            lang: { equalTo: this.$i18n.locale },
           },
           this.first,
           this.offset
@@ -120,7 +123,7 @@ export default {
             first: first,
             offset: offset,
           },
-          ...setHeaderParams("USER")
+          ...setHeaderParams("USER"),
         });
         if (res) {
           return {
@@ -129,7 +132,6 @@ export default {
           };
         }
       } catch (e) {
-        console.log(e);
       }
     },
   },
