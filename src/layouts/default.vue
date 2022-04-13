@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<template>
-  <div>
-    <Topbar />
-    <Nuxt />
-    <Footer />
-  </div>
-</template>
-
-<script>
-import Topbar from "@/components/Topbar.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  components: { Topbar, Footer },
-  mounted() {
-  },
-};
-</script>
-=======
 <template>
   <div>
     <Topbar />
@@ -47,8 +27,6 @@ export default {
     } else if (storePayload.countryCode === 'ID') {
       this.$i18n.setLocale('id-ID');
     }
-
-
       // countryCode
       // locale
     // set i18n locale
@@ -56,4 +34,3 @@ export default {
   }
 };
 </script>
->>>>>>> features/rea-sg/gc
