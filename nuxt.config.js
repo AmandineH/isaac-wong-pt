@@ -1,4 +1,12 @@
-module.exports = {
+require("dotenv").config({
+  path: `./.env`,
+})
+
+export default {
+  srcDir: "src/",
+  alias: {
+    "@/*": `<srcDir>/*`,
+  },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -14,6 +22,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/rea-logo.png' }
+    ],
+    script: [
+      {
+        src: "~/plugins/gtag.js",
+      },
     ]
   },
 
@@ -145,7 +158,6 @@ module.exports = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/dayjs',
     [
       "@nuxtjs/apollo",
       {
@@ -156,7 +168,44 @@ module.exports = {
         },
       },
     ],
+    [
+      "@nuxtjs/i18n",
+      {
+        baseUrl: process.env.BASE_URL,
+        langDir: "lang/",
+        locales: [
+          {
+            code: "en-US",
+            iso: "en-US",
+            file: "en-US.json",
+            dir: "ltr",
+            name: "English",
+          },
+          {
+            code: "id-ID",
+            iso: "id-ID",
+            file: "id-ID.json",
+            dir: "ltr",
+            name: "Basaha Indonesia",
+          },
+        ],
+        defaultLocale: "en-US",
+        langDir: "lang/",
+        vueI18n: {
+          fallbackLocale: "en-US",
+        },
+        lazy: true,
+        detectBrowserLanguage: {
+          useCookie: false,
+        },
+      },
+    ],
+    '@nuxtjs/dayjs',
   ],
+
+  env: {
+    COUNTRY_CODE: process.env.COUNTRY_CODE,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
