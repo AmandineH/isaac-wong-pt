@@ -95,7 +95,7 @@
       </div>
     </div>
 
-    <div class="py-20px pt-40px">
+    <div class="py-20px pt-40px" v-if="countryCode === 'SG'">
       <!-- TODO: only is countryCode = SG -->
       <div class="mx-auto max-w-1300px">
         <div class="flex flex-col items-center">
@@ -155,11 +155,15 @@
 <script>
 // components
 import ArticlesGrid from "@/components/ArticlesGrid.vue";
+import { mapState } from 'vuex';
 
 export default {
   layout: "default",
   components: {
     ArticlesGrid,
+  },
+    computed: {
+    ...mapState(["countryCode"]),
   },
 };
 </script>

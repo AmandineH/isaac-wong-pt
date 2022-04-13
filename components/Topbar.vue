@@ -9,6 +9,9 @@
           <div class="flex">
             <a
               v-for="menuItem in menu"
+              v-if="
+                !(countryCode === 'ID' && menuItem.id === 'news-developments')
+              "
               :key="menuItem.id"
               :href="menuItem.href"
               class="my-20px ml-40px body-3 text-blue-191f6C"
@@ -41,7 +44,15 @@
 
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex flex-col justify-between bg-white text-blue-191f6C"
+      class="
+        fixed
+        inset-0
+        z-50
+        flex flex-col
+        justify-between
+        bg-white
+        text-blue-191f6C
+      "
     >
       <div class="flex flex-col flex-grow p-20px">
         <div class="flex justify-between">
@@ -60,6 +71,9 @@
         <div class="flex flex-col justify-center flex-grow mb-50px">
           <a
             v-for="menuItem in menu"
+            v-if="
+              !(countryCode === 'ID' && menuItem.id === 'news-developments')
+            "
             :key="menuItem.id"
             :href="menuItem.href"
             class="text-center my-20px body-3"
@@ -109,12 +123,12 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
   data() {
     return {
       isOpen: false,
-      menu: [
+      menuList: [
         {
           id: "about-us",
           label: this.$t("menu.aboutus"),
@@ -138,8 +152,32 @@ export default {
       ],
     };
   },
-  // computed: {
-  //   ...mapState(['countryCode']),
-  // },
+  computed: {
+    ...mapState(["countryCode"]),
+    menu() {
+      return [
+        {
+          id: "about-us",
+          label: this.$t("menu.aboutus"),
+          href: "/about",
+        },
+        {
+          id: "news-developments",
+          label: this.$t("menu.newsdevelopments"),
+          href: "/news",
+        }, // TODO: only is countryCode = SG
+        {
+          id: "careers",
+          label: this.$t("menu.careers"),
+          href: "/careers",
+        },
+        {
+          id: "contact-us",
+          label: this.$t("menu.contactus"),
+          href: "/contact",
+        },
+      ];
+    },
+  },
 };
 </script>
