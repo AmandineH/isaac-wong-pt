@@ -2,7 +2,11 @@ require("dotenv").config({
   path: `./.env`,
 })
 
-module.exports = {
+export default {
+  srcDir: "src/",
+  alias: {
+    "@/*": `<srcDir>/*`,
+  },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
