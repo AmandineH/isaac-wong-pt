@@ -72,7 +72,7 @@
           <center>
             <img src="@/assets/rea/rea-white.svg" alt="rea" class="flex h-40px md:hidden mb-20px" />
           </center>
-          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
+          <p class="body-4">©2021 {{$t("footer.companyname")}},</p>
           <p class="body-4">All Right Reserved.</p>
         </div>
       </div>

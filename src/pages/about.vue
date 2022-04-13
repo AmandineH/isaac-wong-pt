@@ -51,8 +51,8 @@
     </div>
 
     <div class="p-20px pt-40px">
-      <div class="mx-auto max-w-1300px" v-if="countryCode === 'SG'">
-        <ul class="list-disc list-outside ml-20px">
+      <div class="mx-auto max-w-1300px">
+        <ul class="list-disc list-outside ml-20px" v-if="countryCode === 'SG'">
           <li>
             REA empowers people and organizations to make the best decisions
             involving real estate.
@@ -82,7 +82,6 @@
             applications.
           </li>
         </ul>
-      </div>
       <div class="flex flex-col items-center" v-else>
         <h1 class="text-center title-1 text-blue-191f6C">
           {{ $t("about.aboutus") }}
@@ -98,6 +97,7 @@
             <p>{{ $t("about.aboutuspara2") }}</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
