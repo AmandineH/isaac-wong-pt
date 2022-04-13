@@ -1,4 +1,12 @@
-module.exports = {
+require("dotenv").config({
+  path: `./.env`,
+});
+
+export default {
+  srcDir: "src/",
+  alias: {
+    "@/*": `<srcDir>/*`,
+  },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -193,6 +201,11 @@ module.exports = {
     ],
     '@nuxtjs/dayjs',
   ],
+
+
+  env: {
+    locale: process.env.LOCALE
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
