@@ -3,13 +3,7 @@
     <div class="justify-between block mx-auto max-w-1300px p-20px md:flex">
       <div class="hidden md:flex">
         <div
-          class="
-            flex flex-col
-            justify-between
-            border-r border-blue-00ACD7
-            pr-20px
-            mr-20px
-          "
+          class="flex flex-col justify-between border-r border-blue-00ACD7 pr-20px mr-20px"
         >
           <img src="@/assets/rea/rea-white.svg" alt="rea" class="h-60px" />
 
@@ -53,22 +47,14 @@
             target="_blank"
             class="cursor-pointer mr-10px"
           >
-            <img
-              src="@/assets/social/facebook.svg"
-              alt="Facebook"
-              class="h-30px"
-            />
+            <img src="@/assets/social/facebook.svg" alt="Facebook" class="h-30px" />
           </a>
           <a
             href="https://www.instagram.com/8prop_eightprop/"
             target="_blank"
             class="cursor-pointer mr-10px"
           >
-            <img
-              src="@/assets/social/instagram.svg"
-              alt="Instagram"
-              class="h-30px"
-            />
+            <img src="@/assets/social/instagram.svg" alt="Instagram" class="h-30px" />
           </a>
           <a
             href="https://linkedin.com/company/real-estate-analytics-8prop"
@@ -84,13 +70,9 @@
         </div>
         <div class="text-center md:text-right">
           <center>
-            <img
-              src="@/assets/rea/rea-white.svg"
-              alt="rea"
-              class="flex h-40px md:hidden mb-20px"
-            />
+            <img src="@/assets/rea/rea-white.svg" alt="rea" class="flex h-40px md:hidden mb-20px" />
           </center>
-          <p class="body-4">©2021 {{ $t("footer.companyname") }},</p>
+          <p class="body-4">©2021 Real Estate Analytics Pte Ltd,</p>
           <p class="body-4">All Right Reserved.</p>
         </div>
       </div>

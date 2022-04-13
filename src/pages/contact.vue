@@ -2,33 +2,14 @@
   <div>
     <div class="mx-auto max-w-1300px">
       <div
-        class="
-          relative
-          overflow-hidden
-          text-white
-          bg-center bg-no-repeat bg-cover
-          p-20px
-          md:m-20px
-          h-200px
-          md:h-400px
-        "
+        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
         :style="{
           backgroundImage:
             'url(\'' + require('@/assets/images/contact.jpg') + '\')',
         }"
       >
         <div
-          class="
-            absolute
-            transform
-            rotate-45
-            -left-1000px
-            md:-left-750px
-            -top-500px
-            w-1000px
-            bg-blue-0689BC
-            h-1000px
-          "
+          class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
         ></div>
 
         <h1 class="relative z-10 supheader-1">{{ $t("contact.contactus") }}</h1>

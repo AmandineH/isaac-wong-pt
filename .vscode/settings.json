@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 {
   "nuxt.isNuxtApp": true,
   "i18n-ally.localesPaths": [
     "src/lang"
   ]
-
-=======
-{
-  "nuxt.isNuxtApp": true,
-  "i18n-ally.localesPaths": [
-    "src/lang"
-  ]
-
->>>>>>> 8f7eafa (completed localisation for indonesia, committing for merge)
 }
