@@ -25,7 +25,7 @@
     </div>
 
     <div class="block md:hidden">
-      <div class="flex justify-between p-20px">
+      <div class="flex justify-between p-20px cursor-pointer">
         <img
           src="@/assets/utility/hamburger.svg"
           alt="hamburger"
@@ -43,7 +43,7 @@
       v-if="isOpen"
       class="fixed inset-0 z-50 flex flex-col justify-between bg-white text-blue-191f6C"
     >
-      <div class="flex flex-col flex-grow p-20px">
+      <div class="flex flex-col flex-grow p-20px cursor-pointer">
         <div class="flex justify-between">
           <img
             src="@/assets/utility/hamburger.svg"
@@ -109,6 +109,8 @@
 </template>
 
 <script>
+import { menuItems } from "@/plugins/countries.js"
+
 export default {
   data() {
     return {
@@ -120,32 +122,7 @@ export default {
       return this.$store.state.countryCode;
     },
     menu() {
-      return [
-        {
-          id: "about-us",
-          label: "menu.aboutus",
-          href: "/about",
-        },
-        ...(this.countryCode === "SG"
-          ? [
-              {
-                id: "news-developments",
-                label: "menu.newsdevelopments",
-                href: "/news",
-              },
-            ]
-          : []),
-        {
-          id: "careers",
-          label: "menu.careers",
-          href: "/careers",
-        },
-        {
-          id: "contact-us",
-          label: "menu.contactus",
-          href: "/contact",
-        },
-      ];
+      return menuItems.filter(e => !(e.excludedCountryCodes.includes(this.countryCode)))
     },
   },
 };
