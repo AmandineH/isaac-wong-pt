@@ -1,0 +1,60 @@
+image: node:14.18
+
+cache:
+  untracked: true
+  paths:
+    - node_modules/
+
+stages:
+  - setup # List of stages for jobs, and their order of execution
+  - build
+  - deploy
+
+setup:
+  stage: setup
+  script:
+    - rm -rf node_modules
+    - npm install
+  only:
+    - /^(sg-prod|sg-dev|id-prod|id-dev)-.*$/
+
+build:
+  stage: build
+  script:
+    - npm run generate
+  artifacts:
+    paths:
+      - dist
+  only:
+    - /^(sg-prod|sg-dev|id-prod|id-dev)-.*$/
+
+deploy:
+  image: "python:latest"
+  stage: deploy
+  variables:
+    BUCKET_PATH: "rea"
+  rules:
+    - if: $CI_COMMIT_REF_NAME =~ /id-prod-.+/
+      variables:
+        BUCKET_PATH: "rea-id-production"
+        COUNTRY_CODE: ID
+    - if: $CI_COMMIT_REF_NAME =~ /id-dev-.+/
+      variables:
+        BUCKET_PATH: "rea-id-development"
+        COUNTRY_CODE: ID
+    - if: $CI_COMMIT_REF_NAME =~ /sg-prod-.+/
+      variables:
+        BUCKET_PATH: "rea-sg-production"
+        COUNTRY_CODE: SG
+    - if: $CI_COMMIT_REF_NAME =~ /sg-dev-.+/
+      variables:
+        BUCKET_PATH: "rea-sg-development"
+        COUNTRY_CODE: SG
+  before_script:
+    - pip install awscli
+  script:
+    - aws s3 rm s3://${S3_BUCKET}/${BUCKET_PATH}/  --recursive --exclude "index.html"
+    - echo "Uploading to s3://${S3_BUCKET}/${BUCKET_PATH}"
+    - aws s3 cp dist s3://${S3_BUCKET}/${BUCKET_PATH} --recursive
+  dependencies:
+    - build

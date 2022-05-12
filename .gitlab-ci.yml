@@ -3,58 +3,60 @@ image: node:14.18
 cache:
   untracked: true
   paths:
+    - .env
     - node_modules/
 
 stages:
-  - setup # List of stages for jobs, and their order of execution
   - build
   - deploy
 
-setup:
-  stage: setup
-  script:
-    - rm -rf node_modules
-    - npm install
-  only:
-    - /^(sg-prod|sg-dev|id-prod|id-dev)-.*$/
-
 build:
+  image: node:14.18
   stage: build
-  script:
-    - npm run generate
+  variables:
+    ENV_FILE: ENV_PROD
+  rules:
+    - if: $CI_COMMIT_REF_NAME =~ /prod-.+/
+      variables:
+        ENV: production
+        ENV_FILE: $ENV_PROD
+    - if: $CI_COMMIT_REF_NAME =~ /dev-.+/
+      variables:
+        ENV: development
+        ENV_FILE: $ENV_DEV
   artifacts:
     paths:
-      - dist
-  only:
-    - /^(sg-prod|sg-dev|id-prod|id-dev)-.*$/
+      - .nuxt
+  script:
+    - printf "%s\n" $ENV_FILE > .env
+    - npm install --only=prod
+    - npm run build
+  environment: $ENV
 
 deploy:
-  image: "python:latest"
+  image: python:latest
   stage: deploy
   variables:
-    BUCKET_PATH: "rea"
+    ENV: development
+    EB_APP_NAME: rea-ssr
+    EB_S3_BUCKET: 8prop-app
+    VPC_ID: $VPC_ID_DEV
   rules:
-    - if: $CI_COMMIT_REF_NAME =~ /id-prod-.+/
+    - if: $CI_COMMIT_REF_NAME =~ /prod-.+/
       variables:
-        BUCKET_PATH: "rea-id-production"
-        COUNTRY_CODE: ID
-    - if: $CI_COMMIT_REF_NAME =~ /id-dev-.+/
+        ENV: production
+        VPC_ID: $VPC_ID_PROD
+        SHORT_ENV: prod
+    - if: $CI_COMMIT_REF_NAME =~ /dev-.+/
       variables:
-        BUCKET_PATH: "rea-id-development"
-        COUNTRY_CODE: ID
-    - if: $CI_COMMIT_REF_NAME =~ /sg-prod-.+/
-      variables:
-        BUCKET_PATH: "rea-sg-production"
-        COUNTRY_CODE: SG
-    - if: $CI_COMMIT_REF_NAME =~ /sg-dev-.+/
-      variables:
-        BUCKET_PATH: "rea-sg-development"
-        COUNTRY_CODE: SG
+        VPC_ID: $VPC_ID_DEV
+        ENV: development
+        SHORT_ENV: dev
   before_script:
-    - pip install awscli
+    - pip install --upgrade awscli zip-files
   script:
-    - aws s3 rm s3://${S3_BUCKET}/${BUCKET_PATH}/  --recursive --exclude "index.html"
-    - echo "Uploading to s3://${S3_BUCKET}/${BUCKET_PATH}"
-    - aws s3 cp dist s3://${S3_BUCKET}/${BUCKET_PATH} --recursive
+    - chmod a+x bin-deploy/deploy.sh
+    - ./bin-deploy/deploy.sh
+  environment: $ENV
   dependencies:
     - build

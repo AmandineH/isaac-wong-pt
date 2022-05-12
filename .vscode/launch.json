@@ -16,8 +16,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "generate: nuxt",
-      "args": ["generate"],
+      "name": "dev: nuxt",
+      "args": ["dev"],
       "console": "integratedTerminal",
       "osx": {
         "program": "${workspaceFolder}/node_modules/.bin/nuxt"

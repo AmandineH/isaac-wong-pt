@@ -7,7 +7,7 @@ export default {
       const { commit, dispatch } = storeParams;
       const { req, app } = context;
 
-      const countryCode = process.env.countryCode;
+      const countryCode = app.$identifyLoc(req.headers.host);
 
       // Get user country code
       app.store.commit("country/setCountryCode", countryCode);

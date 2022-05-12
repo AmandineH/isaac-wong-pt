@@ -102,7 +102,7 @@ export const menuItems = [
     id: "news-developments",
     label: "menu.newsdevelopments",
     href: "/news",
-    excludedCountryCodes: ['ID'],
+    excludedCountryCodes: ["ID"],
   },
   {
     id: "careers",
@@ -125,3 +125,33 @@ export function getCountryVariables(countryCode, variables) {
       ]
     : null;
 }
+
+export default ({ app }, inject) => {
+  inject("identifyLoc", (host) => {
+    if (host) {
+      let code = countries[0]?.countryCode;
+      // Suffix-based locale
+      const ss = host.match(/(^[^-\r\n]+)-([A-z]+)/);
+      const suf = ss?.length >= 3 ? ss[2]?.toUpperCase() : null;
+      if (suf) {
+        const val = countries.find((c) => c.countryCode === suf);
+        if (val) {
+          code = suf;
+          return code;
+        }
+      }
+
+      // Subdomain-based locale
+      const s = host.split(".");
+      const subdom = s?.length ? s[0]?.toUpperCase() : null;
+      if (subdom) {
+        const val = countries.find((c) => c.countryCode === subdom);
+        if (val) {
+          code = subdom;
+          return code;
+        }
+      }
+    }
+    return "SG";
+  });
+};
