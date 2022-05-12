@@ -11,20 +11,13 @@
 import Topbar from "@/components/Topbar.vue";
 import Footer from "@/components/Footer.vue";
 
-// plugins
-import { getCountryVariables } from "@/plugins/countries.js";
-
 export default {
   components: { Topbar, Footer },
   computed: {
     countryCode() {
-      return this.$store.state.countryCode;
+      return this.$store.state.country.countryCode;
     },
   },
-  mounted() {
-    // this.$store.commit("setCountryCode", process.env.countryCode);
-    this.$store.commit("setCountryCode", "SG");
-    this.$i18n.setLocale(getCountryVariables(this.countryCode, "locale"));
-  },
+  mounted() {},
 };
 </script>

@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "client: chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*.vue": "${webRoot}/*.vue",
+        "webpack:///./src/*.js": "${webRoot}/*.js"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "generate: nuxt",
+      "args": ["generate"],
+      "console": "integratedTerminal",
+      "osx": {
+        "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+      },
+      "linux": {
+        "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+      },
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.js"
+      },
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///./src/*": "${webRoot}/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "fullstack: nuxt",
+      "console": "integratedTerminal",
+      "configurations": ["server: nuxt", "client: chrome"]
+    }
+  ]
+}

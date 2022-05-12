@@ -3,7 +3,13 @@
     <div class="justify-between block mx-auto max-w-1300px p-20px md:flex">
       <div class="hidden md:flex">
         <div
-          class="flex flex-col justify-between border-r border-blue-00ACD7 pr-20px mr-20px"
+          class="
+            flex flex-col
+            justify-between
+            border-r border-blue-00ACD7
+            pr-20px
+            mr-20px
+          "
         >
           <img src="@/assets/rea/rea-white.svg" alt="rea" class="h-60px" />
 
@@ -104,7 +110,7 @@ export default {
   },
   computed: {
     countryCode() {
-      return this.$store.state.countryCode;
+      return this.$store.state.country.countryCode;
     },
     emails() {
       return getCountryVariables(this.countryCode, "emails") || {};

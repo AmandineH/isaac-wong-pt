@@ -37,15 +37,19 @@ deploy:
     - if: $CI_COMMIT_REF_NAME =~ /id-prod-.+/
       variables:
         BUCKET_PATH: "rea-id-production"
+        COUNTRY_CODE: ID
     - if: $CI_COMMIT_REF_NAME =~ /id-dev-.+/
       variables:
         BUCKET_PATH: "rea-id-development"
+        COUNTRY_CODE: ID
     - if: $CI_COMMIT_REF_NAME =~ /sg-prod-.+/
       variables:
         BUCKET_PATH: "rea-sg-production"
+        COUNTRY_CODE: SG
     - if: $CI_COMMIT_REF_NAME =~ /sg-dev-.+/
       variables:
         BUCKET_PATH: "rea-sg-development"
+        COUNTRY_CODE: SG
   before_script:
     - pip install awscli
   script:

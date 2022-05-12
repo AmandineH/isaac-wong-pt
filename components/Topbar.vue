@@ -41,7 +41,15 @@
 
     <div
       v-if="isOpen"
-      class="fixed inset-0 z-50 flex flex-col justify-between bg-white text-blue-191f6C"
+      class="
+        fixed
+        inset-0
+        z-50
+        flex flex-col
+        justify-between
+        bg-white
+        text-blue-191f6C
+      "
     >
       <div class="flex flex-col flex-grow p-20px cursor-pointer">
         <div class="flex justify-between">
@@ -109,7 +117,7 @@
 </template>
 
 <script>
-import { menuItems } from "@/plugins/countries.js"
+import { menuItems } from "@/plugins/countries.js";
 
 export default {
   data() {
@@ -119,10 +127,12 @@ export default {
   },
   computed: {
     countryCode() {
-      return this.$store.state.countryCode;
+      return this.$store.state.country.countryCode;
     },
     menu() {
-      return menuItems.filter(e => !(e.excludedCountryCodes.includes(this.countryCode)))
+      return menuItems.filter(
+        (e) => !e.excludedCountryCodes.includes(this.countryCode)
+      );
     },
   },
 };

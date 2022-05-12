@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     countryCode() {
-      return this.$store.state.countryCode;
+      return this.$store.state.country.countryCode;
     },
   },
 };

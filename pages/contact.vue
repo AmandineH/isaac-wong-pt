@@ -2,14 +2,33 @@
   <div>
     <div class="mx-auto max-w-1300px">
       <div
-        class="relative overflow-hidden text-white bg-center bg-no-repeat bg-cover p-20px md:m-20px h-200px md:h-400px"
+        class="
+          relative
+          overflow-hidden
+          text-white
+          bg-center bg-no-repeat bg-cover
+          p-20px
+          md:m-20px
+          h-200px
+          md:h-400px
+        "
         :style="{
           backgroundImage:
             'url(\'' + require('@/assets/images/contact.jpg') + '\')',
         }"
       >
         <div
-          class="absolute transform rotate-45 -left-1000px md:-left-750px -top-500px w-1000px bg-blue-0689BC h-1000px"
+          class="
+            absolute
+            transform
+            rotate-45
+            -left-1000px
+            md:-left-750px
+            -top-500px
+            w-1000px
+            bg-blue-0689BC
+            h-1000px
+          "
         ></div>
 
         <h1 class="relative z-10 supheader-1">{{ $t("contact.contactus") }}</h1>
@@ -20,7 +39,14 @@
       <div class="relative justify-end mx-auto max-w-1300px md:flex p-20px">
         <iframe
           :src="googleMaps"
-          class="top-0 left-0 w-full md:w-1/2 min-h-300px md:absolute md:pl-20px"
+          class="
+            top-0
+            left-0
+            w-full
+            md:w-1/2
+            min-h-300px
+            md:absolute md:pl-20px
+          "
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
@@ -133,7 +159,7 @@ export default {
   layout: "default",
   computed: {
     countryCode() {
-      return this.$store.state.countryCode;
+      return this.$store.state.country.countryCode;
     },
     googleMaps() {
       return getCountryVariables(this.countryCode, "googleMaps");
