@@ -109,6 +109,7 @@ export default {
           variables: {
             filter: {
               published: { equalTo: true },
+              tags: { equalTo: "rea" },
               ...filter,
             },
             first: first,

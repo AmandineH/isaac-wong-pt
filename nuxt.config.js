@@ -1,36 +1,33 @@
 require("dotenv").config({
   path: `./.env`,
-})
+});
 
 export default {
-  srcDir: "src/",
-  alias: {
-    "@/*": `<srcDir>/*`,
-  },
-  target: 'static',
+  // srcDir: "src/",
+  // alias: {
+  //   "@/*": `<srcDir>/*`,
+  // },
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Real Estate Analytics',
+    title: "Real Estate Analytics",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" },
+      { name: "format-detection", content: "telephone=no" },
     ],
-    link: [
-      { rel: 'icon', type: 'image/png', href: '/rea-logo.png' }
-    ]
+    link: [{ rel: "icon", type: "image/png", href: "/rea-logo.png" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,7 +35,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    "@nuxtjs/tailwindcss",
     [
       "@nuxtjs/google-analytics",
       {
@@ -82,7 +79,7 @@ export default {
             "1000px": "1000px",
             "1300px": "1300px",
 
-            "80vh": "80vh"
+            "80vh": "80vh",
           },
           colors: {
             "blue-191f6C": "#191f6C",
@@ -122,8 +119,7 @@ export default {
           borderWidth: (theme) => ({
             ...theme("spacing"),
           }),
-          fontSize: {
-          },
+          fontSize: {},
           fontWeight: {
             hairline: "100",
             thin: "200",
@@ -135,14 +131,10 @@ export default {
             extrabold: "800",
             black: "900",
           },
-          boxShadow: {
-          },
-          borderRadius: {
-          },
-          transitionProperty: {
-          },
-          zIndex: {
-          },
+          boxShadow: {},
+          borderRadius: {},
+          transitionProperty: {},
+          zIndex: {},
           gradientColorStops: (theme) => ({
             ...theme("colors"),
           }),
@@ -155,7 +147,7 @@ export default {
       experimental: {
         applyComplexClasses: true,
       },
-    }
+    },
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -164,9 +156,7 @@ export default {
       "@nuxtjs/apollo",
       {
         clientConfigs: {
-          default: {
-            httpEndpoint: `${process.env.API_URL}/graphql`,
-          },
+          default: "~/plugins/apollo-config.js",
         },
       },
     ],
@@ -202,14 +192,14 @@ export default {
         },
       },
     ],
-    '@nuxtjs/dayjs',
+    "@nuxtjs/dayjs",
   ],
 
   env: {
-    COUNTRY_CODE: process.env.COUNTRY_CODE,
+    countryCode: process.env.COUNTRY_CODE,
+    apiUrl: process.env.API_URL,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
-}
+  build: {},
+};
