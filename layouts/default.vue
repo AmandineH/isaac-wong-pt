@@ -22,7 +22,8 @@ export default {
     },
   },
   mounted() {
-    this.$store.commit("setCountryCode", process.env.COUNTRY_CODE);
+    // this.$store.commit("setCountryCode", process.env.countryCode);
+    this.$store.commit("setCountryCode", "SG");
     this.$i18n.setLocale(getCountryVariables(this.countryCode, "locale"));
   },
 };

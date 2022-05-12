@@ -36,7 +36,7 @@
 
     <center v-if="loadMore && hasNextPage">
       <button
-        class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
+        class="flex items-center border  border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
         @click="loadMoreArticles"
       >
         {{ $t("news.loadmorestories") }}
@@ -79,12 +79,7 @@ export default {
   async mounted() {
     this.loading = true;
 
-    let res = await this.getArticles(
-      {
-        lang: { equalTo: this.$i18n.locale },
-      },
-      this.nbArticles
-    );
+    let res = await this.getArticles({}, this.nbArticles);
 
     if (res) {
       this.articles = res.articles;
@@ -97,13 +92,7 @@ export default {
     async loadMoreArticles() {
       if (this.hasNextPage) {
         this.offset = this.offset + this.first;
-        let res = await this.getArticles(
-          {
-            lang: { equalTo: this.$i18n.locale },
-          },
-          this.first,
-          this.offset
-        );
+        let res = await this.getArticles({}, this.first, this.offset);
 
         if (res) {
           this.articles.push(...res.articles);
@@ -118,6 +107,8 @@ export default {
           variables: {
             filter: {
               published: { equalTo: true },
+              tags: { equalTo: "rea" },
+              lang: { equalTo: this.$i18n.locale },
               ...filter,
             },
             first: first,
@@ -131,8 +122,7 @@ export default {
             hasNextPage: res.data.articles.pageInfo.hasNextPage,
           };
         }
-      } catch (e) {
-      }
+      } catch (e) {}
     },
   },
 };
