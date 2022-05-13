@@ -1,10 +1,6 @@
 <template>
   <div>
-    <nuxt-img
-      :src="`${bucket}/about.jpg`"
-      alt="about"
-      class="w-full min-h-600px"
-    />
+    <img :src="`${bucket}/about.jpg`" alt="about" class="w-full min-h-600px" />
 
     <div class="relative">
       <div class="absolute w-full top-50px h-10px bg-blue-00ACD7" />

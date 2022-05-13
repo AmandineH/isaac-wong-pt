@@ -15,7 +15,7 @@
           v-if="article.layout === 'horizontal'"
           class="flex h-full bg-gray-E8E8F0"
         >
-          <nuxt-img
+          <img
             :src="article.thumbnail"
             :alt="article.title || article.thumbnail"
             class="object-cover w-1/2 h-full min-h-200px"
@@ -24,7 +24,7 @@
         </div>
 
         <div v-else class="h-full bg-gray-E8E8F0">
-          <nuxt-img
+          <img
             :src="article.thumbnail"
             :alt="article.title || article.thumbnail"
             class="object-cover w-full h-200px"
@@ -36,7 +36,15 @@
 
     <center v-if="loadMore && hasNextPage">
       <button
-        class="flex items-center border  border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
+        class="
+          flex
+          items-center
+          border border-blue-00ACD7
+          p-5px
+          body-4
+          text-gray-666666
+          m-20px
+        "
         @click="loadMoreArticles"
       >
         {{ $t("news.loadmorestories") }}

@@ -199,7 +199,6 @@ export default {
       },
     ],
     "@nuxtjs/dayjs",
-    "@nuxt/image",
   ],
 
   env: {

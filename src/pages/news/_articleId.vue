@@ -5,7 +5,7 @@
         <p class="fine-prints-2 text-gray-666666">
           <a href="/news">{{ $t("news.news") }}</a> > {{ article.title }}
         </p>
-        <nuxt-img
+        <img
           v-if="article.thumbnail"
           :src="article.thumbnail"
           :alt="article.title || article.thumbnail"
