@@ -20,7 +20,13 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/png", href: "/rea-logo.png" }],
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "https://8prop-app.s3.ap-southeast-1.amazonaws.com/static/assets/favicon.ico",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
