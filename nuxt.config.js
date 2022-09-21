@@ -3,11 +3,17 @@ require("dotenv").config({
 });
 
 export default {
-  // srcDir: "src/",
-  // alias: {
-  //   "@/*": `<srcDir>/*`,
-  // },
-  target: "static",
+  srcDir: "src/",
+  alias: {
+    "@/*": `<srcDir>/*`,
+  },
+  server: {
+    port: process.env.NODE_ENV === "production" ? 8080 : 3200,
+  },
+  performance: {
+    gzip: true,
+  },
+  telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Real Estate Analytics",
@@ -33,10 +39,10 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/countries.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

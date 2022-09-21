@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "NODE_ENV=production node_modules/nuxt/bin/nuxt.js start",
     "generate": "nuxt generate",
     "deploy": "nuxt build && sls deploy"
   },
@@ -14,22 +14,13 @@
     "@nuxtjs/dayjs": "^1.4.1",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/i18n": "^7.2.1",
-    "aws-serverless-express": "^3.4.0",
     "core-js": "^3.15.1",
     "dotenv": "^16.0.0",
-    "express": "^4.17.1",
-    "nuxt": "^2.15.8",
-    "nuxt-aws-lambda": "^1.5.0",
-    "serverless-http": "^2.7.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "postcss": "^8.3.5",
-    "serverless": "^2.65.0",
-    "serverless-apigw-binary": "^0.4.4",
-    "serverless-domain-manager": "^5.1.5",
-    "serverless-nuxt-plugin": "^1.5.0",
-    "serverless-offline": "^8.2.0"
+    "postcss": "^8.3.5"
   },
   "description": "## Build Setup",
   "main": "nuxt.config.js",
