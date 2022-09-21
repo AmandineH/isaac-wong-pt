@@ -36,7 +36,7 @@
 
     <center v-if="loadMore && hasNextPage">
       <button
-        class="flex items-center border  border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
+        class="flex items-center border border-blue-00ACD7 p-5px body-4 text-gray-666666 m-20px"
         @click="loadMoreArticles"
       >
         {{ $t("news.loadmorestories") }}
@@ -107,7 +107,7 @@ export default {
           variables: {
             filter: {
               published: { equalTo: true },
-              tags: { equalTo: "rea" },
+              tags: { in: ["rea", "8prop"] },
               lang: { equalTo: this.$i18n.locale },
               ...filter,
             },

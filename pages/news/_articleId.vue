@@ -109,7 +109,7 @@ export default {
           variables: {
             filter: {
               published: { equalTo: true },
-              tags: { equalTo: "rea" },
+              tags: { in: ["rea", "8prop"] },
               ...filter,
             },
             first: first,
