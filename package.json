@@ -1,5 +1,5 @@
 {
-  "name": "rea",
+  "name": "isaac-wong-pt",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -24,15 +24,7 @@
   },
   "description": "## Build Setup",
   "main": "nuxt.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/reapl1/rea.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/reapl1/rea/issues"
-  },
-  "homepage": "https://gitlab.com/reapl1/rea#readme"
+  "license": "ISC"
 }

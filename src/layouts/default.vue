@@ -1,5 +1,5 @@
 <template>
-  <div v-if="countryCode && this.$i18n.locale">
+  <div>
     <Topbar />
     <Nuxt />
     <Footer />
@@ -13,11 +13,5 @@ import Footer from "@/components/Footer.vue";
 
 export default {
   components: { Topbar, Footer },
-  computed: {
-    countryCode() {
-      return this.$store.state.country.countryCode;
-    },
-  },
-  mounted() {},
 };
 </script>

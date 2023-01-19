@@ -1,7 +1,3 @@
-require("dotenv").config({
-  path: `./.env`,
-});
-
 export default {
   srcDir: "src/",
   alias: {
@@ -16,7 +12,7 @@ export default {
   telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Real Estate Analytics",
+    title: "Isaac Wong Personal Training",
     htmlAttrs: {
       lang: "en",
     },
@@ -39,7 +35,7 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/countries.js"],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -48,13 +44,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    [
-      "@nuxtjs/google-analytics",
-      {
-        // https://matteogabriele.gitbooks.io/vue-analytics/content/
-        id: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    ],
   ],
 
   tailwindcss: {
@@ -66,41 +55,8 @@ export default {
             display: ["Verdana", "Helvetica", "Arial", "sans-serif"],
             body: ["Verdana", "Helvetica", "Arial", "sans-serif"],
           },
-          spacing: {
-            "1/2": "50%",
-
-            "2px": "2px",
-            "5px": "5px",
-            "10px": "10px",
-            "20px": "20px",
-            "30px": "30px",
-            "40px": "40px",
-            "50px": "50px",
-            "60px": "60px",
-            "70px": "70px",
-            "80px": "80px",
-            "90px": "90px",
-            "100px": "100px",
-            "150px": "150px",
-            "200px": "200px",
-            "250px": "250px",
-            "300px": "300px",
-            "400px": "400px",
-            "500px": "500px",
-            "750px": "750px",
-            "1000px": "1000px",
-            "1300px": "1300px",
-
-            "80vh": "80vh",
-          },
-          colors: {
-            "blue-191f6C": "#191f6C",
-            "blue-00ACD7": "#00ACD7",
-            "blue-0689BC": "#0689BC",
-            "blue-333333": "#333333",
-            "gray-666666": "#666666",
-            "gray-E8E8F0": "#E8E8F0",
-          },
+          spacing: {},
+          colors: {},
           width: (theme) => ({
             ...theme("spacing"),
           }),
@@ -163,54 +119,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    [
-      "@nuxtjs/apollo",
-      {
-        clientConfigs: {
-          default: "~/plugins/apollo-config.js",
-        },
-      },
-    ],
-    [
-      "@nuxtjs/i18n",
-      {
-        baseUrl: process.env.BASE_URL,
-        langDir: "lang/",
-        locales: [
-          {
-            code: "en-US",
-            iso: "en-US",
-            file: "en-US.json",
-            dir: "ltr",
-            name: "English",
-          },
-          {
-            code: "id-ID",
-            iso: "id-ID",
-            file: "id-ID.json",
-            dir: "ltr",
-            name: "Basaha Indonesia",
-          },
-        ],
-        defaultLocale: "en-US",
-        langDir: "lang/",
-        vueI18n: {
-          fallbackLocale: "en-US",
-        },
-        lazy: true,
-        detectBrowserLanguage: {
-          useCookie: false,
-        },
-      },
-    ],
-    "@nuxtjs/dayjs",
-  ],
-
-  env: {
-    countryCode: process.env.COUNTRY_CODE,
-    apiUrl: process.env.API_URL,
-  },
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
