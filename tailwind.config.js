@@ -13,25 +13,12 @@ module.exports = {
         "5px": "5px",
         "10px": "10px",
         "20px": "20px",
-        "30px": "30px",
         "40px": "40px",
         "50px": "50px",
-        "60px": "60px",
-        "70px": "70px",
-        "80px": "80px",
-        "90px": "90px",
         "100px": "100px",
-        "150px": "150px",
-        "200px": "200px",
-        "250px": "250px",
-        "300px": "300px",
-        "400px": "400px",
-        "500px": "500px",
-        "750px": "750px",
-        "1000px": "1000px",
         "1300px": "1300px",
 
-        "80vh": "80vh"
+        "80vh": "80vh",
       },
       colors: {
         "blue-191f6C": "#191f6C",
@@ -71,8 +58,7 @@ module.exports = {
       borderWidth: (theme) => ({
         ...theme("spacing"),
       }),
-      fontSize: {
-      },
+      fontSize: {},
       fontWeight: {
         hairline: "100",
         thin: "200",
@@ -84,14 +70,10 @@ module.exports = {
         extrabold: "800",
         black: "900",
       },
-      boxShadow: {
-      },
-      borderRadius: {
-      },
-      transitionProperty: {
-      },
-      zIndex: {
-      },
+      boxShadow: {},
+      borderRadius: {},
+      transitionProperty: {},
+      zIndex: {},
       gradientColorStops: (theme) => ({
         ...theme("colors"),
       }),

@@ -28,6 +28,10 @@ export default {
         type: "image/x-icon",
         href: "https://8prop-app.s3.ap-southeast-1.amazonaws.com/static/assets/favicon.ico",
       },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap",
+      },
     ],
   },
 
@@ -51,11 +55,21 @@ export default {
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Verdana", "Helvetica", "Arial", "sans-serif"],
-            display: ["Verdana", "Helvetica", "Arial", "sans-serif"],
-            body: ["Verdana", "Helvetica", "Arial", "sans-serif"],
+            sans: ["Noto Sans SC", "Helvetica", "Arial", "sans-serif"],
+            display: ["Noto Sans SC", "Helvetica", "Arial", "sans-serif"],
+            body: ["Noto Sans SC", "Helvetica", "Arial", "sans-serif"],
           },
-          spacing: {},
+          spacing: {
+            "2px": "2px",
+            "5px": "5px",
+            "10px": "10px",
+            "20px": "20px",
+            "40px": "40px",
+            "50px": "50px",
+            "100px": "100px",
+            "200px": "200px",
+            "1300px": "1300px",
+          },
           colors: {},
           width: (theme) => ({
             ...theme("spacing"),
