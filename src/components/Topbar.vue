@@ -94,7 +94,7 @@
               v-for="(item, key) in menu"
               :key="key"
               :to="item.href"
-              class="text-white border-b-3px"
+              class="text-white border-b-5px"
               :class="[
                 $route.name &&
                 ($route.name.startsWith(item.key) ||
