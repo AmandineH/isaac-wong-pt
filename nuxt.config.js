@@ -1,4 +1,5 @@
 export default {
+  target: "static",
   srcDir: "src/",
   alias: {
     "@/*": `<srcDir>/*`,
@@ -25,8 +26,8 @@ export default {
     link: [
       {
         rel: "icon",
-        type: "image/x-icon",
-        href: "https://8prop-app.s3.ap-southeast-1.amazonaws.com/static/assets/favicon.ico",
+        type: "image/png",
+        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.ea95409.png",
       },
       {
         rel: "stylesheet",

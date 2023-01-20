@@ -2,12 +2,12 @@
   <div class="bg-black">
     <div
       v-if="isLg"
-      class="flex items-center justify-between mx-auto  max-w-1300px px-40px py-20px"
+      class="flex items-center justify-between mx-auto max-w-1300px px-40px py-20px"
     >
       <div class="flex items-center gap-50px">
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.jpg"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
             alt="Isaac Wong Personal Training"
             class="h-50px"
           />
@@ -18,7 +18,7 @@
             v-for="(item, key) in menu"
             :key="key"
             :to="item.href"
-            class="relative flex items-center  text-gray-ACACAC body-2 hover:text-orange-EE642A h-50px"
+            class="relative flex items-center text-gray-ACACAC body-2 hover:text-orange-EE642A h-50px"
             >{{ item.label }}
 
             <div
@@ -41,7 +41,7 @@
             :key="key"
             :href="contact.href"
             target="_blank"
-            class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+            class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
           >
             <img :src="contact.src" class="h-30px w-30px" :alt="contact.alt" />
           </a>
@@ -53,7 +53,7 @@
       <div class="flex items-center justify-between px-20px py-10px">
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.jpg"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
             alt="Isaac Wong Personal Training"
             class="h-50px"
           />
@@ -85,10 +85,10 @@
       <transition name="slide">
         <div
           v-if="$route.query.menu"
-          class="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-black  top-70px p-20px"
+          class="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-black top-70px p-20px"
         >
           <div
-            class="flex flex-col items-center flex-grow overflow-y-auto  gap-20px mb-40px"
+            class="flex flex-col items-center flex-grow overflow-y-auto gap-20px mb-40px"
           >
             <nuxt-link
               v-for="(item, key) in menu"
