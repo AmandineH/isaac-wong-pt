@@ -2,7 +2,7 @@
   <div class="bg-black">
     <div
       v-if="isLg"
-      class="flex items-center justify-between mx-auto max-w-1300px px-40px py-20px"
+      class="flex items-center justify-between mx-auto  max-w-1300px px-40px py-20px"
     >
       <div class="flex items-center gap-50px">
         <nuxt-link :to="'/'">
@@ -18,7 +18,14 @@
             v-for="(item, key) in menu"
             :key="key"
             :to="item.href"
-            class="relative flex items-center text-gray-ACACAC body-2 hover:text-orange-EE642A h-50px"
+            class="relative flex items-center  body-2 hover:text-orange-EE642A h-50px"
+            :class="
+              $route.name &&
+              ($route.name.startsWith(item.key) ||
+                (item.key === 'home' && $route.path === '/'))
+                ? 'text-white'
+                : 'text-gray-ACACAC'
+            "
             >{{ item.label }}
 
             <div
@@ -27,7 +34,7 @@
                 ($route.name.startsWith(item.key) ||
                   (item.key === 'home' && $route.path === '/'))
               "
-              class="absolute w-full -bottom-20px bg-orange-EE642A h-5px"
+              class="absolute w-full -bottom-20px bg-orange-EE642A h-2px"
           /></nuxt-link>
         </div>
       </div>
@@ -41,7 +48,7 @@
             :key="key"
             :href="contact.href"
             target="_blank"
-            class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
+            class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
           >
             <img :src="contact.src" class="h-30px w-30px" :alt="contact.alt" />
           </a>
@@ -85,26 +92,77 @@
       <transition name="slide">
         <div
           v-if="$route.query.menu"
-          class="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-black top-70px p-20px"
+          class="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-black  top-70px p-20px gap-40px"
         >
           <div
-            class="flex flex-col items-center flex-grow overflow-y-auto gap-20px mb-40px"
+            class="flex flex-col items-center flex-grow overflow-y-auto  gap-20px"
           >
             <nuxt-link
               v-for="(item, key) in menu"
               :key="key"
               :to="item.href"
-              class="text-white border-b-5px"
+              class="border-b-2px body-2 pb-5px"
               :class="[
                 $route.name &&
                 ($route.name.startsWith(item.key) ||
                   (item.key === 'home' && $route.path === '/'))
-                  ? 'body-bold-2 border-orange-EE642A'
-                  : 'body-2 border-transparent',
+                  ? 'border-orange-EE642A text-white'
+                  : 'border-transparent text-gray-ACACAC',
               ]"
             >
               {{ item.label }}
             </nuxt-link>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <p class="text-center text-white body-2 mb-10px">Contact</p>
+
+            <div class="flex justify-center gap-5px mb-10px">
+              <a
+                v-for="(contact, key) in contacts"
+                :key="key"
+                :href="contact.href"
+                target="_blank"
+                class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+              >
+                <img
+                  :src="contact.src"
+                  class="h-30px w-30px"
+                  :alt="contact.alt"
+                />
+              </a>
+            </div>
+
+            <div class="flex flex-col gap-5px">
+              <p class="text-center text-gray-ACACAC body-3">
+                Whatsapp: +6588888888
+              </p>
+              <p class="text-center text-gray-ACACAC body-3">
+                Email: isaac@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <p class="text-center text-white body-2 mb-10px">Find me on</p>
+
+            <div class="flex justify-center gap-5px mb-10px">
+              <a
+                v-for="(social, key) in socials"
+                :key="key"
+                :href="social.href"
+                target="_blank"
+                class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+              >
+                <img
+                  :src="social.src"
+                  class="h-30px w-30px"
+                  :alt="social.alt"
+                />
+              </a>
+            </div>
+
+            <p class="text-center text-gray-ACACAC body-3">@isaacwongpt</p>
           </div>
         </div>
       </transition>
@@ -156,6 +214,34 @@ export default {
           href: "mailto:",
           src: require("@/assets/social/email.svg"),
           alt: "Email",
+        },
+      ];
+    },
+    socials() {
+      return [
+        {
+          key: "instagram",
+          href: "https://www.instagram.com/isaacwongpt/",
+          src: require("@/assets/social/instagram.svg"),
+          alt: "Instagram",
+        },
+        {
+          key: "tiktok",
+          href: "",
+          src: require("@/assets/social/tiktok.svg"),
+          alt: "TikTok",
+        },
+        {
+          key: "facebook",
+          href: "",
+          src: require("@/assets/social/facebook.svg"),
+          alt: "Facebook",
+        },
+        {
+          key: "linkedin",
+          href: "",
+          src: require("@/assets/social/linkedin.svg"),
+          alt: "LinkedIn",
         },
       ];
     },
