@@ -27,7 +27,7 @@
               :key="key"
               :href="contact.href"
               target="_blank"
-              class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
+              class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
             >
               <img
                 :src="contact.src"
@@ -65,7 +65,7 @@
               :key="key"
               :href="social.href"
               target="_blank"
-              class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
+              class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
             >
               <img :src="social.src" class="h-30px w-30px" :alt="social.alt" />
             </a>
@@ -75,7 +75,6 @@
         </div>
       </div>
 
-      <hr class="border-white opacity-50 border-t-1px mb-20px" />
       <p class="text-white fine-prints-2" :class="isLg ? '' : 'text-center'">
         © Isaac Wong Personal Training
       </p>
