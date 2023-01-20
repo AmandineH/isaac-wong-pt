@@ -1,3 +1,4 @@
+/* Text */
 .supheader-1 {
   font-size: 40px;
   font-weight: bold;
@@ -192,4 +193,30 @@
     white-space: nowrap;
     overflow: hidden;
   }
+}
+
+/* Transitions */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+  opacity: 1;
+}
+.slide-leave-to {
+  transform: translate(100%, 0);
+  opacity: 0;
 }

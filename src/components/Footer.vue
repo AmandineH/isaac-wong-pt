@@ -1,8 +1,16 @@
 <template>
   <footer class="bg-black">
     <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'p-20px'">
-      <div class="flex justify-between gap-20px">
-        <nuxt-link :to="'/'">
+      <div
+        class="grid mb-20px"
+        :class="
+          isLg ? 'grid-cols-4 gap-20px' : 'grid-cols-2 gap-x-20px gap-y-40px'
+        "
+      >
+        <nuxt-link
+          :to="'/'"
+          :class="isLg ? 'order-1' : 'order-2 flex justify-end'"
+        >
           <img
             src="@/assets/isaac-wong-pt/isaac-wong-pt.jpg"
             alt="Isaac Wong Personal Training"
@@ -10,33 +18,67 @@
           />
         </nuxt-link>
 
-        <div class="flex gap-20px">
-          <a
-            v-for="(contact, key) in contacts"
-            :key="key"
-            :href="contact.href"
-            target="_blank"
-            class="relative flex items-center justify-center rounded-full  group button hover:bg-white h-50px w-50px"
-          >
-            <img :src="contact.src" class="h-15px w-15px" :alt="contact.alt" />
-          </a>
+        <div :class="isLg ? 'order-2' : 'order-1'">
+          <p class="text-white body-2 mb-10px">Contact</p>
+
+          <div class="flex gap-5px mb-10px">
+            <a
+              v-for="(contact, key) in contacts"
+              :key="key"
+              :href="contact.href"
+              target="_blank"
+              class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
+            >
+              <img
+                :src="contact.src"
+                class="h-30px w-30px"
+                :alt="contact.alt"
+              />
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-5px">
+            <p class="text-gray-ACACAC body-3">Whatsapp: +6588888888</p>
+            <p class="text-gray-ACACAC body-3">Email: isaac@gmail.com</p>
+          </div>
         </div>
 
-        <div class="flex gap-20px">
-          <a
-            v-for="(social, key) in socials"
+        <div
+          class="flex flex-col order-3 gap-20px"
+          :class="isLg ? '' : 'col-span-2'"
+        >
+          <nuxt-link
+            v-for="(item, key) in menu"
             :key="key"
-            :href="social.href"
-            target="_blank"
-            class="relative flex items-center justify-center rounded-full  group button hover:bg-white h-50px w-50px"
+            :to="item.href"
+            class="text-gray-ACACAC body-3 hover:text-orange-EE642A"
+            >{{ item.label }}</nuxt-link
           >
-            <img :src="social.src" class="h-15px w-15px" :alt="social.alt" />
-          </a>
+        </div>
+
+        <div class="order-4" :class="isLg ? '' : 'col-span-2'">
+          <p class="text-white body-2 mb-10px">Find me on</p>
+
+          <div class="flex gap-5px mb-10px">
+            <a
+              v-for="(social, key) in socials"
+              :key="key"
+              :href="social.href"
+              target="_blank"
+              class="relative flex items-center justify-center rounded-full group button hover:bg-orange-EE642A h-50px w-50px"
+            >
+              <img :src="social.src" class="h-30px w-30px" :alt="social.alt" />
+            </a>
+          </div>
+
+          <p class="text-gray-ACACAC body-3">@isaacwongpt</p>
         </div>
       </div>
 
       <hr class="border-white opacity-50 border-t-1px mb-20px" />
-      <p class="text-white fine-prints-2">© Isaac Wong Personal Training</p>
+      <p class="text-white fine-prints-2" :class="isLg ? '' : 'text-center'">
+        © Isaac Wong Personal Training
+      </p>
     </div>
   </footer>
 </template>
@@ -52,7 +94,7 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "",
+          href: "https://wa.me/+6588888888",
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
         },
