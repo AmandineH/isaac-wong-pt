@@ -40,7 +40,9 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: "~/plugins/vue-carousel.js", mode: "client" },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -73,7 +75,11 @@ export default {
             "100px": "100px",
             "200px": "200px",
             "400px": "400px",
+            "500px": "500px",
             "1300px": "1300px",
+
+            "80vh": "80vh",
+            "100vh": "100vh",
           },
           colors: {
             "yellow-FAC710": "#FAC710",
