@@ -69,8 +69,10 @@ export default {
             "40px": "40px",
             "50px": "50px",
             "70px": "70px",
+            "80px": "80px",
             "100px": "100px",
             "200px": "200px",
+            "400px": "400px",
             "1300px": "1300px",
           },
           colors: {
@@ -80,6 +82,7 @@ export default {
             "blue-468BCC": "#468BCC",
             "green-2B986B": "#2B986B",
             "gray-ACACAC": "#ACACAC",
+            "black-00000033": "#00000033"
           },
           width: (theme) => ({
             ...theme("spacing"),
@@ -124,7 +127,10 @@ export default {
             black: "900",
           },
           boxShadow: {},
-          borderRadius: {},
+          borderRadius: {
+            "5px": "5px",
+            "10px": "10px",
+          },
           transitionProperty: {},
           zIndex: {},
           gradientColorStops: (theme) => ({
