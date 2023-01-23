@@ -1,0 +1,61 @@
+<template>
+  <div class="relative bg-black overflow-hidden">
+    <video
+      autoplay
+      loop
+      muted
+      class="w-full"
+      :class="isLg ? 'absolute top-0' : ''"
+    >
+      <source src="@/assets/isaac-wong-pt/trailer.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="bg-black-00000033 relative z-10">
+      <div class="mx-auto max-w-1300px" :class="isLg ? 'h-80vh' : ''">
+        <div :class="isLg ? 'max-w-500px px-40px py-80px' : 'px-20px py-40px'">
+          <p class="text-white supheader-1 mb-10px">Isaac Wong</p>
+          <p class="text-white header-2 opacity-70">
+            Certified Personal Trainer
+          </p>
+
+          <p class="text-white mb-20px body-2 mt-20px">
+            Reach your fitness goals - I believe that being physically fit is
+            something that everybody should be able to enjoy. With over 15 years
+            of competitive sports experience and more than half a decade of
+            profesional coaching under my belt, I have acquired the necessary
+            skills and expertise to helf any individual achieve his or her
+            fitness goals.
+          </p>
+          <div class="flex" :class="isLg ? ' justify-end' : 'justify-center'">
+            <a
+              href="https://wa.me/+6588888888"
+              target="_blank"
+              class="
+                text-orange-EE642A
+                border border-orange-EE642A
+                hover:bg-orange-EE642A
+                px-40px
+                py-10px
+                rounded-5px
+                hover:text-black
+              "
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Banner",
+  computed: {
+    isLg() {
+      return this.$store.state.layout.isLg;
+    },
+  },
+};
+</script>
