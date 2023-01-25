@@ -33,7 +33,7 @@
               target="_blank"
               class="
                 text-orange-EE642A
-                border border-orange-EE642A
+                border-2px border-orange-EE642A
                 hover:bg-orange-EE642A
                 px-40px
                 py-10px

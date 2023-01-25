@@ -122,11 +122,6 @@ export default {
           href: "/results-and-testimonials",
           label: "Results & Testimonials",
         },
-        {
-          key: "contact",
-          href: "/contact",
-          label: "Contact",
-        },
       ];
     },
     socials() {

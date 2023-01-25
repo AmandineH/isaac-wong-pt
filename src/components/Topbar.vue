@@ -1,8 +1,16 @@
 <template>
-  <div class="bg-black">
+  <div class="bg-black sticky top-0 z-50">
     <div
       v-if="isLg"
-      class="flex items-center justify-between mx-auto  max-w-1300px px-40px py-20px"
+      class="
+        flex
+        items-center
+        justify-between
+        mx-auto
+        max-w-1300px
+        px-40px
+        py-20px
+      "
     >
       <div class="flex items-center gap-50px">
         <nuxt-link :to="'/'">
@@ -18,7 +26,14 @@
             v-for="(item, key) in menu"
             :key="key"
             :to="item.href"
-            class="relative flex items-center  body-2 hover:text-orange-EE642A h-50px"
+            class="
+              relative
+              flex
+              items-center
+              body-2
+              hover:text-orange-EE642A
+              h-50px
+            "
             :class="
               $route.name &&
               ($route.name.startsWith(item.key) ||
@@ -48,7 +63,18 @@
             :key="key"
             :href="contact.href"
             target="_blank"
-            class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+            class="
+              relative
+              flex
+              items-center
+              justify-center
+              rounded-full
+              group
+              button
+              hover:bg-orange-EE642A
+              h-50px
+              w-50px
+            "
           >
             <img :src="contact.src" class="h-30px w-30px" :alt="contact.alt" />
           </a>
@@ -57,7 +83,9 @@
     </div>
 
     <div v-else>
-      <div class="flex items-center justify-between px-20px py-10px">
+      <div
+        class="flex items-center justify-between px-20px py-10px"
+      >
         <nuxt-link :to="'/'">
           <img
             src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
@@ -66,36 +94,77 @@
           />
         </nuxt-link>
 
-        <button
-          @click="
-            $router.push({
-              query: {
-                ...$route.query,
-                menu: $route.query.menu ? undefined : true,
-              },
-            })
-          "
-          class="button"
-        >
-          <img
-            :src="
-              $route.query.menu
-                ? require('@/assets/utility/close.svg')
-                : require('@/assets/utility/menu.svg')
+        <div class="flex gap-5px">
+          <a
+            :href="contacts[0].href"
+            target="_blank"
+            class="
+              relative
+              flex
+              items-center
+              justify-center
+              rounded-full
+              group
+              button
+              hover:bg-orange-EE642A
+              h-50px
+              w-50px
             "
-            alt="Menu"
-            class="h-30px w-30px"
-          />
-        </button>
+          >
+            <img
+              :src="contacts[0].src"
+              class="h-30px w-30px"
+              :alt="contacts[0].alt"
+            />
+          </a>
+
+          <button
+            @click="
+              $router.push({
+                query: {
+                  ...$route.query,
+                  menu: $route.query.menu ? undefined : true,
+                },
+              })
+            "
+            class="button"
+          >
+            <img
+              :src="
+                $route.query.menu
+                  ? require('@/assets/utility/close.svg')
+                  : require('@/assets/utility/menu.svg')
+              "
+              alt="Menu"
+              class="h-30px w-30px"
+            />
+          </button>
+        </div>
       </div>
 
       <transition name="slide">
         <div
           v-if="$route.query.menu"
-          class="fixed inset-x-0 bottom-0 z-50 flex flex-col bg-black  top-70px p-20px gap-40px"
+          class="
+            fixed
+            inset-x-0
+            bottom-0
+            z-50
+            flex flex-col
+            bg-black
+            top-70px
+            p-20px
+            gap-40px
+          "
         >
           <div
-            class="flex flex-col items-center flex-grow overflow-y-auto  gap-20px"
+            class="
+              flex flex-col
+              items-center
+              flex-grow
+              overflow-y-auto
+              gap-20px
+            "
           >
             <nuxt-link
               v-for="(item, key) in menu"
@@ -123,7 +192,18 @@
                 :key="key"
                 :href="contact.href"
                 target="_blank"
-                class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+                class="
+                  relative
+                  flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  group
+                  button
+                  hover:bg-orange-EE642A
+                  h-50px
+                  w-50px
+                "
               >
                 <img
                   :src="contact.src"
@@ -152,7 +232,18 @@
                 :key="key"
                 :href="social.href"
                 target="_blank"
-                class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+                class="
+                  relative
+                  flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  group
+                  button
+                  hover:bg-orange-EE642A
+                  h-50px
+                  w-50px
+                "
               >
                 <img
                   :src="social.src"
@@ -193,11 +284,6 @@ export default {
           key: "results-and-testimonials",
           href: "/results-and-testimonials",
           label: "Results & Testimonials",
-        },
-        {
-          key: "contact",
-          href: "/contact",
-          label: "Contact",
         },
       ];
     },
