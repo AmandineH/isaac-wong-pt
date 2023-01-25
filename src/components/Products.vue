@@ -51,7 +51,7 @@
               :to="'/contact'"
               class="
                 text-white
-                border border-green-2B986B
+                border-2px border-green-2B986B
                 hover:bg-green-2B986B
                 px-40px
                 py-10px
@@ -95,7 +95,7 @@
                   target="_blank"
                   class="
                     text-white
-                    border border-green-2B986B
+                    border-2px border-green-2B986B
                     hover:bg-green-2B986B
                     px-40px
                     py-10px

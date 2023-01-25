@@ -18,7 +18,7 @@
 
       <div v-if="isLg" class="flex flex-col gap-20px mb-20px">
         <div
-          v-for="(product, key) in products"
+          v-for="(testimonial, key) in testimonials"
           :key="key"
           class="bg-white rounded-10px overflow-hidden flex"
         >
@@ -26,27 +26,28 @@
             autoplay
             loop
             muted
+            controls
             class="h-full w-1/2 object-center flex-shrink-0"
           >
-            <source :src="product.src" type="video/mp4" />
+            <source :src="testimonial.src" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div class="p-20px">
             <p class="text-black header-1 mb-10px">
-              {{ product.label }}
+              {{ testimonial.label }}
             </p>
             <p class="text-black title-2 opacity-70 mb-20px">
-              {{ product.sublabel }}
+              {{ testimonial.sublabel }}
             </p>
             <p class="text-black body-2">
-              {{ product.description }}
+              {{ testimonial.description }}
             </p>
           </div>
         </div>
       </div>
       <Carousel
         v-else
-        :slides="products"
+        :slides="testimonials"
         :colorCode="'#FFFFFF'"
         :activeColorCode="'#468BCC'"
         class="mb-20px"
@@ -56,7 +57,10 @@
             <div
               class="h-full bg-white rounded-10px flex flex-col overflow-hidden"
             >
-              <img :src="slide.src" class="w-full mb-10px" />
+              <video autoplay loop muted controls class="w-full mb-10px">
+                <source :src="slide.src" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div
                 class="p-20px flex-grow flex flex-col justify-between gap-40px"
               >
@@ -78,19 +82,18 @@
       </Carousel>
 
       <div class="flex justify-center">
-        <a
-          href="https://wa.me/+6588888888"
-          target="_blank"
+        <nuxt-link
+          :to="'/testimonials'"
           class="
             text-blue-468BCC
-            border border-blue-468BCC
+            border-2px border-blue-468BCC
             hover:bg-blue-468BCC
             px-40px
             py-10px
             rounded-5px
             hover:text-white
           "
-          >See more testimonials</a
+          >More Testimonials</nuxt-link
         >
       </div>
     </div>
@@ -108,11 +111,11 @@ export default {
     isLg() {
       return this.$store.state.layout.isLg;
     },
-    products() {
+    testimonials() {
       return [
         {
           key: "jaden",
-          src: require("@/assets/services/virtual-personal-training.png"),
+          src: require("@/assets/testimonials/jaden.mp4"),
           label: "Jaden",
           sublabel: "Whaterver he wanna do",
           description:
@@ -120,7 +123,7 @@ export default {
         },
         {
           key: "jingxin",
-          src: require("@/assets/services/personal-training.png"),
+          src: require("@/assets/testimonials/jingxin.mp4"),
           label: "Jingxin",
           sublabel: "Whaterver he wanna do",
           description:
@@ -128,7 +131,7 @@ export default {
         },
         {
           key: "darren",
-          src: require("@/assets/services/online-coaching.png"),
+          src: require("@/assets/testimonials/darren.mp4"),
           label: "Darren",
           sublabel: "Whaterver he wanna do",
           description:
