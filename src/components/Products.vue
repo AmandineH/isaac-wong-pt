@@ -8,17 +8,7 @@
       <p class="text-black body-2">
         There are many different ways to get fit and stay fit. Lose weight, run
         a marathon or get that beach body—take a look below at the different
-        ways I can help achieve your fitness goals. During personal training
-        sessions, I will ensure that you lift with good form and are pushed in a
-        safe environment while keeping things enjoyable. There will be regular
-        out of session check-ins regarding nutrition and your general wellbeing
-        to ensure interpersonal accountability.
-        <br />If location is a limiting factor, I offer Virtual Personal Traning
-        as well. Here I will still be able to check your form and push you at
-        the comfort of your own location. For more experienced clients, who
-        require just a traning and nutrition plan to follow, I offer online
-        coaching too. Do contact me if you think I might be the right fit for
-        you!
+        ways I can help achieve your fitness goals. Please contact me directly for a quote!
       </p>
     </div>
 
@@ -48,7 +38,7 @@
 
           <div class="flex justify-center">
             <a
-              href="https://wa.me/+6588888888"
+              href="https://wa.me/+6597567270"
               target="_blank"
               class="
                 text-white
@@ -92,7 +82,7 @@
 
               <div class="flex justify-center">
                 <a
-                  href="https://wa.me/+6588888888"
+                  href="https://wa.me/+6597567270"
                   target="_blank"
                   class="
                     text-white
@@ -128,7 +118,7 @@ export default {
       return [
         {
           key: "personal-training",
-          src: require("@/assets/services/personal-training.png"),
+          src: require("@/assets/services/personal-training.jpg"),
           label: "Personal Training",
           features: [
             "1:1 in-person coaching",

@@ -6,14 +6,6 @@
     >
       <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
         <p class="text-white supheader-1 mb-20px">They made it, you can too</p>
-        <p class="text-white body-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat
-          risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed.
-          Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at
-          enim euismod, sit amet pulvinar dui sagittis. Duis fermentum leo id
-          pretium consequat. Integer sollicitudin porta hendrerit. Vivamus
-          tristique magna sed felis laoreet vestibulum sit amet vel dolor.
-        </p>
       </div>
 
       <div v-if="isLg" class="grid grid-cols-3 gap-20px mb-20px">
@@ -46,8 +38,11 @@
                 backgroundImage: 'url(\'' + testimonial.thumbnail + '\')',
               }"
             >
-              <div class="absolute inset-0 bg-black opacity-50"/>
-              <img src="@/assets/utility/play.svg" class="h-100px w-100px relative" />
+              <div class="absolute inset-0 bg-black opacity-50" />
+              <img
+                src="@/assets/utility/play.svg"
+                class="h-100px w-100px relative"
+              />
             </div>
           </template>
           <img

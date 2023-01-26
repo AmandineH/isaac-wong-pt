@@ -1,140 +1,148 @@
 <template>
-  <div class="bg-black">
-    <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'py-20px'">
-      <div :class="isLg ? 'mb-40px' : 'px-20px mb-40px'">
-        <p class="text-white supheader-1 mb-20px">They made it, you can too</p>
-        <p class="text-white body-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat
-          risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed.
-          Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at
-          enim euismod, sit amet pulvinar dui sagittis. Duis fermentum leo id
-          pretium consequat. Integer sollicitudin porta hendrerit. Vivamus
-          tristique magna sed felis laoreet vestibulum sit amet vel dolor.
-        </p>
-      </div>
-
-      <div v-if="isLg" class="grid grid-cols-4 gap-20px mb-20px">
-        <div
-          v-for="(testimonial, key) in testimonials"
-          :key="key"
-          class="rounded-10px overflow-hidden relative"
-          :class="testimonial.type === 'video' ? 'col-span-2' : 'col-span-1'"
-          @mouseover="playClip(testimonial.key)"
-          @mouseout="pauseClip(testimonial.key)"
-        >
-          <template v-if="testimonial.type === 'video'">
-            <video :id="testimonial.key" muted controls class="h-full w-full">
-              <source :src="testimonial.src" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div
-              :id="'play-' + testimonial.key"
-              class="
-                absolute
-                inset-0
-                z-10
-                flex
-                items-center
-                justify-center
-                bg-center bg-no-repeat bg-cover
-              "
-              :style="{
-                backgroundImage: 'url(\'' + testimonial.thumbnail + '\')',
-              }"
-            >
-              <div class="absolute inset-0 bg-black opacity-50" />
-              <img
-                src="@/assets/utility/play.svg"
-                class="h-50px w-50px relative"
-              />
-            </div>
-          </template>
-          <img
-            v-else
-            :src="testimonial.src"
-            class="w-full h-full object-center object-contain"
-          />
-        </div>
-      </div>
-      <template v-else>
-        <div class="bg-blue-468BCC py-40px">
-          <p class="text-white header-1 px-20px mb-20px text-center">
-            Before, After
+  <div>
+    <div class="bg-black">
+      <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'pt-20px'">
+        <div :class="isLg ? 'mb-40px' : 'px-20px mb-40px'">
+          <p class="text-white supheader-1 mb-20px">
+            They made it, you can too
           </p>
-          <Carousel
-            :slides="testimonials.filter((element) => element.type === 'img')"
-            :colorCode="'#FFFFFF'"
-            :activeColorCode="'#142C90'"
+          <p class="text-white body-2">
+            "I have lost 13kg, can now do more pull ups than what I did in
+            National Service and for the first time in many years, I can climb
+            stairs and run pain free." - Allan
+          </p>
+        </div>
+
+        <div v-if="isLg" class="grid grid-cols-4 gap-20px mb-20px">
+          <div
+            v-for="(testimonial, key) in testimonials"
+            :key="key"
+            class="rounded-10px overflow-hidden relative"
+            :class="testimonial.type === 'video' ? 'col-span-2' : 'col-span-1'"
+            @mouseover="playClip(testimonial.key)"
+            @mouseout="pauseClip(testimonial.key)"
           >
-            <template #slide="{ slide }">
-              <div class="px-20px h-full">
-                <div class="h-full rounded-10px overflow-hidden">
-                  <img
-                    :src="slide.src"
-                    class="w-full h-full object-center object-cover"
-                  />
-                </div>
+            <template v-if="testimonial.type === 'video'">
+              <video :id="testimonial.key" muted controls class="h-full w-full">
+                <source :src="testimonial.src" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              <div
+                :id="'play-' + testimonial.key"
+                class="
+                  absolute
+                  inset-0
+                  z-10
+                  flex
+                  items-center
+                  justify-center
+                  bg-center bg-no-repeat bg-cover
+                "
+                :style="{
+                  backgroundImage: 'url(\'' + testimonial.thumbnail + '\')',
+                }"
+              >
+                <div class="absolute inset-0 bg-black opacity-50" />
+                <img
+                  src="@/assets/utility/play.svg"
+                  class="h-50px w-50px relative"
+                />
               </div>
             </template>
-          </Carousel>
+            <img
+              v-else
+              :src="testimonial.src"
+              class="w-full h-full object-center object-contain"
+            />
+          </div>
         </div>
-
-        <div class="bg-blue-142C90 py-40px">
-          <p class="text-white header-1 px-20px mb-20px text-center">
-            Testimonials
-          </p>
-          <Carousel
-            :slides="testimonials.filter((element) => element.type === 'video')"
-            :colorCode="'#FFFFFF'"
-            :activeColorCode="'#468BCC'"
-          >
-            <template #slide="{ slide }">
-              <div class="px-20px h-full">
-                <div class="h-full rounded-10px overflow-hidden relative">
-                  <video :id="slide.key" muted controls class="w-full">
-                    <source :src="slide.src" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-
-                  <div
-                    :id="'play-' + slide.key"
-                    class="
-                      absolute
-                      inset-0
-                      z-10
-                      flex
-                      items-center
-                      justify-center
-                      bg-center bg-no-repeat bg-cover
-                    "
-                    :style="{
-                      backgroundImage: 'url(\'' + slide.thumbnail + '\')',
-                    }"
-                    @click="playClip(slide.key)"
-                  >
-                    <div class="absolute inset-0 bg-black opacity-50" />
+        <template v-else>
+          <div class="bg-blue-468BCC py-40px">
+            <p class="text-white header-1 px-20px mb-20px text-center">
+              Before, After
+            </p>
+            <Carousel
+              :slides="testimonials.filter((element) => element.type === 'img')"
+              :colorCode="'#FFFFFF'"
+              :activeColorCode="'#000000'"
+            >
+              <template #slide="{ slide }">
+                <div class="px-20px h-full">
+                  <div class="h-full rounded-10px overflow-hidden">
                     <img
-                      src="@/assets/utility/play.svg"
-                      class="h-50px w-50px relative"
+                      :src="slide.src"
+                      class="w-full h-full object-center object-cover"
                     />
                   </div>
                 </div>
-              </div>
-            </template>
-          </Carousel>
-        </div>
-      </template>
+              </template>
+            </Carousel>
+          </div>
+
+          <div class="bg-black py-40px">
+            <p class="text-white header-1 px-20px mb-20px text-center">
+              Testimonials
+            </p>
+            <Carousel
+              :slides="
+                testimonials.filter((element) => element.type === 'video')
+              "
+              :colorCode="'#FFFFFF'"
+              :activeColorCode="'#468BCC'"
+            >
+              <template #slide="{ slide }">
+                <div class="px-20px h-full">
+                  <div class="h-full rounded-10px overflow-hidden relative">
+                    <video :id="slide.key" muted controls class="w-full">
+                      <source :src="slide.src" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    <div
+                      :id="'play-' + slide.key"
+                      class="
+                        absolute
+                        inset-0
+                        z-10
+                        flex
+                        items-center
+                        justify-center
+                        bg-center bg-no-repeat bg-cover
+                      "
+                      :style="{
+                        backgroundImage: 'url(\'' + slide.thumbnail + '\')',
+                      }"
+                      @click="playClip(slide.key)"
+                    >
+                      <div class="absolute inset-0 bg-black opacity-50" />
+                      <img
+                        src="@/assets/utility/play.svg"
+                        class="h-50px w-50px relative"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </Carousel>
+          </div>
+        </template>
+      </div>
     </div>
+
+    <Contact />
   </div>
 </template>
 
 <script>
+// components
 import Carousel from "@/components/Carousel.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
   components: {
     Carousel,
+    Contact,
   },
   computed: {
     isLg() {

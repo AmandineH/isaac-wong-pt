@@ -7,6 +7,8 @@
     <Testimonials />
 
     <About />
+
+    <Contact />
   </div>
 </template>
 
@@ -15,6 +17,7 @@ import Banner from "@/components/Banner.vue";
 import Products from "@/components/Products.vue";
 import Testimonials from "@/components/Testimonials.vue";
 import About from "@/components/About.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
   components: {
@@ -22,6 +25,7 @@ export default {
     Products,
     Testimonials,
     About,
+    Contact,
   },
   computed: {
     isLg() {

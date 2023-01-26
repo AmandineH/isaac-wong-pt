@@ -215,7 +215,7 @@
 
             <div class="flex flex-col gap-5px">
               <p class="text-center text-gray-ACACAC body-3">
-                Whatsapp: +6588888888
+                Whatsapp: +6597567270
               </p>
               <p class="text-center text-gray-ACACAC body-3">
                 Email: isaac@gmail.com
@@ -291,13 +291,13 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "https://wa.me/+6588888888",
+          href: "https://wa.me/+6597567270",
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
         },
         {
           key: "email",
-          href: "mailto:",
+          href: "mailto:isaacwongpt@gmail.com",
           src: require("@/assets/social/email.svg"),
           alt: "Email",
         },
@@ -313,19 +313,19 @@ export default {
         },
         {
           key: "tiktok",
-          href: "",
+          href: "https://www.tiktok.com/@isaacwongpt",
           src: require("@/assets/social/tiktok.svg"),
           alt: "TikTok",
         },
         {
           key: "facebook",
-          href: "",
+          href: "https://www.facebook.com/isaacwongpt",
           src: require("@/assets/social/facebook.svg"),
           alt: "Facebook",
         },
         {
           key: "linkedin",
-          href: "",
+          href: "https://www.linkedin.com/in/isaacwongpt/",
           src: require("@/assets/social/linkedin.svg"),
           alt: "LinkedIn",
         },
