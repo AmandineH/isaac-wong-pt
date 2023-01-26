@@ -22,16 +22,13 @@
           </p>
 
           <p class="text-white mb-20px body-2 mt-20px">
-            Reach your fitness goals - I believe that being physically fit is
-            something that everybody should be able to enjoy. With over 15 years
-            of competitive sports experience and more than half a decade of
-            profesional coaching under my belt, I have acquired the necessary
-            skills and expertise to helf any individual achieve his or her
-            fitness goals.
+            Reach your fitness goals - Since 2017, I’ve been transforming my
+            clients into fitter, healthier versions of themselves. Let’s shape
+            up together.
           </p>
           <div class="flex" :class="isLg ? ' justify-end' : 'justify-center'">
             <a
-              href="https://wa.me/+6588888888"
+              href="https://wa.me/+6597567270"
               target="_blank"
               class="
                 text-orange-EE642A

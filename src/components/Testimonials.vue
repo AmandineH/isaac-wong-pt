@@ -6,76 +6,76 @@
     >
       <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
         <p class="text-white supheader-1 mb-20px">They made it, you can too</p>
-        <p class="text-white body-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat
-          risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed.
-          Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at
-          enim euismod, sit amet pulvinar dui sagittis. Duis fermentum leo id
-          pretium consequat. Integer sollicitudin porta hendrerit. Vivamus
-          tristique magna sed felis laoreet vestibulum sit amet vel dolor.
-        </p>
       </div>
 
-      <div v-if="isLg" class="flex flex-col gap-20px mb-20px">
+      <div v-if="isLg" class="grid grid-cols-3 gap-20px mb-20px">
         <div
-          v-for="(testimonial, key) in testimonials"
+          v-for="(testimonial, key) in testimonials.slice(0, 4)"
           :key="key"
-          class="bg-white rounded-10px overflow-hidden flex"
+          class="rounded-10px overflow-hidden relative"
+          :class="testimonial.type === 'video' ? 'col-span-2' : 'col-span-1'"
+          @mouseover="playClip(testimonial.key)"
+          @mouseout="pauseClip(testimonial.key)"
         >
-          <video
-            autoplay
-            loop
-            muted
-            controls
-            class="h-full w-1/2 object-center flex-shrink-0"
-          >
-            <source :src="testimonial.src" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="p-20px">
-            <p class="text-black header-1 mb-10px">
-              {{ testimonial.label }}
-            </p>
-            <p class="text-black title-2 opacity-70 mb-20px">
-              {{ testimonial.sublabel }}
-            </p>
-            <p class="text-black body-2">
-              {{ testimonial.description }}
-            </p>
-          </div>
+          <template v-if="testimonial.type === 'video'">
+            <video :id="testimonial.key" muted controls class="h-full w-full">
+              <source :src="testimonial.src" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div
+              :id="'play-' + testimonial.key"
+              class="
+                absolute
+                inset-0
+                z-10
+                flex
+                items-center
+                justify-center
+                bg-center bg-no-repeat bg-cover
+              "
+              :style="{
+                backgroundImage: 'url(\'' + testimonial.thumbnail + '\')',
+              }"
+            >
+              <div class="absolute inset-0 bg-black opacity-50" />
+              <img
+                src="@/assets/utility/play.svg"
+                class="h-100px w-100px relative"
+              />
+            </div>
+          </template>
+          <img
+            v-else
+            :src="testimonial.src"
+            class="w-full h-full object-center object-contain"
+          />
         </div>
       </div>
       <Carousel
         v-else
-        :slides="testimonials"
+        :slides="testimonials.filter((element) => element.type === 'img')"
         :colorCode="'#FFFFFF'"
         :activeColorCode="'#468BCC'"
         class="mb-20px"
       >
         <template #slide="{ slide }">
           <div class="px-20px h-full">
-            <div
-              class="h-full bg-white rounded-10px flex flex-col overflow-hidden"
-            >
-              <video autoplay loop muted controls class="w-full mb-10px">
+            <div class="h-full rounded-10px overflow-hidden">
+              <video
+                v-if="slide.type === 'video'"
+                muted
+                controls
+                class="w-full"
+              >
                 <source :src="slide.src" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div
-                class="p-20px flex-grow flex flex-col justify-between gap-40px"
-              >
-                <div>
-                  <p class="text-center text-black header-1 mb-10px">
-                    {{ slide.label }}
-                  </p>
-                  <p class="text-black header-2 opacity-70 mb-20px">
-                    {{ slide.sublabel }}
-                  </p>
-                  <p class="text-black body-2">
-                    {{ slide.description }}
-                  </p>
-                </div>
-              </div>
+              <img
+                v-else
+                :src="slide.src"
+                class="w-full h-full object-center object-cover"
+              />
             </div>
           </div>
         </template>
@@ -83,7 +83,7 @@
 
       <div class="flex justify-center">
         <nuxt-link
-          :to="'/testimonials'"
+          :to="'/results-and-testimonials'"
           class="
             text-blue-468BCC
             border-2px border-blue-468BCC
@@ -114,30 +114,59 @@ export default {
     testimonials() {
       return [
         {
-          key: "jaden",
-          src: require("@/assets/testimonials/jaden.mp4"),
-          label: "Jaden",
-          sublabel: "Whaterver he wanna do",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed. Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at enim euismod, sit amet pulvinar dui sagittis.",
+          key: "allan",
+          type: "video",
+          src: require("@/assets/testimonials/allan.mp4"),
+          thumbnail: require("@/assets/testimonials/allan-thumbnail.png"),
         },
         {
-          key: "jingxin",
-          src: require("@/assets/testimonials/jingxin.mp4"),
-          label: "Jingxin",
-          sublabel: "Whaterver he wanna do",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed. Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at enim euismod, sit amet pulvinar dui sagittis.",
+          key: "allan-before-after",
+          type: "img",
+          src: require("@/assets/testimonials/allan-before-after.png"),
         },
         {
-          key: "darren",
-          src: require("@/assets/testimonials/darren.mp4"),
-          label: "Darren",
-          sublabel: "Whaterver he wanna do",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a erat risus. Morbi ullamcorper tempor justo, sed efficitur neque varius sed. Sed imperdiet sapien nec felis finibus suscipit. In bibendum metus at enim euismod, sit amet pulvinar dui sagittis.",
+          key: "alicia-before-after",
+          type: "img",
+          src: require("@/assets/testimonials/alicia-before-after.png"),
+        },
+        {
+          key: "alicia",
+          type: "video",
+          src: require("@/assets/testimonials/alicia.mp4"),
+          thumbnail: require("@/assets/testimonials/alicia-thumbnail.png"),
+        },
+        {
+          key: "justin-before-after",
+          type: "img",
+          src: require("@/assets/testimonials/justin-before-after.png"),
         },
       ];
+    },
+  },
+  methods: {
+    playClip(id) {
+      let clip = document.getElementById(id);
+
+      if (clip) {
+        clip.play();
+
+        let pauseButton = document.getElementById("play-" + id);
+        if (pauseButton) {
+          pauseButton.classList.add("hidden");
+        }
+      }
+    },
+    pauseClip(id) {
+      let clip = document.getElementById(id);
+
+      if (clip) {
+        clip.pause();
+
+        let pauseButton = document.getElementById("play-" + id);
+        if (pauseButton) {
+          pauseButton.classList.remove("hidden");
+        }
+      }
     },
   },
 };
