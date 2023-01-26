@@ -4,6 +4,8 @@
       autoplay
       loop
       muted
+      defaultMuted
+      playsinline
       class="w-full"
       :class="isLg ? 'absolute top-0' : ''"
     >
