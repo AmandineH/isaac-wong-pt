@@ -88,7 +88,7 @@
 
       <div class="flex justify-center">
         <nuxt-link
-          :to="'/testimonials'"
+          :to="'/results-and-testimonials'"
           class="
             text-blue-468BCC
             border-2px border-blue-468BCC
