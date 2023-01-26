@@ -11,7 +11,7 @@
       "
     />
 
-    <div v-if="!isLg" class="h-full absolute inset-x-0 bg-black opacity-50" />
+    <div v-if="!isLg" class="h-full absolute inset-x-0 bg-black opacity-70" />
 
     <div class="mx-auto max-w-1300px relative">
       <div :class="isLg ? 'px-40px py-80px w-2/3' : 'py-40px px-20px'">
