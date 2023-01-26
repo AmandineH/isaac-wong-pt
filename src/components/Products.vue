@@ -47,8 +47,9 @@
           </div>
 
           <div class="flex justify-center">
-            <nuxt-link
-              :to="'/contact'"
+            <a
+              href="https://wa.me/+6588888888"
+              target="_blank"
               class="
                 text-white
                 border-2px border-green-2B986B
@@ -57,7 +58,7 @@
                 py-10px
                 rounded-5px
               "
-              >Get Started</nuxt-link
+              >Get Started</a
             >
           </div>
         </div>

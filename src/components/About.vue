@@ -6,7 +6,7 @@
       class="h-full absolute"
       :class="
         isLg
-          ? 'right-0 w-1/2 object-center object-cover'
+          ? 'right-0 w-1/3 object-center object-cover'
           : 'inset-x-0 object-center object-cover'
       "
     />
@@ -14,7 +14,7 @@
     <div v-if="!isLg" class="h-full absolute inset-x-0 bg-black opacity-50" />
 
     <div class="mx-auto max-w-1300px relative">
-      <div :class="isLg ? 'px-40px py-80px w-1/2' : 'py-40px px-20px'">
+      <div :class="isLg ? 'px-40px py-80px w-2/3' : 'py-40px px-20px'">
         <p
           class="supheader-1 mb-20px"
           :class="isLg ? 'text-black' : 'text-white'"
