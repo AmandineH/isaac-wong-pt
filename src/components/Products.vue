@@ -48,6 +48,7 @@
                 px-40px
                 py-10px
                 rounded-5px
+                bg-green-2B986B33
               "
               >Get Started</a
             >
@@ -131,7 +132,7 @@ export default {
         },
         {
           key: "virtual-personal-training",
-          src: require("@/assets/services/virtual-personal-training.png"),
+          src: require("@/assets/services/virtual-personal-training.jpg"),
           label: "Virtual Personal Training",
           features: [
             "1:1 virtual coaching",
@@ -143,7 +144,7 @@ export default {
         },
         {
           key: "online-coaching",
-          src: require("@/assets/services/online-coaching.png"),
+          src: require("@/assets/services/online-coaching.jpg"),
           label: "Online Coaching",
           features: [
             "Customized training plan",

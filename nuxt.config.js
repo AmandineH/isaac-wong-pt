@@ -40,9 +40,7 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: "~/plugins/vue-carousel.js", mode: "client" },
-  ],
+  plugins: [{ src: "~/plugins/vue-carousel.js", mode: "client" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -87,12 +85,13 @@ export default {
           colors: {
             "yellow-FAC710": "#FAC710",
             "orange-EE642A": "#EE642A",
+            "orange-EE642A33": "#EE642A33",
             "blue-142C90": "#142C90",
             "blue-468BCC": "#468BCC",
             "green-2B986B": "#2B986B",
             "green-2B986B33": "#2B986B33",
             "gray-ACACAC": "#ACACAC",
-            "black-00000033": "#00000033"
+            "black-00000033": "#00000033",
           },
           width: (theme) => ({
             ...theme("spacing"),
@@ -148,7 +147,13 @@ export default {
           }),
         },
       },
-      variants: ["responsive", "hover", "active", "focus", "first", "last"],
+      variants: {
+        extend: {
+          display: ["group-hover"],
+          textColor: ["hover", "group-hover"],
+          backgroundColor: ["hover"],
+        },
+      },
       purge: {
         enabled: true,
       },

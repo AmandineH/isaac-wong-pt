@@ -1,9 +1,15 @@
 <template>
-  <div class="bg-black">
+  <div class="bg-black relative ">
     <div
       class="mx-auto max-w-1300px"
       :class="isLg ? 'px-40px py-80px' : 'py-40px'"
     >
+      <img
+        src="@/assets/utility/arrow-blue.svg"
+        alt="Design"
+        class="absolute top-50px w-500px left-0"
+      />
+
       <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
         <p class="text-white supheader-1 mb-20px">They made it, you can too</p>
       </div>

@@ -2,7 +2,9 @@
   <div class="bg-white">
     <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'p-20px'">
       <div>
-        <p class="text-black body-1 mb-20px text-center">Ready to get started?</p>
+        <p class="text-black body-1 mb-20px text-center">
+          Ready to get started?
+        </p>
 
         <div class="flex justify-center gap-10px mb-10px">
           <a
@@ -11,20 +13,30 @@
             :href="contact.href"
             target="_blank"
             class="
-              text-white
+              text-orange-EE642A
+              hover:text-white
               border-2px border-orange-EE642A
-              bg-orange-EE642A
+              bg-orange-EE642A33
+              hover:bg-orange-EE642A
               rounded-5px
               flex
               items-center
               gap-10px
-              opacity-90
-              hover:opacity-100
+              group
             "
-            :class="isLg? 'px-40px py-10px' : 'px-20px py-5px'"
+            :class="isLg ? 'px-40px py-10px' : 'px-20px py-5px'"
           >
             {{ contact.label }}
-            <img :src="contact.src" class="h-30px w-30px" :alt="contact.alt" />
+            <img
+              :src="contact.srcInactive"
+              class="h-30px w-30px group-hover:hidden"
+              :alt="contact.alt"
+            />
+            <img
+              :src="contact.src"
+              class="h-30px w-30px group-hover:flex hidden"
+              :alt="contact.alt"
+            />
           </a>
         </div>
       </div>
@@ -45,6 +57,7 @@ export default {
           key: "whatsapp",
           href: "https://wa.me/+6597567270?text=",
           src: require("@/assets/social/whatsapp.svg"),
+          srcInactive: require("@/assets/social/whatsapp-orange.svg"),
           alt: "Whatsapp",
           label: "Whatsapp",
         },
@@ -52,6 +65,7 @@ export default {
           key: "email",
           href: "mailto:isaacwongpt@gmail.com",
           src: require("@/assets/social/email.svg"),
+          srcInactive: require("@/assets/social/email-orange.svg"),
           alt: "Email",
           label: "Email",
         },

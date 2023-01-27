@@ -11,6 +11,12 @@
       "
     />
 
+    <img
+      src="@/assets/utility/arrow-orange.svg"
+      alt="Design"
+      class="absolute -bottom-50px w-500px right-0 transform rotate-180"
+    />
+
     <div v-if="!isLg" class="h-full absolute inset-x-0 bg-black opacity-70" />
 
     <div class="mx-auto max-w-1300px relative">
