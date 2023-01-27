@@ -8,7 +8,8 @@
       <p class="text-black body-2">
         There are many different ways to get fit and stay fit. Lose weight, run
         a marathon or get that beach body—take a look below at the different
-        ways I can help achieve your fitness goals. Please contact me directly for a quote!
+        ways I can help achieve your fitness goals. Please contact me directly
+        for a quote!
       </p>
     </div>
 
@@ -38,7 +39,7 @@
 
           <div class="flex justify-center">
             <a
-              href="https://wa.me/+6597567270"
+              href="https://wa.me/+6597567270?text="
               target="_blank"
               class="
                 text-white
@@ -54,7 +55,7 @@
         </div>
       </div>
     </div>
-    <Carousel v-else :slides="products">
+    <Carousel v-else :slides="products" :autoplay="false">
       <template #slide="{ slide }">
         <div class="px-20px h-full">
           <div
@@ -82,7 +83,7 @@
 
               <div class="flex justify-center">
                 <a
-                  href="https://wa.me/+6597567270"
+                  href="https://wa.me/+6597567270?text="
                   target="_blank"
                   class="
                     text-white

@@ -114,17 +114,6 @@ export default {
     testimonials() {
       return [
         {
-          key: "allan",
-          type: "video",
-          src: require("@/assets/testimonials/allan.mp4"),
-          thumbnail: require("@/assets/testimonials/allan-thumbnail.png"),
-        },
-        {
-          key: "allan-before-after",
-          type: "img",
-          src: require("@/assets/testimonials/allan-before-after.png"),
-        },
-        {
           key: "alicia-before-after",
           type: "img",
           src: require("@/assets/testimonials/alicia-before-after.png"),
@@ -134,6 +123,17 @@ export default {
           type: "video",
           src: require("@/assets/testimonials/alicia.mp4"),
           thumbnail: require("@/assets/testimonials/alicia-thumbnail.png"),
+        },
+        {
+          key: "allan",
+          type: "video",
+          src: require("@/assets/testimonials/allan.mp4"),
+          thumbnail: require("@/assets/testimonials/allan-thumbnail.png"),
+        },
+        {
+          key: "allan-before-after",
+          type: "img",
+          src: require("@/assets/testimonials/allan-before-after.png"),
         },
         {
           key: "justin-before-after",

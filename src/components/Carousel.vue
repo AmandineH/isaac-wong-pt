@@ -11,7 +11,7 @@
         :paginationEnabled="false"
         :loop="true"
         :autoplay="!autoplayStop && autoplay"
-        :autoplayTimeout="8000"
+        :autoplayTimeout="5000"
         :autoplayHoverPause="true"
         :navigate-to="index"
         @pageChange="(value) => (index = value)"
@@ -56,7 +56,7 @@ export default {
     },
     autoplay: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     colorCode: {
       type: String,

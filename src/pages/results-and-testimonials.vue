@@ -6,11 +6,6 @@
           <p class="text-white supheader-1 mb-20px">
             They made it, you can too
           </p>
-          <p class="text-white body-2">
-            "I have lost 13kg, can now do more pull ups than what I did in
-            National Service and for the first time in many years, I can climb
-            stairs and run pain free." - Allan
-          </p>
         </div>
 
         <div v-if="isLg" class="grid grid-cols-4 gap-20px mb-20px">

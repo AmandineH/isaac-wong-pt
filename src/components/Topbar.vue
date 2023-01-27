@@ -291,7 +291,7 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "https://wa.me/+6597567270",
+          href: "https://wa.me/+6597567270?text=",
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
         },

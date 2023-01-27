@@ -87,6 +87,7 @@ export default {
             "blue-142C90": "#142C90",
             "blue-468BCC": "#468BCC",
             "green-2B986B": "#2B986B",
+            "green-2B986B33": "#2B986B33",
             "gray-ACACAC": "#ACACAC",
             "black-00000033": "#00000033"
           },

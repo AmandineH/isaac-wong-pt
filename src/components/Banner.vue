@@ -28,7 +28,7 @@
           </p>
           <div class="flex" :class="isLg ? ' justify-end' : 'justify-center'">
             <a
-              href="https://wa.me/+6597567270"
+              href="https://wa.me/+6597567270?text="
               target="_blank"
               class="
                 text-orange-EE642A
