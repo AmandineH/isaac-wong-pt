@@ -1,94 +1,170 @@
 /* Text */
 .supheader-1 {
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 38px;
+  font-size: 3rem;
+  font-weight: medium;
+  line-height: 1.25;
 }
 
 .supheader-2 {
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 38px;
+  font-size: 2.5rem;
+  font-weight: medium;
+  line-height: 1.25;
+}
+
+.supheader-3 {
+  font-size: 2.25rem;
+  font-weight: medium;
+  line-height: 1.25;
 }
 
 .header-1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 1.25;
 }
 
 .header-2 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
-  line-height: 28px;
-}
-
-.header-3 {
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 28px;
+  line-height: 1.25;
 }
 
 .title-1 {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
-  line-height: 22px;
+  line-height: 1.25;
 }
 
 .title-2 {
-  font-size: 16px;
+  font-size: 1.25rem;
   font-weight: bold;
-  line-height: 20px;
-}
-
-.title-3 {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 16px;
-}
-
-.title-4 {
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 16px;
+  line-height: 1.25;
 }
 
 .body-1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 .body-2 {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .body-3 {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
-.body-4 {
-  font-size: 12px;
-  line-height: 16px;
+.body-bold-1 {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.body-bold-2 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.body-bold-3 {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 .fine-prints-1 {
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 13px;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .fine-prints-2 {
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
-.small-prints-1 {
-  font-size: 8px;
-  line-height: 10px;
+.fine-prints-3 {
+  font-size: 0.7rem;
+  line-height: 1.5;
 }
 
+.fine-prints-bold-1 {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.fine-prints-bold-2 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.fine-prints-bold-3 {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.extra-small {
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .supheader-1 {
+    font-size: 2rem;
+    font-weight: medium;
+    line-height: 1.25;
+  }
+
+  .header-2 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: bold;
+  }
+
+  .title-2 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .body-2 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .body-3 {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .body-bold-2 {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .body-bold-3 {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  .fine-prints-2 {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .fine-prints-bold-2 {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+}
+  
 .text-ellipsis {
   max-width: 100%;
   text-overflow: ellipsis;
@@ -96,103 +172,8 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 992px) {
-  .supheader-1 {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 22px;
-  }
-  
-  .supheader-2 {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 28px;
-  }
-  
-  .header-1 {
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 30px;
-  }
-  
-  .header-2 {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 18px;
-  }
-  
-  .header-3 {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 22px;
-  }
-  
-  .title-1 {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 22px;
-  }
-  
-  .title-2 {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 20px;
-  }
-  
-  .title-3 {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 16px;
-  }
-  
-  .title-4 {
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 16px;
-  }
-  
-  .body-1 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  
-  .body-2 {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  
-  .body-3 {
-    font-size: 14px;
-    line-height: 18px;
-  }
-  
-  .body-4 {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  
-  .fine-prints-1 {
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 13px;
-  }
-  
-  .fine-prints-2 {
-    font-size: 10px;
-    line-height: 12px;
-  }
-  
-  .small-prints-1 {
-    font-size: 8px;
-    line-height: 10px;
-  }
-  
-  .text-ellipsis {
-    max-width: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+.button {
+  @apply cursor-pointer select-none;
 }
 
 /* Transitions */

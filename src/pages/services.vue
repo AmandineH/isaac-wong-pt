@@ -19,7 +19,10 @@
         class="relative"
         :class="isLg ? 'px-40px py-80px' : 'px-20px py-40px'"
       >
-        <p class="text-white supheader-1 mb-20px">
+        <p
+          class="text-white supheader-1 mb-20px"
+          :class="isLg ? '' : 'text-center'"
+        >
           Results Based. Enjoyment. Data Driven.
         </p>
 
@@ -41,79 +44,88 @@
         </div>
       </div>
     </div>
+
     <Products />
 
-    <div
-      class="mx-auto max-w-1300px"
-      :class="isLg ? 'px-40px pt-80px pb-40px' : 'pt-40px pb-20px px-20px'"
-    >
-      <p class="text-black supheader-1 mb-20px">How I can help you?</p>
-      <p class="text-black body-2">
-        There are many different ways to get fit and stay fit. Lose weight, run
-        a marathon or get that beach body—take a look below at the different
-        ways I can help achieve your fitness goals. Please contact me directly
-        for a quote!
-      </p>
+    <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'p-20px'">
+      <div class="flex gap-20px" :class="isLg ? '' : 'flex-col'">
+        <div>
+          <p class="text-black supheader-1 mb-20px">How I can help you?</p>
+          <p class="text-black body-2">
+            I will provide you with the tools and support that you need to reach
+            your health and fitness goal. I will create customized workout plans
+            tailored to your individual needs and fitness level and provide
+            instruction on proper form and technique. Additionally, I will be
+            here to motivate and encourage you to stay on track and push
+            yourself to reach your goals.
+          </p>
+        </div>
+
+        <div
+          class="rounded-10px overflow-hidden relative"
+          :class="isLg ? 'w-1/3 flex-shrink-0' : 'w-full'"
+          @click="playClip('explaination')"
+        >
+          <video :id="'explaination'" controls class="h-full w-full">
+            <source
+              src="@/assets/isaac-wong-pt/explaination.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          <div
+            :id="'play-' + 'explaination'"
+            class="
+              absolute
+              inset-0
+              z-10
+              flex
+              items-center
+              justify-center
+              bg-center bg-no-repeat bg-cover
+              button
+            "
+            :style="{
+              backgroundImage:
+                'url(\'' +
+                require('@/assets/isaac-wong-pt/explaination-thumbnail.png') +
+                '\')',
+            }"
+          >
+            <div class="absolute inset-0 bg-black opacity-30" />
+            <img
+              src="@/assets/utility/play.svg"
+              class="h-50px w-50px relative"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="bg-green-2B986B33">
       <div
-        class="mx-auto max-w-1300px grid gap-20px grid-cols-2"
-        :class="isLg ? 'p-40px' : 'p-20px'"
+        class="mx-auto max-w-1300px grid gap-20px"
+        :class="isLg ? 'p-40px grid-cols-2' : 'p-20px grid-cols-1'"
       >
-        <div class="flex gap-20px items-center">
-          <div class="w-50px flex items-center justify-center">
-            <img src="@/assets/services/time.svg" class="h-50px" />
+        <div
+          v-for="(help, key) in helps"
+          :key="key"
+          class="flex items-center"
+          :class="isLg ? 'gap-20px' : 'flex-col gap-10px'"
+        >
+          <div class="w-50px flex items-center justify-center flex-shrink-0">
+            <img :src="help.src" class="h-50px" />
           </div>
           <div>
-            <p class="body-2-bold text-black">
-              Please contact me directly for a quote!
+            <p
+              class="body-bold-1 text-black"
+              :class="isLg ? '' : 'text-center'"
+            >
+              {{ help.label }}
             </p>
-            <p class="body-2 text-black">
-              Please contact me directly for a quote! Please contact me directly
-              for a quote!
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-20px items-center">
-          <div class="w-50px flex items-center justify-center">
-            <img src="@/assets/services/plate.svg" class="h-50px" />
-          </div>
-          <div>
-            <p class="body-2-bold text-black">
-              Please contact me directly for a quote!
-            </p>
-            <p class="body-2 text-black">
-              Please contact me directly for a quote! Please contact me directly
-              for a quote!
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-20px items-center">
-          <div class="w-50px flex items-center justify-center">
-            <img src="@/assets/services/phone.svg" class="h-50px" />
-          </div>
-          <div>
-            <p class="body-2-bold text-black">
-              Please contact me directly for a quote!
-            </p>
-            <p class="body-2 text-black">
-              Please contact me directly for a quote! Please contact me directly
-              for a quote!
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-20px items-center">
-          <div class="w-50px flex items-center justify-center">
-            <img src="@/assets/services/chat.svg" class="h-50px" />
-          </div>
-          <div>
-            <p class="body-2-bold text-black">
-              Please contact me directly for a quote!
-            </p>
-            <p class="body-2 text-black">
-              Please contact me directly for a quote! Please contact me directly
-              for a quote!
+            <p class="body-2 text-black" :class="isLg ? '' : 'text-center'">
+              {{ help.description }}
             </p>
           </div>
         </div>
@@ -137,6 +149,60 @@ export default {
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;
+    },
+    helps() {
+      return [
+        {
+          src: require("@/assets/services/gym.svg"),
+          label: "Customized training plan",
+          description:
+            "To help you reach your fitness goals more efficiently and effectively",
+        },
+        {
+          src: require("@/assets/services/time.svg"),
+          label: "Flexible workouts and location",
+          description:
+            "Convenient and accessible workout options, adjusted for any fitness level",
+        },
+        {
+          src: require("@/assets/services/plate.svg"),
+          label: "Customized nutrition plan",
+          description:
+            "Meet your specific dietary needs based on your lifestyle and preferences",
+        },
+        {
+          src: require("@/assets/services/chat.svg"),
+          label: "Daily monitoring and support",
+          description:
+            "Helps you to stay on track with training and nutrition plan, as well as to make adjustments when needed",
+        },
+      ];
+    },
+  },
+  methods: {
+    playClip(id) {
+      let clip = document.getElementById(id);
+
+      if (clip) {
+        clip.play();
+
+        let pauseButton = document.getElementById("play-" + id);
+        if (pauseButton) {
+          pauseButton.classList.add("hidden");
+        }
+      }
+    },
+    pauseClip(id) {
+      let clip = document.getElementById(id);
+
+      if (clip) {
+        clip.pause();
+
+        let pauseButton = document.getElementById("play-" + id);
+        if (pauseButton) {
+          pauseButton.classList.remove("hidden");
+        }
+      }
     },
   },
 };

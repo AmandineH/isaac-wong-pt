@@ -63,6 +63,9 @@ export default {
             body: ["Noto Sans SC", "Helvetica", "Arial", "sans-serif"],
           },
           spacing: {
+            "1/3": "33.3333%",
+            "1/2": "50%",
+
             "2px": "2px",
             "5px": "5px",
             "10px": "10px",

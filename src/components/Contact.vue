@@ -2,7 +2,7 @@
   <div class="bg-white">
     <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'p-20px'">
       <div>
-        <p class="text-black body-1 mb-20px text-center">How I can help you?</p>
+        <p class="text-black body-1 mb-20px text-center">Ready to get started?</p>
 
         <div class="flex justify-center gap-10px mb-10px">
           <a
