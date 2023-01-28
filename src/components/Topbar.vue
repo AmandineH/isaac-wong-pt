@@ -83,9 +83,7 @@
     </div>
 
     <div v-else>
-      <div
-        class="flex items-center justify-between px-20px py-10px"
-      >
+      <div class="flex items-center justify-between px-20px py-10px">
         <nuxt-link :to="'/'">
           <img
             src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
@@ -291,7 +289,9 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "https://wa.me/+6597567270?text=",
+          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
+            "Hi, I would like to know more about your Personal Training services. \nName: \nAge: \nActivity level:"
+          )}`,
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
         },

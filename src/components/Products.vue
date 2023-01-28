@@ -8,9 +8,7 @@
       alt="arrow"
       class="absolute transform rotate-180"
       :class="
-        isLg
-          ? 'top-100px w-500px right-40px'
-          : 'top-150px w-200px right-20px'
+        isLg ? 'top-100px w-500px right-40px' : 'top-150px w-200px right-20px'
       "
     />
 
@@ -53,7 +51,7 @@
 
             <div class="flex justify-center">
               <a
-                href="https://wa.me/+6597567270?text="
+                :href="`https://wa.me/+6597567270?text=${product.message}`"
                 target="_blank"
                 class="
                   text-white
@@ -98,7 +96,7 @@
 
                 <div class="flex justify-center">
                   <a
-                    href="https://wa.me/+6597567270?text="
+                    :href="`https://wa.me/+6597567270?text=${slide.message}`"
                     target="_blank"
                     class="
                       text-white
@@ -144,6 +142,9 @@ export default {
             "Out-of-session monitoring",
             "Daily support",
           ],
+          message: `${encodeURIComponent(
+            "Hi, I would like to know more about Personal Training. \nName: \nAge: \nActivity level:"
+          )}`,
         },
         {
           key: "virtual-personal-training",
@@ -156,6 +157,9 @@ export default {
             "Out-of-session monitoring",
             "Daily support",
           ],
+          message: `${encodeURIComponent(
+            "Hi, I would like to know more about Virtual Personal Training. \nName: \nAge: \nActivity level:"
+          )}`,
         },
         {
           key: "online-coaching",
@@ -166,6 +170,9 @@ export default {
             "Customized nutrition plan",
             "Daily monitoring and support",
           ],
+          message: `${encodeURIComponent(
+            "Hi, I would like to know more about Online Coaching. \nName: \nAge: \nActivity level:"
+          )}`,
         },
       ];
     },

@@ -28,7 +28,9 @@
 
         <div class="flex gap-20px justify-center">
           <a
-            href="https://wa.me/+6597567270?text="
+            :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+              'Hi, I would like to know more about your Personal Training services. \nName: \nAge: \nActivity level:'
+            )}`"
             target="_blank"
             class="
               text-orange-EE642A

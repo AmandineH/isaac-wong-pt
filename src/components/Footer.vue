@@ -27,7 +27,18 @@
               :key="key"
               :href="contact.href"
               target="_blank"
-              class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+              class="
+                relative
+                flex
+                items-center
+                justify-center
+                rounded-full
+                group
+                button
+                hover:bg-orange-EE642A
+                h-50px
+                w-50px
+              "
             >
               <img
                 :src="contact.src"
@@ -65,7 +76,18 @@
               :key="key"
               :href="social.href"
               target="_blank"
-              class="relative flex items-center justify-center rounded-full  group button hover:bg-orange-EE642A h-50px w-50px"
+              class="
+                relative
+                flex
+                items-center
+                justify-center
+                rounded-full
+                group
+                button
+                hover:bg-orange-EE642A
+                h-50px
+                w-50px
+              "
             >
               <img :src="social.src" class="h-30px w-30px" :alt="social.alt" />
             </a>
@@ -93,7 +115,9 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "https://wa.me/+6597567270?text=",
+          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
+            "Hi, I would like to know more about your Personal Training services. \nName: \nAge: \nActivity level:"
+          )}`,
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
         },

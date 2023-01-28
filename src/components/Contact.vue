@@ -55,7 +55,9 @@ export default {
       return [
         {
           key: "whatsapp",
-          href: "https://wa.me/+6597567270?text=",
+          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
+            "Hi, I would like to know more about your Personal Training services. \nName: \nAge: \nActivity level: %0a"
+          )}`,
           src: require("@/assets/social/whatsapp.svg"),
           srcInactive: require("@/assets/social/whatsapp-orange.svg"),
           alt: "Whatsapp",
