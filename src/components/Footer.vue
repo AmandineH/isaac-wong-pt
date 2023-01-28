@@ -50,7 +50,7 @@
 
           <div class="flex flex-col gap-5px">
             <p class="text-gray-ACACAC body-3">Whatsapp: +6597567270</p>
-            <p class="text-gray-ACACAC body-3">Email: isaac@gmail.com</p>
+            <p class="text-gray-ACACAC body-3">Email: isaacwongpt@gmail.com</p>
           </div>
         </div>
 

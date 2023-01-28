@@ -216,7 +216,7 @@
                 Whatsapp: +6597567270
               </p>
               <p class="text-center text-gray-ACACAC body-3">
-                Email: isaac@gmail.com
+                Email: isaacwongpt@gmail.com
               </p>
             </div>
           </div>
