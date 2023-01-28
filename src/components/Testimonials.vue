@@ -1,106 +1,81 @@
 <template>
-  <div class="bg-black relative ">
+  <div class="bg-black relative">
     <div
       class="mx-auto max-w-1300px"
       :class="isLg ? 'px-40px py-80px' : 'py-40px'"
     >
       <img
         src="@/assets/utility/arrow-blue.svg"
-        alt="Design"
-        class="absolute top-50px w-500px left-0"
+        alt="arrow"
+        class="absolute"
+        :class="
+          isLg ? '-top-50px w-500px -left-40px' : '-top-20px w-200px -left-20px'
+        "
       />
 
-      <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
-        <p class="text-white supheader-1 mb-20px">They made it, you can too</p>
-      </div>
-
-      <div v-if="isLg" class="grid grid-cols-3 gap-20px mb-20px">
-        <div
-          v-for="(testimonial, key) in testimonials.slice(0, 4)"
-          :key="key"
-          class="rounded-10px overflow-hidden relative"
-          :class="testimonial.type === 'video' ? 'col-span-2' : 'col-span-1'"
-          @mouseover="playClip(testimonial.key)"
-          @mouseout="pauseClip(testimonial.key)"
-        >
-          <template v-if="testimonial.type === 'video'">
-            <video :id="testimonial.key" muted controls class="h-full w-full">
-              <source :src="testimonial.src" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <div
-              :id="'play-' + testimonial.key"
-              class="
-                absolute
-                inset-0
-                z-10
-                flex
-                items-center
-                justify-center
-                bg-center bg-no-repeat bg-cover
-              "
-              :style="{
-                backgroundImage: 'url(\'' + testimonial.thumbnail + '\')',
-              }"
-            >
-              <div class="absolute inset-0 bg-black opacity-50" />
-              <img
-                src="@/assets/utility/play.svg"
-                class="h-100px w-100px relative"
-              />
-            </div>
-          </template>
-          <img
-            v-else
-            :src="testimonial.src"
-            class="w-full h-full object-center object-contain"
-          />
+      <div class="relative">
+        <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
+          <p class="text-white supheader-1 mb-20px text-center">
+            They made it, you can too
+          </p>
         </div>
-      </div>
-      <Carousel
-        v-else
-        :slides="testimonials.filter((element) => element.type === 'img')"
-        :colorCode="'#FFFFFF'"
-        :activeColorCode="'#468BCC'"
-        class="mb-20px"
-      >
-        <template #slide="{ slide }">
-          <div class="px-20px h-full">
-            <div class="h-full rounded-10px overflow-hidden">
-              <video
-                v-if="slide.type === 'video'"
-                muted
-                controls
-                class="w-full"
-              >
-                <source :src="slide.src" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+        <div class="grid grid-cols-1 gap-40px mb-40px">
+          <div v-if="isLg" class="grid gap-20px mb-20px grid-cols-3">
+            <div
+              v-for="(asset, key) in testimonials"
+              :key="key"
+              class="rounded-10px overflow-hidden col-span-1"
+            >
               <img
-                v-else
-                :src="slide.src"
-                class="w-full h-full object-center object-cover"
+                :src="asset.src"
+                class="w-full h-full object-center object-contain"
               />
             </div>
           </div>
-        </template>
-      </Carousel>
 
-      <div class="flex justify-center">
-        <nuxt-link
-          :to="'/results-and-testimonials'"
-          class="
-            text-blue-468BCC
-            border-2px border-blue-468BCC
-            hover:bg-blue-468BCC
-            px-40px
-            py-10px
-            rounded-5px
-            hover:text-white
-          "
-          >More Testimonials</nuxt-link
-        >
+          <Carousel
+            v-else
+            :slides="testimonials"
+            :colorCode="'#FFFFFF'"
+            :activeColorCode="'#536FFD'"
+            class="mb-20px"
+          >
+            <template #slide="{ slide }">
+              <div
+                class="
+                  rounded-10px
+                  overflow-hidden
+                  flex
+                  items-center
+                  h-full
+                  col-span-1
+                  px-20px
+                "
+              >
+                <img
+                  :src="slide.src"
+                  class="w-full h-full object-center object-contain"
+                />
+              </div>
+            </template>
+          </Carousel>
+        </div>
+
+        <div class="flex justify-center">
+          <nuxt-link
+            :to="'/results-and-testimonials'"
+            class="
+              text-blue-536FFD
+              border-2px border-blue-536FFD
+              hover:bg-blue-536FFD
+              px-40px
+              py-10px
+              rounded-5px
+              hover:text-white
+            "
+            >Read Testimonials</nuxt-link
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -120,31 +95,34 @@ export default {
     testimonials() {
       return [
         {
-          key: "alicia-before-after",
+          key: "alicia-before-after-side",
           type: "img",
-          src: require("@/assets/testimonials/alicia-before-after.png"),
+          src: require("@/assets/testimonials/alicia-before-after-side.JPG"),
         },
         {
-          key: "alicia",
-          type: "video",
-          src: require("@/assets/testimonials/alicia.mp4"),
-          thumbnail: require("@/assets/testimonials/alicia-thumbnail.png"),
-        },
-        {
-          key: "allan",
-          type: "video",
-          src: require("@/assets/testimonials/allan.mp4"),
-          thumbnail: require("@/assets/testimonials/allan-thumbnail.png"),
-        },
-        {
-          key: "allan-before-after",
+          key: "isaac-before-after-front",
           type: "img",
-          src: require("@/assets/testimonials/allan-before-after.png"),
+          src: require("@/assets/testimonials/isaac-before-after-front.JPG"),
         },
         {
-          key: "justin-before-after",
+          key: "roger-before-after-back",
           type: "img",
-          src: require("@/assets/testimonials/justin-before-after.png"),
+          src: require("@/assets/testimonials/roger-before-after-back.JPG"),
+        },
+        {
+          key: "allan-before-after-side",
+          type: "img",
+          src: require("@/assets/testimonials/allan-before-after-side.JPG"),
+        },
+        {
+          key: "jingxin-before-after-front",
+          type: "img",
+          src: require("@/assets/testimonials/jingxin-before-after-front.JPG"),
+        },
+        {
+          key: "justin-before-after-back",
+          type: "img",
+          src: require("@/assets/testimonials/justin-before-after-back.JPG"),
         },
       ];
     },

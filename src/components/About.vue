@@ -13,8 +13,8 @@
 
     <img
       src="@/assets/utility/arrow-orange.svg"
-      alt="Design"
-      class="absolute right-20px transform rotate-180"
+      alt="arrow"
+      class="absolute transform rotate-180"
       :class="
         isLg
           ? '-bottom-50px w-400px right-40px'

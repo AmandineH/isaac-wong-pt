@@ -79,6 +79,7 @@ export default {
             "370px": "370px",
             "400px": "400px",
             "500px": "500px",
+            "1000px": "1000px",
             "1300px": "1300px",
 
             "80vh": "80vh",
@@ -88,8 +89,8 @@ export default {
             "yellow-FAC710": "#FAC710",
             "orange-EE642A": "#EE642A",
             "orange-EE642A33": "#EE642A33",
-            "blue-142C90": "#142C90",
-            "blue-468BCC": "#468BCC",
+            "blue-536FFD": "#536FFD",
+            "blue-536FFD33": "#536FFD33",
             "green-2B986B": "#2B986B",
             "green-2B986B33": "#2B986B33",
             "gray-ACACAC": "#ACACAC",
