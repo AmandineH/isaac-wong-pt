@@ -3,32 +3,30 @@
     <img
       src="@/assets/isaac-wong-pt/profile.jpg"
       alt="Isaac Wong"
-      class="h-full absolute"
+      class=""
       :class="
         isLg
-          ? 'right-0 w-1/3 object-center object-cover'
-          : 'inset-x-0 object-center object-cover'
+          ? 'right-0 w-1/3 object-center object-cover h-full absolute'
+          : 'w-full h-400px object-center object-cover'
       "
     />
 
     <img
       src="@/assets/utility/arrow-orange.svg"
       alt="Design"
-      class="absolute -bottom-50px w-500px right-0 transform rotate-180"
+      class="absolute right-20px transform rotate-180"
+      :class="
+        isLg
+          ? '-bottom-50px w-400px right-40px'
+          : 'top-370px w-150px right-20px'
+      "
     />
-
-    <div v-if="!isLg" class="h-full absolute inset-x-0 bg-black opacity-70" />
 
     <div class="mx-auto max-w-1300px relative">
       <div :class="isLg ? 'px-40px py-80px w-2/3' : 'py-40px px-20px'">
-        <p
-          class="supheader-1 mb-20px"
-          :class="isLg ? 'text-black' : 'text-white'"
-        >
-          Isaac Wong
-        </p>
+        <p class="supheader-1 mb-20px text-black">Isaac Wong</p>
 
-        <p class="body-2 mb-20px" :class="isLg ? 'text-black' : 'text-white'">
+        <p class="body-2 mb-20px text-black">
           My name is Isaac Wong. Since 2017, I have been helping clients and
           athletes reach their fitness goals through science-based, sustainable
           & data-driven methods. Having been a competitive athlete across
@@ -40,7 +38,7 @@
           push-ups and pull-ups were a way for me to relax during that period. ​
         </p>
 
-        <p class="body-2 mb-20px" :class="isLg ? 'text-black' : 'text-white'">
+        <p class="body-2 mb-20px text-black">
           I believe that being physically fit is something that everyone should
           be able to enjoy! With over 15 years of competitive sports experience
           and more than half a decade of professional fitness coaching under my
@@ -48,10 +46,7 @@
           individual achieve his/her fitness goals!
         </p>
 
-        <ul
-          class="list-disc list-inside body-2 mb-20px"
-          :class="isLg ? 'text-black' : 'text-white'"
-        >
+        <ul class="list-disc list-inside body-2 mb-20px text-black">
           <li>Certified Personal Trainer & Competitive athlete</li>
           <li>B.Sc. Quantitative Economics & Data Science</li>
           <li>
