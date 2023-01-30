@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <Carousel v-else :slides="products" :autoplay="false">
+      <Carousel v-else :slides="products">
         <template #slide="{ slide }">
           <div class="px-20px h-full">
             <div
@@ -143,7 +143,7 @@ export default {
             "Daily support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Personal Training. \nName: \nAge: \nActivity level:"
+            "Hi, I would like to know more about Personal Training. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
         {
@@ -158,7 +158,7 @@ export default {
             "Daily support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Virtual Personal Training. \nName: \nAge: \nActivity level:"
+            "Hi, I would like to know more about Virtual Personal Training. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
         {
@@ -171,7 +171,7 @@ export default {
             "Daily monitoring and support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Online Coaching. \nName: \nAge: \nActivity level:"
+            "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
       ];

@@ -181,14 +181,14 @@ export default {
             "After having my kid, I couldn't lose weight... I needed to do something different and that's where Isaac stepped into the picture.",
           assets: [
             {
-              key: "alicia-before-after-side",
-              type: "img",
-              src: require("@/assets/testimonials/alicia-before-after-side.JPG"),
-            },
-            {
               key: "alicia-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/alicia-before-after-front.JPG"),
+            },
+            {
+              key: "alicia-before-after-side",
+              type: "img",
+              src: require("@/assets/testimonials/alicia-before-after-side.JPG"),
             },
             {
               key: "alicia-before-after-back",
@@ -211,14 +211,14 @@ export default {
             "I ended up in some unhealthy habits which put me in a bad place, both physically and mentally. But Isaac helped me to lose weight, helped me build discipline.",
           assets: [
             {
-              key: "roger-before-after-side",
-              type: "img",
-              src: require("@/assets/testimonials/roger-before-after-side.JPG"),
-            },
-            {
               key: "roger-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/roger-before-after-front.JPG"),
+            },
+            {
+              key: "roger-before-after-side",
+              type: "img",
+              src: require("@/assets/testimonials/roger-before-after-side.JPG"),
             },
             {
               key: "roger-before-after-back",
@@ -241,14 +241,14 @@ export default {
             "Couple of months ago, while climbing the stairs in school, I had so much pain in my knee that I had to stop halfway and take a break, to the point that some of the students had to check in on me. That's when I knew I had to do something. I have lost 13kg, can now do more pull ups than what I did in National Service and for the first time in many years, I can climb stairs and run pain free.",
           assets: [
             {
-              key: "allan-before-after-side",
-              type: "img",
-              src: require("@/assets/testimonials/allan-before-after-side.JPG"),
-            },
-            {
               key: "allan-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/allan-before-after-front.JPG"),
+            },
+            {
+              key: "allan-before-after-side",
+              type: "img",
+              src: require("@/assets/testimonials/allan-before-after-side.JPG"),
             },
             {
               key: "allan-before-after-back",
@@ -271,14 +271,14 @@ export default {
             "My expectations have been greatly surpassed. I have not only dropped more weight than what I put on during the pandemic, but I have also gained significant muscle mass and strength! I now look much better and can feel more confident for my wedding! Big thanks to Isaac for turning my life around!",
           assets: [
             {
-              key: "jingxin-before-after-side",
-              type: "img",
-              src: require("@/assets/testimonials/jingxin-before-after-side.JPG"),
-            },
-            {
               key: "jingxin-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/jingxin-before-after-front.JPG"),
+            },
+            {
+              key: "jingxin-before-after-side",
+              type: "img",
+              src: require("@/assets/testimonials/jingxin-before-after-side.JPG"),
             },
             {
               key: "jingxin-before-after-back",
@@ -301,14 +301,14 @@ export default {
             "Diet is a huge barrier that stops me from getting my dream body. I like to eat a lot of junk food and tend to stress eat a lot. I have engaged 2 personal trainers before but due to the lack of nutritional follow up outside of the 1-hour sessions, I did not see much progress. Isaac, on the other hand, has monitored my daily weight and nutritional intake to ensure I reach my goals. He also ensures that I am pushed safely to my limits by programming intelligently and ensuring I train with good technique.",
           assets: [
             {
-              key: "justin-before-after-side",
-              type: "img",
-              src: require("@/assets/testimonials/justin-before-after-side.JPG"),
-            },
-            {
               key: "justin-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/justin-before-after-front.JPG"),
+            },
+            {
+              key: "justin-before-after-side",
+              type: "img",
+              src: require("@/assets/testimonials/justin-before-after-side.JPG"),
             },
             {
               key: "justin-before-after-back",

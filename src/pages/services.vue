@@ -2,7 +2,7 @@
   <div>
     <div
       class="
-        bg-right bg-no-repeat bg-cover
+        bg-center bg-no-repeat bg-cover
         h-80vh
         flex
         items-center
@@ -11,7 +11,11 @@
       "
       :style="{
         backgroundImage:
-          'url(\'' + require('@/assets/services/services-banner.jpg') + '\')',
+          'url(\'' +
+          (isLg
+            ? require('@/assets/services/services-banner.jpg')
+            : require('@/assets/services/services-banner-mobile.jpg')) +
+          '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
@@ -29,7 +33,7 @@
         <div class="flex gap-20px justify-center">
           <a
             :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-              'Hi, I would like to know more about your Personal Training services. \nName: \nAge: \nActivity level:'
+              'Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
             )}`"
             target="_blank"
             class="

@@ -95,34 +95,34 @@ export default {
     testimonials() {
       return [
         {
-          key: "alicia-before-after-side",
-          type: "img",
-          src: require("@/assets/testimonials/alicia-before-after-side.JPG"),
-        },
-        {
           key: "isaac-before-after-front",
           type: "img",
           src: require("@/assets/testimonials/isaac-before-after-front.JPG"),
         },
         {
-          key: "roger-before-after-back",
+          key: "alicia-before-after-front",
           type: "img",
-          src: require("@/assets/testimonials/roger-before-after-back.JPG"),
+          src: require("@/assets/testimonials/alicia-before-after-front.JPG"),
         },
         {
-          key: "allan-before-after-side",
+          key: "allan-before-after-front",
           type: "img",
-          src: require("@/assets/testimonials/allan-before-after-side.JPG"),
+          src: require("@/assets/testimonials/allan-before-after-front.JPG"),
+        },
+        {
+          key: "justin-before-after-side",
+          type: "img",
+          src: require("@/assets/testimonials/justin-before-after-side.JPG"),
+        },
+        {
+          key: "roger-before-after-front",
+          type: "img",
+          src: require("@/assets/testimonials/roger-before-after-front.JPG"),
         },
         {
           key: "jingxin-before-after-front",
           type: "img",
           src: require("@/assets/testimonials/jingxin-before-after-front.JPG"),
-        },
-        {
-          key: "justin-before-after-back",
-          type: "img",
-          src: require("@/assets/testimonials/justin-before-after-back.JPG"),
         },
       ];
     },
