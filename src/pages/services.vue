@@ -33,7 +33,7 @@
         <div class="flex gap-20px justify-center">
           <a
             :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-              'Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+              'Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
             )}`"
             target="_blank"
             class="

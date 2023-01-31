@@ -143,7 +143,7 @@ export default {
             "Daily support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Personal Training. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+            "Hi, I would like to know more about Personal Training. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
         {
@@ -158,7 +158,7 @@ export default {
             "Daily support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Virtual Personal Training. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+            "Hi, I would like to know more about Virtual Personal Training. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
         {
@@ -171,7 +171,7 @@ export default {
             "Daily monitoring and support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+            "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
       ];
