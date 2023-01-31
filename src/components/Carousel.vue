@@ -56,7 +56,7 @@ export default {
     },
     autoplay: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     colorCode: {
       type: String,
