@@ -33,7 +33,7 @@ export default {
       {
         rel: "icon",
         type: "image/png",
-        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.ea95409.jpg",
+        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt-black.8c463c3.png",
         media: "(prefers-color-scheme: light)"
       },
       {
