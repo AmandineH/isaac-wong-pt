@@ -15,7 +15,7 @@
       <div class="flex items-center gap-50px">
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt-black.png"
             alt="Isaac Wong Personal Training"
             class="h-50px"
           />

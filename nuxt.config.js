@@ -28,6 +28,13 @@ export default {
         rel: "icon",
         type: "image/png",
         href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.b0d47ca.png",
+        media: "(prefers-color-scheme: dark)"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.ea95409.jpg",
+        media: "(prefers-color-scheme: light)"
       },
       {
         rel: "stylesheet",
