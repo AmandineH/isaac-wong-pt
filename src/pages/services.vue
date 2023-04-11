@@ -148,6 +148,9 @@ import Products from "@/components/Products.vue";
 import Contact from "@/components/Contact.vue";
 
 export default {
+  head() {
+    return this.$metadata.head();
+  },
   components: {
     Products,
     Contact,

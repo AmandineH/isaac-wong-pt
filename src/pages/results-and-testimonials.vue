@@ -144,6 +144,9 @@ import Carousel from "@/components/Carousel.vue";
 import Contact from "@/components/Contact.vue";
 
 export default {
+  head() {
+    return this.$metadata.head();
+  },
   components: {
     Carousel,
     Contact,

@@ -13,7 +13,7 @@ export default {
   telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Isaac Wong Personal Training",
+    title: "Isaac Wong Personal Training - Certified Personal Trainer",
     htmlAttrs: {
       lang: "en",
     },
@@ -40,7 +40,11 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/vue-carousel.js", mode: "client" }],
+  plugins: [
+    { src: "~/plugins/vue-carousel.js", mode: "client" },
+
+    "~/plugins/meta.js",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
