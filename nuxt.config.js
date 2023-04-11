@@ -27,13 +27,13 @@ export default {
       {
         rel: "icon",
         type: "image/png",
-        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.b0d47ca.png",
+        href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.png",
         media: "(prefers-color-scheme: dark)"
       },
       {
         rel: "icon",
         type: "image/png",
-        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt-black.8c463c3.png",
+        href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.png",
         media: "(prefers-color-scheme: light)"
       },
       {

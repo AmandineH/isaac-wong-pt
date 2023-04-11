@@ -39,7 +39,7 @@ export default ({ app }, inject) => {
             name: "og:image",
             property: "og:image",
             itemprop: "image",
-            content: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.ea95409.jpg",
+            content: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
           },
           {
             hid: "og:image:width",
@@ -58,20 +58,20 @@ export default ({ app }, inject) => {
             name: "twitter:image",
             property: "twitter:image",
             itemprop: "image",
-            content: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.ea95409.jpg",
+            content: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
           },
         ],
         link: [
           {
             rel: "icon",
             type: "image/png",
-            href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.b0d47ca.png",
+            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.png",
             media: "(prefers-color-scheme: dark)"
           },
           {
             rel: "icon",
             type: "image/png",
-            href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt-black.8c463c3.png",
+            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.png",
             media: "(prefers-color-scheme: light)"
           },
           {
