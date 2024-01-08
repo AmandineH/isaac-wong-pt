@@ -9,13 +9,13 @@
       style="box-shadow: 0px 4px 10px 0px #7c7c7c40"
     >
       <a
-        :href="`https://wa.me/+6597567270`"
+        :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+          'Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+        )}`"
         target="_blank"
       >
         <div>
-          <p class="body-bold-3 text-black">
-            Ready to get started?
-          </p>
+          <p class="body-bold-3 text-black">Ready to get started?</p>
           <p class="body-3 text-black">Chat on WhatsApp!</p>
         </div>
       </a>
@@ -28,7 +28,9 @@
       />
     </div>
     <a
-      :href="`https://wa.me/+6597567270`"
+      :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+        'Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+      )}`"
       target="_blank"
       class="
         flex

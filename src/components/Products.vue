@@ -142,16 +142,29 @@ export default {
         },
         {
           key: "online-coaching",
-          src: require("@/assets/services/online-coaching.jpg"),
+          src: require("@/assets/services/virtual-personal-training.jpg"),
           label: "Online Coaching",
           features: [
             "Customized training plan",
             "Customized nutrition plan",
             "Daily monitoring and support",
-            "Option for Virtual Personal Training"
+            "Option for Virtual Personal Training",
           ],
           message: `${encodeURIComponent(
             "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+          )}`,
+        },
+        {
+          key: "fitness-business-coaching",
+          src: require("@/assets/services/online-coaching.jpg"),
+          label: "Fitness Business Coaching",
+          features: [
+            "Customized solutions to grow your fitness business",
+            "Technical advisory for training / nutrition programming",
+            "Enquire to find out more!",
+          ],
+          message: `${encodeURIComponent(
+            "Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
       ];
