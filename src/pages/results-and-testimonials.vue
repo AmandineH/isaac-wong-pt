@@ -133,12 +133,15 @@
         </div>
       </div>
     </div>
+
+    <About />
   </div>
 </template>
 
 <script>
 // components
 import Carousel from "@/components/Carousel.vue";
+import About from "@/components/About.vue";
 
 export default {
   head() {
@@ -146,6 +149,7 @@ export default {
   },
   components: {
     Carousel,
+    About,
   },
   computed: {
     isLg() {
