@@ -1,30 +1,13 @@
 <template>
   <div>
-    <Banner />
-
-    <Products />
-
-    <Testimonials />
-
-    <About />
+    <p class="text-black text-center header-2 py-370px px-24px">Coming Soon...</p>
   </div>
 </template>
 
 <script>
-import Banner from "@/components/Banner.vue";
-import Products from "@/components/Products.vue";
-import Testimonials from "@/components/Testimonials.vue";
-import About from "@/components/About.vue";
-
 export default {
   head() {
     return this.$metadata.head();
-  },
-  components: {
-    Banner,
-    Products,
-    Testimonials,
-    About,
   },
   computed: {
     isLg() {
