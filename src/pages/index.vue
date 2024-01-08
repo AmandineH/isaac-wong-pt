@@ -20,6 +20,9 @@ import About from "@/components/About.vue";
 import Contact from "@/components/Contact.vue";
 
 export default {
+  head() {
+    return this.$metadata.head();
+  },
   components: {
     Banner,
     Products,

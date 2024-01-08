@@ -13,7 +13,7 @@ export default {
   telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Isaac Wong Personal Training",
+    title: "Isaac Wong Personal Training - Certified Personal Trainer",
     htmlAttrs: {
       lang: "en",
     },
@@ -27,7 +27,14 @@ export default {
       {
         rel: "icon",
         type: "image/png",
-        href: "https://isaac-wong-pt.netlify.app/_nuxt/img/isaac-wong-pt.b0d47ca.png",
+        href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.png",
+        media: "(prefers-color-scheme: dark)"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.png",
+        media: "(prefers-color-scheme: light)"
       },
       {
         rel: "stylesheet",
@@ -40,7 +47,11 @@ export default {
   css: ["@/assets/css/style.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/vue-carousel.js", mode: "client" }],
+  plugins: [
+    { src: "~/plugins/vue-carousel.js", mode: "client" },
+
+    "~/plugins/meta.js",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,

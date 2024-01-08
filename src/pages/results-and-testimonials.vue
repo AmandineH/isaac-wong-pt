@@ -144,6 +144,9 @@ import Carousel from "@/components/Carousel.vue";
 import Contact from "@/components/Contact.vue";
 
 export default {
+  head() {
+    return this.$metadata.head();
+  },
   components: {
     Carousel,
     Contact,
@@ -157,7 +160,7 @@ export default {
         {
           key: "isaac",
           name: "Isaac",
-          profile: "20s, Fitness",
+          profile: "26, Fitness",
           quote:
             "My first client is myself. Leading by example was the first thing I learnt in the SAF's Officer Cadet School and this principle has stuck with me throughout these years as a Personal Trainer and Fitness Coach. It would not sit right with me to be here today asking my clients to commit to the things they need to do to enter the fittest days of their lives if I had not done so myself!",
           assets: [
@@ -176,7 +179,7 @@ export default {
         {
           key: "alicia",
           name: "Alicia",
-          profile: "40s, Banking & Finance",
+          profile: "42, Banking & Finance",
           quote:
             "After having my kid, I couldn't lose weight... I needed to do something different and that's where Isaac stepped into the picture.",
           assets: [
@@ -206,7 +209,7 @@ export default {
         {
           key: "roger",
           name: "Roger",
-          profile: "20s, Data Scientist",
+          profile: "29, Data Scientist",
           quote:
             "I ended up in some unhealthy habits which put me in a bad place, both physically and mentally. But Isaac helped me to lose weight, helped me build discipline.",
           assets: [
