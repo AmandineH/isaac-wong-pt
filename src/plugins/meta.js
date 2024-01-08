@@ -8,7 +8,7 @@ export default ({ app }, inject) => {
        */
 
       return {
-        title: "Isaac Wong Personal Training - Certified Personal Trainer",
+        title: "Isaac Wong Personal Training - Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter",
         meta: [
           { charset: "utf-8" },
           {

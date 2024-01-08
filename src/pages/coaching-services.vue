@@ -138,14 +138,14 @@
       </div>
     </div>
 
-    <Contact />
+    <About />
   </div>
 </template>
 
 <script>
 // components
 import Products from "@/components/Products.vue";
-import Contact from "@/components/Contact.vue";
+import About from "@/components/About.vue";
 
 export default {
   head() {
@@ -153,7 +153,7 @@ export default {
   },
   components: {
     Products,
-    Contact,
+    About,
   },
   computed: {
     isLg() {

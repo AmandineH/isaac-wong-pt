@@ -18,7 +18,7 @@
         <div :class="isLg ? 'max-w-500px px-40px py-80px' : 'px-20px py-40px'">
           <p class="text-white supheader-1 mb-10px">Isaac Wong</p>
           <p class="text-white header-2 opacity-70 mb-20px">
-            Certified Personal Trainer
+            Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
           </p>
 
           <p class="text-white mb-20px body-2">

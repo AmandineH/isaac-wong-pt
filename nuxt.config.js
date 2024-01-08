@@ -13,7 +13,7 @@ export default {
   telemetry: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Isaac Wong Personal Training - Certified Personal Trainer",
+    title: "Isaac Wong Personal Training - Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter",
     htmlAttrs: {
       lang: "en",
     },
@@ -78,6 +78,7 @@ export default {
             "2px": "2px",
             "5px": "5px",
             "10px": "10px",
+            "15px": "15px",
             "20px": "20px",
             "30px": "30px",
             "40px": "40px",

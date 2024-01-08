@@ -133,15 +133,12 @@
         </div>
       </div>
     </div>
-
-    <Contact />
   </div>
 </template>
 
 <script>
 // components
 import Carousel from "@/components/Carousel.vue";
-import Contact from "@/components/Contact.vue";
 
 export default {
   head() {
@@ -149,7 +146,6 @@ export default {
   },
   components: {
     Carousel,
-    Contact,
   },
   computed: {
     isLg() {
@@ -160,7 +156,7 @@ export default {
         {
           key: "isaac",
           name: "Isaac",
-          profile: "26, Fitness",
+          profile: "20s, Fitness",
           quote:
             "My first client is myself. Leading by example was the first thing I learnt in the SAF's Officer Cadet School and this principle has stuck with me throughout these years as a Personal Trainer and Fitness Coach. It would not sit right with me to be here today asking my clients to commit to the things they need to do to enter the fittest days of their lives if I had not done so myself!",
           assets: [
@@ -179,7 +175,7 @@ export default {
         {
           key: "alicia",
           name: "Alicia",
-          profile: "42, Banking & Finance",
+          profile: "40s, Banking & Finance",
           quote:
             "After having my kid, I couldn't lose weight... I needed to do something different and that's where Isaac stepped into the picture.",
           assets: [
@@ -209,7 +205,7 @@ export default {
         {
           key: "roger",
           name: "Roger",
-          profile: "29, Data Scientist",
+          profile: "20s, Data Scientist",
           quote:
             "I ended up in some unhealthy habits which put me in a bad place, both physically and mentally. But Isaac helped me to lose weight, helped me build discipline.",
           assets: [
@@ -238,8 +234,8 @@ export default {
         },
         {
           key: "allan",
-          name: "Allan",
-          profile: "61, Senior Lecturer",
+          name: "My Dad, Allan",
+          profile: "60s, Senior Lecturer",
           quote:
             "Couple of months ago, while climbing the stairs in school, I had so much pain in my knee that I had to stop halfway and take a break, to the point that some of the students had to check in on me. That's when I knew I had to do something. I have lost 13kg, can now do more pull ups than what I did in National Service and for the first time in many years, I can climb stairs and run pain free.",
           assets: [
@@ -269,7 +265,7 @@ export default {
         {
           key: "jingxin",
           name: "Jingxin",
-          profile: "25, Data Analyst",
+          profile: "20s, Data Analyst",
           quote:
             "My expectations have been greatly surpassed. I have not only dropped more weight than what I put on during the pandemic, but I have also gained significant muscle mass and strength! I now look much better and can feel more confident for my wedding! Big thanks to Isaac for turning my life around!",
           assets: [
@@ -299,7 +295,7 @@ export default {
         {
           key: "justin",
           name: "Justin",
-          profile: "34, Sales Engineer",
+          profile: "30s, Sales Engineer",
           quote:
             "Diet is a huge barrier that stops me from getting my dream body. I like to eat a lot of junk food and tend to stress eat a lot. I have engaged 2 personal trainers before but due to the lack of nutritional follow up outside of the 1-hour sessions, I did not see much progress. Isaac, on the other hand, has monitored my daily weight and nutritional intake to ensure I reach my goals. He also ensures that I am pushed safely to my limits by programming intelligently and ensuring I train with good technique.",
           assets: [
@@ -329,7 +325,7 @@ export default {
         {
           key: "jaden",
           name: "Jaden",
-          profile: "31, Strength Coach",
+          profile: "30s, Strength Coach",
           quote:
             "My Squat went from 110kg to 135kg, my Bench Press from 70kg to 85kg and my Deadlift from 130kg to 180kg!",
           assets: [
@@ -344,7 +340,7 @@ export default {
         {
           key: "darren",
           name: "Darren",
-          profile: "26, Financial Advisor",
+          profile: "20s, Financial Advisor",
           quote:
             "Having lost a lot of belly fat and gained significant muscle mass, I now feel a lot more confident for my wedding!",
           assets: [

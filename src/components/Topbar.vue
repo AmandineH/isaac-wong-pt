@@ -274,9 +274,14 @@ export default {
           label: "Home",
         },
         {
-          key: "services",
-          href: "/services",
-          label: "Services",
+          key: "coaching-services",
+          href: "/coaching-services",
+          label: "Coaching Services",
+        },
+        {
+          key: "products",
+          href: "/products",
+          label: "Products",
         },
         {
           key: "results-and-testimonials",

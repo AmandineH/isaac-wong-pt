@@ -15,13 +15,7 @@
     <div class="relative">
       <div :class="isLg ? 'mb-40px' : 'px-20px mb-20px'">
         <p class="text-black supheader-1 mb-20px text-center">
-          Let's do it together
-        </p>
-        <p class="text-black body-2 text-center">
-          There are many different ways to get fit and stay fit. Lose weight,
-          run a marathon or get that beach body—take a look below at the
-          different ways I can help achieve your fitness goals. Please contact
-          me directly for a quote!
+          Let me help you reach your goals!
         </p>
       </div>
 
@@ -134,7 +128,7 @@ export default {
         {
           key: "personal-training",
           src: require("@/assets/services/personal-training.jpg"),
-          label: "Personal Training",
+          label: "In-Person Coaching",
           features: [
             "1:1 in-person coaching",
             "Customized training plan",
@@ -143,22 +137,7 @@ export default {
             "Daily support",
           ],
           message: `${encodeURIComponent(
-            "Hi, I would like to know more about Personal Training. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
-          )}`,
-        },
-        {
-          key: "virtual-personal-training",
-          src: require("@/assets/services/virtual-personal-training.jpg"),
-          label: "Virtual Personal Training",
-          features: [
-            "1:1 virtual coaching",
-            "Customized training plan",
-            "Customized nutrition plan",
-            "Out-of-session monitoring",
-            "Daily support",
-          ],
-          message: `${encodeURIComponent(
-            "Hi, I would like to know more about Virtual Personal Training. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+            "Hi, I would like to know more about In-Person Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
           )}`,
         },
         {
@@ -169,6 +148,7 @@ export default {
             "Customized training plan",
             "Customized nutrition plan",
             "Daily monitoring and support",
+            "Option for Virtual Personal Training"
           ],
           message: `${encodeURIComponent(
             "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
