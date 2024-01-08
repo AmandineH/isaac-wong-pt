@@ -22,8 +22,8 @@
           </p>
 
           <p class="text-white mb-20px body-2">
-            Reach your fitness goals - Since 2017, I’ve been transforming my
-            clients into fitter, healthier versions of themselves. Let’s shape
+            Reach your fitness goals - Since 2017, I've been transforming my
+            clients into fitter, healthier versions of themselves. Let's shape
             up together.
           </p>
 
