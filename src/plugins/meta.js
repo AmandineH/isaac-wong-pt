@@ -20,19 +20,19 @@ export default ({ app }, inject) => {
             hid: "description",
             name: "description",
             property: "description",
-            content: "Reach your fitness goals - Since 2017, I’ve been transforming my clients into fitter, healthier versions of themselves. Let’s shape up together.",
+            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "og:description",
             name: "og:description",
             property: "og:description",
-            content: "Reach your fitness goals - Since 2017, I’ve been transforming my clients into fitter, healthier versions of themselves. Let’s shape up together.",
+            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "twitter:description",
             name: "twitter:description",
             property: "twitter:description",
-            content: "Reach your fitness goals - Since 2017, I’ve been transforming my clients into fitter, healthier versions of themselves. Let’s shape up together.",
+            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "og:image",

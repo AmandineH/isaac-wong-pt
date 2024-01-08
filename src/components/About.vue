@@ -27,31 +27,51 @@
         <p class="supheader-1 mb-20px text-black">Isaac Wong</p>
 
         <p class="body-2 mb-20px text-black">
-          My name is Isaac Wong. Since 2017, I have been helping clients and
-          athletes reach their fitness goals through science-based, sustainable
-          & data-driven methods. Having been a competitive athlete across
-          football, basketball and floorball throughout my schooling years, I
-          have always been active and passionate about sports in general.
-          However, with regards to exercising, my interest in bodyweight
-          training was first sparked in 2014 when I was preparing to take the
-          GCE 'A' Level examinations. Bodyweight training in the form of
-          push-ups and pull-ups were a way for me to relax during that period. ​
+          I've been a competitive athlete since I was 10, playing Basketball,
+          Football and Floorball up until National Service where I found my love
+          for fitness and strength training. Since then, I've been called up to
+          the national Powerlifting and Weightlifting team, as well as competed
+          competitively in hybrid fitness sports such as CrossFit and Hyrox.
         </p>
 
         <p class="body-2 mb-20px text-black">
-          I believe that being physically fit is something that everyone should
-          be able to enjoy! With over 15 years of competitive sports experience
-          and more than half a decade of professional fitness coaching under my
-          belt, I believe that I have acquired the necessary skills to help any
-          individual achieve his/her fitness goals!
+          My coaching career began in 2016 after I finished my service in the
+          Military. I did personal training and online coaching while
+          concurrently studying for a degree in economics and data science. Upon
+          graduation, I took up a post graduate research scholarship to pursue a
+          PhD in Economics but ultimately left the programme 6 months later to
+          pursue my love for fitness fulltime.
+        </p>
+
+        <p class="body-2 mb-20px text-black">
+          I have not looked back since and feel extremely fortunate everyday to
+          be put in a position to directly change someone else's life for the
+          better!
+        </p>
+
+        <p class="body-2 mb-20px text-black">
+          With more than 7 years of experience in the fitness industry as a
+          coach with multiple fitness entities, I am confident of the skills
+          that I've developed to help anyone achieve their goals! Whether you're
+          looking to lose weight, build muscle or get stronger and fitter for a
+          sport, I'll be more than happy to journey alongside you!
+        </p>
+
+        <p class="body-bold-2 mb-20px text-black">
+          Do reach out if you think that I might be a good fit to serve you. See
+          you soon!
         </p>
 
         <ul class="list-disc list-inside body-2 mb-20px text-black">
-          <li>Certified Personal Trainer & Competitive athlete</li>
-          <li>B.Sc. Quantitative Economics & Data Science</li>
+          <li>Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global)</li>
+          <li>National Powerlifter & Weightlifter | 3-time Record Holder</li>
+          <li>Competitive Hybrid Fitness Athlete (Hyrox, CrossFit)</li>
+          <li>Sponsored Athlete for The Lions' Den</li>
           <li>
-            Believer of science-based, sustainable & data-driven protocols
+            Technical Advisor and Business Consultant for multiple fitness
+            entities
           </li>
+          <li>B.Sc. Quantitative Economics & Data Science</li>
         </ul>
       </div>
     </div>
