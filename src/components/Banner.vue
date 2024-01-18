@@ -37,7 +37,7 @@
       <div :class="isLg ? 'order-2' : 'order-1'">
         <div class="max-w-400px mx-auto">
           <video autoplay loop muted defaultMuted playsinline controls>
-            <source src="@/assets/isaac-wong-pt/trailer.MP4" type="video/mp4" />
+            <source src="@/assets/isaac-wong-pt/trailer.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

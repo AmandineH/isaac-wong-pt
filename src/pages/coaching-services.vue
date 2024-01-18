@@ -5,7 +5,7 @@
       :class="isLg ? 'items-center' : 'items-end'"
       :style="{
         backgroundImage:
-          'url(\'' + require('@/assets/services/services-banner.JPG') + '\')',
+          'url(\'' + require('@/assets/services/services-banner.jpg') + '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
