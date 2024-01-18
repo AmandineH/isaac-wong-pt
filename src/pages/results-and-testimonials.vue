@@ -317,17 +317,17 @@ export default {
             {
               key: "jingxin-before-after-front",
               type: "img",
-              src: require("@/assets/testimonials/jingxin-before-after-front.jpg"),
+              src: require("@/assets/testimonials/jingxin-before-after-front.JPG"),
             },
             {
               key: "jingxin-before-after-side",
               type: "img",
-              src: require("@/assets/testimonials/jingxin-before-after-side.jpg"),
+              src: require("@/assets/testimonials/jingxin-before-after-side.JPG"),
             },
             {
               key: "jingxin-before-after-back",
               type: "img",
-              src: require("@/assets/testimonials/jingxin-before-after-back.jpg"),
+              src: require("@/assets/testimonials/jingxin-before-after-back.JPG"),
             },
             {
               key: "jingxin-video",
