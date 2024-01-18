@@ -1,15 +1,31 @@
 <template>
   <div class="relative">
-    <img
-      src="@/assets/isaac-wong-pt/profile.jpg"
-      alt="Isaac Wong"
-      class=""
-      :class="
-        isLg
-          ? 'right-0 w-1/3 object-center object-cover h-full absolute'
-          : 'w-full h-400px object-center object-cover'
-      "
-    />
+    <div
+      class="grid"
+      :class="isLg ? 'right-0 w-1/3  h-full absolute grid-rows-3' : 'w-full h-400px grid-rows-2'"
+    >
+      <div class="col-span-2">
+        <img
+          src="@/assets/isaac-wong-pt/isaac-1.jpg"
+          alt="Isaac Wong"
+          class="object-center object-cover w-full h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="@/assets/isaac-wong-pt/isaac-2.jpg"
+          alt="Isaac Wong"
+          class="object-center object-cover w-full h-full"
+        />
+      </div>
+      <div>
+        <img
+          src="@/assets/isaac-wong-pt/isaac-3.jpg"
+          alt="Isaac Wong"
+          class="object-center object-cover w-full h-full"
+        />
+      </div>
+    </div>
 
     <img
       src="@/assets/utility/arrow-orange.svg"
