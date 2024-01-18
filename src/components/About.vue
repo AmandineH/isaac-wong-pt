@@ -2,9 +2,13 @@
   <div class="relative">
     <div
       class="grid"
-      :class="isLg ? 'right-0 w-1/3  h-full absolute grid-rows-3' : 'w-full h-400px grid-rows-2'"
+      :class="
+        isLg
+          ? 'right-0 w-1/3 h-full absolute grid-rows-3 grid-cols-1'
+          : 'w-full h-400px grid-rows-2'
+      "
     >
-      <div class="col-span-2">
+      <div :class="isLg ? '' : 'col-span-2'">
         <img
           src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
