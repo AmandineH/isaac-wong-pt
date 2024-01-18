@@ -151,6 +151,11 @@ export default {
           href: "/results-and-testimonials",
           label: "Results & Testimonials",
         },
+        {
+          key: "about-me",
+          href: "/about-me",
+          label: "About Me",
+        },
       ];
     },
     socials() {

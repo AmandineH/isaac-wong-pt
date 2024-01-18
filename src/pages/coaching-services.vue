@@ -1,21 +1,11 @@
 <template>
   <div>
     <div
-      class="
-        bg-center bg-no-repeat bg-cover
-        h-80vh
-        flex
-        items-center
-        justify-center
-        relative
-      "
+      class="bg-center bg-no-repeat bg-cover h-80vh flex justify-center relative"
+      :class="isLg ? 'items-center' : 'items-end'"
       :style="{
         backgroundImage:
-          'url(\'' +
-          (isLg
-            ? require('@/assets/services/services-banner.jpg')
-            : require('@/assets/services/services-banner-mobile.jpg')) +
-          '\')',
+          'url(\'' + require('@/assets/services/services-banner.JPG') + '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
@@ -36,15 +26,7 @@
               'Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
             )}`"
             target="_blank"
-            class="
-              text-orange-EE642A
-              border-2px border-orange-EE642A
-              hover:bg-orange-EE642A
-              px-40px
-              py-10px
-              rounded-5px
-              hover:text-black
-            "
+            class="text-orange-EE642A border-2px border-orange-EE642A hover:bg-orange-EE642A px-40px py-10px rounded-5px hover:text-black"
             >Get in Touch</a
           >
         </div>
@@ -82,16 +64,7 @@
 
           <div
             :id="'play-' + 'explaination'"
-            class="
-              absolute
-              inset-0
-              z-10
-              flex
-              items-center
-              justify-center
-              bg-center bg-no-repeat bg-cover
-              button
-            "
+            class="absolute inset-0 z-10 flex items-center justify-center bg-center bg-no-repeat bg-cover button"
             :style="{
               backgroundImage:
                 'url(\'' +
