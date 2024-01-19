@@ -274,19 +274,24 @@ export default {
           label: "Home",
         },
         {
+          key: "about-me",
+          href: "/about-me",
+          label: "About Me",
+        },
+        {
           key: "coaching-services",
           href: "/coaching-services",
           label: "Coaching Services",
         },
         {
-          key: "products",
-          href: "/products",
-          label: "Products",
-        },
-        {
           key: "results-and-testimonials",
           href: "/results-and-testimonials",
           label: "Results & Testimonials",
+        },
+        {
+          key: "products",
+          href: "/products",
+          label: "Products",
         },
       ];
     },

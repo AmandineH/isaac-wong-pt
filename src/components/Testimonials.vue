@@ -100,14 +100,19 @@ export default {
           src: require("@/assets/testimonials/isaac-before-after-front.JPG"),
         },
         {
+          key: "allan-before-after-front",
+          type: "img",
+          src: require("@/assets/testimonials/allan-before-after-front.JPG"),
+        },
+        {
           key: "alicia-before-after-front",
           type: "img",
           src: require("@/assets/testimonials/alicia-before-after-front.JPG"),
         },
         {
-          key: "allan-before-after-front",
+          key: "ridhwan-before-after-front",
           type: "img",
-          src: require("@/assets/testimonials/allan-before-after-front.JPG"),
+          src: require("@/assets/testimonials/ridhwan-before-after-front.JPG"),
         },
         {
           key: "justin-before-after-side",
@@ -115,14 +120,29 @@ export default {
           src: require("@/assets/testimonials/justin-before-after-side.JPG"),
         },
         {
-          key: "roger-before-after-front",
+          key: "angela-before-after-front",
           type: "img",
-          src: require("@/assets/testimonials/roger-before-after-front.JPG"),
+          src: require("@/assets/testimonials/angela-before-after-front.JPG"),
+        },
+        {
+          key: "keith-before-after-side",
+          type: "img",
+          src: require("@/assets/testimonials/keith-before-after-side.JPG"),
         },
         {
           key: "jingxin-before-after-front",
           type: "img",
           src: require("@/assets/testimonials/jingxin-before-after-front.JPG"),
+        },
+        {
+          key: "roger-before-after-front",
+          type: "img",
+          src: require("@/assets/testimonials/roger-before-after-front.JPG"),
+        },
+        {
+          key: "christopher-before-after-back",
+          type: "img",
+          src: require("@/assets/testimonials/christopher-before-after-back.JPG"),
         },
       ];
     },

@@ -1,51 +1,51 @@
 <template>
-  <div class="relative bg-black overflow-hidden">
-    <video
-      autoplay
-      loop
-      muted
-      defaultMuted
-      playsinline
-      class="w-full"
-      :class="isLg ? 'absolute top-0' : ''"
-    >
-      <source src="@/assets/isaac-wong-pt/trailer.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <div class="bg-black">
+    <div class="mx-auto max-w-1300px grid" :class="isLg ? 'grid-cols-2' : ''">
+      <div
+        :class="
+          isLg
+            ? 'order-1 px-40px py-80px flex flex-col justify-center'
+            : 'order-2 px-20px py-40px'
+        "
+      >
+        <p class="text-white supheader-1 mb-10px">Isaac Wong</p>
+        <p class="text-white header-2 opacity-70 mb-20px">
+          Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
+        </p>
 
-    <div class="bg-black-00000033 relative z-10">
-      <div class="mx-auto max-w-1300px" :class="isLg ? 'h-80vh' : ''">
-        <div :class="isLg ? 'max-w-500px px-40px py-80px' : 'px-20px py-40px'">
-          <p class="text-white supheader-1 mb-10px">Isaac Wong</p>
-          <p class="text-white header-2 opacity-70 mb-20px">
-            Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
-          </p>
+        <p class="text-white mb-20px body-2">
+          Reach your fitness goals - Since 2017, I've been transforming my
+          clients into fitter, healthier versions of themselves. Let's shape up
+          together.
+        </p>
 
-          <p class="text-white mb-20px body-2">
-            Reach your fitness goals - Since 2017, I've been transforming my
-            clients into fitter, healthier versions of themselves. Let's shape
-            up together.
-          </p>
+        <div class="flex">
+          <a
+            :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+              'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
+            )}`"
+            target="_blank"
+            class="
+              text-orange-EE642A
+              border-2px border-orange-EE642A
+              bg-orange-EE642A33
+              hover:bg-orange-EE642A
+              px-40px
+              py-10px
+              rounded-5px
+              hover:text-white
+            "
+            >Get in Touch</a
+          >
+        </div>
+      </div>
 
-          <div class="flex">
-            <a
-              :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-                'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
-              )}`"
-              target="_blank"
-              class="
-                text-orange-EE642A
-                border-2px border-orange-EE642A
-                bg-orange-EE642A33
-                hover:bg-orange-EE642A
-                px-40px
-                py-10px
-                rounded-5px
-                hover:text-white
-              "
-              >Get in Touch</a
-            >
-          </div>
+      <div :class="isLg ? 'order-2' : 'order-1'">
+        <div class="max-w-400px mx-auto">
+          <video controls>
+            <source src="@/assets/isaac-wong-pt/trailer.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

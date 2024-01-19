@@ -5,17 +5,13 @@
         bg-center bg-no-repeat bg-cover
         h-80vh
         flex
-        items-center
         justify-center
         relative
       "
+      :class="isLg ? 'items-center' : 'items-end'"
       :style="{
         backgroundImage:
-          'url(\'' +
-          (isLg
-            ? require('@/assets/services/services-banner.jpg')
-            : require('@/assets/services/services-banner-mobile.jpg')) +
-          '\')',
+          'url(\'' + require('@/assets/services/services-banner.JPG') + '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
@@ -70,41 +66,11 @@
         <div
           class="rounded-10px overflow-hidden relative"
           :class="isLg ? 'w-1/3 flex-shrink-0' : 'w-full'"
-          @click="playClip('explaination')"
         >
-          <video :id="'explaination'" controls class="h-full w-full">
-            <source
-              src="@/assets/isaac-wong-pt/explaination.mp4"
-              type="video/mp4"
-            />
+          <video controls>
+            <source src="@/assets/isaac-wong-pt/trailer.MP4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-
-          <div
-            :id="'play-' + 'explaination'"
-            class="
-              absolute
-              inset-0
-              z-10
-              flex
-              items-center
-              justify-center
-              bg-center bg-no-repeat bg-cover
-              button
-            "
-            :style="{
-              backgroundImage:
-                'url(\'' +
-                require('@/assets/isaac-wong-pt/explaination-thumbnail.png') +
-                '\')',
-            }"
-          >
-            <div class="absolute inset-0 bg-black opacity-30" />
-            <img
-              src="@/assets/utility/play.svg"
-              class="h-50px w-50px relative"
-            />
-          </div>
         </div>
       </div>
     </div>
@@ -182,32 +148,6 @@ export default {
             "Helps you to stay on track with training and nutrition plan, as well as to make adjustments when needed",
         },
       ];
-    },
-  },
-  methods: {
-    playClip(id) {
-      let clip = document.getElementById(id);
-
-      if (clip) {
-        clip.play();
-
-        let pauseButton = document.getElementById("play-" + id);
-        if (pauseButton) {
-          pauseButton.classList.add("hidden");
-        }
-      }
-    },
-    pauseClip(id) {
-      let clip = document.getElementById(id);
-
-      if (clip) {
-        clip.pause();
-
-        let pauseButton = document.getElementById("play-" + id);
-        if (pauseButton) {
-          pauseButton.classList.remove("hidden");
-        }
-      }
     },
   },
 };
