@@ -10,7 +10,7 @@
     >
       <a
         :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-          'Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+          'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
         )}`"
         target="_blank"
       >
@@ -29,7 +29,7 @@
     </div>
     <a
       :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-        'Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+        'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
       )}`"
       target="_blank"
       class="

@@ -116,7 +116,7 @@ export default {
         {
           key: "whatsapp",
           href: `https://wa.me/+6597567270?text=${encodeURIComponent(
-            "Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
+            "Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:"
           )}`,
           src: require("@/assets/social/whatsapp.svg"),
           alt: "Whatsapp",
@@ -137,14 +137,14 @@ export default {
           label: "Home",
         },
         {
+          key: "about-me",
+          href: "/about-me",
+          label: "About Me",
+        },
+        {
           key: "coaching-services",
           href: "/coaching-services",
           label: "Coaching Services",
-        },
-        {
-          key: "products",
-          href: "/products",
-          label: "Products",
         },
         {
           key: "results-and-testimonials",
@@ -152,9 +152,9 @@ export default {
           label: "Results & Testimonials",
         },
         {
-          key: "about-me",
-          href: "/about-me",
-          label: "About Me",
+          key: "products",
+          href: "/products",
+          label: "Products",
         },
       ];
     },

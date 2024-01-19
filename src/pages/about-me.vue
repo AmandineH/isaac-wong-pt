@@ -4,7 +4,7 @@
 
     <div class="flex " :class="isLg ? '' : 'flex-col'" :style="isLg ? 'max-height:720px' : ''">
       <div class="max-w-400px" style="max-height:710px">
-        <video autoplay loop muted defaultMuted playsinline controls>
+        <video controls>
           <source src="@/assets/isaac-wong-pt/135.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

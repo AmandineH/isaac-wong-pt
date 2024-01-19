@@ -45,7 +45,9 @@
 
             <div class="flex justify-center">
               <a
-                :href="`https://wa.me/+6597567270?text=${product.message}`"
+                :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+                  'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
+                )}`"
                 target="_blank"
                 class="
                   text-white
@@ -90,7 +92,9 @@
 
                 <div class="flex justify-center">
                   <a
-                    :href="`https://wa.me/+6597567270?text=${slide.message}`"
+                    :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+                      'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
+                    )}`"
                     target="_blank"
                     class="
                       text-white
@@ -136,9 +140,6 @@ export default {
             "Out-of-session monitoring",
             "Daily support",
           ],
-          message: `${encodeURIComponent(
-            "Hi, I would like to know more about In-Person Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
-          )}`,
         },
         {
           key: "online-coaching",
@@ -150,9 +151,6 @@ export default {
             "Daily monitoring and support",
             "Option for Virtual Personal Training",
           ],
-          message: `${encodeURIComponent(
-            "Hi, I would like to know more about Online Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
-          )}`,
         },
         {
           key: "fitness-business-coaching",
@@ -163,9 +161,6 @@ export default {
             "Technical advisory for training / nutrition programming",
             "Enquire to find out more!",
           ],
-          message: `${encodeURIComponent(
-            "Hi, I would like to know more about Fitness Business Coaching. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:"
-          )}`,
         },
       ];
     },

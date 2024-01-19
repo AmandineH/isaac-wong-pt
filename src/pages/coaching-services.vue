@@ -1,7 +1,13 @@
 <template>
   <div>
     <div
-      class="bg-center bg-no-repeat bg-cover h-80vh flex justify-center relative"
+      class="
+        bg-center bg-no-repeat bg-cover
+        h-80vh
+        flex
+        justify-center
+        relative
+      "
       :class="isLg ? 'items-center' : 'items-end'"
       :style="{
         backgroundImage:
@@ -23,10 +29,18 @@
         <div class="flex gap-20px justify-center">
           <a
             :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-              'Hi, I would like to know more about your Personal Training services. \nName: \nGender: \nAge: \nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history: \nGoals:'
+              'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
             )}`"
             target="_blank"
-            class="text-orange-EE642A border-2px border-orange-EE642A hover:bg-orange-EE642A px-40px py-10px rounded-5px hover:text-black"
+            class="
+              text-orange-EE642A
+              border-2px border-orange-EE642A
+              hover:bg-orange-EE642A
+              px-40px
+              py-10px
+              rounded-5px
+              hover:text-black
+            "
             >Get in Touch</a
           >
         </div>
@@ -52,32 +66,11 @@
         <div
           class="rounded-10px overflow-hidden relative"
           :class="isLg ? 'w-1/3 flex-shrink-0' : 'w-full'"
-          @click="playClip('explaination')"
         >
-          <video :id="'explaination'" controls class="h-full w-full">
-            <source
-              src="@/assets/isaac-wong-pt/explaination.mp4"
-              type="video/mp4"
-            />
+          <video controls>
+            <source src="@/assets/isaac-wong-pt/trailer.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-
-          <div
-            :id="'play-' + 'explaination'"
-            class="absolute inset-0 z-10 flex items-center justify-center bg-center bg-no-repeat bg-cover button"
-            :style="{
-              backgroundImage:
-                'url(\'' +
-                require('@/assets/isaac-wong-pt/explaination-thumbnail.png') +
-                '\')',
-            }"
-          >
-            <div class="absolute inset-0 bg-black opacity-30" />
-            <img
-              src="@/assets/utility/play.svg"
-              class="h-50px w-50px relative"
-            />
-          </div>
         </div>
       </div>
     </div>
@@ -155,32 +148,6 @@ export default {
             "Helps you to stay on track with training and nutrition plan, as well as to make adjustments when needed",
         },
       ];
-    },
-  },
-  methods: {
-    playClip(id) {
-      let clip = document.getElementById(id);
-
-      if (clip) {
-        clip.play();
-
-        let pauseButton = document.getElementById("play-" + id);
-        if (pauseButton) {
-          pauseButton.classList.add("hidden");
-        }
-      }
-    },
-    pauseClip(id) {
-      let clip = document.getElementById(id);
-
-      if (clip) {
-        clip.pause();
-
-        let pauseButton = document.getElementById("play-" + id);
-        if (pauseButton) {
-          pauseButton.classList.remove("hidden");
-        }
-      }
     },
   },
 };
