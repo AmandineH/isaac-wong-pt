@@ -134,7 +134,7 @@ export default {
           src: require("@/assets/services/gym.svg"),
           label: "Customized training plan",
           description:
-            "To help you reach your fitness goals more efficiently and effectively",
+            "To help you reach your fitness goals more efficiently and effectively.",
         },
         {
           src: require("@/assets/services/time.svg"),
