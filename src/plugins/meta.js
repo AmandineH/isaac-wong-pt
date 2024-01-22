@@ -1,14 +1,18 @@
 export default ({ app }, inject) => {
   inject("metadata", {
-    head: () => {
+    head: (options) => {
       /**
        * Generates meta and link tags for the app's head.
        *
        * @returns {object} Meta and link tags for the app's head.
        */
 
+      const { title, description, image } = options || {};
+
       return {
-        title: "Isaac Wong Personal Training - Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter",
+        title: `${
+          title ? `${title} - ` : ""
+        }Isaac Wong Personal Training - Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter`,
         meta: [
           { charset: "utf-8" },
           {
@@ -20,26 +24,34 @@ export default ({ app }, inject) => {
             hid: "description",
             name: "description",
             property: "description",
-            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
+            content:
+              description ||
+              "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "og:description",
             name: "og:description",
             property: "og:description",
-            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
+            content:
+              description ||
+              "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "twitter:description",
             name: "twitter:description",
             property: "twitter:description",
-            content: "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
+            content:
+              description ||
+              "Reach your fitness goals - Since 2017, I've been transforming my clients into fitter, healthier versions of themselves. Let's shape up together.",
           },
           {
             hid: "og:image",
             name: "og:image",
             property: "og:image",
             itemprop: "image",
-            content: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
+            content:
+              image ||
+              "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
           },
           {
             hid: "og:image:width",
@@ -58,7 +70,9 @@ export default ({ app }, inject) => {
             name: "twitter:image",
             property: "twitter:image",
             itemprop: "image",
-            content: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
+            content:
+              image ||
+              "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
           },
         ],
         link: [
@@ -66,13 +80,13 @@ export default ({ app }, inject) => {
             rel: "icon",
             type: "image/png",
             href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.png",
-            media: "(prefers-color-scheme: dark)"
+            media: "(prefers-color-scheme: dark)",
           },
           {
             rel: "icon",
             type: "image/png",
             href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.png",
-            media: "(prefers-color-scheme: light)"
+            media: "(prefers-color-scheme: light)",
           },
           {
             rel: "stylesheet",

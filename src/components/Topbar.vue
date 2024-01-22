@@ -1,143 +1,65 @@
 <template>
-  <div class="bg-black sticky top-0 z-50">
-    <div
-      v-if="isLg"
-      class="
-        flex
-        items-center
-        justify-between
-        mx-auto
-        max-w-1300px
-        px-40px
-        py-20px
-      "
-    >
-      <div class="flex items-center gap-50px">
+  <div class="bg-white sticky top-0 z-50">
+    <div v-if="isLg" class="flex gap-52px mx-auto max-w-1300px px-32px">
+      <div class="py-8px">
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt-black.png"
             alt="Isaac Wong Personal Training"
-            class="h-50px"
+            class="h-44px"
           />
         </nuxt-link>
-
-        <div class="flex gap-20px">
-          <nuxt-link
-            v-for="(item, key) in menu"
-            :key="key"
-            :to="item.href"
-            class="
-              relative
-              flex
-              items-center
-              body-2
-              hover:text-orange-EE642A
-              h-50px
-            "
-            :class="
-              $route.name &&
-              ($route.name.startsWith(item.key) ||
-                (item.key === 'home' && $route.path === '/'))
-                ? 'text-white'
-                : 'text-gray-ACACAC'
-            "
-            >{{ item.label }}
-
-            <div
-              v-if="
-                $route.name &&
-                ($route.name.startsWith(item.key) ||
-                  (item.key === 'home' && $route.path === '/'))
-              "
-              class="absolute w-full -bottom-20px bg-orange-EE642A h-2px"
-          /></nuxt-link>
-        </div>
       </div>
 
-      <div class="flex items-center gap-10px">
-        <p class="text-gray-ACACAC body-3">Contact</p>
-
-        <div class="flex items-center gap-5px">
-          <a
-            v-for="(contact, key) in contacts"
-            :key="key"
-            :href="contact.href"
-            target="_blank"
-            class="
-              relative
-              flex
-              items-center
-              justify-center
-              rounded-full
-              group
-              button
-              hover:bg-orange-EE642A
-              h-50px
-              w-50px
-            "
-          >
-            <img :src="contact.src" class="h-30px w-30px" :alt="contact.alt" />
-          </a>
-        </div>
+      <div class="flex gap-16px">
+        <nuxt-link
+          v-for="(item, key) in menu"
+          :key="key"
+          :to="item.href"
+          class="border-b-4px flex items-end py-8px"
+          :class="
+            $route.name &&
+            ($route.name.startsWith(item.key) ||
+              (item.key === 'home' && $route.path === '/'))
+              ? 'border-primary-blue text-sm-semibold text-primary-blue'
+              : 'border-transparent hover:border-primary-blue text-sm-regular text-black'
+          "
+          >{{ item.label }}
+        </nuxt-link>
       </div>
     </div>
 
     <div v-else>
-      <div class="flex items-center justify-between px-20px py-10px">
+      <div class="flex items-center justify-between px-24px py-8px">
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.png"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt-black.png"
             alt="Isaac Wong Personal Training"
-            class="h-50px"
+            class="h-44px"
           />
         </nuxt-link>
 
-        <div class="flex gap-5px">
-          <a
-            :href="contacts[0].href"
-            target="_blank"
-            class="
-              relative
-              flex
-              items-center
-              justify-center
-              rounded-full
-              group
-              button
-              hover:bg-orange-EE642A
-              h-50px
-              w-50px
+        <button
+          @click="
+            $router.push({
+              query: {
+                ...$route.query,
+                menu: $route.query.menu ? undefined : true,
+              },
+            })
+          "
+          class="button"
+        >
+          <img
+            :src="
+              $route.query.menu
+                ? require('@/assets/utility/close.svg')
+                : require('@/assets/utility/menu.svg')
             "
-          >
-            <img
-              :src="contacts[0].src"
-              class="h-30px w-30px"
-              :alt="contacts[0].alt"
-            />
-          </a>
-
-          <button
-            @click="
-              $router.push({
-                query: {
-                  ...$route.query,
-                  menu: $route.query.menu ? undefined : true,
-                },
-              })
-            "
-            class="button"
-          >
-            <img
-              :src="
-                $route.query.menu
-                  ? require('@/assets/utility/close.svg')
-                  : require('@/assets/utility/menu.svg')
-              "
-              alt="Menu"
-              class="h-30px w-30px"
-            />
-          </button>
-        </div>
+            alt="Menu"
+            class="h-32px w-32px"
+          />
+        </button>
       </div>
 
       <transition name="slide">
@@ -149,32 +71,31 @@
             bottom-0
             z-50
             flex flex-col
-            bg-black
-            top-70px
-            p-20px
-            gap-40px
+            bg-white
+            top-60px
+            p-24px
           "
         >
           <div
             class="
               flex flex-col
               items-center
+              gap-16px
               flex-grow
               overflow-y-auto
-              gap-20px
             "
           >
             <nuxt-link
               v-for="(item, key) in menu"
               :key="key"
               :to="item.href"
-              class="border-b-2px body-2 pb-5px"
+              class="border-b-4px"
               :class="[
                 $route.name &&
                 ($route.name.startsWith(item.key) ||
                   (item.key === 'home' && $route.path === '/'))
-                  ? 'border-orange-EE642A text-white'
-                  : 'border-transparent text-gray-ACACAC',
+                  ? 'border-primary-blue text-md-semibold text-primary-blue'
+                  : 'border-transparent hover:border-primary-blue text-md-regular text-black',
               ]"
             >
               {{ item.label }}
@@ -182,49 +103,11 @@
           </div>
 
           <div class="flex flex-col items-center">
-            <p class="text-center text-white body-2 mb-10px">Contact</p>
+            <p class="text-center text-black text-md-regular mb-8px">
+              Find me on
+            </p>
 
-            <div class="flex justify-center gap-5px mb-10px">
-              <a
-                v-for="(contact, key) in contacts"
-                :key="key"
-                :href="contact.href"
-                target="_blank"
-                class="
-                  relative
-                  flex
-                  items-center
-                  justify-center
-                  rounded-full
-                  group
-                  button
-                  hover:bg-orange-EE642A
-                  h-50px
-                  w-50px
-                "
-              >
-                <img
-                  :src="contact.src"
-                  class="h-30px w-30px"
-                  :alt="contact.alt"
-                />
-              </a>
-            </div>
-
-            <div class="flex flex-col gap-5px">
-              <p class="text-center text-gray-ACACAC body-3">
-                Whatsapp: +6597567270
-              </p>
-              <p class="text-center text-gray-ACACAC body-3">
-                Email: isaacwongpt@gmail.com
-              </p>
-            </div>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <p class="text-center text-white body-2 mb-10px">Find me on</p>
-
-            <div class="flex justify-center gap-5px mb-10px">
+            <div class="flex justify-center mb-8px gap-16px">
               <a
                 v-for="(social, key) in socials"
                 :key="key"
@@ -238,20 +121,27 @@
                   rounded-full
                   group
                   button
-                  hover:bg-orange-EE642A
-                  h-50px
-                  w-50px
+                  hover:bg-primary-blue
+                  h-52px
+                  w-52px
+                  group
                 "
               >
                 <img
                   :src="social.src"
-                  class="h-30px w-30px"
+                  class="h-24px w-24px flex group-hover:hidden"
+                  :alt="social.alt"
+                />
+
+                <img
+                  :src="social.srcSelected"
+                  class="h-24px w-24px hidden group-hover:flex"
                   :alt="social.alt"
                 />
               </a>
             </div>
 
-            <p class="text-center text-gray-ACACAC body-3">@isaacwongpt</p>
+            <p class="text-center text-md-regular text-black">@isaacwongpt</p>
           </div>
         </div>
       </transition>
@@ -295,48 +185,30 @@ export default {
         },
       ];
     },
-    contacts() {
-      return [
-        {
-          key: "whatsapp",
-          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
-            "Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:"
-          )}`,
-          src: require("@/assets/social/whatsapp.svg"),
-          alt: "Whatsapp",
-        },
-        {
-          key: "email",
-          href: "mailto:isaacwongpt@gmail.com",
-          src: require("@/assets/social/email.svg"),
-          alt: "Email",
-        },
-      ];
-    },
     socials() {
       return [
         {
           key: "instagram",
           href: "https://www.instagram.com/isaacwongpt/",
-          src: require("@/assets/social/instagram.svg"),
+          src: require("@/assets/social/instagram-black.svg"),
           alt: "Instagram",
         },
         {
           key: "tiktok",
           href: "https://www.tiktok.com/@isaacwongpt",
-          src: require("@/assets/social/tiktok.svg"),
+          src: require("@/assets/social/tiktok-black.svg"),
           alt: "TikTok",
         },
         {
           key: "facebook",
           href: "https://www.facebook.com/isaacwongpt",
-          src: require("@/assets/social/facebook.svg"),
+          src: require("@/assets/social/facebook-black.svg"),
           alt: "Facebook",
         },
         {
           key: "linkedin",
           href: "https://www.linkedin.com/in/isaacwongpt/",
-          src: require("@/assets/social/linkedin.svg"),
+          src: require("@/assets/social/linkedin-black.svg"),
           alt: "LinkedIn",
         },
       ];

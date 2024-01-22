@@ -1,133 +1,96 @@
 <template>
-  <div class="bg-black">
-    <div
-      class="mx-auto max-w-1300px relative"
-      :class="isLg ? 'px-40px py-80px' : 'py-40px px-20px'"
-    >
-      <img
-        src="@/assets/utility/arrow-blue.svg"
-        alt="arrow"
-        class="absolute transform rotate-180"
-        :class="
-          isLg ? 'top-20px w-400px right-40px' : 'top-30px w-200px right-20px'
-        "
-      />
+  <div
+    class="mx-auto max-w-1300px"
+    :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
+  >
+    <div :class="isLg ? 'mb-32px' : 'mb-24px'">
+      <p class="text-black display-md-bold text-center">
+        They made it, you can too
+      </p>
+      <p class="text-md-regular text-gray-500 text-center max-w-800px mx-auto">
+        From smashing personal bests to embracing a healthier lifestyle, their
+        success stories speak volumes. Ready to be the next success story? Let's
+        embark on your fitness journey together! 💪🌟
+      </p>
+    </div>
 
-      <div class="" :class="isLg ? 'mb-40px' : 'mb-20px'">
-        <p class="text-white supheader-1 text-center">
-          They made it, you can too
+    <div class="mb-32px flex-col gap-32px flex max-w-800px mx-auto">
+      <div
+        v-for="(testimonial, key) in testimonials.slice(
+          offset,
+          first + (offset / first) * first
+        )"
+        :key="key"
+        class="bg-black rounded-12px p-16px shadow-md"
+      >
+        <p class="text-white display-sm-bold uppercase mb-8px">
+          {{ testimonial.name }}
+          <span class="text-white text-xs-regular">{{
+            testimonial.profile
+          }}</span>
         </p>
-      </div>
 
-      <div class="grid grid-cols-1 gap-40px">
-        <div v-for="(testimonial, key) in testimonials" :key="key">
-          <p class="text-white title-1 mb-10px">
-            {{ testimonial.name }}
-            <span class="text-blue-536FFD body-2">{{
-              testimonial.profile
-            }}</span>
-          </p>
-          <p class="text-white body-2 mb-20px">"{{ testimonial.quote }}"</p>
+        <p class="text-white text-md-regular mb-16px">
+          "{{ testimonial.quote }}"
+        </p>
 
-          <div v-if="isLg" class="grid gap-20px mb-20px grid-cols-3">
-            <div
-              v-for="(asset, key) in testimonial.assets"
-              :key="key"
-              class="rounded-10px overflow-hidden"
-              :class="asset.type === 'video' ? 'col-span-3' : 'col-span-1'"
-            >
-              <div
-                v-if="asset.type === 'video'"
-                class="button relative"
-                @click="playClip(asset.key)"
-              >
-                <video :id="asset.key" controls class="h-full w-full">
-                  <source :src="asset.src" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-
-                <div
-                  :id="'play-' + asset.key"
-                  class="absolute inset-0 z-10 flex items-center justify-center bg-center bg-no-repeat bg-cover"
-                  :style="{
-                    backgroundImage: 'url(\'' + asset.thumbnail + '\')',
-                  }"
-                >
-                  <div class="absolute inset-0 bg-black opacity-50" />
-                  <img
-                    src="@/assets/utility/play.svg"
-                    class="h-50px w-50px relative"
-                  />
-                </div>
-              </div>
-              <img
-                v-else
-                :src="asset.src"
-                class="w-full h-full object-center object-contain"
-              />
-            </div>
-          </div>
-
-          <Carousel
-            v-else
-            :slides="testimonial.assets"
-            :colorCode="'#FFFFFF'"
-            :activeColorCode="'#536FFD'"
-            class="mb-20px"
+        <div
+          class="grid gap-16px grid-cols-2"
+          :style="`grid-template-columns: repeat(${
+            testimonial.cols || 2
+          }, minmax(0, 1fr));`"
+        >
+          <div
+            v-for="(asset, key) in testimonial.assets"
+            :key="key"
+            class="rounded-12px overflow-hidden"
+            :class="asset.class"
           >
-            <template #slide="{ slide }">
-              <div
-                class="rounded-10px overflow-hidden flex items-center h-full"
-                :class="slide.type === 'video' ? 'col-span-3' : 'col-span-1'"
-              >
-                <div
-                  v-if="slide.type === 'video'"
-                  class="button relative"
-                  @click="playClip(slide.key)"
-                >
-                  <video :id="slide.key" controls class="h-full w-full">
-                    <source :src="slide.src" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-
-                  <div
-                    :id="'play-' + slide.key"
-                    class="absolute inset-0 z-10 flex items-center justify-center bg-center bg-no-repeat bg-cover"
-                    :style="{
-                      backgroundImage: 'url(\'' + slide.thumbnail + '\')',
-                    }"
-                  >
-                    <div class="absolute inset-0 bg-black opacity-50" />
-                    <img
-                      src="@/assets/utility/play.svg"
-                      class="h-50px w-50px relative"
-                    />
-                  </div>
-                </div>
-                <img
-                  v-else
-                  :src="slide.src"
-                  class="w-full h-full object-center object-contain"
-                />
-              </div>
-            </template>
-          </Carousel>
+            <VideoPlayer
+              v-if="asset.type === 'video'"
+              :src="asset.src"
+              :thumbnail="asset.thumbnail"
+              class="w-full h-full overflow-hidden"
+            />
+            <img
+              v-else
+              :src="asset.src"
+              class="w-full h-full object-center object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
+
+    <Pagination
+      :initialValue="offset / first + 1"
+      :pageSize="first"
+      :totalCount="testimonials.length"
+      @on-change="(value) => (offset = value)"
+    />
   </div>
 </template>
 
 <script>
 // components
-import Carousel from "@/components/Carousel.vue";
+import VideoPlayer from "@/components/VideoPlayer.vue";
+import Pagination from "@/components/Pagination.vue";
 
 export default {
   head() {
-    return this.$metadata.head();
+    return this.$metadata.head({
+      title: "Results & Testimonials",
+    });
   },
   components: {
-    Carousel,
+    VideoPlayer,
+    Pagination,
+  },
+  data() {
+    return {
+      first: 5,
+      offset: 0,
+    };
   },
   computed: {
     isLg() {
@@ -225,6 +188,7 @@ export default {
               key: "ridhwan-before-after-front",
               type: "img",
               src: require("@/assets/testimonials/ridhwan-before-after-front.jpg"),
+              class: "col-span-2 row-span-2",
             },
             {
               key: "ridhwan-before-after-side",
@@ -237,6 +201,7 @@ export default {
               src: require("@/assets/testimonials/ridhwan-before-after-back.jpg"),
             },
           ],
+          cols: 3,
         },
         {
           key: "justin",
@@ -306,6 +271,7 @@ export default {
               src: require("@/assets/testimonials/keith-before-after-back.jpg"),
             },
           ],
+          cols: 3,
         },
         {
           key: "jingxin",
@@ -390,6 +356,7 @@ export default {
               src: require("@/assets/testimonials/christopher-before-after-back.jpg"),
             },
           ],
+          cols: 3,
         },
         {
           key: "jaden",
@@ -405,6 +372,7 @@ export default {
               thumbnail: require("@/assets/testimonials/jaden-thumbnail.png"),
             },
           ],
+          cols: 1,
         },
         {
           key: "darren",
@@ -420,22 +388,9 @@ export default {
               thumbnail: require("@/assets/testimonials/darren-thumbnail.png"),
             },
           ],
+          cols: 1,
         },
       ];
-    },
-  },
-  methods: {
-    playClip(id) {
-      let clip = document.getElementById(id);
-
-      if (clip) {
-        clip.play();
-
-        let pauseButton = document.getElementById("play-" + id);
-        if (pauseButton) {
-          pauseButton.classList.add("hidden");
-        }
-      }
     },
   },
 };

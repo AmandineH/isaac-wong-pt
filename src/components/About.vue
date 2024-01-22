@@ -1,28 +1,24 @@
 <template>
-  <div class="relative">
+  <div>
     <div
       class="grid"
-      :class="
-        isLg
-          ? 'right-0 w-1/3 h-full absolute grid-rows-3 grid-cols-1'
-          : 'w-full h-400px grid-rows-2'
-      "
+      :class="isLg ? 'grid-cols-3' : 'h-400px w-full grid-rows-2'"
     >
-      <div :class="isLg ? '' : 'col-span-2'">
+      <div :class="isLg ? 'h-50vh' : 'col-span-2'">
         <img
           src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
       </div>
-      <div>
+      <div :class="isLg ? 'h-50vh' : ''">
         <img
           src="@/assets/isaac-wong-pt/isaac-2.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
       </div>
-      <div>
+      <div :class="isLg ? 'h-50vh' : ''">
         <img
           src="@/assets/isaac-wong-pt/isaac-3.jpg"
           alt="Isaac Wong"
@@ -31,22 +27,27 @@
       </div>
     </div>
 
-    <img
-      src="@/assets/utility/arrow-orange.svg"
-      alt="arrow"
-      class="absolute transform rotate-180"
-      :class="
-        isLg
-          ? '-bottom-50px w-400px right-40px'
-          : 'top-370px w-150px right-20px'
-      "
-    />
+    <div
+      class="text-center bg-primary-blue"
+      :class="isLg ? 'p-32px' : 'p-24px'"
+    >
+      <p
+        class="text-white mb-8px"
+        :class="isLg ? 'display-xl-bold' : 'display-lg-bold'"
+      >
+        Isaac Wong
+      </p>
+      <p class="text-white text-xs-medium">
+        Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
+      </p>
+    </div>
 
-    <div class="mx-auto max-w-1300px relative">
-      <div :class="isLg ? 'px-40px py-80px w-2/3' : 'py-40px px-20px'">
-        <p class="supheader-1 mb-20px text-black">Isaac Wong</p>
-
-        <p class="body-2 mb-20px text-black">
+    <div
+      class="mx-auto max-w-1300px grid gap-32px"
+      :class="isLg ? 'grid-cols-3 px-32px py-52px' : 'px-24px py-32px'"
+    >
+      <div :class="isLg ? 'col-span-2' : ''">
+        <p class="text-md-regular mb-16px text-black">
           I've been a competitive athlete since I was 10, playing Basketball,
           Football and Floorball up until National Service where I found my love
           for fitness and strength training. Since then, I've been called up to
@@ -54,7 +55,7 @@
           competitively in hybrid fitness sports such as CrossFit and Hyrox.
         </p>
 
-        <p class="body-2 mb-20px text-black">
+        <p class="text-md-regular mb-16px text-black">
           My coaching career began in 2016 after I finished my service in the
           Military. I did personal training and online coaching while
           concurrently studying for a degree in economics and data science. Upon
@@ -63,13 +64,13 @@
           pursue my love for fitness fulltime.
         </p>
 
-        <p class="body-2 mb-20px text-black">
+        <p class="text-md-regular mb-16px text-black">
           I have not looked back since and feel extremely fortunate everyday to
           be put in a position to directly change someone else's life for the
           better!
         </p>
 
-        <p class="body-2 mb-20px text-black">
+        <p class="text-md-regular mb-16px text-black">
           With more than 7 years of experience in the fitness industry as a
           coach with multiple fitness entities, I am confident of the skills
           that I've developed to help anyone achieve their goals! Whether you're
@@ -77,12 +78,12 @@
           sport, I'll be more than happy to journey alongside you!
         </p>
 
-        <p class="body-bold-2 mb-20px text-black">
+        <p class="text-md-semibold mb-16px text-black">
           Do reach out if you think that I might be a good fit to serve you. See
           you soon!
         </p>
 
-        <ul class="list-disc list-inside body-2 mb-20px text-black">
+        <ul class="list-disc list-inside text-md-regular text-black">
           <li>Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global)</li>
           <li>National Powerlifter & Weightlifter | 3-time Record Holder</li>
           <li>Competitive Hybrid Fitness Athlete (Hyrox, CrossFit)</li>
@@ -94,12 +95,25 @@
           <li>B.Sc. Quantitative Economics & Data Science</li>
         </ul>
       </div>
+
+      <div>
+        <VideoPlayer
+          :src="require('@/assets/isaac-wong-pt/135.mp4')"
+          :thumbnail="require('@/assets/isaac-wong-pt/135-thumbnail.png')"
+          class="w-full overflow-hidden rounded-12px"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import VideoPlayer from "@/components/VideoPlayer.vue";
+
 export default {
+  components: {
+    VideoPlayer,
+  },
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;

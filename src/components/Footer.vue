@@ -1,103 +1,104 @@
 <template>
   <footer class="bg-black">
-    <div class="mx-auto max-w-1300px" :class="isLg ? 'p-40px' : 'p-20px'">
+    <div class="mx-auto max-w-1300px" :class="isLg ? 'p-32px' : 'p-24px'">
       <div
-        class="grid mb-20px"
-        :class="
-          isLg ? 'grid-cols-4 gap-20px' : 'grid-cols-2 gap-x-20px gap-y-40px'
-        "
+        class="grid mb-24px"
+        :class="isLg ? 'grid-cols-3 gap-24px' : 'grid-cols-2 gap-24px'"
       >
-        <nuxt-link
-          :to="'/'"
-          :class="isLg ? 'order-1' : 'order-2 flex justify-end'"
-        >
+        <nuxt-link :to="'/'">
           <img
             src="@/assets/isaac-wong-pt/isaac-wong-pt.jpg"
             alt="Isaac Wong Personal Training"
-            :class="isLg ? 'h-200px' : 'h-100px'"
+            class="w-full max-w-240px"
           />
         </nuxt-link>
 
-        <div :class="isLg ? 'order-2' : 'order-1'">
-          <p class="text-white body-2 mb-10px">Contact</p>
+        <div v-if="isLg">
+          <p class="text-white text-md-bold mb-8px">Quick Links</p>
 
-          <div class="flex gap-5px mb-10px">
-            <a
-              v-for="(contact, key) in contacts"
+          <div class="flex flex-col gap-8px items-start">
+            <nuxt-link
+              v-for="(item, key) in menu"
               :key="key"
-              :href="contact.href"
-              target="_blank"
+              :to="item.href"
               class="
-                relative
-                flex
-                items-center
-                justify-center
-                rounded-full
-                group
-                button
-                hover:bg-orange-EE642A
-                h-50px
-                w-50px
+                text-white text-md-regular
+                border-b-4px
+                hover:border-primary-blue
+                border-transparent
               "
+              >{{ item.label }}</nuxt-link
             >
-              <img
-                :src="contact.src"
-                class="h-30px w-30px"
-                :alt="contact.alt"
-              />
-            </a>
-          </div>
-
-          <div class="flex flex-col gap-5px">
-            <p class="text-gray-ACACAC body-3">Whatsapp: +6597567270</p>
-            <p class="text-gray-ACACAC body-3">Email: isaacwongpt@gmail.com</p>
           </div>
         </div>
 
-        <div
-          class="flex flex-col order-3 gap-20px"
-          :class="isLg ? '' : 'col-span-2'"
-        >
-          <nuxt-link
-            v-for="(item, key) in menu"
-            :key="key"
-            :to="item.href"
-            class="text-gray-ACACAC body-3 hover:text-orange-EE642A"
-            >{{ item.label }}</nuxt-link
-          >
-        </div>
+        <div>
+          <div class="mb-24px">
+            <p class="text-white text-md-bold mb-8px">Contact</p>
 
-        <div class="order-4" :class="isLg ? '' : 'col-span-2'">
-          <p class="text-white body-2 mb-10px">Find me on</p>
-
-          <div class="flex gap-5px mb-10px">
-            <a
-              v-for="(social, key) in socials"
-              :key="key"
-              :href="social.href"
-              target="_blank"
-              class="
-                relative
-                flex
-                items-center
-                justify-center
-                rounded-full
-                group
-                button
-                hover:bg-orange-EE642A
-                h-50px
-                w-50px
-              "
-            >
-              <img :src="social.src" class="h-30px w-30px" :alt="social.alt" />
-            </a>
+            <div class="flex">
+              <a
+                v-for="(contact, key) in contacts"
+                :key="key"
+                :href="contact.href"
+                target="_blank"
+                class="
+                  relative
+                  flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  group
+                  button
+                  hover:bg-primary-blue
+                  h-52px
+                  w-52px
+                "
+              >
+                <img
+                  :src="contact.src"
+                  class="h-32px w-32px"
+                  :alt="contact.alt"
+                />
+              </a>
+            </div>
           </div>
 
-          <p class="text-gray-ACACAC body-3">@isaacwongpt</p>
+          <div>
+            <p class="text-white text-md-bold mb-8px">Find Me On</p>
+            <div class="flex mb-8px">
+              <a
+                v-for="(social, key) in socials"
+                :key="key"
+                :href="social.href"
+                target="_blank"
+                class="
+                  flex
+                  items-center
+                  justify-center
+                  rounded-full
+                  button
+                  hover:bg-primary-blue
+                  h-52px
+                  w-52px
+                "
+              >
+                <img
+                  :src="social.src"
+                  class="h-24px w-24px"
+                  :alt="social.alt"
+                />
+              </a>
+            </div>
+
+            <p class="text-white text-md-regular">@isaacwongpt</p>
+          </div>
         </div>
       </div>
 
-      <p class="text-white fine-prints-2" :class="isLg ? '' : 'text-center'">
+      <hr class="border-t border-white mb-24px" />
+
+      <p class="text-white text-xs-regular text-center">
         © Isaac Wong Personal Training
       </p>
     </div>
@@ -110,24 +111,6 @@ export default {
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;
-    },
-    contacts() {
-      return [
-        {
-          key: "whatsapp",
-          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
-            "Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:"
-          )}`,
-          src: require("@/assets/social/whatsapp.svg"),
-          alt: "Whatsapp",
-        },
-        {
-          key: "email",
-          href: "mailto:isaacwongpt@gmail.com",
-          src: require("@/assets/social/email.svg"),
-          alt: "Email",
-        },
-      ];
     },
     menu() {
       return [
@@ -155,6 +138,24 @@ export default {
           key: "products",
           href: "/products",
           label: "Products",
+        },
+      ];
+    },
+    contacts() {
+      return [
+        {
+          key: "whatsapp",
+          href: `https://wa.me/+6597567270?text=${encodeURIComponent(
+            "Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:"
+          )}`,
+          src: require("@/assets/social/whatsapp.svg"),
+          alt: "Whatsapp",
+        },
+        {
+          key: "email",
+          href: "mailto:isaacwongpt@gmail.com",
+          src: require("@/assets/social/email.svg"),
+          alt: "Email",
         },
       ];
     },

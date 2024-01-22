@@ -1,22 +1,32 @@
 <template>
   <div class="bg-black">
-    <div class="mx-auto max-w-1300px grid" :class="isLg ? 'grid-cols-2' : ''">
+    <div
+      class="mx-auto max-w-1300px grid"
+      :class="isLg ? 'grid-cols-2 p-32px gap-32px' : ''"
+    >
       <div
         :class="
           isLg
-            ? 'order-1 px-40px py-80px flex flex-col justify-center'
-            : 'order-2 px-20px py-40px'
+            ? 'flex flex-col justify-center pb-70px order-1'
+            : 'p-32px order-2'
         "
       >
-        <p class="text-white supheader-1 mb-10px">Isaac Wong</p>
-        <p class="text-white header-2 opacity-70 mb-20px">
+        <p
+          class="text-white mb-8px"
+          :class="isLg ? 'display-xl-bold' : 'display-lg-bold'"
+        >
+          Isaac Wong
+        </p>
+        <p class="text-gray-500 text-xs-medium mb-24px">
           Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
         </p>
 
-        <p class="text-white mb-20px body-2">
-          Reach your fitness goals - Since 2017, I've been transforming my
-          clients into fitter, healthier versions of themselves. Let's shape up
-          together.
+        <p class="text-white text-md-regular mb-24px">
+          <span class="text-white text-md-medium"
+            >Reach your fitness goals</span
+          >
+          - Since 2017, I've been transforming my clients into fitter, healthier
+          versions of themselves. Let's shape up together.
         </p>
 
         <div class="flex">
@@ -26,35 +36,38 @@
             )}`"
             target="_blank"
             class="
-              text-orange-EE642A
-              border-2px border-orange-EE642A
-              bg-orange-EE642A33
-              hover:bg-orange-EE642A
-              px-40px
-              py-10px
-              rounded-5px
-              hover:text-white
+              text-md-semibold text-white
+              bg-primary-blue
+              opacity-100
+              hover:opacity-80
+              px-32px
+              py-16px
+              rounded-8px
+              uppercase
             "
-            >Get in Touch</a
-          >
+            >Get in Touch
+          </a>
         </div>
       </div>
 
-      <div :class="isLg ? 'order-2' : 'order-1'">
-        <div class="max-w-400px mx-auto">
-          <video controls>
-            <source src="@/assets/isaac-wong-pt/trailer.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+      <VideoPlayer
+        :src="require('@/assets/isaac-wong-pt/trailer.mp4')"
+        :thumbnail="require('@/assets/isaac-wong-pt/trailer-thumbnail.jpg')"
+        class="w-full overflow-hidden"
+        :class="isLg ? 'rounded-12px order-2 h-70vh' : 'order-1 h-50vh'"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import VideoPlayer from "@/components/VideoPlayer.vue";
+
 export default {
   name: "Banner",
+  components: {
+    VideoPlayer,
+  },
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;

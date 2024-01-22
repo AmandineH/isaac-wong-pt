@@ -1,6 +1,7 @@
 <template>
   <div>
     <Topbar />
+
     <Nuxt />
 
     <Whatsapp />
