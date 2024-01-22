@@ -11,7 +11,7 @@ import About from "@/components/About.vue";
 export default {
   head() {
     return this.$metadata.head({
-      title: "About Me"
+      title: "About Me",
     });
   },
   components: {
