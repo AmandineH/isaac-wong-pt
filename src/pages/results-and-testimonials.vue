@@ -365,12 +365,20 @@ export default {
               src: require("@/assets/testimonials/christopher-before-after-side.jpg"),
             },
             {
+              key: "christopher-video",
+              type: "video",
+              src: require("@/assets/testimonials/christopher.mp4"),
+              thumbnail: require("@/assets/testimonials/christopher-thumbnail.png"),
+              class: "col-span-2 row-span-2",
+            },
+            {
               key: "christopher-before-after-back",
               type: "img",
               src: require("@/assets/testimonials/christopher-before-after-back.jpg"),
+              class: "col-span-2",
             },
           ],
-          cols: 3,
+          cols: 4,
         },
         {
           key: "jaden",
