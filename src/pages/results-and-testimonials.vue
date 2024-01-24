@@ -4,27 +4,27 @@
     :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
   >
     <div :class="isLg ? 'mb-32px' : 'mb-24px'">
-      <p class="text-black display-md-bold text-center">
+      <p class="text-center text-black display-md-bold">
         They made it, you can too
       </p>
-      <p class="text-md-regular text-gray-500 text-center max-w-800px mx-auto">
+      <p class="mx-auto text-center text-gray-500 text-md-regular max-w-800px">
         From smashing personal bests to embracing a healthier lifestyle, their
         success stories speak volumes. Ready to be the next success story? Let's
         embark on your fitness journey together! 💪🌟
       </p>
     </div>
 
-    <div class="mb-32px flex-col gap-32px flex max-w-800px mx-auto">
+    <div class="flex flex-col mx-auto mb-32px gap-32px max-w-800px">
       <div
         v-for="(testimonial, key) in testimonials.slice(
           offset,
           first + (offset / first) * first
         )"
         :key="key"
-        class="bg-black rounded-12px p-16px shadow-md"
+        class="bg-black shadow-md rounded-12px p-16px"
       >
-        <p class="text-white display-sm-bold uppercase mb-8px">
-          {{ testimonial.name }}
+        <p class="text-white display-sm-bold mb-8px">
+          <span class="uppercase">{{ testimonial.name }}</span>
           <span class="text-white text-xs-regular">{{
             testimonial.profile
           }}</span>
@@ -35,7 +35,7 @@
         </p>
 
         <div
-          class="grid gap-16px grid-cols-2"
+          class="grid grid-cols-2 gap-16px"
           :style="`grid-template-columns: repeat(${
             testimonial.cols || 2
           }, minmax(0, 1fr));`"
@@ -43,7 +43,7 @@
           <div
             v-for="(asset, key) in testimonial.assets"
             :key="key"
-            class="rounded-12px overflow-hidden"
+            class="overflow-hidden rounded-12px"
             :class="asset.class"
           >
             <VideoPlayer
@@ -55,7 +55,7 @@
             <img
               v-else
               :src="asset.src"
-              class="w-full h-full object-center object-contain"
+              class="object-contain object-center w-full h-full"
             />
           </div>
         </div>
