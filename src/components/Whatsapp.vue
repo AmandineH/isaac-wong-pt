@@ -40,7 +40,7 @@
         button
         h-52px
         w-52px
-        bg-primary-blue
+        bg-whatsapp
         shadow-md
         group-hover:opacity-100
         opacity-80
@@ -88,3 +88,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.bg-whatsapp {
+  background-color: #25d366;
+}
+</style>
