@@ -1,22 +1,16 @@
 <template>
   <div>
     <div
-      class="
-        bg-center bg-no-repeat bg-cover
-        flex
-        justify-center
-        relative
-        items-center
-      "
+      class="relative flex items-center justify-center bg-center bg-no-repeat bg-cover "
       :class="isLg ? 'h-70vh' : 'h-50vh'"
       :style="{
         backgroundImage:
-          'url(\'' + require('@/assets/services/services-banner.jpg') + '\')',
+          'url(\'' + require('@/assets/services/services-banner.png') + '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
       <div class="relative p-32px">
-        <p class="text-white display-md-bold mb-24px text-center">
+        <p class="text-center text-white display-md-bold mb-24px">
           Results Based. Enjoyment. Data Driven.
         </p>
 
@@ -26,16 +20,7 @@
               'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
             )}`"
             target="_blank"
-            class="
-              text-md-semibold text-white
-              bg-primary-blue
-              opacity-100
-              hover:opacity-80
-              px-32px
-              py-16px
-              rounded-8px
-              uppercase
-            "
+            class="text-white uppercase opacity-100  text-md-semibold bg-primary-blue hover:opacity-80 px-32px py-16px rounded-8px"
             >Get in Touch
           </a>
         </div>
@@ -63,14 +48,7 @@
           </p>
 
           <div
-            class="
-              gap-16px
-              grid
-              border-4px
-              rounded-12px
-              border-primary-blue
-              p-16px
-            "
+            class="grid  gap-16px border-4px rounded-12px border-primary-blue p-16px"
             :class="isLg ? 'grid-cols-2' : ''"
           >
             <div
@@ -79,7 +57,7 @@
               class="flex items-center"
               :class="isLg ? 'gap-16px' : 'flex-col gap-8px'"
             >
-              <img :src="help.src" class="h-44px w-44px flex-shrink-0" />
+              <img :src="help.src" class="flex-shrink-0 h-44px w-44px" />
               <div>
                 <p
                   class="text-sm-bold text-primary-blue"
@@ -88,7 +66,7 @@
                   {{ help.label }}
                 </p>
                 <p
-                  class="text-sm-regular text-black"
+                  class="text-black text-sm-regular"
                   :class="isLg ? '' : 'text-center'"
                 >
                   {{ help.description }}
