@@ -6,7 +6,7 @@
     >
       <div :class="isLg ? 'h-50vh' : 'col-span-2'">
         <img
-          src="@/assets/isaac-wong-pt/isaac-1.jpg"
+          src="@/assets/isaac-wong-pt/isaac-1.JPG"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
@@ -20,7 +20,7 @@
       </div>
       <div :class="isLg ? 'h-50vh' : ''">
         <img
-          src="@/assets/isaac-wong-pt/isaac-3.jpg"
+          src="@/assets/isaac-wong-pt/isaac-3.png"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
@@ -99,7 +99,7 @@
       <div>
         <VideoPlayer
           :src="require('@/assets/isaac-wong-pt/135.mp4')"
-          :thumbnail="require('@/assets/isaac-wong-pt/135-thumbnail.png')"
+          :thumbnail="require('@/assets/isaac-wong-pt/135-thumbnail.JPG')"
           class="w-full overflow-hidden rounded-12px"
         />
       </div>
