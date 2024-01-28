@@ -2,23 +2,23 @@
   <div>
     <div
       class="grid"
-      :class="isLg ? 'grid-cols-3' : 'h-400px w-full grid-rows-2'"
+      :class="isLg ? 'grid-cols-3' : 'h-70vh w-full grid-rows-2'"
     >
-      <div :class="isLg ? 'h-50vh' : 'col-span-2'">
+      <div :class="isLg ? 'h-70vh' : 'col-span-2'">
         <img
           src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
       </div>
-      <div :class="isLg ? 'h-50vh' : ''">
+      <div :class="isLg ? 'h-70vh' : ''">
         <img
           src="@/assets/isaac-wong-pt/isaac-2.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
       </div>
-      <div :class="isLg ? 'h-50vh' : ''">
+      <div :class="isLg ? 'h-70vh' : ''">
         <img
           src="@/assets/isaac-wong-pt/isaac-3.png"
           alt="Isaac Wong"
