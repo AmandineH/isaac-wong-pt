@@ -2,16 +2,16 @@
   <div>
     <div
       class="grid"
-      :class="isLg ? 'grid-cols-3' : 'h-70vh w-full grid-rows-2'"
+      :class="isLg ? 'grid-cols-3' : 'h-400px w-full grid-rows-2'"
     >
-      <div :class="isLg ? 'h-70vh' : 'col-span-2'">
+      <div :class="isLg ? 'h-70vh order-1' : 'col-span-2 order-2'">
         <img
           src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
       </div>
-      <div :class="isLg ? 'h-70vh' : ''">
+      <div :class="isLg ? 'h-70vh order-2' : 'order-1'">
         <img
           src="@/assets/isaac-wong-pt/isaac-2.jpg"
           alt="Isaac Wong"
