@@ -6,7 +6,7 @@
     >
       <div :class="isLg ? 'h-50vh' : 'col-span-2'">
         <img
-          src="@/assets/isaac-wong-pt/isaac-1.JPG"
+          src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
           class="object-center object-cover w-full h-full"
         />
