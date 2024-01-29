@@ -1,18 +1,13 @@
 const tailwindConfig = require("./tailwind.config.js");
 
 module.exports = {
-  target: "static",
   srcDir: "src/",
   alias: {
     "@/*": `<srcDir>/*`,
   },
-  server: {
-    port: process.env.NODE_ENV === "production" ? 8080 : 3200,
-  },
-  performance: {
-    gzip: true,
-  },
-  telemetry: false,
+  target: "static",
+  ssr: true,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title:
