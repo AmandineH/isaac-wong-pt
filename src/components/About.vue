@@ -1,28 +1,25 @@
 <template>
   <div>
-    <div
-      class="grid"
-      :class="isLg ? 'grid-cols-3' : 'h-400px w-full grid-rows-2'"
-    >
-      <div :class="isLg ? 'h-70vh order-1' : 'order-2'">
+    <div class="grid" :class="isLg ? 'grid-cols-3' : 'w-full grid-cols-2'">
+      <div :class="isLg ? 'h-70vh' : 'h-40vh order-2'">
         <img
           src="@/assets/isaac-wong-pt/isaac-1.jpg"
           alt="Isaac Wong"
-          class="object-center object-cover w-full h-full"
+          class="object-cover object-center w-full h-full"
         />
       </div>
-      <div :class="isLg ? 'h-70vh order-2' : 'col-span-2 order-1'">
+      <div :class="isLg ? 'h-70vh' : 'h-40vh order-3'">
         <img
-          src="@/assets/isaac-wong-pt/isaac-2.jpg"
+          src="@/assets/isaac-wong-pt/isaac-2.png"
           alt="Isaac Wong"
-          class="object-center object-cover w-full h-full"
+          class="object-cover object-center w-full h-full"
         />
       </div>
-      <div :class="isLg ? 'h-70vh order-3' : 'order-3'">
+      <div :class="isLg ? 'h-70vh' : 'col-span-2 h-30vh order-1'">
         <img
-          src="@/assets/isaac-wong-pt/isaac-3.png"
+          src="@/assets/isaac-wong-pt/isaac-3.jpg"
           alt="Isaac Wong"
-          class="object-center object-cover w-full h-full"
+          class="object-cover object-center w-full h-full"
         />
       </div>
     </div>
@@ -43,11 +40,11 @@
     </div>
 
     <div
-      class="mx-auto max-w-1300px grid gap-32px"
+      class="grid mx-auto max-w-1300px gap-32px"
       :class="isLg ? 'grid-cols-3 px-32px py-52px' : 'px-24px py-32px'"
     >
       <div :class="isLg ? 'col-span-2' : ''">
-        <p class="text-md-regular mb-16px text-black">
+        <p class="text-black text-md-regular mb-16px">
           I've been a competitive athlete since I was 10, playing Basketball,
           Football and Floorball up until National Service where I found my love
           for fitness and strength training. Since then, I've been called up to
@@ -55,7 +52,7 @@
           competitively in hybrid fitness sports such as CrossFit and Hyrox.
         </p>
 
-        <p class="text-md-regular mb-16px text-black">
+        <p class="text-black text-md-regular mb-16px">
           My coaching career began in 2016 after I finished my service in the
           Military. I did personal training and online coaching while
           concurrently studying for a degree in economics and data science. Upon
@@ -64,13 +61,13 @@
           pursue my love for fitness fulltime.
         </p>
 
-        <p class="text-md-regular mb-16px text-black">
+        <p class="text-black text-md-regular mb-16px">
           I have not looked back since and feel extremely fortunate everyday to
           be put in a position to directly change someone else's life for the
           better!
         </p>
 
-        <p class="text-md-regular mb-16px text-black">
+        <p class="text-black text-md-regular mb-16px">
           With more than 7 years of experience in the fitness industry as a
           coach with multiple fitness entities, I am confident of the skills
           that I've developed to help anyone achieve their goals! Whether you're
@@ -78,12 +75,12 @@
           sport, I'll be more than happy to journey alongside you!
         </p>
 
-        <p class="text-md-semibold mb-16px text-black">
+        <p class="text-black text-md-semibold mb-16px">
           Do reach out if you think that I might be a good fit to serve you. See
           you soon!
         </p>
 
-        <ul class="list-disc list-inside text-md-regular text-black">
+        <ul class="text-black list-disc list-inside text-md-regular">
           <li>Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global)</li>
           <li>National Powerlifter & Weightlifter | 3-time Record Holder</li>
           <li>Competitive Hybrid Fitness Athlete (Hyrox, CrossFit)</li>
