@@ -181,7 +181,7 @@ export default {
         {
           key: "sponsorships-collaborations",
           href: "/sponsorships-collaborations",
-          label: "Sponsorships / Collaborations",
+          label: "Sponsorships & Collaborations",
         },
         {
           key: "products",

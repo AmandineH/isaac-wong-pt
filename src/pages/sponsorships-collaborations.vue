@@ -4,7 +4,7 @@
     :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
   >
     <div :class="isLg ? 'mb-32px' : 'mb-24px'">
-      <p class="text-black display-md-bold text-center">Sponsorships / Collaborations</p>
+      <p class="text-black display-md-bold text-center">Sponsorships & Collaborations</p>
       <p class="text-md-regular text-gray-500 text-center max-w-800px mx-auto">
         Enjoy exclusive discounts from my trusted fitness and wellness partners! ✊
       </p>
