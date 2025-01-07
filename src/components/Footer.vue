@@ -135,6 +135,11 @@ export default {
           label: "Results & Testimonials",
         },
         {
+          key: "sponsorships-collaborations",
+          href: "/sponsorships-collaborations",
+          label: "Sponsorships / Collaborations",
+        },
+        {
           key: "products",
           href: "/products",
           label: "Products",

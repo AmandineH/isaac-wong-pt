@@ -2,7 +2,7 @@
   <div>
     <p
       class="
-        text-black text-center text-med-regular
+        text-black text-center text-md-regular
         flex
         items-center
         justify-center
