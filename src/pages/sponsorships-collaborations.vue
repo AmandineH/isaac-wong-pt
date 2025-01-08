@@ -4,8 +4,8 @@
     :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
   >
     <div :class="isLg ? 'mb-32px' : 'mb-24px'">
-      <p class="text-black display-md-bold text-center">Sponsorships & Collaborations</p>
-      <p class="text-md-regular text-gray-500 text-center max-w-800px mx-auto">
+      <p class="text-center text-black display-md-bold">Sponsorships & Collaborations</p>
+      <p class="mx-auto text-center text-gray-500 text-md-regular max-w-800px">
         Enjoy exclusive discounts from my trusted fitness and wellness partners! ✊
       </p>
     </div>
@@ -15,15 +15,15 @@
       :class="isLg ? 'p-32px grid grid-cols-3 gap-16px' : 'p-16px'"
     >
       <div
-        class="flex justify-center items-center"
+        class="flex items-center justify-center"
         :class="isLg ? 'border-r border-white' : 'mb-16px'"
       >
         <img src="@/assets/collaborations/active-x.png" class="h-52px" />
       </div>
 
       <div class="col-span-2">
-        <p class="text-white text-md-regular text-center">
-          Use “isaacwongpt” to get 10% off your initial consult on
+        <p class="text-center text-white text-md-regular">
+          Use “isaacwongpt” to get 10% off your initial consult at
           <a href="https://activexphysio.com/" target="_blank"
             >ActiveX Physiotherapy</a
           >.
