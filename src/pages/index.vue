@@ -2,9 +2,10 @@
   <div>
     <Banner />
 
-    <Products />
+    <Testimonials v-if="isLg" />
+    <TestimonialsMobile v-if="!isLg" />
 
-    <Testimonials />
+    <Products />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Banner from "@/components/Banner.vue";
 import Products from "@/components/Products.vue";
 import Testimonials from "@/components/Testimonials.vue";
+import TestimonialsMobile from "@/components/TestimonialsMobile.vue";
 
 export default {
   head() {
@@ -21,6 +23,7 @@ export default {
     Banner,
     Products,
     Testimonials,
+    TestimonialsMobile,
   },
   computed: {
     isLg() {

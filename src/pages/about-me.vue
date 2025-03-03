@@ -8,13 +8,7 @@
     >
       <div :class="isLg ? 'mb-32px' : 'mb-24px'">
         <p class="text-center text-black display-md-bold">
-          Join Me on Instagram
-        </p>
-        <p
-          class="mx-auto text-center text-gray-500 text-md-regular max-w-800px"
-        >
-          For a daily dose of motivation, killer workouts, and a peek into my
-          fitness journey right! 🏋️‍♀️💙
+          Follow my journey on Instagram!
         </p>
       </div>
 

@@ -2,16 +2,19 @@
   <div>
     <div
       class="relative flex items-center justify-center bg-center bg-no-repeat bg-cover "
-      :class="isLg ? 'h-70vh' : 'h-50vh'"
+      :class="isLg ? 'h-[50dvh]' : 'h-[28dvh] md:h-[26dvh]'"
       :style="{
         backgroundImage:
-          'url(\'' + require('@/assets/services/services-banner.png') + '\')',
+          'url(\'' + (
+            !isSm ? 
+              require('@/assets/services/services-banner.jpg') : require('@/assets/services/services-banner-mobile.jpg')
+          ) + '\')',
       }"
     >
       <div class="absolute inset-0 bg-black opacity-50" />
       <div class="relative p-32px">
-        <p class="text-center text-white display-md-bold mb-24px">
-          Results Based. Enjoyment. Data Driven.
+        <p class="text-center text-white text-2xl font-bold md:text-4xl mb-24px">
+          Commit. Transform. Perform.
         </p>
 
         <div class="flex justify-center">
@@ -20,7 +23,7 @@
               'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
             )}`"
             target="_blank"
-            class="text-white uppercase opacity-100  text-md-semibold bg-primary-blue hover:opacity-80 px-32px py-16px rounded-8px"
+            class="text-white uppercase opacity-100 text-xs font-semibold md:text-base bg-primary-blue hover:opacity-80 px-32px py-16px rounded-8px"
             >Get in Touch
           </a>
         </div>
@@ -33,19 +36,17 @@
       <div class="flex gap-32px" :class="isLg ? '' : 'flex-col'">
         <div :class="isLg ? 'order-1' : 'px-24px order-2'">
           <p
-            class="text-black display-md-bold"
+            class="text-black display-sm-bold"
             :class="isLg ? 'mb-32px' : 'mb-24px'"
           >
-            How I can help you?
+            What sets me apart from other coaches
           </p>
-          <p class="text-black body-2" :class="isLg ? 'mb-32px' : 'mb-24px'">
-            I will provide you with the tools and support that you need to reach
-            your health and fitness goal. I will create customized workout plans
-            tailored to your individual needs and fitness level and provide
-            instruction on proper form and technique. Additionally, I will be
-            here to motivate and encourage you to stay on track and push
-            yourself to reach your goals.
-          </p>
+
+          <ul class="text-black list-disc list-inside text-md-regular" :class="isLg ? 'mb-32px' : 'mb-24px'">
+            <li>Proven track record of client transformations</li>
+            <li>Accountability and commitment to each individual</li>
+            <li>World class experience in both knowledge and practical execution</li>
+          </ul>
 
           <div
             class="grid  gap-16px border-4px rounded-12px border-primary-blue p-16px"
@@ -106,6 +107,9 @@ export default {
     isLg() {
       return this.$store.state.layout.isLg;
     },
+    isSm() {
+      return this.$store.state.layout.isSm;
+    },
     helps() {
       return [
         {
@@ -122,7 +126,7 @@ export default {
         },
         {
           src: require("@/assets/services/plate.svg"),
-          label: "Customized nutrition plan",
+          label: "Customized weight management protocols",
           description:
             "Meet your specific dietary needs based on your lifestyle and preferences",
         },

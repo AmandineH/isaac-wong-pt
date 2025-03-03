@@ -21,10 +21,12 @@ export default {
   async mounted() {
     // SET SCREEN SIZE
     this.$store.commit("layout/setIsLg", document.body.clientWidth);
+    this.$store.commit("layout/setIsSm", document.body.clientWidth);
 
     if (process.client) {
       window.addEventListener("resize", () => {
         this.$store.commit("layout/setIsLg", document.body.clientWidth);
+        this.$store.commit("layout/setIsSm", document.body.clientWidth);
       });
     }
   },

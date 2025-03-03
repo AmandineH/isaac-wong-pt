@@ -10,40 +10,27 @@
       </p>
     </div>
 
-    <div
-      class="bg-[#0F1799] rounded-16px"
-      :class="isLg ? 'p-32px grid grid-cols-3 gap-16px' : 'p-16px'"
-    >
-      <div
-        class="flex items-center justify-center"
-        :class="isLg ? 'border-r border-white' : 'mb-16px'"
-      >
-        <img src="@/assets/collaborations/active-x.png" class="h-52px" />
-      </div>
+    <Promo />
 
-      <div class="col-span-2">
-        <p class="text-center text-white text-md-regular">
-          Use “isaacwongpt” to get 10% off your initial consult at
-          <a href="https://activexphysio.com/" target="_blank"
-            >ActiveX Physiotherapy</a
-          >.
-        </p>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
+import Promo from "@/components/Promo.vue";
+
 export default {
   head() {
     return this.$metadata.head({
       title: "Products",
     });
   },
+  components: {
+    Promo,
+  },
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;
-    },
+    }
   },
 };
 </script>

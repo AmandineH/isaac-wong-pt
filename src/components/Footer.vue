@@ -7,9 +7,9 @@
       >
         <nuxt-link :to="'/'">
           <img
-            src="@/assets/isaac-wong-pt/isaac-wong-pt.jpg"
+            src="@/assets/isaac-wong-pt/isaac-wong-pt-white-with-wordmark.png"
             alt="Isaac Wong Personal Training"
-            class="w-full max-w-240px"
+            class="w-full max-w-360px scale-150 md:scale-100"
           />
         </nuxt-link>
 

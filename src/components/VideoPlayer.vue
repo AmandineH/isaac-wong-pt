@@ -3,7 +3,8 @@
     <video
       ref="video-player"
       controls
-      class="w-full h-full"
+      loop
+      class="w-full h-full max-h-full"
       :class="isPlay ? 'oapcity-100' : 'opacity-0'"
     >
       <source :src="src" type="video/mp4" />

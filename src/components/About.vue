@@ -10,7 +10,7 @@
       </div>
       <div :class="isLg ? 'h-70vh' : 'h-40vh order-3'">
         <img
-          src="@/assets/isaac-wong-pt/isaac-2.png"
+          src="@/assets/isaac-wong-pt/isaac-2.jpg"
           alt="Isaac Wong"
           class="object-cover object-center w-full h-full"
         />
@@ -25,7 +25,7 @@
     </div>
 
     <div
-      class="text-center bg-primary-blue"
+      class="text-center bg-black"
       :class="isLg ? 'p-32px' : 'p-24px'"
     >
       <p
@@ -35,7 +35,9 @@
         Isaac Wong
       </p>
       <p class="text-white text-xs-medium">
-        Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
+        Personal Trainer | Online Coach | Mentor
+        <br/>
+        Team Singapore Powerlifter and Weightlifter | Hyrox Pro Athlete
       </p>
     </div>
 
@@ -68,11 +70,11 @@
         </p>
 
         <p class="text-black text-md-regular mb-16px">
-          With more than 7 years of experience in the fitness industry as a
-          coach with multiple fitness entities, I am confident of the skills
-          that I've developed to help anyone achieve their goals! Whether you're
-          looking to lose weight, build muscle or get stronger and fitter for a
-          sport, I'll be more than happy to journey alongside you!
+          With close to a decade of professional coaching in the fitness industry, 
+          I am confident of the skills that I've developed to help anyone achieve 
+          their goals! Whether you're looking to lose weight, build muscle or get 
+          stronger and fitter for a sport, I'll be more than happy to journey 
+          alongside you!
         </p>
 
         <p class="text-black text-md-semibold mb-16px">
@@ -80,16 +82,12 @@
           you soon!
         </p>
 
-        <ul class="text-black list-disc list-inside text-md-regular">
-          <li>Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global)</li>
-          <li>National Powerlifter & Weightlifter | 3-time Record Holder</li>
-          <li>Competitive Hybrid Fitness Athlete (Hyrox, CrossFit)</li>
-          <li>Sponsored Athlete for The Lions' Den</li>
-          <li>
-            Technical Advisor and Business Consultant for multiple fitness
-            entities
-          </li>
-          <li>B.Sc. Quantitative Economics & Data Science</li>
+        <ul class="text-black list-disc list-inside text-[15px]">
+          <li class="pb-4px">Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global) | Mentorship 🌎 (Global)</li>
+          <li class="pb-4px">National Powerlifter | 5-time National Record Holder | 2x National Champion🥇 | 🥈APAC’23 | 13th Ranked Worldwide</li>
+          <li class="pb-4px">National Weightlifter</li>
+          <li class="pb-4px">Hyrox Individual Pro Athlete</li>
+          <li>Sponsored Athlete for The Lions’ Den and ActiveX Physiotherapy</li>
         </ul>
       </div>
 
