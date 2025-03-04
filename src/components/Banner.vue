@@ -17,14 +17,14 @@
         >
           Isaac Wong
         </p>
-        <p class="text-gray-500 text-xs-medium mb-24px">
-          Fitness Coach | Team Singapore 🇸🇬 Powerlifter & Weightlifter
+        <p class="text-gray-400 text-sm mb-24px">
+          Personal Trainer | Online Coach | Mentor
+          <br/>
+          Team Singapore Powerlifter and Weightlifter | Hyrox Pro Athlete
         </p>
 
         <p class="text-white text-md-regular mb-24px">
-          <span class="text-white text-md-medium"
-            >Reach your fitness goals</span
-          >
+          <span class="text-white text-md-medium">Welcome to the fittest days of your life.</span>
           - Since 2017, I've been transforming my clients into fitter, healthier
           versions of themselves. Let's shape up together.
         </p>

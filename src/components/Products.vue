@@ -7,15 +7,11 @@
       <p class="text-black display-md-bold text-center">
         Let me help you reach your goals!
       </p>
-      <p class="text-md-regular text-gray-500 text-center max-w-800px mx-auto">
-        Personalized training right here in Singapore. Let's crush those goals
-        together! 💪🏋️‍♀️
-      </p>
     </div>
 
     <div
       class="flex gap-16px"
-      :class="isLg ? 'items-center' : 'overflow-x-auto px-24px'"
+      :class="isLg ? 'items-center' : 'flex-col md:flex-row md:justify-center md:flex-wrap px-24px'"
     >
       <div
         v-for="(product, key) in products"
@@ -29,15 +25,8 @@
           hover:border-primary-blue
           overflow-hidden
         "
-        :class="[product.class, isLg ? '' : 'min-w-400px']"
+        :class="[product.class, isLg ? '' : 'w-full md:w-[calc(50%-8px)]']"
       >
-        <a
-          :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
-            'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
-          )}`"
-          target="_blank"
-          class="w-full h-full"
-        >
           <div class="flex flex-col overflow-hidden w-full h-full">
             <div class="relative">
               <img
@@ -48,8 +37,7 @@
               <p
                 class="
                   text-center text-white
-                  display-md-bold
-                  header-1
+                  display-xs-bold
                   absolute
                   inset-0
                   flex
@@ -58,9 +46,8 @@
                   uppercase
                   p-16px
                 "
-              >
-                {{ product.label }}
-              </p>
+                v-html="product.label"
+              ></p>
             </div>
 
             <div class="p-16px flex flex-col flex-grow">
@@ -75,24 +62,40 @@
                 </p>
               </div>
 
-              <div
-                class="
-                  text-md-semibold text-white
-                  bg-primary-blue
-                  opacity-100
-                  hover:opacity-80
-                  px-32px
-                  py-16px
-                  rounded-8px
-                  uppercase
-                  text-center
-                "
-              >
-                Get Started
+              <div>
+                <a
+                  :href="`https://wa.me/+6597567270?text=${encodeURIComponent(
+                    'Hello, I would like to know more about your coaching services! \n\n1. In-Person Coaching \n2. ⁠Online Coaching \n3. ⁠Fitness Business Coaching \n\nName: \nGender: \nAge: \nPreferred Coaching Service (1, 2, or 3): \n\nUltimate Goal: \n\nPre-existing injuries / medical conditions / illnesses / diseases: \nExercise history:'
+                  )}`"
+                  target="_blank"
+                  class="w-full"
+                >
+                  <div
+                    class="
+                      text-md-semibold text-white
+                      bg-primary-blue
+                      opacity-100
+                      hover:opacity-80
+                      px-32px
+                      py-16px
+                      rounded-8px
+                      uppercase
+                      text-center
+                    "
+                  >
+                    Get Started
+                  </div>
+                </a>
+
+                <a 
+                  class="flex text-gray-200 hover:underline justify-center pt-12px cursor-pointer text-sm"
+                  :href="`/results-and-testimonials?category=${product.key}`"
+                >
+                  View Testimonials
+                </a>
               </div>
             </div>
           </div>
-        </a>
       </div>
     </div>
   </div>
@@ -121,7 +124,7 @@ export default {
         {
           key: "personal-training",
           src: require("@/assets/services/personal-training.jpg"),
-          label: "In-Person Coaching",
+          label: "PERSONAL TRAINING<br/>(In-Person | 1:1, 1:2)",
           features: [
             "1:1 in-person coaching",
             "Customized training plan",
@@ -132,9 +135,9 @@ export default {
           class: this.isLg ? "w-2/5 flex-shrink-0" : "order-1",
         },
         {
-          key: "fitness-business-coaching",
+          key: "mentorship",
           src: require("@/assets/services/online-coaching.jpg"),
-          label: "Fitness Business Coaching",
+          label: "MENTORSHIP FOR COACHES | FITNESS BUSINESS CONSULTANCY",
           features: [
             "Customized solutions to grow your fitness business",
             "Technical advisory for training / nutrition programming",

@@ -51,7 +51,7 @@ export default ({ app }, inject) => {
             itemprop: "image",
             content:
               image ||
-              "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
+              "@/assets/isaac-wong-pt/isaac-wong-pt-white-with-wordmark.png",
           },
           {
             hid: "og:image:width",
@@ -72,20 +72,20 @@ export default ({ app }, inject) => {
             itemprop: "image",
             content:
               image ||
-              "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.jpg",
+              "@/assets/isaac-wong-pt/isaac-wong-pt-white-with-wordmark.png",
           },
         ],
         link: [
           {
             rel: "icon",
             type: "image/png",
-            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.png",
+            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt.ico",
             media: "(prefers-color-scheme: dark)",
           },
           {
             rel: "icon",
             type: "image/png",
-            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.png",
+            href: "https://isaac-wong-pt.netlify.app/isaac-wong-pt/isaac-wong-pt-black.ico",
             media: "(prefers-color-scheme: light)",
           },
           {
