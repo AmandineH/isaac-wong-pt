@@ -64,17 +64,11 @@
             {{ testimonial.quote }}
           </p>
 
-          <div
-            class="grid grid-cols-2 gap-16px"
-            :style="`grid-template-columns: repeat(${
-              testimonial.cols || 2
-            }, minmax(0, 1fr));`"
-          >
+          <div class="grid grid-cols-2 gap-16px">
             <div
               v-for="(asset, key) in testimonial.assets"
               :key="key"
-              class="overflow-hidden rounded-6px md:rounded-12px text-white"
-              :class="asset.class"
+              class="overflow-hidden rounded-6px md:rounded-12px"
             >
               <div v-if="asset.type === 'video'" class="w-full h-full">
                 <VideoPlayer

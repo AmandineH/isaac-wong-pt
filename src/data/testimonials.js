@@ -139,7 +139,6 @@ export const testimonials = [
         thumbnail: require("@/assets/testimonials/angela-keith-thumbnail.png"),
       },
     ],
-    cols: 3,
   },
   {
     key: "keith",
@@ -172,7 +171,6 @@ export const testimonials = [
         thumbnail: require("@/assets/testimonials/angela-keith-thumbnail.png"),
       },
     ],
-    cols: 3,
   },
   {
     key: "sylvester",
@@ -204,7 +202,6 @@ export const testimonials = [
         thumbnail: require("@/assets/testimonials/sylvester-thumbnail.jpg"),
       },
     ],
-    cols: 3,
   },
   {
     key: "dat",
@@ -236,7 +233,6 @@ export const testimonials = [
         thumbnail: require("@/assets/testimonials/dat-thumbnail.jpg"),
       },
     ],
-    cols: 3,
   },
   {
     key: "roger",
@@ -470,7 +466,6 @@ My message to anyone considering this journey: don’t wait for a health scare l
         src: require("@/assets/testimonials/twin-1-before-after-back.jpg"),
       },
     ],
-    cols: 3,
   },
   {
     key: "twin-2",
@@ -496,7 +491,6 @@ My message to anyone considering this journey: don’t wait for a health scare l
         src: require("@/assets/testimonials/twin-2-before-after-back.jpg"),
       },
     ],
-    cols: 3,
   },
   {
     key: "jadon",
@@ -966,7 +960,7 @@ export function sortTestimonials(orderArray, testimonials_) {
 
 // Homepage Testimonials
 const previews = ['isaac', 'allan', 'jose', 'louis', 'alicia', 'sylvester', 'dat', 'victoria', 'peter', 'justin', 'angela', 'roger', 'ridhwan', 'regina', 'jaden', 'jj', 'jingxin', 'lionel', 'lawrence', 'chiching', 'yewei', 'jadon', 'twin-1', 'johann', 'christopher', 'twin-2', 'joshua', 'rory', 'mark', 'sam', 'keith', 'gary'];
-const filteredTestimonials = testimonials.filter(t => previews.includes(t.key)).map(t => ({ key: t.key, src: t.assets[0].src }));
+const filteredTestimonials = testimonials.filter(t => previews.includes(t.key)).map(t => ({ key: t.key, src: t.assets[0].src, ...t }));
 export const testimonialsPreview = sortTestimonials(previews, filteredTestimonials);
 
 // Testimonials - Index
