@@ -9,8 +9,6 @@
       </p>
     </div>
 
-    IsLg: {{ isLg }}
-
     <div
       :class="
         isLg
@@ -21,7 +19,7 @@
       <img
         v-for="(asset, key) in testimonials"
         :key="key"
-        :src="isLg ? asset.srcDesktop || asset.src : asset.src"
+        :src="asset.src"
         class="object-center object-contain rounded-12px"
         :class="isLg ? '' : ''"
       />

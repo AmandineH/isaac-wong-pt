@@ -73,16 +73,17 @@
             <div
               v-for="(asset, key) in testimonial.assets"
               :key="key"
-              class="overflow-hidden rounded-6px md:rounded-12px"
+              class="overflow-hidden rounded-6px md:rounded-12px text-white"
               :class="asset.class"
             >
-              <VideoPlayer
-                v-if="asset.type === 'video'"
-                :key="asset.key"
-                :src="asset.src"
-                :thumbnail="asset.thumbnail"
-                class="w-full h-full max-h-[174px] md:max-h-[470px] overflow-hidden flex items-center"
-              />
+              <div v-if="asset.type === 'video'" class="w-full h-full">
+                <VideoPlayer
+                  :key="`${asset.key}-${isLg}`"
+                  :src="isLg ? asset.srcDesktop || asset.src : asset.src"
+                  :thumbnail="asset.thumbnail"
+                  class="w-full h-full overflow-hidden flex items-center"
+                />
+              </div>
               <img
                 v-else
                 :src="asset.src"
