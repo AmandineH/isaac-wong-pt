@@ -84,7 +84,7 @@
 
         <ul class="text-black list-disc list-inside text-[15px]">
           <li class="pb-4px">Personal Trainer 🇸🇬 (Singapore) | Online Coach 🌎 (Global) | Mentorship 🌎 (Global)</li>
-          <li class="pb-4px">National Powerlifter | 5-time National Record Holder | 2x National Champion🥇 | 🥈APAC’23 | 13th Ranked Worldwide</li>
+          <li class="pb-4px">National Powerlifter | 5-time National Record Holder | 3x National Champion🥇 | 🥈APAC’23 | 13th Ranked Worldwide</li>
           <li class="pb-4px">National Weightlifter</li>
           <li class="pb-4px">Hyrox Individual Pro Athlete</li>
           <li>Sponsored Athlete for The Lions’ Den and ActiveX Physiotherapy</li>

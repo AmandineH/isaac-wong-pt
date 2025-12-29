@@ -9,35 +9,29 @@
       </p>
     </div>
 
+    IsLg: {{ isLg }}
+
     <div
-      class="gap-16px"
       :class="
-        isLg ? 'grid grid-cols-3 mb-32px' : 'mb-16px pb-16px flex overflow-x-auto'
+        isLg
+          ? 'grid grid-cols-3 gap-16px mb-32px'
+          : 'grid grid-cols-2 gap-8px mb-24px'
       "
     >
       <img
         v-for="(asset, key) in testimonials"
         :key="key"
-        :src="asset.src"
+        :src="isLg ? asset.srcDesktop || asset.src : asset.src"
         class="object-center object-contain rounded-12px"
-        :class="isLg ? '' : 'max-w-[280px] md:max-w-[300px]'"
+        :class="isLg ? '' : ''"
       />
     </div>
 
     <div class="flex justify-center">
       <nuxt-link
         :to="'/results-and-testimonials'"
-        class="
-          text-md-semibold text-black
-          border-4px border-black
-          hover:border-primary-blue hover:text-primary-blue
-          px-32px
-          py-16px
-          rounded-8px
-          uppercase
-          text-center
-        "
-        >Read More Testimonials</nuxt-link
+        class="text-md-semibold text-black border-4px border-black hover:border-primary-blue hover:text-primary-blue px-32px py-16px rounded-8px uppercase text-center"
+        >Read Testimonials</nuxt-link
       >
     </div>
   </div>

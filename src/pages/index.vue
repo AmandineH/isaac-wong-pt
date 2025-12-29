@@ -2,8 +2,7 @@
   <div>
     <Banner />
 
-    <Testimonials v-if="isLg" />
-    <TestimonialsMobile v-if="!isLg" />
+    <Testimonials />
 
     <Products />
   </div>
@@ -13,7 +12,6 @@
 import Banner from "@/components/Banner.vue";
 import Products from "@/components/Products.vue";
 import Testimonials from "@/components/Testimonials.vue";
-import TestimonialsMobile from "@/components/TestimonialsMobile.vue";
 
 export default {
   head() {
@@ -23,12 +21,6 @@ export default {
     Banner,
     Products,
     Testimonials,
-    TestimonialsMobile,
-  },
-  computed: {
-    isLg() {
-      return this.$store.state.layout.isLg;
-    },
   },
 };
 </script>
