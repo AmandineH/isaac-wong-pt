@@ -183,17 +183,17 @@ export const testimonials = [
       {
         key: "sylvester-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/sylvester-before-after-front.jpg"),
+        src: require("@/assets/testimonials/sylvester-before-after-front.JPG"),
       },
       {
         key: "sylvester-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/sylvester-before-after-side.jpg"),
+        src: require("@/assets/testimonials/sylvester-before-after-side.JPG"),
       },
       {
         key: "sylvester-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/sylvester-before-after-back.jpg"),
+        src: require("@/assets/testimonials/sylvester-before-after-back.JPG"),
       },
       {
         key: "sylvester-video",
@@ -214,22 +214,22 @@ export const testimonials = [
       {
         key: "dat-after-front",
         type: "img",
-        src: require("@/assets/testimonials/dat-after-front.jpg"),
+        src: require("@/assets/testimonials/dat-after-front.JPG"),
       },
       {
         key: "dat-after-side",
         type: "img",
-        src: require("@/assets/testimonials/dat-after-side.jpg"),
+        src: require("@/assets/testimonials/dat-after-side.JPG"),
       },
       {
         key: "dat-after-back",
         type: "img",
-        src: require("@/assets/testimonials/dat-after-back.jpg"),
+        src: require("@/assets/testimonials/dat-after-back.JPG"),
       },
       {
         key: "dat-video",
         type: "video",
-        src: require("@/assets/testimonials/dat.mp4"),
+        src: require("@/assets/testimonials/dat.MP4"),
         thumbnail: require("@/assets/testimonials/dat-thumbnail.jpg"),
       },
     ],
@@ -279,17 +279,17 @@ Looking back, the doubts we had at the start feel distant. Today, seeing our pro
       {
         key: "regina-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/regina-before-after-front.jpg"),
+        src: require("@/assets/testimonials/regina-before-after-front.JPG"),
       },
       {
         key: "regina-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/regina-before-after-side.jpg"),
+        src: require("@/assets/testimonials/regina-before-after-side.JPG"),
       },
       {
         key: "regina-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/regina-before-after-back.jpg"),
+        src: require("@/assets/testimonials/regina-before-after-back.JPG"),
       },
     ],
   },
@@ -307,17 +307,17 @@ Looking back, the doubts we had at the start feel distant. Today, seeing our pro
       {
         key: "mark-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/mark-before-after-front.jpg"),
+        src: require("@/assets/testimonials/mark-before-after-front.JPG"),
       },
       {
         key: "mark-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/mark-before-after-side.jpg"),
+        src: require("@/assets/testimonials/mark-before-after-side.JPG"),
       },
       {
         key: "mark-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/mark-before-after-back.jpg"),
+        src: require("@/assets/testimonials/mark-before-after-back.JPG"),
       },
     ],
   },
@@ -335,17 +335,17 @@ This experience reinforced a simple truth: anyone can achieve their fitness goal
       {
         key: "lionel-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/lionel-before-after-front.jpg"),
+        src: require("@/assets/testimonials/lionel-before-after-front.JPG"),
       },
       {
         key: "lionel-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/lionel-before-after-side.jpg"),
+        src: require("@/assets/testimonials/lionel-before-after-side.JPG"),
       },
       {
         key: "lionel-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/lionel-before-after-back.jpg"),
+        src: require("@/assets/testimonials/lionel-before-after-back.JPG"),
       },
     ],
   },
@@ -362,17 +362,17 @@ These last few months with Isaac have been far more productive than the past few
       {
         key: "lawrence-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/lawrence-before-after-front.jpg"),
+        src: require("@/assets/testimonials/lawrence-before-after-front.JPG"),
       },
       {
         key: "lawrence-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/lawrence-before-after-side.jpg"),
+        src: require("@/assets/testimonials/lawrence-before-after-side.JPG"),
       },
       {
         key: "lawrence-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/lawrence-before-after-back.jpg"),
+        src: require("@/assets/testimonials/lawrence-before-after-back.JPG"),
       },
       {
         key: "lawrence-video",
@@ -399,17 +399,17 @@ My takeaway? Getting healthier and stronger is a process—so enjoy the journey 
       {
         key: "chiching-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/chiching-before-after-front.jpg"),
+        src: require("@/assets/testimonials/chiching-before-after-front.JPG"),
       },
       {
         key: "chiching-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/chiching-before-after-side.jpg"),
+        src: require("@/assets/testimonials/chiching-before-after-side.JPG"),
       },
       {
         key: "chiching-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/chiching-before-after-back.jpg"),
+        src: require("@/assets/testimonials/chiching-before-after-back.JPG"),
       },
     ],
   },
@@ -428,17 +428,17 @@ My message to anyone considering this journey: don’t wait for a health scare l
       {
         key: "yewei-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/yewei-before-after-front.jpg"),
+        src: require("@/assets/testimonials/yewei-before-after-front.JPG"),
       },
       {
         key: "yewei-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/yewei-before-after-side.jpg"),
+        src: require("@/assets/testimonials/yewei-before-after-side.JPG"),
       },
       {
         key: "yewei-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/yewei-before-after-back.jpg"),
+        src: require("@/assets/testimonials/yewei-before-after-back.JPG"),
       },
     ],
   },
@@ -508,17 +508,17 @@ If you’re thinking about starting, just do it. Small steps really do add up. A
       {
         key: "jadon-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/jadon-before-after-front.jpg"),
+        src: require("@/assets/testimonials/jadon-before-after-front.JPG"),
       },
       {
         key: "jadon-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/jadon-before-after-side.jpg"),
+        src: require("@/assets/testimonials/jadon-before-after-side.JPG"),
       },
       {
         key: "jadon-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/jadon-before-after-back.jpg"),
+        src: require("@/assets/testimonials/jadon-before-after-back.JPG"),
       },
     ],
   },
@@ -644,17 +644,17 @@ If you’re thinking about starting, just know that the hardest part is taking t
       {
         key: "joshua-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/joshua-before-after-front.jpg"),
+        src: require("@/assets/testimonials/joshua-before-after-front.JPG"),
       },
       {
         key: "joshua-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/joshua-before-after-side.jpg"),
+        src: require("@/assets/testimonials/joshua-before-after-side.JPG"),
       },
       {
         key: "joshua-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/joshua-before-after-back.jpg"),
+        src: require("@/assets/testimonials/joshua-before-after-back.JPG"),
       },
     ],
   },
@@ -716,7 +716,7 @@ If you’re thinking about starting, just know that the hardest part is taking t
         key: "jose-video",
         type: "video",
         src: require("@/assets/testimonials/jose.mp4"),
-        srcDesktop: require("@/assets/testimonials/jose-desktop.mp4"),
+        srcDesktop: require("@/assets/testimonials/jose-desktop.MP4"),
         thumbnail: require("@/assets/testimonials/jose-thumbnail.jpg"),
       },
     ],
@@ -805,7 +805,7 @@ If you’re thinking about starting, just know that the hardest part is taking t
         key: "louis-video",
         type: "video",
         src: require("@/assets/testimonials/louis.mp4"),
-        srcDesktop: require("@/assets/testimonials/louis-desktop.mp4"),
+        srcDesktop: require("@/assets/testimonials/louis-desktop.MP4"),
         thumbnail: require("@/assets/testimonials/louis-thumbnail.jpg"),
       },
     ],
@@ -837,7 +837,7 @@ If you’re thinking about starting, just know that the hardest part is taking t
         key: "jaden-video",
         type: "video",
         src: require("@/assets/testimonials/jaden.mp4"),
-        srcDesktop: require("@/assets/testimonials/jaden-desktop.mp4"),
+        srcDesktop: require("@/assets/testimonials/jaden-desktop.MP4"),
         thumbnail: require("@/assets/testimonials/jaden-thumbnail.jpg"),
       },
       {
@@ -874,7 +874,7 @@ If you’re thinking about starting, just know that the hardest part is taking t
         key: "jj-video",
         type: "video",
         src: require("@/assets/testimonials/jj.mp4"),
-        srcDesktop: require("@/assets/testimonials/jj-desktop.mp4"),
+        srcDesktop: require("@/assets/testimonials/jj-desktop.MP4"),
         thumbnail: require("@/assets/testimonials/jj-thumbnail.jpg"),
       },
       {
@@ -894,17 +894,17 @@ If you’re thinking about starting, just know that the hardest part is taking t
       {
         key: "victoria-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/victoria-before-after-front.png"),
+        src: require("@/assets/testimonials/victoria-before-after-front.PNG"),
       },
       {
         key: "victoria-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/victoria-before-after-side.png"),
+        src: require("@/assets/testimonials/victoria-before-after-side.PNG"),
       },
       {
         key: "victoria-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/victoria-before-after-back.png"),
+        src: require("@/assets/testimonials/victoria-before-after-back.PNG"),
       },
       {
         key: "victoria-video",
@@ -925,17 +925,17 @@ If you’re thinking about starting, just know that the hardest part is taking t
       {
         key: "rory-before-after-front",
         type: "img",
-        src: require("@/assets/testimonials/rory-before-after-front.jpg"),
+        src: require("@/assets/testimonials/rory-before-after-front.JPG"),
       },
       {
         key: "rory-before-after-side",
         type: "img",
-        src: require("@/assets/testimonials/rory-before-after-side.jpg"),
+        src: require("@/assets/testimonials/rory-before-after-side.JPG"),
       },
       {
         key: "rory-before-after-back",
         type: "img",
-        src: require("@/assets/testimonials/rory-before-after-back.jpg"),
+        src: require("@/assets/testimonials/rory-before-after-back.JPG"),
       },
       {
         key: "rory-rootfitness",
@@ -945,8 +945,8 @@ If you’re thinking about starting, just know that the hardest part is taking t
       {
         key: "rory-video",
         type: "video",
-        src: require("@/assets/testimonials/rory.mp4"),
-        srcDesktop: require("@/assets/testimonials/rory-desktop.mp4"),
+        src: require("@/assets/testimonials/rory.MP4"),
+        srcDesktop: require("@/assets/testimonials/rory-desktop.MP4"),
         thumbnail: require("@/assets/testimonials/rory-thumbnail.jpg"),
       },
     ],
