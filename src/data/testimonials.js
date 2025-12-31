@@ -3,7 +3,6 @@ export const testimonials = [
     key: "isaac",
     name: "Isaac",
     profile: "20s, Fitness",
-    category: [],
     quote:
       "My first client is myself. Leading by example was the first thing I learnt in the SAF's Officer Cadet School and this principle has stuck with me throughout these years as a Personal Trainer and Fitness Coach. It would not sit right with me to be here today asking my clients to commit to the things they need to do to enter the fittest days of their lives if I had not done so myself!",
     assets: [
@@ -20,7 +19,6 @@ export const testimonials = [
     profile: "30s, Creative",
     quote:
       "I was always active since young, but I desired a greater physique! That’s when I found Isaac. Since then, I have lost 11kg and 13% bodyfat!",
-    category: ['personal-training'],
     assets: [
       {
         key: "ridhwan-before-after-front",
@@ -52,7 +50,6 @@ export const testimonials = [
     profile: "40s, Chief of Staff, Cyber Security",
     quote:
       "After having my kid, I couldn't lose weight... I needed to do something different and that's where Isaac stepped into the picture.",
-    category: ['personal-training'],
     assets: [
       {
         key: "alicia-before-after-front",
@@ -83,7 +80,6 @@ export const testimonials = [
     profile: "30s, Sales Engineer",
     quote:
       "Diet is a huge barrier that stops me from getting my dream body. I like to eat a lot of junk food and tend to stress eat a lot. I have engaged 2 personal trainers before but due to the lack of nutritional follow up outside of the 1-hour sessions, I did not see much progress. Isaac, on the other hand, has monitored my daily weight and nutritional intake to ensure I reach my goals. He also ensures that I am pushed safely to my limits by programming intelligently and ensuring I train with good technique.",
-    category: ['personal-training'],
     assets: [
       {
         key: "justin-before-after-front",
@@ -114,7 +110,6 @@ export const testimonials = [
     profile: "30s, Law Professor & Researcher",
     quote:
       "We were both looking for something to do together as a couple while getting fitter and transforming our bodies for the upcoming wedding celebrations!",
-    category: ['personal-training'],
     assets: [
       {
         key: "angela-before-after-front",
@@ -146,7 +141,6 @@ export const testimonials = [
     profile: "30s, Policy & Research",
     quote:
       "We were both looking for something to do together as a couple while getting fitter and transforming our bodies for the upcoming wedding celebrations!",
-    category: ['personal-training'],
     assets: [
       {
         key: "keith-before-after-front",
@@ -178,7 +172,6 @@ export const testimonials = [
     profile: "30s",
     quote:
       "I’ve been working out on my own for the past 10 years but felt like I hit a plateau and was stagnant. I didn’t have much of a goal at the start, but Isaac saw the potential and pushed me to see how best my body could look!",
-    category: ['personal-training'],
     assets: [
       {
         key: "sylvester-before-after-front",
@@ -209,7 +202,6 @@ export const testimonials = [
     profile: "20s",
     quote:
       "Working with Isaac opened my eyes to a whole new approach to fitness and nutrition. He doesn’t just hand out goals - he explains the why behind every step, helping me understand the science and mindset required to truly transform.",
-    category: ['personal-training'],
     assets: [
       {
         key: "dat-after-front",
@@ -240,7 +232,6 @@ export const testimonials = [
     profile: "20s, Director of Data Science",
     quote:
       "I ended up in some unhealthy habits which put me in a bad place, both physically and mentally. But Isaac helped me to lose weight, helped me build discipline.",
-    category: ['personal-training'],
     assets: [
       {
         key: "roger-before-after-front",
@@ -274,7 +265,6 @@ export const testimonials = [
 I’m Mark, 37, working in industrial design. After training consistently for over 10 years with minimal physical change, I knew I needed professional guidance. From the start, working with Isaac felt approachable and supportive, like having a trusted friend guiding the process. Nutrition and tracking were broken down into simple, manageable steps that finally made sense.
 Despite long work hours, overseas travel, and social commitments, the programme adapted to real life rather than demanding perfection. Weekly check-ins kept me accountable while remaining sustainable. In just six months, I lost around 11kg—something I never thought possible after years of frustration.
 Looking back, the doubts we had at the start feel distant. Today, seeing our progress fills us with pride and confidence. This journey showed us that with the right guidance, accountability, and support system, meaningful change is not only possible—it’s sustainable.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "regina-before-after-front",
@@ -302,7 +292,6 @@ Looking back, the doubts we had at the start feel distant. Today, seeing our pro
 I’m Mark, 37, working in industrial design. After training consistently for over 10 years with minimal physical change, I knew I needed professional guidance. From the start, working with Isaac felt approachable and supportive, like having a trusted friend guiding the process. Nutrition and tracking were broken down into simple, manageable steps that finally made sense.
 Despite long work hours, overseas travel, and social commitments, the programme adapted to real life rather than demanding perfection. Weekly check-ins kept me accountable while remaining sustainable. In just six months, I lost around 11kg—something I never thought possible after years of frustration.
 Looking back, the doubts we had at the start feel distant. Today, seeing our progress fills us with pride and confidence. This journey showed us that with the right guidance, accountability, and support system, meaningful change is not only possible—it’s sustainable.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "mark-before-after-front",
@@ -330,7 +319,6 @@ Looking back, the doubts we had at the start feel distant. Today, seeing our pro
 I chose to work with Isaac because he had proven himself at a competitive level—he clearly understood what it takes to achieve real results. From the start, his approach stood out as highly scientific and data-driven. Every recommendation was grounded in first principles, removing guesswork and focusing only on what truly works.
 Isaac was consistently knowledgeable and precise, always able to explain the rationale behind each adjustment. That clarity made it easier to stay disciplined and trust the process, even with a demanding schedule.
 This experience reinforced a simple truth: anyone can achieve their fitness goals if they set their mind to it—but having the right guidance makes the journey far more effective and sustainable.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "lionel-before-after-front",
@@ -357,7 +345,6 @@ This experience reinforced a simple truth: anyone can achieve their fitness goal
       `Earlier this year, I was shocked to weigh in at 75kg, the heaviest I’ve ever been! Every new year I would tell myself “ok this is it, time to lose weight, get fit and aim for a 6 pack”. But every year, it just doesn’t happen. I’d always lose focus and usually rebounded to worse than when i started.
 One day, I saw my friend Jose’s incredible transformation with Isaac and without even thinking twice, I decided to engage Isaac for myself.
 These last few months with Isaac have been far more productive than the past few years of me trying to DIY fitness on my own. And this is hands down the fittest I’ve ever been in my life, even completing multiple solo Hyrox races this year.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "lawrence-before-after-front",
@@ -394,7 +381,6 @@ Nutrition-wise, it felt like having a reliable accountability partner. Although 
 What surprised me most was how much I came to enjoy strength training. Each session feels almost meditative, with full focus on reps and sets. Seeing myself lift heavier over time has been incredibly motivating. In the beginning, I struggled just to carry an empty barbell and had to find some rather comical ways to manoeuvre it. Eventually, I realised the solution was simple: just get stronger 💪🏼
 The goal weight we set during the weight-loss phase initially felt impossible—I hadn’t seen that number since my 20s. But by taking it step by step and learning how to eat better with a high-protein diet, I reached it.
 My takeaway? Getting healthier and stronger is a process—so enjoy the journey and have fun along the way.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "chiching-before-after-front",
@@ -423,7 +409,6 @@ I had been doing CrossFit consistently for four years and assumed I was relative
 What made the biggest difference was his structured, data-driven system. From week one, I could see measurable progress. Instead of focusing only on gym performance, Isaac helped me understand how proper nutrition directly impacted my visceral fat and overall health. The clear tracking of key metrics—body composition, energy levels, and sleep quality—allowed me to see progress beyond just the number on the scale.
 The experience has been truly transformative. One of my biggest concerns was whether social events, work functions, and annual vacations would derail my progress. Instead, I learned how to plan around them. Isaac showed me that consistency doesn’t mean perfection, and that sustainable results come from making smart, informed choices over time.
 My message to anyone considering this journey: don’t wait for a health scare like I did. Even if you’re already active, there’s always room for improvement. You don’t have to figure it out alone—working with a coach who understands both the science and real-life challenges makes all the difference. Take the first step—your future self will thank you.`,
-    category: ['personal-training'],
     assets: [
       {
         key: "yewei-before-after-front",
@@ -446,7 +431,6 @@ My message to anyone considering this journey: don’t wait for a health scare l
     key: "twin-1",
     name: "Twin #1",
     profile: "20s",
-    category: ["personal-training"],
     quote:
       "Two hearts, one soul - born together, best friends forever! Twin rivalry - the strongest bond of love, annoyance and friendly competitiveness you'll ever experience! And what great privilege was it for me to be given the opportunity to coach these 2! Looked forward to every single one of our late night sessions together!",
     assets: [
@@ -471,7 +455,6 @@ My message to anyone considering this journey: don’t wait for a health scare l
     key: "twin-2",
     name: "Twin #2",
     profile: "20s",
-    category: ["personal-training"],
     quote:
       "Two hearts, one soul - born together, best friends forever! Twin rivalry - the strongest bond of love, annoyance and friendly competitiveness you'll ever experience! And what great privilege was it for me to be given the opportunity to coach these 2! Looked forward to every single one of our late night sessions together!",
     assets: [
@@ -496,7 +479,6 @@ My message to anyone considering this journey: don’t wait for a health scare l
     key: "jadon",
     name: "Jadon",
     profile: "30s",
-    category: ["personal-training"],
     quote:
       `“Hey, I’m Jadon, 39 years old, married, with three young kids. Life is busy, but I try to stay active with my family whenever I can.
 I started this journey because I wanted to lose weight, get stronger, and simply feel better overall. I knew motivation alone wasn’t enough—I needed structure and accountability. That’s when I came across Isaac. Seeing the results his clients were achieving convinced me that his approach was realistic, supportive, and something I could actually sustain long-term.
@@ -526,7 +508,6 @@ If you’re thinking about starting, just do it. Small steps really do add up. A
     key: "sam",
     name: "Sam",
     profile: "30s, Real Estate Fund Manager",
-    category: ["personal-training"],
     quote:
       `"Music to my ears!" - Sam's reply whenever I gave some sort of concession for his next set! But behind the seemingly chill facade was an extremely driven individual that would do whatever it takes to get to his goal, and 28 weeks later, the 35 year old analyst is now in the best shape of his life! Having had multiple different PTs in the past, I asked him what made the difference this time and he was quick to answer, "out-of-session accountability!"`,
     assets: [
@@ -551,7 +532,6 @@ If you’re thinking about starting, just do it. Small steps really do add up. A
     key: "johann",
     name: "Johann",
     profile: "19, Full-Time National Serviceman",
-    category: ["personal-training"],
     quote: `I was always lifting but school soon caught up with me and I fell off track. After finishing my IB exams, and having originally failed my pre-enlistment fitness tests - the Individual Physical Proficiency Test (IPPT), I decided to get back into the gym to transform my body in order to get fitter for National Service (NS) with the Singapore Police Force.
 In less than 20 weeks, I lost 6kg of fat, gained 1kg of muscle, can now squat 98kg, deadlift 110kg and bench press 90kg! I have much better running endurance now too and improved my IPPT by 22 points!`,
     assets: [
@@ -578,7 +558,6 @@ In less than 20 weeks, I lost 6kg of fat, gained 1kg of muscle, can now squat 98
     profile: "20s, Data Analyst & Entrepreneur",
     quote:
       "My expectations have been greatly surpassed. I have not only dropped more weight than what I put on during the pandemic, but I have also gained significant muscle mass and strength! I now look much better and can feel more confident for my wedding! Big thanks to Isaac for turning my life around!",
-    category: ['personal-training'],
     assets: [
       {
         key: "jingxin-before-after-front",
@@ -607,7 +586,6 @@ In less than 20 weeks, I lost 6kg of fat, gained 1kg of muscle, can now squat 98
     key: "gary",
     name: "Gary",
     profile: "30s, Entrepreneur",
-    category: ["personal-training"],
     quote: `I’ve been skinny my entire life and could never seem to gain weight. I knew Isaac from Army and have seen his work ethic both in and outside of camp. Hence, I decided to finally make a change and engage him.
 In just a short period of 4 months, I’ve see the potential that my body had all this while. Isaac’s protocols were effective yet sustainable and I now wish I had started earlier all this time.`,
     assets: [
@@ -632,7 +610,6 @@ In just a short period of 4 months, I’ve see the potential that my body had al
     key: "joshua",
     name: "Joshua",
     profile: "30s, Product Designer",
-    category: ['online-coaching'],
     quote:
       `I’m Joshua, 39, and I work as a product designer.
 I decided to start this journey after seeing the results Isaac helped Jose achieve—it was genuinely motivating. I’d been trying to lose weight on my own for years, mainly through calorie counting, but it was always on and off. I never quite reached my ideal weight, and eventually I realised I needed proper structure and support to break that cycle.
@@ -662,7 +639,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "allan",
     name: "My Dad, Allan",
     profile: "60s, Engineering Lecturer",
-    category: ['online-coaching'],
     quote:
       "Couple of months ago, while climbing the stairs in school, I had so much pain in my knee that I had to stop halfway and take a break, to the point that some of the students had to check in on me. That's when I knew I had to do something. I have lost 13kg, can now do more pull ups than what I did in National Service and for the first time in many years, I can climb stairs and run pain free.",
     assets: [
@@ -693,7 +669,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "jose",
     name: "Jose",
     profile: "30s, Sales",
-    category: ["online-coaching"],
     quote:
       "I was into CrossFit for many years but unfortunately tore my shoulder and knee ligaments. I gained a lot of weight thereafter, and knew I needed a change soon. At the start of Isaac’s online coaching program, I was skeptical and doubtful because the protocols given were just ‘too easy’! However, I soon saw the value of a structured, simple yet progressive training plan and the flexibility of his nutritional protocol also meant I could still enjoy foods at the hawker as well as some alcohol weekly! Having lost 10kg and 4” off my waist, I feel much lighter, stronger, more energetic and can also keep up with my 4 year old now!",
     assets: [
@@ -725,7 +700,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "peter",
     name: "Peter",
     profile: "30s, Engineering",
-    category: ["online-coaching"],
     quote:
       "I wanted to transform my life before turning 30, so that I can also be in the best shape before my first kid came in a few months time. I knew Isaac as he was the S2 of my NS Battalion and approached him for help via online coaching. What a journey it has been - from barely ever gymming, I am now in the best physical shape of my life and have also completed a Hyrox Pro event!",
     assets: [
@@ -752,7 +726,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     profile: "20s, Post-Graduate Student",
     quote:
       "Isaac has really helped me understand more about training and nutrition. Over the last 9 months, I have lost 14kg and 16% bodyfat!",
-    category: ['online-coaching'],
     assets: [
       {
         key: "christopher-before-after-front",
@@ -782,7 +755,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "louis",
     name: "Louis",
     profile: `20s, Head Coach & Founder of "Lift with Louis"`,
-    category: ["online-coaching", "mentorship"],
     quote:
       "I was always passionate about bodybuilding but just lacked the confidence. Through Isaac's encouragement and after going through this transformation for myself, I feel like I am finally ready to step on stage next year! Isaac's mentoring has also deepened my understanding of what it takes to be a great coach and I couldn't be more grateful for his guidance!",
     assets: [
@@ -814,7 +786,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "jaden",
     name: "Jaden",
     profile: `30s, Head Coach & Founder of "Blue Rocketeer"`,
-    category: ["online-coaching", 'mentorship'],
     quote:
       "As a coach, I wanted to make sure that I can empathise with my clients, as well as plan sustainable and efficient programs for them. Through Isaac’s online training & nutrition coaching and mentorship program, I have learnt what it takes to get clients their desired transformation. Additionally, Isaac’s advice to the problems I faced in my business were never tone deaf and he always made sure to help me overcome any issues I had.",
     assets: [
@@ -851,7 +822,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "jj",
     name: "Jia Juo",
     profile: `20s, Head Coach & Founder of "One Percent Fitness"`,
-    category: ["online-coaching", "mentorship"],
     quote:
       "As a commando leader in the Singapore Armed Forces, leadership by example was an important trait to me, and I was inspired by Isaac due to his similar coaching philosophy, as well as his achievements not only for himself as a dual Team Singapore athlete, but also with his clients. The soft skills I acquired through Isaac’s mentorship program such as inspiration and communication also helps me journey alongside my clients empathetically!",
     assets: [
@@ -888,7 +858,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "victoria",
     name: "Victoria",
     profile: `20s, Personal Trainer & Founder of "Train with Vic"`,
-    category: ["personal-training", "mentorship"],
     quote: "With Isaac’s help in the earlier days, I reframed my relationship with food and gained almost 10kg of muscle! I’ve learnt so much from him over the years and this has greatly influenced how I coach my clients too!",
     assets: [
       {
@@ -919,7 +888,6 @@ If you’re thinking about starting, just know that the hardest part is taking t
     key: "rory",
     name: "Rory Tufano",
     profile: "ROOTFITNESS",
-    category: ["mentorship"],
     quote: "I’ve been freelance training for some time, but I felt there were gaps in my coaching—particularly around empathy—because I’d never experienced being coached myself. After meeting Isaac, observing his work with clients, and seeing the impact of his approach and social presence, I felt mentorship under him would help elevate my own practice.",
     assets: [
       {
@@ -962,10 +930,11 @@ export function sortTestimonials(orderArray, testimonials_) {
 const previews = ['isaac', 'allan', 'jose', 'louis', 'alicia', 'sylvester', 'dat', 'victoria', 'peter', 'justin', 'angela', 'roger', 'ridhwan', 'regina', 'jaden', 'jj', 'jingxin', 'lionel', 'lawrence', 'chiching', 'yewei', 'jadon', 'twin-1', 'johann', 'christopher', 'twin-2', 'joshua', 'rory', 'mark', 'sam', 'keith', 'gary'];
 export const testimonialsPreview = sortTestimonials(previews, testimonials.filter(t => previews.includes(t.key)).map(t => ({ key: t.key, src: t.assets[0].src, ...t })));
 
-// Testimonials
+// Testimonials - Dedicated
 const ptKeys = ['ridhwan', 'alicia', 'sylvester', 'lawrence', 'victoria', 'justin', 'roger', 'angela', 'keith', 'jingxin', 'twin-1', 'twin-2', 'johann', 'sam', 'gary'];
 const onlineKeys = ['allan', 'jose', 'louis', 'dat', 'jaden', 'jj', 'rory', 'christopher', 'peter', 'regina', 'mark', 'lionel', 'chiching', 'yewei', 'jadon', 'joshua'];
 const mentorshipKeys = ['jaden', 'louis', 'jj', 'rory', 'victoria'];
+
 export const isaacTestimonial = testimonials.find(t => t.key === 'isaac');
 export const ptTestimonials = sortTestimonials(ptKeys, testimonials.filter(t => ptKeys.includes(t.key)));
 export const onlineTestimonials = sortTestimonials(onlineKeys, testimonials.filter(t => onlineKeys.includes(t.key)));

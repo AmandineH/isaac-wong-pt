@@ -3,6 +3,7 @@
     class="mx-auto max-w-1300px"
     :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
   >
+    <!-- Header -->
     <div :class="isLg ? 'mb-32px' : 'mb-24px'">
       <p class="text-center text-black display-md-bold">
         They made it, you can too
@@ -12,14 +13,9 @@
       </p>
     </div>
 
+    <!-- Categories -->
     <div class="flex flex-col mx-auto gap-32px max-w-800px">
-      <div
-        v-for="(category, index) in categories.filter(
-          (category) =>
-            !$route.query.category || $route.query.category === category.key
-        )"
-        :key="category.key"
-      >
+      <div v-for="category in paginatedCategories" :key="category.key">
         <p
           v-if="category.label"
           class="mb-24px display-md-bold underline text-center"
@@ -29,40 +25,34 @@
 
         <div class="flex flex-col gap-32px mb-24px">
           <div
-            v-for="testimonial in category.testimonials.slice(
-              category.offset,
-              category.first +
-                (category.offset / category.first) * category.first
-            )"
+            v-for="testimonial in category.paginatedTestimonials"
             :key="`${category.key}-${testimonial.key}`"
           >
+            <!-- Testimonial Card -->
             <div class="bg-black shadow-md rounded-12px p-16px">
               <p class="text-white display-sm-bold mb-8px">
                 <span class="uppercase">{{ testimonial.name }}</span>
-                <span class="text-white text-xs-regular">{{
-                  testimonial.profile
-                }}</span>
+                <span class="text-white text-xs-regular">
+                  {{ testimonial.profile }}
+                </span>
               </p>
 
               <client-only>
                 <p
+                  v-if="testimonial.category?.length"
                   class="text-white text-sm-bold mb-8px"
-                  v-if="testimonial.category.length > 0"
                 >
                   Service(s):
-                  <span
-                    v-for="(category, key) in testimonial.category"
-                    :key="key"
-                  >
+                  <span v-for="(cat, key) in testimonial.category" :key="key">
                     {{
-                      category
+                      cat
                         .split("-")
                         .join(" ")
-                        .replace(/\b\w/g, (char) => char.toUpperCase())
+                        .replace(/\b\w/g, (c) => c.toUpperCase())
                     }}
                     <span v-if="key !== testimonial.category.length - 1"
-                      >,</span
-                    >
+                      >,
+                    </span>
                   </span>
                 </p>
               </client-only>
@@ -85,6 +75,7 @@
                       class="w-full h-full overflow-hidden flex items-center"
                     />
                   </div>
+
                   <img
                     v-else
                     :src="asset.src"
@@ -94,26 +85,23 @@
               </div>
             </div>
           </div>
-
-          <Pagination
-            v-if="category.testimonials.length > 1"
-            :initialValue="category.offset / category.first + 1"
-            :pageSize="category.first"
-            :totalCount="category.testimonials.length"
-            @on-change="(value) => (category.offset = value)"
-          />
         </div>
       </div>
+
+      <Pagination
+        :initialValue="offset / first + 1"
+        :pageSize="first"
+        :totalCount="totalCount * first"
+        @on-change="(value) => (offset = value)"
+      />
     </div>
   </div>
 </template>
 
 <script>
-// components
 import VideoPlayer from "@/components/VideoPlayer.vue";
 import Pagination from "@/components/Pagination.vue";
 
-// data
 import {
   isaacTestimonial,
   ptTestimonials,
@@ -122,44 +110,39 @@ import {
 } from "@/data/testimonials.js";
 
 export default {
-  head() {
-    return this.$metadata.head({
-      title: "Results & Testimonials",
-    });
-  },
   components: {
     VideoPlayer,
     Pagination,
   },
+
   data() {
     return {
+      first: 8,
+      offset: 0,
       categories: [
         {
+          key: "featured",
           label: "",
           testimonials: [isaacTestimonial],
-          first: 1,
-          offset: 0,
+          perPage: 1,
         },
         {
           key: "personal-training",
           label: "Personal Training",
           testimonials: ptTestimonials,
-          first: 3,
-          offset: 0,
+          perPage: 3,
         },
         {
           key: "online-coaching",
           label: "Online Coaching",
           testimonials: onlineTestimonials,
-          first: 3,
-          offset: 0,
+          perPage: 3,
         },
         {
           key: "mentorship",
           label: "Mentorship",
           testimonials: mentorshipTestimonials,
-          first: 1,
-          offset: 0,
+          perPage: 1,
         },
       ],
     };
@@ -167,6 +150,39 @@ export default {
   computed: {
     isLg() {
       return this.$store.state.layout.isLg;
+    },
+
+    paginatedCategories() {
+      return this.categories.map((category) => {
+        const totalCountForCategory = Math.floor(
+          category.testimonials.length / category.perPage
+        );
+
+        let pageNumber = this.offset / this.first;
+
+        // Clamp to last page if category runs out
+        pageNumber = Math.min(
+          pageNumber,
+          Math.max(totalCountForCategory - 1, 0)
+        );
+
+        const start = pageNumber * category.perPage;
+        const end = start + category.perPage;
+
+        return {
+          ...category,
+          paginatedTestimonials: category.testimonials.slice(start, end),
+        };
+      });
+    },
+
+    // Pagination length driven by the LONGEST category
+    totalCount() {
+      return Math.max(
+        ...this.categories.map((c) =>
+          Math.floor(c.testimonials.length / c.perPage)
+        )
+      );
     },
   },
 };
