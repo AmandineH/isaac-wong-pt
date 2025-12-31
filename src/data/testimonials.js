@@ -960,26 +960,13 @@ export function sortTestimonials(orderArray, testimonials_) {
 
 // Homepage Testimonials
 const previews = ['isaac', 'allan', 'jose', 'louis', 'alicia', 'sylvester', 'dat', 'victoria', 'peter', 'justin', 'angela', 'roger', 'ridhwan', 'regina', 'jaden', 'jj', 'jingxin', 'lionel', 'lawrence', 'chiching', 'yewei', 'jadon', 'twin-1', 'johann', 'christopher', 'twin-2', 'joshua', 'rory', 'mark', 'sam', 'keith', 'gary'];
-const filteredTestimonials = testimonials.filter(t => previews.includes(t.key)).map(t => ({ key: t.key, src: t.assets[0].src, ...t }));
-export const testimonialsPreview = sortTestimonials(previews, filteredTestimonials);
+export const testimonialsPreview = sortTestimonials(previews, testimonials.filter(t => previews.includes(t.key)).map(t => ({ key: t.key, src: t.assets[0].src, ...t })));
 
-// Testimonials - Index
-const categories = ['personal-training', 'online-coaching', 'mentorship'];
-const sortedArray = [];
-
-const categoryGroups = categories.map(category => testimonials.filter(t => t.category.includes(category)).slice(0, 3));
-const usedKeys = new Set(categoryGroups.flat().map(t => t.key));
-const remaining = testimonials.filter(t => !usedKeys.has(t.key));
-const isaac = remaining.shift();
-sortedArray.push(isaac, ...categoryGroups.flat(), ...remaining);
-
-export const sortedTestimonials = sortedArray;
-
-// Testimonials - Dedicated
+// Testimonials
 const ptKeys = ['ridhwan', 'alicia', 'sylvester', 'lawrence', 'victoria', 'justin', 'roger', 'angela', 'keith', 'jingxin', 'twin-1', 'twin-2', 'johann', 'sam', 'gary'];
 const onlineKeys = ['allan', 'jose', 'louis', 'dat', 'jaden', 'jj', 'rory', 'christopher', 'peter', 'regina', 'mark', 'lionel', 'chiching', 'yewei', 'jadon', 'joshua'];
-const mentorshipKeys = ['louis', 'jaden', 'jj', 'rory', 'victoria'];
-
+const mentorshipKeys = ['jaden', 'louis', 'jj', 'rory', 'victoria'];
+export const isaacTestimonial = testimonials.find(t => t.key === 'isaac');
 export const ptTestimonials = sortTestimonials(ptKeys, testimonials.filter(t => ptKeys.includes(t.key)));
 export const onlineTestimonials = sortTestimonials(onlineKeys, testimonials.filter(t => onlineKeys.includes(t.key)));
 export const mentorshipTestimonials = sortTestimonials(mentorshipKeys, testimonials.filter(t => mentorshipKeys.includes(t.key)));
