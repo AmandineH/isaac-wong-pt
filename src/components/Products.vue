@@ -31,7 +31,7 @@
             />
             <div class="absolute inset-0 bg-black opacity-50" />
             <p
-              class="absolute inset-0 flex items-center justify-center text-center text-white uppercase display-xs-bold p-16px"
+              class="absolute inset-0 flex items-center justify-center text-center text-white display-xs-bold p-16px"
               v-html="product.label"
             ></p>
           </div>
@@ -88,7 +88,7 @@ export default {
         {
           key: "online-coaching",
           src: require("@/assets/services/virtual-personal-training.jpg"),
-          label: "ONLINE COACHING Coaching",
+          label: "ONLINE COACHING",
           features: [
             "Customized training plan",
             "Customized nutrition plan",
