@@ -1,10 +1,7 @@
 <template>
-  <div
-    class="mx-auto max-w-1300px"
-    :class="isLg ? 'py-52px px-32px' : 'py-32px px-24px'"
-  >
+  <div class="mx-auto max-w-1300px" :class="isLg ? 'py-52px' : 'py-32px'">
     <!-- Header -->
-    <div :class="isLg ? 'mb-32px' : 'mb-24px'">
+    <div :class="isLg ? 'mb-32px px-32px' : 'mb-24px px-24px'">
       <p class="text-center text-black display-md-bold">
         They made it, you can too
       </p>
@@ -14,7 +11,7 @@
     </div>
 
     <!-- Categories -->
-    <div class="flex flex-col mx-auto gap-32px max-w-800px">
+    <div class="flex flex-col gap-32px">
       <template v-for="category in paginatedCategories">
         <div
           v-if="category.key !== 'featured' || offset === 0"
@@ -22,12 +19,16 @@
         >
           <p
             v-if="category.label"
-            class="text-center underline mb-24px display-md-bold"
+            class="text-center display-xs-bold sticky top-[60px] z-30 py-16px bg-primary-blue text-white uppercase mb-24px"
+            :class="isLg ? 'px-32px' : 'px-24px'"
           >
             {{ category.label }}
           </p>
 
-          <div class="flex flex-col gap-32px mb-24px">
+          <div
+            class="flex flex-col mx-auto gap-32px max-w-800px"
+            :class="isLg ? 'px-32px' : 'px-24px'"
+          >
             <div
               v-for="testimonial in category.paginatedTestimonials"
               :key="`${category.key}-${testimonial.key}`"
@@ -95,12 +96,14 @@
         </div>
       </template>
 
-      <Pagination
-        :initialValue="offset / first + 1"
-        :pageSize="first"
-        :totalCount="totalCount * first"
-        @on-change="(value) => (offset = value)"
-      />
+      <div :class="isLg ? 'px-32px' : 'px-24px'">
+        <Pagination
+          :initialValue="offset / first + 1"
+          :pageSize="first"
+          :totalCount="totalCount * first"
+          @on-change="onPageChange"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -160,36 +163,57 @@ export default {
     },
 
     paginatedCategories() {
-      return this.categories.map((category) => {
-        const totalCountForCategory = Math.floor(
-          category.testimonials.length / category.perPage
-        );
+      return this.categories
+        .filter(
+          (element) =>
+            !this.$route.query.category ||
+            element.key === this.$route.query.category
+        )
+        .map((category) => {
+          const totalCountForCategory = Math.floor(
+            category.testimonials.length / category.perPage
+          );
 
-        let pageNumber = this.offset / this.first;
+          let pageNumber = this.offset / this.first;
 
-        // Clamp to last page if category runs out
-        pageNumber = Math.min(
-          pageNumber,
-          Math.max(totalCountForCategory - 1, 0)
-        );
+          // Clamp to last page if category runs out
+          pageNumber = Math.min(
+            pageNumber,
+            Math.max(totalCountForCategory - 1, 0)
+          );
 
-        const start = pageNumber * category.perPage;
-        const end = start + category.perPage;
+          const start = pageNumber * category.perPage;
+          const end = start + category.perPage;
 
-        return {
-          ...category,
-          paginatedTestimonials: category.testimonials.slice(start, end),
-        };
-      });
+          return {
+            ...category,
+            paginatedTestimonials: category.testimonials.slice(start, end),
+          };
+        });
     },
 
     // Pagination length driven by the LONGEST category
     totalCount() {
       return Math.max(
-        ...this.categories.map((c) =>
-          Math.floor(c.testimonials.length / c.perPage)
-        )
+        ...this.categories
+          .filter(
+            (element) =>
+              !this.$route.query.category ||
+              element.key === this.$route.query.category
+          )
+          .map((c) => Math.floor(c.testimonials.length / c.perPage))
       );
+    },
+  },
+  methods: {
+    onPageChange(value) {
+      this.offset = value;
+
+      // scroll to top of page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // optional
+      });
     },
   },
 };
