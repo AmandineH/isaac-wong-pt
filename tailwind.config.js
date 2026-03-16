@@ -328,6 +328,7 @@ module.exports = {
       "src/plugins/**/*.js",
       "nuxt.config.js",
     ],
+    safelist: ["max-h-120px"],
   },
   experimental: {
     applyComplexClasses: true,
