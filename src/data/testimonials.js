@@ -297,7 +297,7 @@ export const testimonials = [
     key: "mark",
     name: "Mark",
     profile: "30s",
-    quote: `Make sure this the testimonial and break it into paragraphs: I’m Mark, 37, working in industrial design. After training consistently for over 10 years with minimal physical change, I knew I needed professional guidance. From the start, working with Isaac felt approachable and supportive, like having a trusted friend guiding the process. Nutrition and tracking were broken down into simple, manageable steps that finally made sense. 
+    quote: `I’m Mark, 37, working in industrial design. After training consistently for over 10 years with minimal physical change, I knew I needed professional guidance. From the start, working with Isaac felt approachable and supportive, like having a trusted friend guiding the process. Nutrition and tracking were broken down into simple, manageable steps that finally made sense. 
 <br/><br/>Despite long work hours, overseas travel, and social commitments, the programme adapted to real life rather than demanding perfection. Weekly check-ins kept me accountable while remaining sustainable. In just six months, I lost around 11kg—something I never thought possible after years of frustration. 
 <br/><br/>Looking back, the doubts we had at the start feel distant. Today, seeing our progress fills us with pride and confidence. This journey showed us that with the right guidance, accountability, and support system, meaningful change is not only possible—it’s sustainable.`,
     assets: [
