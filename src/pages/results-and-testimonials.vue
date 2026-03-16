@@ -12,11 +12,12 @@
 
     <!-- Categories -->
     <div class="flex flex-col gap-32px">
-      <template v-for="category in paginatedCategories">
-        <div
-          v-if="category.key !== 'featured' || offset === 0"
-          :key="category.key"
-        >
+      <div
+        v-for="category in paginatedCategories"
+        class="mb-32px last:mb-0"
+        :key="category.key"
+      >
+        <div v-if="category.key !== 'featured' || offset === 0">
           <p
             v-if="category.label"
             class="text-center display-xs-bold sticky top-[60px] z-30 py-16px bg-primary-blue text-white uppercase mb-24px"
@@ -94,7 +95,7 @@
             </div>
           </div>
         </div>
-      </template>
+      </div>
 
       <div :class="isLg ? 'px-32px' : 'px-24px'">
         <Pagination
