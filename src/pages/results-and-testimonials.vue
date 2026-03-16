@@ -155,7 +155,6 @@ export default {
           perPage: 1,
         },
       ],
-      categoryRefs: {},
     };
   },
   computed: {
