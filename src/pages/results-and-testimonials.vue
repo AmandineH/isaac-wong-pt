@@ -19,6 +19,7 @@
         <p
           v-if="category.label"
           class="mb-24px display-md-bold underline text-center"
+          :ref="(el) => (categoryRefs[category.key] = el)"
         >
           {{ category.label }}
         </p>
@@ -145,6 +146,7 @@ export default {
           perPage: 1,
         },
       ],
+      categoryRefs: {},
     };
   },
   computed: {
@@ -184,6 +186,16 @@ export default {
         )
       );
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      const categoryKey = this.$route.query.category;
+      if (categoryKey && this.categoryRefs[categoryKey]) {
+        this.categoryRefs[categoryKey].scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }, 300);
   },
 };
 </script>
