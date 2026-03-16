@@ -214,7 +214,6 @@ export default {
       // scroll to top of page
       window.scrollTo({
         top: 0,
-        behavior: "smooth", // optional
       });
     },
   },
