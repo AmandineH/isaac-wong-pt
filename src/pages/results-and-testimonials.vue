@@ -202,7 +202,7 @@ export default {
       const categoryKey = this.$route.query.category;
       if (categoryKey && this.categoryRefs[categoryKey]) {
         this.categoryRefs[categoryKey].scrollIntoView({
-          behavior: "smooth",
+          behavior: "instant",
         });
       }
     }, 500);
