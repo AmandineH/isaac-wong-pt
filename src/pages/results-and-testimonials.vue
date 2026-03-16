@@ -16,6 +16,7 @@
         <div
           v-if="category.key !== 'featured' || offset === 0"
           :key="category.key"
+          :ref="(el) => (categoryRefs[category.key] = el)"
         >
           <p
             v-if="category.label"
@@ -155,6 +156,7 @@ export default {
           perPage: 1,
         },
       ],
+      categoryRefs: {},
     };
   },
   computed: {
@@ -163,49 +165,47 @@ export default {
     },
 
     paginatedCategories() {
-      return this.categories
-        .filter(
-          (element) =>
-            !this.$route.query.category ||
-            element.key === this.$route.query.category
-        )
-        .map((category) => {
-          const totalCountForCategory = Math.floor(
-            category.testimonials.length / category.perPage
-          );
+      return this.categories.map((category) => {
+        const totalCountForCategory = Math.floor(
+          category.testimonials.length / category.perPage
+        );
 
-          let pageNumber = this.offset / this.first;
+        let pageNumber = this.offset / this.first;
 
-          // Clamp to last page if category runs out
-          pageNumber = Math.min(
-            pageNumber,
-            Math.max(totalCountForCategory - 1, 0)
-          );
+        // Clamp to last page if category runs out
+        pageNumber = Math.min(
+          pageNumber,
+          Math.max(totalCountForCategory - 1, 0)
+        );
 
-          const start = pageNumber * category.perPage;
-          const end = start + category.perPage;
+        const start = pageNumber * category.perPage;
+        const end = start + category.perPage;
 
-          return {
-            ...category,
-            paginatedTestimonials: category.testimonials
-              ? category.testimonials.slice(start, end)
-              : [],
-          };
-        });
+        return {
+          ...category,
+          paginatedTestimonials: category.testimonials.slice(start, end),
+        };
+      });
     },
 
     // Pagination length driven by the LONGEST category
     totalCount() {
       return Math.max(
-        ...this.categories
-          .filter(
-            (element) =>
-              !this.$route.query.category ||
-              element.key === this.$route.query.category
-          )
-          .map((c) => Math.floor(c.testimonials.length / c.perPage))
+        ...this.categories.map((c) =>
+          Math.floor(c.testimonials.length / c.perPage)
+        )
       );
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      const categoryKey = this.$route.query.category;
+      if (categoryKey && this.categoryRefs[categoryKey]) {
+        this.categoryRefs[categoryKey].scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }, 300);
   },
   methods: {
     onPageChange(value) {
