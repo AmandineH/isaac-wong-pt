@@ -65,7 +65,7 @@
                 <p
                   v-html="testimonial.quote"
                   class="text-white text-md-regular mb-16px"
-                />
+                ></p>
 
                 <div class="grid grid-cols-2 gap-16px">
                   <div
