@@ -205,7 +205,7 @@ export default {
           behavior: "smooth",
         });
       }
-    }, 300);
+    }, 500);
   },
   methods: {
     onPageChange(value) {
