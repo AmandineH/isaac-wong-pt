@@ -13,41 +13,38 @@
     <!-- Categories -->
     <div class="flex flex-col gap-32px">
       <div
-        v-for="category in paginatedCategories"
-        class="mb-32px last:mb-0"
-        :key="category.key"
+        v-for="testimonial in category.paginatedTestimonials"
+        v-if="category.paginatedTestimonials.length"
+        :key="`${category.key}-${testimonial.key}`"
       >
-        <div v-if="category.key !== 'featured' || offset === 0">
-          <p
-            v-if="category.label"
-            class="text-center display-xs-bold sticky top-[60px] z-30 py-16px bg-primary-blue text-white uppercase mb-24px"
-            :class="isLg ? 'px-32px' : 'px-24px'"
-          >
-            {{ category.label }}
-          </p>
+        <p
+          v-if="category.label"
+          class="text-center display-xs-bold sticky top-[60px] z-30 py-16px bg-primary-blue text-white uppercase mb-24px"
+          :class="isLg ? 'px-32px' : 'px-24px'"
+        >
+          {{ category.label }}
+        </p>
 
+        <div
+          class="flex flex-col mx-auto gap-32px max-w-800px"
+          :class="isLg ? 'px-32px' : 'px-24px'"
+        >
           <div
-            class="flex flex-col mx-auto gap-32px max-w-800px"
-            :class="isLg ? 'px-32px' : 'px-24px'"
+            v-for="testimonial in category.paginatedTestimonials"
+            :key="`${category.key}-${testimonial.key}`"
           >
-            <div
-              v-for="testimonial in category.paginatedTestimonials"
-              :key="`${category.key}-${testimonial.key}`"
-            >
-              <!-- Testimonial Card -->
-              <div class="bg-black shadow-md rounded-12px p-16px">
-                <p class="text-white display-sm-bold mb-8px">
-                  <span class="uppercase">{{ testimonial.name }}</span>
-                  <span class="text-white text-xs-regular">
-                    {{ testimonial.profile }}
-                  </span>
-                </p>
+            <!-- Testimonial Card -->
+            <div class="bg-black shadow-md rounded-12px p-16px">
+              <p class="text-white display-sm-bold mb-8px">
+                <span class="uppercase">{{ testimonial.name }}</span>
+                <span class="text-white text-xs-regular">
+                  {{ testimonial.profile }}
+                </span>
+              </p>
 
-                <client-only>
-                  <p
-                    v-if="testimonial.category?.length"
-                    class="text-white text-sm-bold mb-8px"
-                  >
+              <client-only>
+                <div v-if="testimonial.category?.length">
+                  <p class="text-white text-sm-bold mb-8px">
                     Service(s):
                     <span v-for="(cat, key) in testimonial.category" :key="key">
                       {{
@@ -57,39 +54,39 @@
                           .replace(/\b\w/g, (c) => c.toUpperCase())
                       }}
                       <span v-if="key !== testimonial.category.length - 1"
-                        >,
-                      </span>
+                        >,</span
+                      >
                     </span>
                   </p>
-                </client-only>
+                </div>
+              </client-only>
 
-                <p
-                  v-html="testimonial.quote"
-                  class="text-white text-md-regular mb-16px"
-                ></p>
+              <p
+                v-html="testimonial.quote"
+                class="text-white text-md-regular mb-16px"
+              ></p>
 
-                <div class="grid grid-cols-2 gap-16px">
-                  <div
-                    v-for="(asset, key) in testimonial.assets"
-                    :key="key"
-                    class="overflow-hidden rounded-6px md:rounded-12px"
-                    :class="asset.class"
-                  >
-                    <div v-if="asset.type === 'video'" class="w-full h-full">
-                      <VideoPlayer
-                        :key="`${asset.key}-${isLg}`"
-                        :src="isLg ? asset.srcDesktop || asset.src : asset.src"
-                        :thumbnail="asset.thumbnail"
-                        class="flex items-center w-full h-full overflow-hidden"
-                      />
-                    </div>
-
-                    <img
-                      v-else
-                      :src="asset.src"
-                      class="object-contain object-center w-full h-full"
+              <div class="grid grid-cols-2 gap-16px">
+                <div
+                  v-for="(asset, key) in testimonial.assets"
+                  :key="key"
+                  class="overflow-hidden rounded-6px md:rounded-12px"
+                  :class="asset.class"
+                >
+                  <div v-if="asset.type === 'video'" class="w-full h-full">
+                    <VideoPlayer
+                      :key="`${asset.key}-${isLg}`"
+                      :src="isLg ? asset.srcDesktop || asset.src : asset.src"
+                      :thumbnail="asset.thumbnail"
+                      class="flex items-center w-full h-full overflow-hidden"
                     />
                   </div>
+
+                  <img
+                    v-else
+                    :src="asset.src"
+                    class="object-contain object-center w-full h-full"
+                  />
                 </div>
               </div>
             </div>
@@ -188,7 +185,9 @@ export default {
 
           return {
             ...category,
-            paginatedTestimonials: category.testimonials.slice(start, end),
+            paginatedTestimonials: category.testimonials
+              ? category.testimonials.slice(start, end)
+              : [],
           };
         });
     },
