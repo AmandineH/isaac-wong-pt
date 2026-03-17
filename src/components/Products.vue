@@ -65,7 +65,7 @@
 
               <a
                 class="flex justify-center text-sm text-gray-200 cursor-pointer hover:underline pt-12px"
-                :href="`/results-and-testimonials?category=${product.key}`"
+                :href="`/results-and-testimonials/${product.key}`"
               >
                 View Testimonials
               </a>

@@ -16,7 +16,6 @@
         <div
           v-if="category.key !== 'featured' || offset === 0"
           :key="category.key"
-          :ref="(el) => (categoryRefs[category.key] = el)"
         >
           <p
             v-if="category.label"
@@ -156,7 +155,6 @@ export default {
           perPage: 1,
         },
       ],
-      categoryRefs: {},
     };
   },
   computed: {
@@ -197,24 +195,12 @@ export default {
       );
     },
   },
-  mounted() {
-    setTimeout(() => {
-      const categoryKey = this.$route.query.category;
-      if (categoryKey && this.categoryRefs[categoryKey]) {
-        this.categoryRefs[categoryKey].scrollIntoView({
-          behavior: "instant",
-        });
-      }
-    }, 500);
-  },
   methods: {
     onPageChange(value) {
       this.offset = value;
 
       // scroll to top of page
-      window.scrollTo({
-        top: 0,
-      });
+      window.scrollTo(0, 0);
     },
   },
 };
