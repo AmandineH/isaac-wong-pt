@@ -266,7 +266,7 @@ export const testimonials = [
     key: "regina",
     name: "Regina",
     profile: "30s",
-    quote: `Make sure this the testimonial and break it into paragraphs: We came from different professional backgrounds, but shared the same frustration—despite our efforts, our health and fitness weren’t where we wanted them to be. 
+    quote: `We came from different professional backgrounds, but shared the same frustration—despite our efforts, our health and fitness weren’t where we wanted them to be. 
 <br/><br/>I’m Regina, 34, working in a tech non-profit. After seeing a colleague’s transformation, my husband and I decided to join Isaac’s online nutrition programme to prioritise our health and build better accountability together. 
 <br/><br/>The programme’s simplicity—focusing on calories, steps, and protein—made it easy to follow even with frequent work travel. Reducing calories was tough at first, but constant encouragement and flexible adjustments helped me stay consistent. 
 <br/><br/>After six months, I reached my goal and felt ready to move confidently into the next phase of my fitness journey. Doing the programme with my husband made the process far more sustainable and rewarding.`,
