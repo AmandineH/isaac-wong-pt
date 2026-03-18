@@ -57,9 +57,10 @@
             }}</span>
           </p>
 
-          <p class="text-black text-md-regular mb-16px">
-            {{ selectedTestimonial.quote }}
-          </p>
+          <p
+            v-html="selectedTestimonial.quote"
+            class="text-black text-md-regular mb-16px"
+          />
 
           <div class="grid grid-cols-2 gap-16px">
             <div
